@@ -1,0 +1,44 @@
+{
+  "disclosure": "Fictional service-launch data · layout examples only",
+  "comparison": {
+    "maxWeeks": 6,
+    "maxCost": 80,
+    "options": [
+      { "name": "Build", "weeks": 12, "cost": 120, "control": "Full" },
+      { "name": "Buy", "weeks": 4, "cost": 60, "control": "Limited" },
+      { "name": "Partner", "weeks": 6, "cost": 80, "control": "Shared" }
+    ]
+  },
+  "composition": {
+    "total": 200,
+    "parts": [
+      { "name": "Product", "value": 100 },
+      { "name": "Operations", "value": 50 },
+      { "name": "Research", "value": 30 },
+      { "name": "Contingency", "value": 20 }
+    ]
+  },
+  "hierarchy": {
+    "name": "Launch programme",
+    "groups": [
+      { "name": "Experience", "children": ["Research", "Design"] },
+      { "name": "Delivery", "children": ["Engineering", "Operations"] }
+    ]
+  },
+  "relationship": {
+    "nodes": ["Research", "Design", "Build", "Launch", "Compliance"],
+    "edges": [["Research", "Design"], ["Design", "Build"], ["Build", "Launch"], ["Compliance", "Launch"]]
+  },
+  "change-over-time": {
+    "year": 2026,
+    "cohortSize": 20,
+    "points": [
+      { "month": "Jan", "days": 10 },
+      { "month": "Feb", "days": 9 },
+      { "month": "Mar", "days": 7 },
+      { "month": "Apr", "days": 8 },
+      { "month": "May", "days": 6 },
+      { "month": "Jun", "days": 5 }
+    ]
+  }
+}

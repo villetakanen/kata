@@ -1,0 +1,40 @@
+import { readFile, readdir, stat } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import assert from 'node:assert/strict';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const read = path => readFile(resolve(root, path), 'utf8');
+const data = JSON.parse(await read('examples/data.json'));
+assert.equal(data.composition.parts.reduce((sum, p) => sum + p.value, 0), data.composition.total, 'Parts must exhaust the stated total');
+assert(data.composition.parts.every(p => p.value >= 0), 'A composition cannot contain negative parts');
+const nodes = new Set(data.relationship.nodes);
+for (const edge of data.relationship.edges) assert(edge.length === 2 && edge.every(n => nodes.has(n)), 'Every dependency endpoint must exist');
+assert.equal(new Set(data['change-over-time'].points.map(p => p.month)).size, data['change-over-time'].points.length, 'Time observations must be distinct');
+assert(data['change-over-time'].points.every(p => Number.isFinite(p.days) && p.days >= 0 && p.days <= 12), 'Observations must fit the example scale');
+
+async function markdownLinks(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) await markdownLinks(path);
+    else if (entry.name.endsWith('.md')) {
+      const body = await readFile(path, 'utf8');
+      for (const [, target] of body.matchAll(/\]\(([^)]+)\)/g)) {
+        if (/^(https?:|#)/.test(target)) continue;
+        await stat(resolve(dirname(path), target.split('#')[0]));
+      }
+    }
+  }
+}
+await markdownLinks(resolve(root, 'skills'));
+for (const name of ['index.html', 'kata-lys.html']) {
+  const html = await read(`examples/${name}`);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+  assert.equal(ids.length, new Set(ids).size, `${name}: IDs must be unique`);
+  for (const [, target] of html.matchAll(/href="#([^"]+)"/g)) assert(ids.includes(target), `${name}: missing anchor ${target}`);
+  assert.equal([...html.matchAll(/<article\b/g)].length, 10, `${name}: five before/after pairs`);
+  assert.equal([...html.matchAll(/data-notes="/g)].length, 10, `${name}: every slide needs notes`);
+  assert(!/<(?:script|link)[^>]+(?:src|href)="https?:/i.test(html), 'Examples must work offline');
+  assert(html.includes(data.disclosure), 'Fictional data must be disclosed');
+}
+console.log('Checked example data, skill links, slide structure, navigation targets, and offline packaging.');
