@@ -1,0 +1,45 @@
+{
+  "protocol": "kata-eval-case-index/v1",
+  "cases": [
+    {
+      "id": "pilot-review",
+      "revision": "1.0.0",
+      "brief": "pilot-review/brief.md",
+      "answer_key": "pilot-review/answer-key.json",
+      "audience_question": "What does the pilot evidence support the steering group doing next?",
+      "constraints": [
+        "Use one slide.",
+        "Preserve the scope and limits of the pilot.",
+        "Do not claim the pilot caused the observed difference."
+      ],
+      "reader_task": "State the observed result, the evidence limitation, and the next step supported by the brief."
+    },
+    {
+      "id": "shuttle-options",
+      "revision": "1.0.0",
+      "brief": "shuttle-options/brief.md",
+      "answer_key": "shuttle-options/answer-key.json",
+      "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+      "constraints": [
+        "Use one slide.",
+        "Compare all options on the same criteria.",
+        "Show range in kilometres and costs in thousands of dollars."
+      ],
+      "reader_task": "Identify the qualifying option with the lowest upfront cost and state its range and upfront cost."
+    },
+    {
+      "id": "retrofit-feedback",
+      "revision": "1.0.0",
+      "brief": "retrofit-feedback/brief.md",
+      "answer_key": "retrofit-feedback/answer-key.json",
+      "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+      "constraints": [
+        "Use one slide.",
+        "Do not combine the two reporting sources or rank barriers across them without compatible denominators.",
+        "Do not infer change without a comparable baseline.",
+        "State what information is needed to answer the audience question."
+      ],
+      "reader_task": "Explain whether either question can be answered from the brief and name the minimum missing information needed for a valid comparison."
+    }
+  ]
+}
