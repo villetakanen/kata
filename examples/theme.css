@@ -125,5 +125,6 @@ svg text { font-family: inherit; font-size: 22px; } svg .value { font-weight: 65
   @page { size: 13.333in 7.5in; margin: 0; }
   .gallery .slide { width: 13.333in; height: 7.5in; aspect-ratio: 16 / 9; break-after: page; page-break-after: always; }
   .gallery .pattern:last-of-type .slide:last-child { break-after: auto; page-break-after: auto; }
+  .deck [data-lys], .deck [data-lys]:focus, .deck [data-lys] > .slide:focus { outline: none !important; }
   .mobile-equivalent { display: none !important; }
 }
