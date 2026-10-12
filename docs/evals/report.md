@@ -104,8 +104,13 @@ Codex candidate omitted that North supplied no turnaround times; and pi
 candidate only implied that South's other barriers may be present. Claude's
 retrofit candidate headline says installer barriers lead in each source, which
 is unsupported because South recorded only one barrier; its body correctly
-says no South ranking is possible. These are artifact-level observations, not
-comparative scores.
+says no South ranking is possible. Targeted encoding review also found a
+quantitatively misplaced axis on Codex's plain-Lys pilot slide, despite its
+correctly stated numbers; the Codex candidate pilot axis was correctly scaled.
+Claude's source-specific retrofit bars and pi 0.1 pilot's 12/18 share were
+proportionally encoded. These are selected artifact-level observations, not a
+complete encoding audit or comparative scores; details are recorded in the
+semantic review JSON.
 
 Three preflight runs of three cases each were preserved separately from the 27-attempt
 matrix: [runner-smoke](../../evals/results/runner-smoke/) had CLI exits with
@@ -147,6 +152,25 @@ corrected shared prompt that explicitly requests 1440×900 and 390×844 review,
 keyboard use, no-JavaScript content, and print. It is a combined intervention,
 not an isolated test of the skill revision, and must remain separate from these
 27 attempts. The original prompt and artifacts remain frozen.
+
+## Corrective candidate check
+
+A separate nine-attempt run tested the revised candidate skill together with a
+corrected shared prompt. All nine CLI calls succeeded. The revised prompt
+spells out 1440×900 and 390×844 review, keyboard navigation, no-JavaScript
+content, and print inspection. Per-case task-prompt hashes are recorded in
+[corrective-review.json](corrective-review.json). They differ from the original
+run, so this combined intervention cannot isolate the effect of the skill
+change and must not be pooled with the original matrix.
+
+The authored HTML text for all nine retest slides includes every answer-key
+required fact. This is source-text coverage only. Pi's pilot slide states the
+correct median and range, but its plotted positions are inaccurate: on a −3% to
++14% scale, zero belongs at 17.65% and +6% at 52.94%; the chart places them at
+50% and 58.82%. A complete source-fact statement does not guarantee faithful
+visual encoding. Updated browser and structural reviews are being recorded
+separately after the validator's overflow classification fix. The per-attempt
+text and encoding review is in [corrective-review.json](corrective-review.json).
 
 ## Reader outcomes and limits
 

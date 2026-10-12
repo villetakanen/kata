@@ -1,0 +1,220 @@
+{
+  "protocol": "kata-eval-corrective-review/v1",
+  "run_id": "release-0.2.0-corrective-20261012",
+  "intervention": "Combined candidate-skill revision and corrected shared task prompt. This is not an isolated or causal test of the skill.",
+  "review_type": "Agent source-fact text coverage review with separate encoding and browser review fields; no human reader outcome data.",
+  "prompt_sha256_by_case": {
+    "pilot-review": "957ee2a345b5452472a152434cba7f83479e3d354156ee60eb4434aa6b16bfdf",
+    "retrofit-feedback": "1275cddaed5ef629891a28a6cc72601999937f47391f71c2a00641ab3a610083",
+    "shuttle-options": "6b4989057b2a1fc280c1d20f7bd9aca4abfcd746c25a35d71301164504f9f132"
+  },
+  "sources": {
+    "cases": "../../evals/cases/index.json",
+    "attempts": "../../evals/results/release-0.2.0-corrective-20261012/"
+  },
+  "summary": {
+    "attempts": 9,
+    "cli_successes": 9,
+    "source_fact_text_coverage": "all required fact IDs appear in all nine authored slide HTML artifacts",
+    "visual_encoding_issue_count": 1,
+    "human_reader_outcomes": "none collected",
+    "browser_and_validator_rerun": "pending"
+  },
+  "records": [
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "pilot-review--kata-candidate--claude",
+      "case_id": "pilot-review",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "scale",
+        "median",
+        "spread",
+        "design",
+        "omissions",
+        "decision"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "retrofit-feedback--kata-candidate--claude",
+      "case_id": "retrofit-feedback",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "north-sample",
+        "north-counts",
+        "south-sample",
+        "south-barrier",
+        "south-time",
+        "baseline",
+        "incomparability"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "shuttle-options--kata-candidate--claude",
+      "case_id": "shuttle-options",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "threshold",
+        "alder",
+        "birch",
+        "cedar",
+        "dogwood",
+        "assumption",
+        "answer"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "pilot-review--kata-candidate--codex",
+      "case_id": "pilot-review",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "scale",
+        "median",
+        "spread",
+        "design",
+        "omissions",
+        "decision"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "retrofit-feedback--kata-candidate--codex",
+      "case_id": "retrofit-feedback",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "north-sample",
+        "north-counts",
+        "south-sample",
+        "south-barrier",
+        "south-time",
+        "baseline",
+        "incomparability"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "shuttle-options--kata-candidate--codex",
+      "case_id": "shuttle-options",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "threshold",
+        "alder",
+        "birch",
+        "cedar",
+        "dogwood",
+        "assumption",
+        "answer"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "pilot-review--kata-candidate--pi",
+      "case_id": "pilot-review",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "scale",
+        "median",
+        "spread",
+        "design",
+        "omissions",
+        "decision"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "retrofit-feedback--kata-candidate--pi",
+      "case_id": "retrofit-feedback",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "north-sample",
+        "north-counts",
+        "south-sample",
+        "south-barrier",
+        "south-time",
+        "baseline",
+        "incomparability"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    },
+    {
+      "cli": "release-0.2.0-corrective-20261012",
+      "attempt_id": "shuttle-options--kata-candidate--pi",
+      "case_id": "shuttle-options",
+      "condition": "kata-candidate",
+      "cli_status": "succeeded",
+      "source_fact_ids_text_covered": [
+        "threshold",
+        "alder",
+        "birch",
+        "cedar",
+        "dogwood",
+        "assumption",
+        "answer"
+      ],
+      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_not_covered": [],
+      "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
+      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
+      "browser_review": "pending-coordinator-rerun-after-validator-fix",
+      "visual_encoding_notes": []
+    }
+  ]
+}
