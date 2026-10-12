@@ -29,6 +29,37 @@ patterns are slide guidance with worked Lys examples, not a general deck
 storytelling system or a packaged Kata-Lys integration. Brand-specific work
 remains untested.
 
+## Proposed: 0.3.0
+
+The [initial 0.3.0 plan](0.3.0.md) responds to the Lys-side migration
+evaluation supplied on 12 October 2026. Its scope is layout around supplied
+content: retaining suitable arrangements, placing content and qualifications,
+and applying emphasis when priority is supplied. General assessment guidance
+would live in a shared reference used across forms, with the number-and-context
+case as a small illustration rather than a golden-cut-specific feature.
+The main focus area is a Lys field-guide PoC: each current form is visibly
+demonstrated on a slide that also explains where it works and its limits.
+The deck serves as dogfooding, a demo, and a reproducible review fixture,
+alongside the guidance tasks. Verification covers every form, agreement with
+the skill references, automated artifact checks, and presentation, phone,
+keyboard, no-JavaScript, and print review. Baseline-versus-candidate model runs
+are deferred until a specific agent-behavior question calls for them.
+
+The plan also includes aligning the README, vision, development instructions,
+delivered skill, and other living materials with that current scope. A later
+scope change should update those materials as part of the same decision.
+
+Prose, videos, infographics, and tables are treated as supplied content.
+Creating or internally redesigning them is intentionally outside this release.
+The six existing patterns remain; their long-term fit with this boundary is
+unresolved. The draft does not expand the catalogue or implement these changes.
+
+[Out-of-scope work](out-of-scope.md) records information-structure research,
+content-authoring questions, separate harness improvements, and Lys-owned
+follow-ups. Whether graphs, flows, tiers, and relationship semantics belong in
+Kata needs substantial study. These items are unscheduled, may remain outside
+Kata, and are not 0.3.0 dependencies.
+
 ## Questions for the next discussion
 
 Slides remain the first test medium. Lys can render slide content in different
