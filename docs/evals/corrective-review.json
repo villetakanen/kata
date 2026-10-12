@@ -15,14 +15,62 @@
   "summary": {
     "attempts": 9,
     "cli_successes": 9,
-    "source_fact_text_coverage": "all required fact IDs appear in all nine authored slide HTML artifacts",
+    "source_fact_text_coverage": "Eight of nine artifacts include every required fact; pi pilot leaves six not-positive implicit. Pi retrofit additionally omits the source caveat that North supplied no turnaround times.",
     "visual_encoding_issue_count": 1,
     "human_reader_outcomes": "none collected",
-    "browser_and_validator_rerun": "pending"
+    "browser_and_validator_rerun": "complete; final validation records are in each attempt directory",
+    "structural_passes": 7,
+    "structural_failures": 2,
+    "attempt_browser_passes": 5,
+    "attempt_browser_failures": 2,
+    "attempt_browser_not_run": 2,
+    "standalone_html_browser_passes": 2,
+    "structural_failure_reason": "Two Claude artifacts dropped only the trailing /*$vite$:1*/ comment from otherwise byte-matching vendored Lys CSS; standalone HTML browser checks passed for both.",
+    "attempt_browser_failures_by_case": {
+      "codex/retrofit-feedback": "Content clipped by hidden/clip overflow in presentation layout.",
+      "pi/retrofit-feedback": "Content clipped by hidden/clip overflow in presentation layout."
+    },
+    "browser_final_visual_review": "Completed coordinator review of phone top and scrolled-bottom screenshots for all nine attempts. Text and caveats were reachable by scrolling at phone size in all nine. Findings: Claude pilot phone axis labels overlap; pi pilot quantitative positions are incorrect; Codex and pi retrofit slides have presentation clipping (pi severe); Codex shuttle units footer escapes its rounded card but remains reachable.",
+    "print_review": {
+      "attempts_inspected": 9,
+      "with_print_layout_issue": 7,
+      "single_page_intact": 2,
+      "focus_outlines": "Blue focus outlines were visible in some PDFs.",
+      "evidence_type": "coordinator/agent visual review; not human reader testing"
+    },
+    "phone_review": {
+      "attempts_inspected": 9,
+      "top_and_scrolled_bottom_inspected": true,
+      "authored_text_and_caveats_reachable_by_scroll": 9,
+      "specific_observations": [
+        {
+          "attempt_id": "pilot-review--kata-candidate--claude",
+          "finding": "The −3% and 0% chart labels overlap at phone size."
+        },
+        {
+          "attempt_id": "pilot-review--kata-candidate--pi",
+          "finding": "The chart positions are inaccurate; numeric text is present but values are misencoded."
+        },
+        {
+          "attempt_id": "shuttle-options--kata-candidate--codex",
+          "finding": "The units footer extends beyond the rounded card but remains reachable by scrolling."
+        },
+        {
+          "attempt_id": "retrofit-feedback--kata-candidate--codex",
+          "finding": "Presentation-size content is clipped; relevant content remains reachable by scrolling."
+        },
+        {
+          "attempt_id": "retrofit-feedback--kata-candidate--pi",
+          "finding": "Severe presentation-size clipping; lower content is reachable by scrolling."
+        }
+      ],
+      "assessment_type": "Coordinator/agent visual inspection; not human reader research."
+    },
+    "browser_final_visual_review_status": "complete"
   },
   "records": [
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "claude",
       "attempt_id": "pilot-review--kata-candidate--claude",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
@@ -38,12 +86,23 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": false,
+      "structural_error": "Lys style inputs/lys/lys.css is neither embedded exactly nor linked from the snapshot",
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": null,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": true,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Blank first PDF page; content begins on the second page."
+      },
+      "presentation_visual_review": "At phone size, the −3% and 0% chart labels overlap.",
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "claude",
       "attempt_id": "retrofit-feedback--kata-candidate--claude",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
@@ -60,12 +119,22 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": true,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Needed-information box and footer spill to a second page."
+      },
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "claude",
       "attempt_id": "shuttle-options--kata-candidate--claude",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
@@ -82,12 +151,22 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": false,
+      "structural_error": "Lys style inputs/lys/lys.css is neither embedded exactly nor linked from the snapshot",
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": null,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": true,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Source footer spills to a second page."
+      },
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "codex",
       "attempt_id": "pilot-review--kata-candidate--codex",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
@@ -103,12 +182,23 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": true,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Important limitations spill to a second page."
+      },
+      "presentation_visual_review": "Phone content reflows with scrollable overflow; corrected validator classifies this separately from clipping.",
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "codex",
       "attempt_id": "retrofit-feedback--kata-candidate--codex",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
@@ -125,12 +215,24 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": false,
+      "attempt_browser_errors": [
+        "presentation slide 1 has content clipped by hidden/clip overflow"
+      ],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Footer spills to a second page."
+      },
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "codex",
       "attempt_id": "shuttle-options--kata-candidate--codex",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
@@ -147,12 +249,22 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": true,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Single-page output visually intact in the coordinator inspection."
+      },
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "pi",
       "attempt_id": "pilot-review--kata-candidate--pi",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
@@ -160,20 +272,33 @@
       "source_fact_ids_text_covered": [
         "scale",
         "median",
-        "spread",
         "design",
         "omissions",
         "decision"
       ],
-      "source_fact_ids_partially_covered": {},
+      "source_fact_ids_partially_covered": {
+        "spread": "States that 12/18 plots were positive, but does not explicitly state that six were not positive."
+      },
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [
+        "The text states +6% and the −3% to +14% range, but chart positions are inaccurate: on a −3% to +14% domain, zero belongs at 17.65% and +6% at 52.94%; the chart places zero at 50% and +6% at 58.82%."
+      ],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": true,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Blank first PDF page; content begins on the second page."
+      },
+      "material_caveat_omissions": []
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "pi",
       "attempt_id": "retrofit-feedback--kata-candidate--pi",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
@@ -183,19 +308,33 @@
         "north-counts",
         "south-sample",
         "south-barrier",
-        "south-time",
         "baseline",
-        "incomparability"
+        "incomparability",
+        "south-time"
       ],
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": false,
+      "attempt_browser_errors": [
+        "presentation slide answer has content clipped by hidden/clip overflow"
+      ],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Single-page PDF clips lower source and needed-information content; presentation layout also has hidden/clip overflow."
+      },
+      "material_caveat_omissions": [
+        "North supplied no service-turnaround times; this source caveat is not a separate required_fact ID in the answer key."
+      ]
     },
     {
-      "cli": "release-0.2.0-corrective-20261012",
+      "cli": "pi",
       "attempt_id": "shuttle-options--kata-candidate--pi",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
@@ -212,9 +351,19 @@
       "source_fact_ids_partially_covered": {},
       "source_fact_ids_not_covered": [],
       "text_coverage_limit": "Authored HTML source text only; does not establish rendered visibility, readability, or correct quantitative encoding.",
-      "structural_validation": "pending-coordinator-rerun-after-validator-fix",
-      "browser_review": "pending-coordinator-rerun-after-validator-fix",
-      "visual_encoding_notes": []
+      "visual_encoding_notes": [],
+      "structural_pass": true,
+      "structural_error": null,
+      "validator_source_sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47",
+      "attempt_browser_review_pass": true,
+      "attempt_browser_errors": [],
+      "standalone_html_browser_pass": null,
+      "standalone_html_browser_errors": [],
+      "print_review": {
+        "status": "coordinator visual inspection",
+        "observation": "Single-page output visually intact in the coordinator inspection."
+      },
+      "material_caveat_omissions": []
     }
   ]
 }

@@ -112,6 +112,16 @@ proportionally encoded. These are selected artifact-level observations, not a
 complete encoding audit or comparative scores; details are recorded in the
 semantic review JSON.
 
+Independent agent judgment from source text and decisions: all nine shuttle
+outputs use aligned comparisons for options with the same threshold and source
+values. Pilot outputs use several structures; more than one can support the
+cautious measurement decision, so this brief has no unique winning form.
+Retrofit outputs generally keep partner evidence separate or make the
+answerability gap prominent; the overall ranking and change question remain
+unanswerable. Claude's candidate retrofit headline is the noted unsupported
+exception. These qualitative judgments are not a scored review of every
+rationale or a reader study.
+
 Three preflight runs of three cases each were preserved separately from the 27-attempt
 matrix: [runner-smoke](../../evals/results/runner-smoke/) had CLI exits with
 status 1; [runner-smoke-access](../../evals/results/runner-smoke-access/) made
@@ -128,10 +138,13 @@ trailing Vite marker comment. This strict byte mismatch does not by itself show
 that the HTML failed to render or that its layout was unreadable. Structural
 and browser findings are separate.
 
-Automated browser geometry results are per CLI. They detect content taller
-than visible slide boxes, but do not assess whether text is readable or table
-cells overlap. Claude's candidate pilot passed those geometry checks even
-though visual review found microscopic text and overlapping table content.
+Automated browser geometry results are per CLI. For the original matrix, 22
+attempts failed because content was clipped by hidden/clip overflow at a target
+size, four passed, and one did not run after the strict contract failure. The
+checker also records scrollable overflow separately. It does not assess whether
+text is readable or table cells overlap. Claude's candidate pilot passed those
+geometry checks even though visual review found microscopic text and overlapping
+table content.
 
 | CLI | Geometry pass | Geometry fail | Not run |
 | --- | ---: | ---: | ---: |
@@ -145,13 +158,11 @@ The checked-in 14-slide gallery/deck was separately inspected at presentation
 and phone sizes: all 14 rendered with no overflow, keyboard navigation worked,
 content remained available without JavaScript, and final print checks showed
 no focus rings, blank pages, or clipping. Human judgment is still needed for
-grouping, emphasis, label association, and reading order.
+grouping, emphasis, label association, and reading order. Screenshots, PDFs,
+and the verification record are in the [release review archive](release-review/verification.json).
 
-A follow-up 9-attempt candidate check is using both the revised skill and a
-corrected shared prompt that explicitly requests 1440×900 and 390×844 review,
-keyboard use, no-JavaScript content, and print. It is a combined intervention,
-not an isolated test of the skill revision, and must remain separate from these
-27 attempts. The original prompt and artifacts remain frozen.
+The original prompt and artifacts remain frozen. The completed corrective run
+using the revised skill and expanded prompt is summarized separately below.
 
 ## Corrective candidate check
 
@@ -163,14 +174,46 @@ content, and print inspection. Per-case task-prompt hashes are recorded in
 run, so this combined intervention cannot isolate the effect of the skill
 change and must not be pooled with the original matrix.
 
-The authored HTML text for all nine retest slides includes every answer-key
-required fact. This is source-text coverage only. Pi's pilot slide states the
-correct median and range, but its plotted positions are inaccurate: on a −3% to
-+14% scale, zero belongs at 17.65% and +6% at 52.94%; the chart places them at
-50% and 58.82%. A complete source-fact statement does not guarantee faithful
-visual encoding. Updated browser and structural reviews are being recorded
-separately after the validator's overflow classification fix. The per-attempt
-text and encoding review is in [corrective-review.json](corrective-review.json).
+| CLI | CLI success | Structural pass | Attempt browser pass / fail / not run | Standalone HTML browser pass |
+| --- | ---: | ---: | ---: | ---: |
+| Claude Code | 3/3 | 1/3 | 1 / 0 / 2 | 2 |
+| Codex CLI | 3/3 | 3/3 | 2 / 1 / 0 | 0 |
+| pi | 3/3 | 3/3 | 2 / 1 / 0 | 0 |
+
+Claude's pilot and shuttle HTML failed the exact vendored-CSS byte check
+because each omitted only the trailing `/*$vite$:1*/` marker; their remaining
+vendored CSS matched the frozen file, with the custom theme appended. Separate
+HTML-only checks passed for those two renderings; those checks do not establish
+the full manifest, result, or decision contract. Codex's pilot phone layout
+also uses scrollable overflow, which the corrected validator records separately
+from clipping. These are per-artifact validation outcomes, not a CLI quality
+comparison.
+
+The authored HTML text for eight of the nine retest slides includes every
+answer-key required fact. Pi's pilot slide states 12 of 18 plots were positive,
+but leaves the fact that six were not positive implicit; this is partial
+coverage of the keyed spread fact. Pi's retrofit slide also omits the source
+caveat that North supplied no service-turnaround times, which is not a separate
+required-fact ID in the answer key. Separately, pi pilot's chart positions are inaccurate: on a
+−3% to +14% scale, zero belongs at 17.65% and +6% at 52.94%; the chart places
+them at 50% and 58.82%. Claude's pilot phone chart also has overlapping −3% and
+0% labels. Source-text coverage does not guarantee faithful encoding or
+readability. The corrected validator distinguishes hidden/clip clipping from scrollable
+overflow. Coordinator phone review inspected the top and scrolled bottom for all
+nine attempts; text and caveats were reachable by scrolling in each. It found
+overlapping chart labels on Claude's pilot, incorrect quantitative positions on
+pi's pilot, presentation clipping on both Codex and pi retrofit slides (severe
+on pi), and a Codex shuttle units footer extending beyond its rounded card while
+remaining reachable.
+
+Coordinator print review inspected all nine PDFs: seven had a print layout
+issue (blank first page, content or footer spilling to a second page, or clipped
+lower content); the Codex and pi shuttle PDFs were single-page and visually
+intact. Some PDFs also showed focus outlines. Print review is separate from
+automated browser measurements, and a browser pass does not establish print
+acceptance. These are coordinator/agent artifact reviews, not human reader
+outcomes. The per-attempt text, encoding, phone, print, and validation review
+is in [corrective-review.json](corrective-review.json).
 
 ## Reader outcomes and limits
 
