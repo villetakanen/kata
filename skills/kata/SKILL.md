@@ -1,11 +1,11 @@
 ---
 name: kata
-description: Choose and adapt slide patterns for comparisons, parts of a whole, hierarchies, dependencies, and change over time. Use when turning structured information into a clear slide or improving its visual structure. Works with a slide renderer and optional brand skill; does not plan a whole deck narrative.
+description: Choose, adapt, or reject slide patterns for an audience's question. Use when turning structured information into a clear slide or improving its visual structure. Works with a slide renderer and optional brand skill; does not plan a whole deck narrative.
 ---
 
 # Kata
 
-Start with the relationship the audience needs to understand. Choose the visual structure before applying a theme. A slide may communicate a useful fact without making a recommendation.
+Start with the audience's question and the understanding or decision it supports. Identify the information relationship before choosing a visual structure. A slide may communicate a useful fact without making a recommendation.
 
 ## Choose a pattern
 
@@ -16,12 +16,13 @@ Start with the relationship the audience needs to understand. Choose the visual 
 | What belongs inside what? | Nested groups | [hierarchy](references/hierarchy.md) |
 | What depends on what? | Directed dependencies | [relationship](references/relationship.md) |
 | How did this measure change? | Time series | [change-over-time](references/change-over-time.md) |
+| What is primary, with context beside it? | Asymmetric composition | [golden cut](references/golden-cut.md) |
 
-Read the relevant reference, rather than all five. If the data mixes relationships, choose the one that answers the audience's main question, or separate the questions into slides. Do not force geographic, distributional, or other unsupported data into this set. Offer a more suitable structure and explain the mismatch briefly.
+Read the relevant reference. Check whether the source supports the relationship and whether the medium, density, and reading context keep it legible. Choose a pattern, adapt it, separate questions into slides, or name a better representation outside this catalogue. If none fits, say so and identify what missing information would change the choice. Do not score patterns or imply one wins apart from the purpose.
 
 ## Adapt to the information
 
-Identify the audience question, the units and scope of the supplied data, and a supportable headline. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption.
+Identify the audience question, the units and scope of the supplied data, and a supportable headline. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption. Explain the consequential trade-off and retain values, units, scope, uncertainty, and caveats.
 
 Keep labels, units, denominators, dates, uncertainty, and sources that affect interpretation. Do not invent measurements, causal explanations, option weights, or winners. The worked examples use fictional data and are layout specimens, not evidence to reuse in a real presentation.
 
@@ -36,5 +37,7 @@ For Lys, read [the integration note](references/integration.md) and use the avai
 ## Review the slide
 
 Check whether a reader can answer the audience question from the visual without reconstructing the source prose. Check data fidelity, meaningful grouping, and the suggested reading order. Make numeric encodings proportional; do not use decorative size or area to imply magnitude. Inspect at presentation size for clipped text, unreadable labels, and connectors that imply the wrong relationship. Preserve a text equivalent for charts and diagrams, and use labels or shape as well as color.
+
+Review label association, emphasis, and legibility in the rendered result. Keep the explanation of the selected pattern and consequential assumptions with the deliverable when useful.
 
 Deliver the slide in the requested format. Include the chosen pattern and consequential assumptions in the accompanying explanation when useful; keep authoring instructions out of the audience's slide.
