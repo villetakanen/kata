@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { access, mkdir, readFile, realpath, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { pathToFileURL } from 'node:url';
 
 const protocol = 'kata-eval/v1';
@@ -377,9 +378,35 @@ async function reviewWithBrowser(context, outputDir) {
     await page.screenshot({ path: path.join(outputDir, 'presentation-1440x900.png') });
     const text = await page.locator('body').innerText().catch(() => '');
     if (!text.trim()) errors.push('presentation viewport has no readable body text');
-    const overflowPresentation = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
-    if (overflowPresentation) errors.push('presentation viewport has horizontal overflow');
-    notes.push({ check: 'presentation-1440x900', passed: !overflowPresentation });
+    const viewportOverflow = async () => page.evaluate(() => {
+      const root = document.documentElement;
+      const body = document.body;
+      const overflowX = [getComputedStyle(root).overflowX, getComputedStyle(body).overflowX];
+      const overflowY = [getComputedStyle(root).overflowY, getComputedStyle(body).overflowY];
+      const scrollWidth = Math.max(root.scrollWidth, body.scrollWidth);
+      const clientWidth = root.clientWidth;
+      const scrollHeight = Math.max(root.scrollHeight, body.scrollHeight);
+      const clientHeight = root.clientHeight;
+      const horizontalOverflow = scrollWidth > clientWidth + 2;
+      const verticalOverflow = scrollHeight > clientHeight + 2;
+      const clippedHorizontally = horizontalOverflow && overflowX.some(value => value === 'hidden' || value === 'clip');
+      const clippedVertically = verticalOverflow && overflowY.some(value => value === 'hidden' || value === 'clip');
+      return { clientWidth, scrollWidth, overflowX, horizontalOverflow,
+        horizontalOverflowAmount: Math.max(0, scrollWidth - clientWidth), clippedHorizontally,
+        scrollableHorizontally: horizontalOverflow && overflowX.some(value => value === 'auto' || value === 'scroll'),
+        visibleOverflowHorizontally: horizontalOverflow && overflowX.includes('visible'),
+        clientHeight, scrollHeight, overflowY, verticalOverflow,
+        verticalOverflowAmount: Math.max(0, scrollHeight - clientHeight), clippedVertically,
+        scrollableVertically: verticalOverflow && overflowY.some(value => value === 'auto' || value === 'scroll'),
+        visibleOverflowVertically: verticalOverflow && overflowY.includes('visible'),
+        clipped: clippedHorizontally || clippedVertically,
+        scrollable: (horizontalOverflow && overflowX.some(value => value === 'auto' || value === 'scroll')) ||
+          (verticalOverflow && overflowY.some(value => value === 'auto' || value === 'scroll')) };
+    });
+    const presentationOverflow = await viewportOverflow();
+    if (presentationOverflow.clipped) errors.push('presentation viewport clips overflow with hidden/clip');
+    notes.push({ check: 'presentation-1440x900', passed: !presentationOverflow.clipped, overflow: presentationOverflow,
+      status: presentationOverflow.scrollable ? 'manual-review' : 'measured' });
 
     const slides = page.locator('[data-lys] > article');
     const slideCount = await slides.count();
@@ -396,25 +423,52 @@ async function reviewWithBrowser(context, outputDir) {
           await page.waitForFunction((priorId) => document.querySelector('[data-lys] > article[data-lys-active]')?.id !== priorId, previous, { timeout: 1500 }).catch(() => {});
         }
         await page.screenshot({ path: path.join(outputDir, `${prefix}-slide-${String(index + 1).padStart(2, '0')}.png`) });
-        const layout = await slides.nth(index).evaluate((element) => ({
-          id: element.id || null,
-          active: element.hasAttribute('data-lys-active'),
-          clientHeight: element.clientHeight,
-          scrollHeight: element.scrollHeight,
-          clippedVertically: element.clientHeight > 0 && element.scrollHeight > element.clientHeight + 2
-        }));
+        const layout = await slides.nth(index).evaluate((element) => {
+          const style = getComputedStyle(element);
+          const horizontalOverflow = element.clientWidth > 0 && element.scrollWidth > element.clientWidth + 2;
+          const verticalOverflow = element.clientHeight > 0 && element.scrollHeight > element.clientHeight + 2;
+          const clippedHorizontally = horizontalOverflow && ['hidden', 'clip'].includes(style.overflowX);
+          const clippedVertically = verticalOverflow && ['hidden', 'clip'].includes(style.overflowY);
+          return {
+            id: element.id || null,
+            active: element.hasAttribute('data-lys-active'),
+            clientWidth: element.clientWidth,
+            scrollWidth: element.scrollWidth,
+            overflowX: style.overflowX,
+            horizontalOverflow,
+            horizontalOverflowAmount: Math.max(0, element.scrollWidth - element.clientWidth),
+            clippedHorizontally,
+            scrollableHorizontally: horizontalOverflow && ['auto', 'scroll'].includes(style.overflowX),
+            visibleOverflowHorizontally: horizontalOverflow && style.overflowX === 'visible',
+            clientHeight: element.clientHeight,
+            scrollHeight: element.scrollHeight,
+            overflowY: style.overflowY,
+            verticalOverflow,
+            verticalOverflowAmount: Math.max(0, element.scrollHeight - element.clientHeight),
+            clippedVertically,
+            scrollableVertically: verticalOverflow && ['auto', 'scroll'].includes(style.overflowY),
+            visibleOverflowVertically: verticalOverflow && style.overflowY === 'visible',
+            clipped: clippedHorizontally || clippedVertically,
+            scrollable: (horizontalOverflow && ['auto', 'scroll'].includes(style.overflowX)) ||
+              (verticalOverflow && ['auto', 'scroll'].includes(style.overflowY))
+          };
+        });
         layouts.push(layout);
-        if (layout.clippedVertically) errors.push(`${prefix} slide ${layout.id ?? index + 1} has content taller than its visible slide box`);
+        if (layout.clipped) errors.push(`${prefix} slide ${layout.id ?? index + 1} has content clipped by hidden/clip overflow`);
       }
+      const scrollable = layouts.filter(layout => layout.scrollable).map(layout => layout.id);
+      if (scrollable.length) notes.push({ check: `${prefix}-scrollable-overflow`, status: 'manual-review', slides: scrollable,
+        note: 'Scrollability is measured; it does not establish that all content is readable.' });
       return layouts;
     };
     presentationLayouts = slideCount ? await captureSlides('presentation') : [];
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.screenshot({ path: path.join(outputDir, 'phone-390x844.png') });
-    const overflowPhone = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
-    if (overflowPhone) errors.push('phone viewport has horizontal overflow');
-    notes.push({ check: 'phone-390x844', passed: !overflowPhone });
+    const phoneOverflow = await viewportOverflow();
+    if (phoneOverflow.clipped) errors.push('phone viewport clips overflow with hidden/clip');
+    notes.push({ check: 'phone-390x844', passed: !phoneOverflow.clipped, overflow: phoneOverflow,
+      status: phoneOverflow.scrollable ? 'manual-review' : 'measured' });
     if (slideCount) {
       await page.goto(pathToFileURL(context.htmlPath).href, { waitUntil: 'load' });
       phoneLayouts = await captureSlides('phone');
@@ -504,6 +558,7 @@ async function main() {
   }
   const report = {
     protocol: 'kata-eval-lys-validation/v1',
+    validator_source: { path: 'evals/lys/check.mjs', sha256: sha256(await readFile(fileURLToPath(import.meta.url))) },
     target: options.attempt ? { kind: 'attempt', path: path.resolve(options.attempt) } : { kind: 'html', path: path.resolve(options.html) },
     contract_status: options.attempt ? 'checked' : 'HTML-only; full manifest/result/decision contract not checked',
     structural: { passed: structuralError === null, error: structuralError, lysRoot: context?.scan.hasLysRoot ?? false, slides: context?.scan.slides ?? 0,
