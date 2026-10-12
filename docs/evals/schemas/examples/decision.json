@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which proposal should receive the next review?",
+  "form": "golden-cut",
+  "fit_rationale": "One proposal is the focus; the side field keeps the qualification available without implying a quantitative ranking.",
+  "tradeoff": "The secondary proposal receives less space, so its evidence is summarized.",
+  "caveats": ["The proposals are not quantitatively ranked."]
+}

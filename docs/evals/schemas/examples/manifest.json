@@ -1,0 +1,28 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "2026-10-12T093000Z-codex-case-gc01-candidate",
+  "case": {
+    "id": "gc01",
+    "revision": "1.0.0",
+    "brief": {"path": "inputs/brief.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    "answer_key": {"path": "evaluator/answer-key.md", "sha256": "1111111111111111111111111111111111111111111111111111111111111111"}
+  },
+  "task": {
+    "audience_question": "Which proposal should receive the next review?",
+    "constraints": ["One slide", "Do not imply a quantitative ranking"]
+  },
+  "condition": "kata-candidate",
+  "tool": {"id": "codex", "requested_version": "1.2.3", "model": "example-model", "settings": {"reasoning_effort": "medium"}},
+  "prompt": {"path": "inputs/prompt.md", "sha256": "2222222222222222222222222222222222222222222222222222222222222222"},
+  "skill_snapshot": {
+    "revision": "candidate:abc1234",
+    "directory": "inputs/skill",
+    "files": [{"path": "inputs/skill/SKILL.md", "sha256": "3333333333333333333333333333333333333333333333333333333333333333"}]
+  },
+  "lys_snapshot": {
+    "version": "lys-1.0.0",
+    "directory": "inputs/lys",
+    "files": [{"path": "inputs/lys/lys.js", "sha256": "4444444444444444444444444444444444444444444444444444444444444444"}]
+  },
+  "output_dir": "output"
+}
