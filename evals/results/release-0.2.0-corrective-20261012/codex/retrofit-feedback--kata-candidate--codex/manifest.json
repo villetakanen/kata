@@ -1,0 +1,112 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "release-0.2.0-corrective-20261012",
+  "case": {
+    "id": "retrofit-feedback",
+    "revision": "1.0.0",
+    "brief": {
+      "path": "inputs/brief.md",
+      "sha256": "22d2dfbce4985ea35ffa731752949f54047ec0f84e7db40aca8af8ab53ea3c58"
+    },
+    "answer_key": {
+      "path": "evaluator/answer-key.json",
+      "sha256": "3d53ca63c970b641d36ce95748761da4bb728f62c95b330197d0a60f617cb370"
+    }
+  },
+  "task": {
+    "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+    "constraints": [
+      "Use one slide.",
+      "Do not combine the two reporting sources or rank barriers across them without compatible denominators.",
+      "Do not infer change without a comparable baseline.",
+      "State what information is needed to answer the audience question."
+    ]
+  },
+  "condition": "kata-candidate",
+  "tool": {
+    "id": "codex",
+    "requested_version": null,
+    "model": "gpt-6-luna",
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-RNQ5Cu",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-RNQ5Cu/output/final-response.md",
+        "-m",
+        "gpt-6-luna",
+        "-"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    }
+  },
+  "prompt": {
+    "path": "inputs/prompt.md",
+    "sha256": "1275cddaed5ef629891a28a6cc72601999937f47391f71c2a00641ab3a610083"
+  },
+  "skill_snapshot": {
+    "revision": "d2bf664fcc774e3b7f589b42ff71e689da0894ae",
+    "directory": "inputs/skill",
+    "files": [
+      {
+        "path": "inputs/skill/references/change-over-time.md",
+        "sha256": "eb395237d58a5f4d5e277d433bd744b943642684faed95d8102df4a54fbe4a3b"
+      },
+      {
+        "path": "inputs/skill/references/comparison.md",
+        "sha256": "fc20172f54b9999bf3c38d169091d1032fa61321c7e40e7c9ed2f9b187b5bb18"
+      },
+      {
+        "path": "inputs/skill/references/composition.md",
+        "sha256": "b6d6139d1f0c84126859127e581ce0be1154666a383ecbcbcf163f171f900100"
+      },
+      {
+        "path": "inputs/skill/references/golden-cut.md",
+        "sha256": "86ea110295ce70059ee60cbc78d0165493f3ce41ada275d5a6b566870c43c940"
+      },
+      {
+        "path": "inputs/skill/references/hierarchy.md",
+        "sha256": "0093c30b01c1b7c591c547d07d96827c72a5ab23227054be950416dcf5cd0779"
+      },
+      {
+        "path": "inputs/skill/references/integration.md",
+        "sha256": "3d67fcfe1c0161c85e51b57ea583251c1f9edb9e1114a7fda75607e91a58f779"
+      },
+      {
+        "path": "inputs/skill/references/relationship.md",
+        "sha256": "49857540dd3749e38417504a862c3e5f5775fb5daab874109bf4a63b4eaffd1e"
+      },
+      {
+        "path": "inputs/skill/SKILL.md",
+        "sha256": "a3c23e30cdb67929f5cb42dc9aa2d92a2c9799068809ebad23a65d6e378bb987"
+      }
+    ]
+  },
+  "lys_snapshot": {
+    "version": "1.2.1",
+    "directory": "inputs/lys",
+    "files": [
+      {
+        "path": "inputs/lys/lys.css",
+        "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+      },
+      {
+        "path": "inputs/lys/lys.iife.js",
+        "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+      },
+      {
+        "path": "inputs/lys/NOTICE.md",
+        "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+      }
+    ]
+  },
+  "output_dir": "output"
+}

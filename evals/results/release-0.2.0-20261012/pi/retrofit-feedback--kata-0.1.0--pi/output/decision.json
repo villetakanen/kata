@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Evidence-gated two-part comparison",
+  "fit_rationale": "The question has two distinct answerability tests. Separate partner panels preserve source-specific units and denominators while making the incompatible barrier summaries and non-comparable turnaround measures clear; a shared next-step callout states what would make both questions answerable.",
+  "tradeoff": "A concise side-by-side view sacrifices detailed methodology but avoids falsely pooling or ranking incompatible sources.",
+  "caveats": ["North barrier selections overlap among 40 survey respondents.", "South reviewed 15 open cases, not a reported share of homeowners served; co-occurring barriers were not recorded.", "South's 8-day median covers 11 cases; 4 case times are missing.", "The ‘around two weeks last spring’ note has no identified cases, sample size, or method and is not a comparable baseline.", "North supplied no turnaround times."]
+}

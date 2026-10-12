@@ -1,0 +1,602 @@
+--- stdout ---
+Created the one-slide offline Lys deck and decision record:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y/output/decision.json)
+
+The slide compares all four options on range, upfront cost, and annual energy cost. It identifies Alder as the lowest-upfront option that meets the 200 km minimum and preserves the supplied caveats. JSON validity and required fields were checked.
+
+--- stderr ---
+OpenAI Codex v0.162.1
+--------
+workdir: /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a12efc-6900-7a61-9323-a67c9912d0b6
+--------
+user
+Create one single-file Lys slide that answers the audience question using the supplied brief. Use the standard Lys structure: a `<div data-lys>` containing one or more `<article>` slides. Include a document language, character set, viewport, title, a heading on each slide, and useful `data-notes`. Inline the supplied `lys.css` in a `<style>` element and `lys.iife.js` in a `<script>` element so the HTML works offline. Keep the content readable without JavaScript and use a custom theme. Choose the form that best preserves the evidence and makes the answer clear. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Write `output/decision.json` as valid JSON with exactly this shape and protocol value (replace the example values):
+
+```json
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "copy the audience question",
+  "form": "chosen form, or none",
+  "fit_rationale": "why the form fits or does not fit",
+  "tradeoff": "one consequential trade-off",
+  "caveats": ["preserved caveat"]
+}
+```
+
+Do not include Markdown fences in `decision.json`.
+
+Case brief: inputs/brief.md
+Audience question: Which shuttle option meets the minimum range at the lowest upfront cost?
+Constraints:
+- Use one slide.
+- Compare all options on the same criteria.
+- Show range in kilometres and costs in thousands of dollars.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and make output/decision.json match the JSON example above exactly. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll read the brief and supplied Lys assets, then create the single-slide offline HTML and the matching decision JSON in `output/`.
+exec
+/bin/zsh -lc "rg --files -g '"'!*'"\\.git*'" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+inputs/lys/NOTICE.md
+inputs/lys/lys.iife.js
+inputs/lys/lys.css
+inputs/brief.md
+inputs/prompt.md
+inputs/skill/SKILL.md
+inputs/skill/references/golden-cut.md
+inputs/skill/references/hierarchy.md
+inputs/skill/references/relationship.md
+inputs/skill/references/composition.md
+inputs/skill/references/change-over-time.md
+inputs/skill/references/integration.md
+inputs/skill/references/comparison.md
+
+codex
+I found the supplied Lys skill snapshot and will use its guidance for slide structure and visual composition.
+exec
+/bin/zsh -lc 'cat inputs/brief.md inputs/skill/SKILL.md inputs/skill/references/comparison.md inputs/skill/references/hierarchy.md inputs/skill/references/composition.md' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+# Campus shuttle options
+
+This is a fictional scenario; all figures are invented for the evaluation.
+
+## Audience question
+
+Which shuttle option meets the minimum range at the lowest upfront cost?
+
+## Source facts
+
+The procurement team requires a minimum range of **200 kilometres**. Costs
+are fictional planning estimates in thousands of US dollars.
+
+| Option | Range (km) | Upfront cost (USD thousands) | Estimated annual energy cost (USD thousands) |
+| --- | ---: | ---: | ---: |
+| Alder | 210 | 38 | 4.2 |
+| Birch | 240 | 44 | 3.9 |
+| Cedar | 190 | 35 | 4.5 |
+| Dogwood | 220 | 47 | 3.8 |
+
+The annual energy estimates assume 18,000 kilometres of service per vehicle.
+They do not include maintenance or charging-infrastructure costs. All figures
+are estimates supplied by the same procurement worksheet; no uncertainty
+ranges were provided.
+
+## Constraints
+
+- Make one slide for the procurement team.
+- Compare every option using the same criteria and units.
+- Identify the lowest upfront-cost option among those meeting the 200 km
+  minimum; do not imply it is best on every criterion.
+- Preserve the annual energy-cost assumption and excluded cost categories.
+---
+name: kata
+description: Choose, adapt, or reject slide patterns for an audience's question. Use when turning structured information into a clear slide or improving its visual structure. Works with a slide renderer and optional brand skill; does not plan a whole deck narrative.
+---
+
+# Kata
+
+Start with the audience's question and the understanding or decision it supports. Identify the information relationship before choosing a visual structure. A slide may communicate a useful fact without making a recommendation.
+
+## Choose a pattern
+
+| Audience question | Pattern | Read |
+| --- | --- | --- |
+| How do these options differ on the same criteria? | Aligned comparison | [comparison](references/comparison.md) |
+| What makes up this total? | Whole and parts | [composition](references/composition.md) |
+| What belongs inside what? | Nested groups | [hierarchy](references/hierarchy.md) |
+| What depends on what? | Directed dependencies | [relationship](references/relationship.md) |
+| How did this measure change? | Time series | [change-over-time](references/change-over-time.md) |
+| What is primary, with context beside it? | Asymmetric composition | [golden cut](references/golden-cut.md) |
+
+Read the relevant reference. Check whether the source supports the relationship and whether the medium, density, and reading context keep it legible. Choose a pattern, adapt it, separate questions into slides, or name a better representation outside this catalogue. If none fits, say so and identify what missing information would change the choice. Do not score patterns or imply one wins apart from the purpose.
+
+## Adapt to the information
+
+Identify the audience question, the units and scope of the supplied data, and a supportable headline. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption. Explain the consequential trade-off and retain values, units, scope, uncertainty, and caveats.
+
+Keep labels, units, denominators, dates, uncertainty, and sources that affect interpretation. Do not invent measurements, causal explanations, option weights, or winners. The worked examples use fictional data and are layout specimens, not evidence to reuse in a real presentation.
+
+Each reference includes a message, a layout, an example, a failure condition, and a rationale. The rationales are design judgments. Gestalt vocabulary supplies analogies, not proof that a layout is universally effective. When making empirical psychology claims, find and cite research supporting the particular claim.
+
+## Render with the available tools
+
+Kata owns the information structure and its reading order. The renderer owns slide behavior and output format. The brand skill owns typography, colors, imagery, and other visual identity. Preserve meaningful scales, grouping, and labels when applying a brand. The examples' cream and rust theme is replaceable and is not a Futurice theme.
+
+For Lys, read [the integration note](references/integration.md) and use the available Lys skill or documented HTML contract. For another output format, use its authoring workflow. Kata works without Lys or a brand skill and does not install either. Only claim an integration was tested when the actual output has been inspected.
+
+## Review the slide
+
+Check whether a reader can answer the audience question from the visual without reconstructing the source prose. Check data fidelity, meaningful grouping, and the suggested reading order. Make numeric encodings proportional; do not use decorative size or area to imply magnitude. Inspect at presentation size for clipped text, unreadable labels, and connectors that imply the wrong relationship. Preserve a text equivalent for charts and diagrams, and use labels or shape as well as color.
+
+Review label association, emphasis, and legibility in the rendered result. Keep the explanation of the selected pattern and consequential assumptions with the deliverable when useful.
+
+Deliver the slide in the requested format. Include the chosen pattern and consequential assumptions in the accompanying explanation when useful; keep authoring instructions out of the audience's slide.
+# Aligned comparison
+
+**Form:** Several alternatives share the same attributes. **Audience question:** Which trade-offs matter for this decision?
+
+Use a matrix when exact values or mixed units matter. Use aligned bars or dots when the question is primarily about one numeric measure. Avoid a matrix for long narrative descriptions or options evaluated on unrelated criteria. Split a large comparison around the actual decision instead of shrinking everything.
+
+## Structure
+
+Put alternatives in columns and criteria in rows, with units in row labels. Keep identical attributes in the same position. Use consistent precision. Put the decisive criterion near the top when the audience has supplied one. Highlight a recommendation only when the data and decision criteria support it. Missing data remains “Unknown,” not a dash that could mean zero.
+
+## Worked example
+
+Fictional service launch. An operations lead needs a launch route within six weeks and an initial budget of €80k. Costs are one-time estimates; lead times are estimates too.
+
+| Criterion | Build | Buy | Partner |
+| --- | ---: | ---: | ---: |
+| Lead time, weeks | 12 | 4 | 6 |
+| Initial cost, €k | 120 | 60 | 80 |
+| Control | Full | Limited | Shared |
+
+**Before:** Three paragraphs, each listing its option's time, cost, and control. The audience must remember values across paragraphs.
+
+**After headline:** “Buy and Partner meet both launch limits”
+
+**After layout:** One matrix with the constraints stated above it. Emphasize the time and cost cells for Buy and Partner, retaining their text. State below: “The remaining trade-off is control.” This does not establish a winner or address lifetime cost.
+
+## Rationale and limits
+
+Design judgment: common alignment makes a criterion easy to scan. Similarity is a useful Gestalt analogy for repeated cell treatment; it does not prove this matrix is best for every audience. Avoid unrelated icons, ratings without defined scales, and weighted totals without agreed weights.
+
+**Check:** All nine values survive the transformation, both constraints remain visible, and no option becomes a recommendation by styling alone.
+# Nested groups
+
+**Form:** A rooted structure in which each child has one parent. **Audience question:** What belongs where?
+
+Use nested regions for membership, a tree for reporting lines or deeper parent-child structure, and an indented list when space is tight. Multiple parents or cross-group dependencies call for a relationship diagram. Do not infer reporting authority from mere grouping.
+
+## Structure
+
+Name the root and the relation being shown. Give siblings the same visual treatment and place children within their parent region. Keep spacing between groups greater than spacing within them. Use equal areas when size has no meaning. Limit visible depth to what the audience needs, with a separate detail slide if required.
+
+## Worked example
+
+Fictional service launch. A new team member needs the workstream map, not a reporting chart.
+
+- Launch programme
+  - Experience: Research, Design
+  - Delivery: Engineering, Operations
+
+**Before:** One sentence listing the programme, workstreams, and four disciplines.
+
+**After headline:** “Launch work belongs to two workstreams”
+
+**After layout:** A single enclosing region named Launch programme. Inside, two equal regions named Experience and Delivery, each containing its two disciplines. Add “Workstream membership; area does not indicate team size.”
+
+## Rationale and limits
+
+Design judgment: containment expresses membership without a tangle of connectors. Common region is the Gestalt inspiration. Equal region size is a deliberate choice to avoid implying staffing levels. It is not evidence that the workstreams have equal capacity or influence.
+
+**Check:** Each discipline has exactly one parent in the supplied example. Do not silently duplicate a shared team to make the diagram fit.
+# Whole and parts
+
+**Form:** Mutually exclusive parts exhaust a known total. **Audience question:** Where does the whole go?
+
+Use a single stacked bar for a broad allocation and direct labels for exact amounts. If precise ranking of similar parts is the main question, use aligned bars instead. If categories overlap or the total is unknown, establish the denominator or use a different pattern.
+
+## Structure
+
+State the whole and its unit. Draw segment lengths from actual proportions. Preserve small parts even if labels must sit outside. Label categories directly, avoiding a legend that depends on color alone. Keep the order meaningful and stable across repeated slides. Negative values and flows need another representation.
+
+## Worked example
+
+Fictional service launch. The sponsor wants to understand the planned allocation of a €200k launch budget. Categories are exclusive and cover the entire budget.
+
+| Part | €k | Share |
+| --- | ---: | ---: |
+| Product | 100 | 50% |
+| Operations | 50 | 25% |
+| Research | 30 | 15% |
+| Contingency | 20 | 10% |
+
+**Before:** A bulleted list of the four amounts and the total.
+
+**After headline:** “Product accounts for half of the launch budget”
+
+**After layout:** Total above a 100% stacked bar. Four aligned labels below show names, amounts, and percentages. Use proportionate widths of 50, 25, 15, and 10 percent. Make clear that this is an allocation, not actual spending.
+
+## Rationale and limits
+
+Design judgment: one bounded bar makes the whole explicit. Common region is a Gestalt analogy for parts belonging to that whole. Segment length is the quantitative encoding; color only identifies categories. Do not suggest that the allocation is effective or optimal without evidence.
+
+**Check:** Amounts sum to €200k and shares to 100%. An omitted category, rounded residual, or overlap must be disclosed rather than silently corrected.
+
+exec
+/bin/zsh -lc 'cat inputs/skill/references/integration.md inputs/prompt.md' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+# Combining Kata with a renderer and a brand
+
+The first iteration uses three separate responsibilities:
+
+| Layer | Owns | Example |
+| --- | --- | --- |
+| Kata | Message, relationships, encoding, reading order | A comparison matrix with common rows |
+| Lys or another renderer | Output, navigation, sizing, notes, print behavior | Semantic HTML articles in a Lys deck |
+| Optional brand skill | Visual identity | Approved typography and palette |
+
+These are composition guidelines, not an adapter API. There is no separate `kata-lys` package yet.
+
+## Lys
+
+Read the available Lys instructions when producing a deck. The locally inspected Lys 1.2.1 contract uses a `div` with `data-lys` containing direct `article` children. Give each slide a heading and useful `data-notes`. Keep Kata's layout inside the article. Include the renderer CSS and JavaScript according to its packaging instructions, followed by the theme's CSS overrides. Use public `--lys-*` tokens; leave internal state attributes to Lys.
+
+A dependency chart can be inline SVG with a title and text description. A comparison should remain a semantic table. Charts should retain their values in text or an accessible data table. A no-JavaScript view must still expose the slide content. Check both navigation and print output after integration.
+
+The repository's `examples/kata-lys.html` is a working single-file specimen with ten slides: a before and after for each form. It bundles the locally available Lys build; it does not fetch a CDN resource at runtime. `examples/index.html` offers a scrollable comparison gallery. These are repository review artifacts and are not required when installing just this skill folder.
+
+The specimen uses Lys's direct transition mode. A small chapter-navigation listener routes local anchor clicks through the public `Lys.Lys.from(element).goTo(id)` API so the active slide, accessibility state, and subsequent arrow-key navigation agree. Plain anchors remain usable without JavaScript. The vendored runtime itself is unchanged.
+
+## Brand skills
+
+If a Futurice brand skill is supplied, read and apply it. This repository does not contain or verify Futurice assets, tokens, or rules. Do not label a neutral example as on-brand. Keep the data's grouping and scales intact while changing the visual identity. If a brand palette cannot distinguish adjacent segments, retain explicit labels and boundaries instead of relying on hue.
+
+## Example requests
+
+“Use Kata to compare these three suppliers for the procurement team. Cost and delivery time matter, but don't choose a winner.”
+
+“Use Kata with Lys to show how this budget is allocated. Apply the attached brand skill.”
+
+“Improve this slide's structure using Kata. Preserve the supplied figures and explain the choice of pattern.”
+Create one single-file Lys slide that answers the audience question using the supplied brief. Use the standard Lys structure: a `<div data-lys>` containing one or more `<article>` slides. Include a document language, character set, viewport, title, a heading on each slide, and useful `data-notes`. Inline the supplied `lys.css` in a `<style>` element and `lys.iife.js` in a `<script>` element so the HTML works offline. Keep the content readable without JavaScript and use a custom theme. Choose the form that best preserves the evidence and makes the answer clear. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Write `output/decision.json` as valid JSON with exactly this shape and protocol value (replace the example values):
+
+```json
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "copy the audience question",
+  "form": "chosen form, or none",
+  "fit_rationale": "why the form fits or does not fit",
+  "tradeoff": "one consequential trade-off",
+  "caveats": ["preserved caveat"]
+}
+```
+
+Do not include Markdown fences in `decision.json`.
+
+Case brief: inputs/brief.md
+Audience question: Which shuttle option meets the minimum range at the lowest upfront cost?
+Constraints:
+- Use one slide.
+- Compare all options on the same criteria.
+- Show range in kilometres and costs in thousands of dollars.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and make output/decision.json match the JSON example above exactly. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+
+exec
+/bin/zsh -lc 'wc -c inputs/lys/lys.css inputs/lys/lys.iife.js && head -c 1600 inputs/lys/lys.css && head -c 800 inputs/lys/lys.iife.js' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+    3235 inputs/lys/lys.css
+    6970 inputs/lys/lys.iife.js
+   10205 total
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[data-lys]>article{--_lys-aspect-ratio:var(--lys-aspect-ratio,16 / 9);--_lys-slide-padding:var(--lys-slide-padding,4cqi);--_lys-transition-duration:var(--lys-transition-duration,.3s);--_lys-transition-easing:var(--lys-transition-easing,ease-in-out);--_lys-font-size-base:var(--lys-font-size-base,clamp(.75rem, 2.5cqi, 1.5rem));--_lys-slide-gap:var(--lys-slide-gap,0);--_lys-slide-max-width:var(--lys-slide-max-width,100vw);--_lys-slide-max-height:var(--lys-slide-max-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark;background:var(--_lys-backdrop);color:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-lys]>article{scroll-snap-align:center;scroll-snap-stop:always;padding:var(--_lys-slide-padding);font-size:var(--_lys-font-size-base);box-sizing:border-box;width:min(var(--_lys-slide-max-width), var(--_lys-slide-max-height) * var(--_lys-aspect-ratio));aspect-ratio:var(--_lys-aspect-ratio);max-height:var(--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:attr(data-backgrouvar Lys=(function(e){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function t(e,t,n){let r=[],i=new Map,a=new Set;if(e.setAttribute(`role`,`group`),r.push(`role`),e.setAttribute(`aria-roledescription`,`slide deck`),r.push(`aria-roledescription`),!e.hasAttribute(`aria-label`)&&!e.hasAttribute(`aria-labelledby`)){let n=(t[0]?.querySelector(`h1, h2, h3, h4, h5, h6`))?.textContent?.trim()||`Slide deck`;e.setAttribute(`aria-label`,n),r.push(`aria-label`)}let o=t.length;for(let e=0;e<o;e++){let r=t[e];if(!r)continue;let s=[];r.setAttribute(`role`,`group`),s.push(`role`),r.setAttribute(`aria-roledescription`,`slide`),s.push(`aria-roledescription`),r.hasAttribute(`aria-label`)||(r.setAttribute(`aria-label`,`Slide ${e+1} of ${o}`),s.push(`aria-label`)),e!==n&&(r.setAttribute(`aria-hi
+exec
+/bin/zsh -lc 'cat inputs/lys/lys.css' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[data-lys]>article{--_lys-aspect-ratio:var(--lys-aspect-ratio,16 / 9);--_lys-slide-padding:var(--lys-slide-padding,4cqi);--_lys-transition-duration:var(--lys-transition-duration,.3s);--_lys-transition-easing:var(--lys-transition-easing,ease-in-out);--_lys-font-size-base:var(--lys-font-size-base,clamp(.75rem, 2.5cqi, 1.5rem));--_lys-slide-gap:var(--lys-slide-gap,0);--_lys-slide-max-width:var(--lys-slide-max-width,100vw);--_lys-slide-max-height:var(--lys-slide-max-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark;background:var(--_lys-backdrop);color:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-lys]>article{scroll-snap-align:center;scroll-snap-stop:always;padding:var(--_lys-slide-padding);font-size:var(--_lys-font-size-base);box-sizing:border-box;width:min(var(--_lys-slide-max-width), var(--_lys-slide-max-height) * var(--_lys-aspect-ratio));aspect-ratio:var(--_lys-aspect-ratio);max-height:var(--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:attr(data-background type(<color>), none)}[data-lys]>article:focus{outline:none}.lys-sr-only{clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}[data-lys] [data-lys-nav]{z-index:1;position:fixed;top:0;left:0;right:0}[data-lys][data-lys-mode]{scroll-snap-type:none;display:block;position:relative;overflow:hidden}[data-lys][data-lys-mode]>article{scroll-snap-align:unset;scroll-snap-stop:unset;opacity:0;pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}[data-lys][data-lys-ready][data-lys-mode]>article[data-transition=fade]{transition-property:opacity;transition-duration:var(--_lys-transition-duration);transition-timing-function:var(--_lys-transition-easing)}[data-lys][data-lys-mode]>article:not([data-transition=fade]){transition-duration:0s}[data-lys][data-lys-mode]>article[data-lys-active]{opacity:1;pointer-events:auto}@media (prefers-reduced-motion:reduce){[data-lys],[data-lys]>article{--_lys-transition-duration:0s}}@media print{@page{size:var(--lys-print-page-size,13.333in 7.5in);margin:0}[data-lys]{scroll-snap-type:none;background:0 0;height:auto;display:block;overflow:visible}[data-lys]>article{scroll-snap-align:unset;page-break-after:always;break-after:page;-webkit-print-color-adjust:exact;-moz-print-color-adjust:exact;print-color-adjust:exact;margin:0 auto}[data-lys]>article+article{margin-top:0}[data-lys]>article:last-of-type{page-break-after:avoid;break-after:avoid}[data-lys][data-lys-mode]>article{opacity:1;pointer-events:auto;position:static;transform:none}[data-lys] [data-lys-nav]{display:none}}
+/*$vite$:1*/
+codex
+The decision is supported by an aligned comparison: Alder, Birch, and Dogwood meet the 200 km threshold, and Alder has the lowest upfront estimate among them. I’m keeping annual energy cost in the same table and retaining its operating assumption and exclusions as caveats.
+exec
+/bin/zsh -lc 'tail -c 1000 inputs/lys/lys.iife.js' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+e(`data-lys-active`,``),this.#e.setAttribute(`data-lys-current`,String(this.#n)),!this.#i){let e=matchMedia(`(prefers-reduced-motion: reduce)`).matches;i.scrollIntoView({behavior:e?`instant`:`smooth`,block:`start`})}this.#e.dispatchEvent(new CustomEvent(`lys:slidechange`,{detail:{from:n,to:this.#n,slide:i},bubbles:!0}))}}destroy(){this.#a&&=(cancelAnimationFrame(this.#a),0),this.#s?.destroy(),this.#s=null,this.#o?.destroy(),this.#o=null,this.#c?.destroy(),this.#c=null;for(let e of this.#t)e.removeAttribute(`data-lys-active`);this.#e.removeAttribute(`data-lys-current`),this.#e.removeAttribute(`data-lys-mode`),this.#e.removeAttribute(`data-lys-ready`),this.#i=null;for(let[e,t]of this.#r)e.classList.remove(...t);this.#r.clear();for(let e of this.#t)e.dataset.background&&(e.style.background=``);this.#t=[],this.#n=-1,a.delete(this.#e)}};return typeof document<`u`&&(document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,()=>o.init(),{once:!0}):o.init()),e.Lys=o,e})({});
+exec
+/bin/zsh -lc "mkdir -p output && python3 - <<'PY'
+from pathlib import Path
+import json
+root = Path('.')
+css = (root/'inputs/lys/lys.css').read_text()
+js = (root/'inputs/lys/lys.iife.js').read_text()
+html = '''<"'!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus shuttle range and upfront cost</title>
+  <style>
+'"''' + css + '''
+  </style>
+  <style>
+    :root {
+      --lys-backdrop: #101b2a;
+      --lys-aspect-ratio: 16 / 9;
+      --lys-slide-padding: 4.3cqi;
+      --lys-font-size-base: clamp(12px, 1.35cqi, 18px);
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif;
+      background: #101b2a;
+      color: #f3f5f0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    [data-lys] { --lys-backdrop: #101b2a; color: #f3f5f0; }
+    [data-lys] > article {
+      color: #f3f5f0;
+      background: #101b2a;
+    }
+    .slide {
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 2.1cqi;
+      background:
+        radial-gradient(ellipse at 92% 2%, rgba(120, 214, 160, .12), transparent 33%),
+        #101b2a;
+    }
+    .kicker {
+      margin: 0 0 .65cqi;
+      color: #9eafc0;
+      font-size: 1.05cqi;
+      font-weight: 750;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 24ch;
+      margin: 0;
+      color: #f5f7f2;
+      font-size: 3.2cqi;
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      font-weight: 750;
+    }
+    .answer {
+      display: flex;
+      align-items: center;
+      gap: 1.2cqi;
+      margin-top: 1.2cqi;
+      color: #cbd5db;
+      font-size: 1.25cqi;
+      line-height: 1.35;
+    }
+    .answer strong { color: #89e2ae; font-weight: 750; }
+    .answer .mark {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 2.3cqi;
+      height: 2.3cqi;
+      border-radius: 50%;
+      background: #89e2ae;
+      color: #102131;
+      font-size: 1.25cqi;
+      font-weight: 900;
+    }
+    .table-wrap {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      min-height: 0;
+      border: 1px solid #344456;
+      border-radius: 1cqi;
+      background: rgba(21, 34, 50, .82);
+      overflow: hidden;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-variant-numeric: tabular-nums;
+    }
+    col.option { width: 21%; }
+    col.range { width: 31%; }
+    col.cost { width: 23%; }
+    col.energy { width: 25%; }
+    thead th {
+      padding: 1.25cqi 1.35cqi;
+      color: #aebdca;
+      background: #1a2a3d;
+      text-align: left;
+      font-size: 1.05cqi;
+      line-height: 1.25;
+      font-weight: 700;
+      vertical-align: bottom;
+    }
+    thead th:not(:first-child), tbody td:not(:first-child) { text-align: right; }
+    thead th:first-child { padding-left: 1.7cqi; }
+    tbody th, tbody td {
+      padding: 1.12cqi 1.35cqi;
+      border-top: 1px solid #2b3c4e;
+      font-size: 1.28cqi;
+      line-height: 1.15;
+    }
+    tbody th {
+      padding-left: 1.7cqi;
+      color: #f4f6f3;
+      text-align: left;
+      font-weight: 720;
+    }
+    tbody td { color: #d9e1e5; }
+    tbody tr.selected { background: rgba(91, 187, 128, .13); }
+    tbody tr.selected th, tbody tr.selected td { color: #f4fff6; }
+    .range-cell {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: .75cqi;
+    }
+    .status {
+      display: inline-block;
+      padding: .36cqi .58cqi;
+      border-radius: 99px;
+      font-size: .78cqi;
+      font-weight: 800;
+      letter-spacing: .07em;
+      white-space: nowrap;
+    }
+    .pass { background: #244a3a; color: #9ce8b7; }
+    .fail { background: #4a3433; color: #f1b1a6; }
+    .selected .status { background: #89e2ae; color: #102b20; }
+    .foot {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2cqi;
+      align-items: end;
+      color: #aebdca;
+      font-size: .94cqi;
+      line-height: 1.45;
+    }
+    .foot p { margin: 0; }
+    .key { color: #89e2ae; font-weight: 700; text-align: right; white-space: nowrap; }
+    @media (max-width: 680px) {
+      .foot { grid-template-columns: 1fr; }
+      .key { text-align: left; }
+      .status { letter-spacing: 0; }
+    }
+    @media print {
+      :root, [data-lys], [data-lys] > article { background: #101b2a "'!important; }
+    }
+  </style>
+</head>
+<body>
+  <div data-lys aria-label="Campus shuttle procurement comparison">
+    <article class="slide" data-notes="Alder is the lowest upfront-cost option among those meeting the procurement minimum: 210 km for an estimated USD 38 thousand upfront. Cedar costs USD 35 thousand upfront but its 190 km range is below the 200 km minimum. All costs are fictional planning estimates from one procurement worksheet. Annual energy estimates assume 18,000 km of service per vehicle and exclude maintenance and charging-infrastructure costs. No uncertainty ranges were provided.">
+      <header>
+        <p class="kicker">Campus shuttle procurement · decision check</p>
+        <h1>Alder meets the range minimum at the lowest upfront cost</h1>
+        <p class="answer"><span class="mark" aria-hidden="true">✓</span><span><strong>Alder:</strong> 210 km range · USD $38k upfront. The minimum is 200 km.</span></p>
+      </header>
+
+      <div class="table-wrap">
+        <table aria-label="Shuttle options compared by range, upfront cost, and annual energy cost">
+          <colgroup><col class="option"><col class="range"><col class="cost"><col class="energy"></colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Shuttle option</th>
+              <th scope="col">Range<br>(km; minimum 200)</th>
+              <th scope="col">Upfront cost<br>(USD thousands)</th>
+              <th scope="col">Annual energy cost¹<br>(USD thousands/year)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="selected">
+              <th scope="row">Alder</th>
+              <td><span class="range-cell"><span>210</span><span class="status pass">MEETS</span></span></td>
+              <td><strong>$38</strong></td>
+              <td>$4.2</td>
+            </tr>
+            <tr>
+              <th scope="row">Birch</th>
+              <td><span class="range-cell"><span>240</span><span class="status pass">MEETS</span></span></td>
+              <td>$44</td>
+              <td>$3.9</td>
+            </tr>
+            <tr>
+              <th scope="row">Cedar</th>
+              <td><span class="range-cell"><span>190</span><span class="status fail">BELOW</span></span></td>
+              <td>$35</td>
+              <td>$4.5</td>
+            </tr>
+            <tr>
+              <th scope="row">Dogwood</th>
+              <td><span class="range-cell"><span>220</span><span class="status pass">MEETS</span></span></td>
+              <td>$47</td>
+              <td>$3.8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="foot">
+        <p>¹ Annual energy estimates assume 18,000 km of service per vehicle; exclude maintenance and charging-infrastructure costs. All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided.</p>
+        <p class="key">Lowest upfront cost among options ≥200 km</p>
+      </footer>
+    </article>
+  </div>
+  <script>
+'"''' + js + '''
+  </script>
+</body>
+</html>
+'''
+(root/'output/slide.html').write_text(html)
+decision = {
+  \"protocol\": \"kata-eval-decision/v1\",
+  \"audience_question\": \"Which shuttle option meets the minimum range at the lowest upfront cost?\",
+  \"form\": \"Aligned comparison matrix\",
+  \"fit_rationale\": \"A shared table keeps all four shuttle options on the same criteria and units, puts the 200 km threshold beside each range, and makes Alder's lowest upfront cost among qualifying options easy to identify while retaining annual energy estimates.\",
+  \"tradeoff\": \"The matrix preserves exact values across three criteria, so the annual energy assumption and exclusions sit in a compact footer rather than receiving separate visual emphasis.\",
+  \"caveats\": [
+    \"Annual energy estimates assume 18,000 kilometres of service per vehicle and exclude maintenance and charging-infrastructure costs.\",
+    \"All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided.\",
+    \"Cedar has the lowest upfront estimate overall ("'$35k) but does not meet the 200 km minimum (190 km)."
+  ]
+}
+(root/'"'output/decision.json').write_text(json.dumps(decision, ensure_ascii=False, indent=2) + '\\n')
+PY
+rg --files output" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+output/slide.html
+output/decision.json
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+import json
+p = Path('output/slide.html')
+s = p.read_text().replace('grid-template-rows: auto auto 1fr auto;', 'grid-template-rows: auto 1fr auto;')
+p.write_text(s)
+p = Path('output/decision.json')
+d = json.loads(p.read_text())
+d['tradeoff'] = 'Selecting on the stated upfront-cost and range criteria does not establish the lowest total cost of ownership; annual energy is shown for context, while maintenance and infrastructure costs are excluded.'
+p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\\n')
+PY
+python3 - <<'PY'
+from pathlib import Path
+import json
+p=Path('output')
+d=json.loads((p/'decision.json').read_text())
+assert set(d)=={'protocol','audience_question','form','fit_rationale','tradeoff','caveats'}
+s=(p/'slide.html').read_text()
+for x in ['<html lang=\"en\">','<meta charset=\"utf-8\">','<meta name=\"viewport\"','<div data-lys','<article','data-notes=','Alder','Birch','Cedar','Dogwood','18,000','charging-infrastructure','no uncertainty ranges']:
+    assert x in s, x
+print('JSON valid; requested fields and slide content present. Output files:', ', '.join(sorted(x.name for x in p.iterdir())))
+PY" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y
+ succeeded in 0ms:
+JSON valid; requested fields and slide content present. Output files: decision.json, slide.html
+
+codex
+Created the one-slide offline Lys deck and decision record:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-35qa6Y/output/decision.json)
+
+The slide compares all four options on range, upfront cost, and annual energy cost. It identifies Alder as the lowest-upfront option that meets the 200 km minimum and preserves the supplied caveats. JSON validity and required fields were checked.
+tokens used
+41,796

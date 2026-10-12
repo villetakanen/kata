@@ -1,0 +1,14 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Asymmetric evidence summary (adapted golden cut)",
+  "fit_rationale": "A single slide can lead with the supported conclusion that neither overall ranking nor improvement is established, then keep partner-specific evidence and the information needed to resolve each part visible. A matrix or trend chart would imply compatible categories or a comparable baseline that the brief does not provide.",
+  "tradeoff": "The slide prioritizes the answerability limits over a direct winner or trend visualization, so readers must compare the separately labeled source figures themselves.",
+  "caveats": [
+    "North's multiple selections overlap; its counts are among 40 survey respondents.",
+    "South reviewed 15 open cases, not a reported total of homeowners served; other barriers were not systematically recorded.",
+    "South's 8-day median covers 11 cases; four times are missing.",
+    "The “around two weeks last spring” note has no identified cases, sample size, or method and is not comparable to the recent median.",
+    "There is no shared period definition, common denominator, or comparable baseline across partners."
+  ]
+}

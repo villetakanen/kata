@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "decision-led evidence summary",
+  "fit_rationale": "The question asks what action the evidence supports, so a decision-led summary pairs the bounded yield evidence with a clear next step rather than implying a causal comparison or forcing the results into a time-series chart.",
+  "tradeoff": "Prioritizes the steering decision over showing plot-level detail; the range and positive/non-positive counts retain key variation.",
+  "caveats": ["18 plots at 3 sites over one winter growing cycle; plots were not randomly assigned and crop mix and baseline conditions differed between sites.", "The +6% is a reported median difference versus each site's reference plots, not evidence that lighting caused the difference.", "Installation cost and energy use were not measured; yield alone does not support wider installation."]
+}

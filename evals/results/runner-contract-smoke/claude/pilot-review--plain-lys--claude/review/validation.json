@@ -1,0 +1,28 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "target": {
+    "kind": "attempt",
+    "path": "/private/tmp/kata-eval-smoke/runner-contract-smoke/claude/pilot-review--plain-lys--claude"
+  },
+  "contract_status": "checked",
+  "structural": {
+    "passed": false,
+    "error": "result.frozen_inputs has unreferenced file evaluator/reader-task.md",
+    "lysRoot": false,
+    "slides": 0,
+    "manifestSha256": null,
+    "resultSha256": null,
+    "artifacts": {}
+  },
+  "review": {
+    "checks": [],
+    "errors": [],
+    "passed": null,
+    "status": "not-run"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

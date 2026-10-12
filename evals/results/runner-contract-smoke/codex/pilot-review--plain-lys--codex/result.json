@@ -1,0 +1,82 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "runner-contract-smoke",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "a4679a2310efc4cba09c6e822fae7725dd48b1178f6d3577088c9ccc8c4027a3"
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T07:09:10.528Z",
+  "ended_at": "2026-10-12T07:10:11.950Z",
+  "tool": {
+    "id": "codex",
+    "observed_version": "codex-cli 0.162.1",
+    "model": "gpt-6-luna",
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8n0OrD",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8n0OrD/output/final-response.md",
+        "-m",
+        "gpt-6-luna",
+        "-"
+      ]
+    },
+    "exit_code": 0
+  },
+  "frozen_inputs": [
+    {
+      "path": "inputs/brief.md",
+      "sha256": "f28885c95f4d23075eb72a6bd8b5d780133263e1a9dcb730b4e17e500b3b003d"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "sha256": "c363447092b67cae380cdce796ce4181f02e1fcbc912c108168132ab6230ad3a"
+    },
+    {
+      "path": "inputs/lys/lys.css",
+      "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+    },
+    {
+      "path": "inputs/lys/lys.iife.js",
+      "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+    },
+    {
+      "path": "inputs/lys/NOTICE.md",
+      "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+    },
+    {
+      "path": "evaluator/answer-key.json",
+      "sha256": "89f4e89007e1eba734eac3f876e9e2c7f95c7f64cc59352d537c6783b8bb8102"
+    },
+    {
+      "path": "evaluator/reader-task.md",
+      "sha256": "31f6de9cd404d0af618a3096ec178fc08c3a921e7d58c63319360265db85df40"
+    }
+  ],
+  "artifacts": {
+    "decision": {
+      "path": "output/decision.json",
+      "sha256": "50bfc0df7cd1dfd514b743534a34f7aefbacc896a566ff4c4f8579f961ae37f3"
+    },
+    "lys_html": {
+      "path": "output/slide.html",
+      "sha256": "94100c15a8412af03a3604643260b8e6c56a0a8b4ebed945ccb8ca8f1cef02c8"
+    },
+    "final_response": {
+      "path": "output/final-response.md",
+      "sha256": "bf67da506f543d1a58ccdf5bdb64f5c1b03b533d8addf5b01969b52a38345dbb"
+    },
+    "log": {
+      "path": "output/tool.log",
+      "sha256": "3abee4e83a1fad4e4a3bf7274d3ded8332f7c80e7cb1af5363387bb18eae0422"
+    }
+  },
+  "failure": null
+}

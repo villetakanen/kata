@@ -1,0 +1,14 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Evidence-status asymmetric composition",
+  "fit_rationale": "The two parts of the question require separate evidence: partner-specific barrier figures and turnaround measures. An asymmetric two-panel slide makes the limits explicit without suggesting compatible comparison, while naming the information needed to answer both parts.",
+  "tradeoff": "Separating partner evidence avoids a misleading overall ranking, but means the slide cannot name a single most-common barrier.",
+  "caveats": [
+    "North allowed overlapping selections among 40 survey respondents.",
+    "South reviewed 15 cases but did not report the total homeowners served; other barriers may co-occur.",
+    "South turnaround median is 8 days for 11 cases; four of 15 reviewed cases had no time recorded.",
+    "The unmethoded “around two weeks last spring” note is not comparable to the recent partial median.",
+    "Partners lack a shared period definition, common denominator, and comparable baseline."
+  ]
+}

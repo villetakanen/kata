@@ -1,0 +1,12 @@
+{
+  "schema": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "Single-slide comparison table with an aligned range bar and explicit 200 km threshold, plus upfront and annual energy cost columns.",
+  "fit_rationale": "The audience needs a constrained selection: identify which options meet 200 km, then compare their upfront estimates. The shared table keeps all four options on identical criteria and makes Cedar's shortfall and Alder's lowest qualifying upfront cost visible. Annual energy estimates remain alongside upfront cost to preserve a relevant tradeoff.",
+  "tradeoff": "Alder is the lowest upfront-cost option among those that meet the minimum at $38 thousand and 210 km. It does not have the lowest annual energy estimate; Dogwood is estimated at $3.8 thousand per year.",
+  "caveats": [
+    "All figures are fictional planning estimates from the same procurement worksheet; no uncertainty ranges were provided.",
+    "Annual energy estimates assume 18,000 kilometres of service per vehicle per year.",
+    "Annual energy estimates exclude maintenance and charging-infrastructure costs."
+  ]
+}

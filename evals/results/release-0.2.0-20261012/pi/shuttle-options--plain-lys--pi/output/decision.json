@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "comparative table",
+  "fit_rationale": "A same-criteria table compares range, upfront cost, and annual energy cost for every option, while a clear callout identifies the least expensive option that reaches the 200 km threshold.",
+  "tradeoff": "Showing annual energy cost alongside the decision criteria adds context but can compete visually with the primary range-and-upfront-cost comparison.",
+  "caveats": ["Cedar costs less upfront but falls short of the 200 km minimum.", "Annual energy estimates assume 18,000 km of service per vehicle and exclude maintenance and charging-infrastructure costs.", "All figures are fictional estimates from one procurement worksheet; no uncertainty ranges were provided."]
+}

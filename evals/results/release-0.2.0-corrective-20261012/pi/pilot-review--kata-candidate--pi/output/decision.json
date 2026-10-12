@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Asymmetric composition",
+  "fit_rationale": "A clear next step leads, with the observed yield signal and its limits alongside it; the layout makes a measurement-cycle decision legible without implying that the pilot proves efficacy or rollout readiness.",
+  "tradeoff": "Emphasizing another measurement cycle gives less space to detailing the plot-level distribution, so the median, range, positive-count denominator, and study scope are stated explicitly.",
+  "caveats": ["18 plots at three sites over one winter growing cycle; plots were not randomly assigned and crop mix and baseline conditions differed between sites.", "The +6% median observed yield difference versus site reference plots does not establish that lighting caused the difference.", "Installation cost and energy use were not measured; yield alone does not justify wider installation."]
+}

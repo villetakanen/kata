@@ -1,0 +1,11 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "comparison table with a highlighted recommendation",
+  "fit_rationale": "A single table compares every shuttle on range, upfront cost, and estimated annual energy cost in consistent units, while clearly marking which options meet the 200 km threshold and identifying Alder as the least expensive qualifying option.",
+  "tradeoff": "The choice minimizes upfront cost among qualifying options, while Birch and Dogwood offer more range and lower estimated annual energy costs.",
+  "caveats": [
+    "Annual energy-cost estimates assume 18,000 kilometres of service per vehicle and exclude maintenance and charging-infrastructure costs.",
+    "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided."
+  ]
+}

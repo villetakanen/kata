@@ -1,0 +1,107 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "release-0.2.0-20261012",
+  "case": {
+    "id": "shuttle-options",
+    "revision": "1.0.0",
+    "brief": {
+      "path": "inputs/brief.md",
+      "sha256": "91cb98872680ab5fc217f6d8fdb00081b7d5d6bbfb98cd81dfcbfbb232670bb2"
+    },
+    "answer_key": {
+      "path": "evaluator/answer-key.json",
+      "sha256": "3590f4bfe71c9308db4ef065c3cd34485c68b7c101832f9f21c86ab3a458d0a4"
+    }
+  },
+  "task": {
+    "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+    "constraints": [
+      "Use one slide.",
+      "Compare all options on the same criteria.",
+      "Show range in kilometres and costs in thousands of dollars."
+    ]
+  },
+  "condition": "kata-0.1.0",
+  "tool": {
+    "id": "pi",
+    "requested_version": null,
+    "model": "gpt-6-luna",
+    "settings": {
+      "cli_args": [
+        "--print",
+        "--no-session",
+        "--no-context-files",
+        "--no-skills",
+        "--no-extensions",
+        "--no-mcp",
+        "--model",
+        "gpt-6-luna",
+        "--provider",
+        "openai-codex",
+        "--",
+        "<frozen prompt>"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    }
+  },
+  "prompt": {
+    "path": "inputs/prompt.md",
+    "sha256": "5fbc11e92036fd07f8a310a08b7d68f41aef0b6ae670ff0c7de869fb68969000"
+  },
+  "skill_snapshot": {
+    "revision": "v0.1.0",
+    "directory": "inputs/skill",
+    "files": [
+      {
+        "path": "inputs/skill/references/change-over-time.md",
+        "sha256": "eb395237d58a5f4d5e277d433bd744b943642684faed95d8102df4a54fbe4a3b"
+      },
+      {
+        "path": "inputs/skill/references/comparison.md",
+        "sha256": "fc20172f54b9999bf3c38d169091d1032fa61321c7e40e7c9ed2f9b187b5bb18"
+      },
+      {
+        "path": "inputs/skill/references/composition.md",
+        "sha256": "b6d6139d1f0c84126859127e581ce0be1154666a383ecbcbcf163f171f900100"
+      },
+      {
+        "path": "inputs/skill/references/hierarchy.md",
+        "sha256": "0093c30b01c1b7c591c547d07d96827c72a5ab23227054be950416dcf5cd0779"
+      },
+      {
+        "path": "inputs/skill/references/integration.md",
+        "sha256": "3d67fcfe1c0161c85e51b57ea583251c1f9edb9e1114a7fda75607e91a58f779"
+      },
+      {
+        "path": "inputs/skill/references/relationship.md",
+        "sha256": "49857540dd3749e38417504a862c3e5f5775fb5daab874109bf4a63b4eaffd1e"
+      },
+      {
+        "path": "inputs/skill/SKILL.md",
+        "sha256": "a09260e864ea2cef5ef7d85493c9a2390c8418cb5837b29d4228b1922f1d37bf"
+      }
+    ]
+  },
+  "lys_snapshot": {
+    "version": "1.2.1",
+    "directory": "inputs/lys",
+    "files": [
+      {
+        "path": "inputs/lys/lys.css",
+        "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+      },
+      {
+        "path": "inputs/lys/lys.iife.js",
+        "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+      },
+      {
+        "path": "inputs/lys/NOTICE.md",
+        "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+      }
+    ]
+  },
+  "output_dir": "output"
+}

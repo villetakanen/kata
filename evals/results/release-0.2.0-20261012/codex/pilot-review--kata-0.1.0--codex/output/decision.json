@@ -1,0 +1,13 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Evidence-to-decision pathway",
+  "fit_rationale": "The slide pairs the pilot's observed yield signal and plot-to-plot spread with the bounded next action, while keeping the non-randomized design and missing cost and energy measures visible. This directly answers what the steering group can support now without implying causation or wider rollout.",
+  "tradeoff": "A compact evidence-to-action layout prioritizes the steering decision over site-by-site detail; the three-site scope and one-cycle duration remain explicit, but site-level results are not available in the brief.",
+  "caveats": [
+    "18 plots across three sites over one winter growing cycle; median yield difference was +6% versus each site's reference plots, with individual plot differences from −3% to +14%.",
+    "12 of 18 plots had a positive difference and six did not.",
+    "Plots were not randomly assigned, and crop mix and baseline conditions differed between sites; the pilot does not establish that lighting caused the observed differences.",
+    "Installation cost and energy use were not measured, so yield alone does not support wider installation."
+  ]
+}

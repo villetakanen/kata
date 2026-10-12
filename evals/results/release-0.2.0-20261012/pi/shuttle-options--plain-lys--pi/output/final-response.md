@@ -1,0 +1,1 @@
+Created the single-slide Lys deck at `output/slide.html` and the valid decision record at `output/decision.json`. The slide identifies Alder as the lowest-upfront-cost option meeting the 200 km minimum and preserves the brief’s assumptions and caveats.

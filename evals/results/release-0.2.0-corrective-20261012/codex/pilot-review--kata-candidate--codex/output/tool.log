@@ -1,0 +1,472 @@
+--- stdout ---
+Created the offline, single-slide deck at [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/slide.html) and the requested decision record at [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/decision.json).
+
+The slide recommends authorizing another measurement cycle and preserves the pilot’s scope, yield figures, non-random assignment, causal uncertainty, and unmeasured cost and energy use. I did not render or inspect it at the requested viewport sizes or in print.
+
+--- stderr ---
+OpenAI Codex v0.162.1
+--------
+workdir: /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a12f56-de08-76f0-a9de-0d1e3a713ee5
+--------
+user
+Create one single-file Lys slide that answers the audience question using the supplied brief. Use the standard Lys structure: a `<div data-lys>` containing one or more `<article>` slides. Include a document language, character set, viewport, title, a heading on each slide, and useful `data-notes`. Inline the supplied `lys.css` in a `<style>` element and `lys.iife.js` in a `<script>` element so the HTML works offline. Keep the content readable without JavaScript and use a custom theme. Choose the form that best preserves the evidence and makes the answer clear; do not choose a form just to satisfy these review targets.
+
+Make the complete message and its necessary evidence, uncertainty, and caveats readable at both a 1440×900 presentation viewport and a 390×844 phone viewport. Keep the deck keyboard-operable using Lys navigation; if it has multiple slides, verify ArrowLeft and ArrowRight move between them. Keep the information available when JavaScript is disabled, and make the HTML print without clipping or losing essential labels and qualifications. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Write `output/decision.json` as valid JSON with exactly this shape and protocol value (replace the example values):
+
+```json
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "copy the audience question",
+  "form": "chosen form, or none",
+  "fit_rationale": "why the form fits or does not fit",
+  "tradeoff": "one consequential trade-off",
+  "caveats": ["preserved caveat"]
+}
+```
+
+Do not include Markdown fences in `decision.json`.
+
+Case brief: inputs/brief.md
+Audience question: What does the pilot evidence support the steering group doing next?
+Constraints:
+- Use one slide.
+- Preserve the scope and limits of the pilot.
+- Do not claim the pilot caused the observed difference.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and make output/decision.json match the JSON example above exactly. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll read the brief, skill snapshot, and supplied Lys assets, then build the one-slide offline deck and decision JSON in `output/`.
+exec
+/bin/zsh -lc "rg --files -g '"'!*node_modules*'"'" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+ succeeded in 0ms:
+inputs/lys/NOTICE.md
+inputs/lys/lys.iife.js
+inputs/lys/lys.css
+inputs/brief.md
+inputs/prompt.md
+inputs/skill/SKILL.md
+inputs/skill/references/golden-cut.md
+inputs/skill/references/hierarchy.md
+inputs/skill/references/relationship.md
+inputs/skill/references/composition.md
+inputs/skill/references/change-over-time.md
+inputs/skill/references/integration.md
+inputs/skill/references/comparison.md
+
+exec
+/bin/zsh -lc 'cat inputs/brief.md && cat inputs/skill/SKILL.md && cat inputs/skill/references/golden-cut.md && cat inputs/skill/references/hierarchy.md && cat inputs/lys/NOTICE.md' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+ succeeded in 0ms:
+# Riverbank greenhouse lighting pilot
+
+This is a fictional scenario; all figures are invented for the evaluation.
+
+## Audience question
+
+What does the pilot evidence support the steering group doing next?
+
+## Source facts
+
+- A cooperative tested supplemental lighting on 18 greenhouse plots at three
+  sites over one winter growing cycle.
+- The reported median yield difference versus each site's reference plots was
+  **+6%**. Individual plot differences ranged from **−3% to +14%**.
+- Twelve of the 18 plots had a positive yield difference; six did not.
+- The plots were not randomly assigned. Crop mix and baseline conditions
+  differed between sites.
+- The pilot did not measure installation cost or energy use.
+- The steering group can authorize another measurement cycle, but has not
+  approved wider installation.
+
+## Constraints
+
+- Make one slide for the steering group.
+- Preserve the pilot size, duration, result, and limitations.
+- Do not claim that lighting caused the observed yield differences.
+- Do not recommend wider installation based on yield alone; cost and energy
+  use have not been measured.
+- The group can decide whether to run another measurement cycle.
+---
+name: kata
+description: Choose, adapt, or reject slide patterns for an audience's question. Use when turning structured information into a clear slide or improving its visual structure. Works with a slide renderer and optional brand skill; does not plan a whole deck narrative.
+---
+
+# Kata
+
+Start with the audience's question and the understanding or decision it supports. Identify the information relationship before choosing a visual structure. A slide may communicate a useful fact without making a recommendation.
+
+## Choose a pattern
+
+| Audience question | Pattern | Read |
+| --- | --- | --- |
+| How do these options differ on the same criteria? | Aligned comparison | [comparison](references/comparison.md) |
+| What makes up this total? | Whole and parts | [composition](references/composition.md) |
+| What belongs inside what? | Nested groups | [hierarchy](references/hierarchy.md) |
+| What depends on what? | Directed dependencies | [relationship](references/relationship.md) |
+| How did this measure change? | Time series | [change-over-time](references/change-over-time.md) |
+| What is primary, with context beside it? | Asymmetric composition | [golden cut](references/golden-cut.md) |
+
+Read the relevant reference. Check whether the source supports the relationship and whether the medium, density, and reading context keep it legible. Choose a pattern, adapt it, separate questions into slides, or name a better representation outside this catalogue. If none fits, say so and identify what missing information would change the choice. Do not score patterns or imply one wins apart from the purpose.
+
+## Adapt to the information
+
+Identify the audience question, the units and scope of the supplied data, and a supportable headline. Keep the headline within the evidence: an observed category is not “most common” or a winner when other categories were unrecorded; say when the records do not establish a ranking. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption. Explain the consequential trade-off and retain values, units, scope, uncertainty, and caveats.
+
+Keep labels, units, denominators, dates, uncertainty, and sources that affect interpretation. Do not invent measurements, causal explanations, option weights, or winners. The worked examples use fictional data and are layout specimens, not evidence to reuse in a real presentation.
+
+Each reference includes a message, a layout, an example, a failure condition, and a rationale. The rationales are design judgments. Gestalt vocabulary supplies analogies, not proof that a layout is universally effective. When making empirical psychology claims, find and cite research supporting the particular claim.
+
+## Render with the available tools
+
+Kata owns the information structure and its reading order. The renderer owns slide behavior and output format. The brand skill owns typography, colors, imagery, and other visual identity. Preserve meaningful scales, grouping, and labels when applying a brand. The examples' cream and rust theme is replaceable and is not a Futurice theme.
+
+For Lys, read [the integration note](references/integration.md) and use the available Lys skill or documented HTML contract. For another output format, use its authoring workflow. Kata works without Lys or a brand skill and does not install either. Only claim an integration was tested when the actual output has been inspected.
+
+## Review the slide
+
+Check whether a reader can answer the audience question from the visual without reconstructing the source prose. Check data fidelity, meaningful grouping, and the suggested reading order. Make numeric encodings proportional; do not use decorative size or area to imply magnitude. Inspect at presentation size for clipped text, unreadable labels, and connectors that imply the wrong relationship. Preserve a text equivalent for charts and diagrams, and use labels or shape as well as color.
+
+Review the rendered deliverable in its intended reading contexts, including phone size when relevant. Structural validity does not establish readability: inspect the actual output for legible text, clipping, overflow, and labels and caveats that remain attached to their evidence. When fitting a narrow screen, reflow or stack content in reading order; do not shrink a desktop canvas until its text is unreadable. Simplify only when the values, units, uncertainty, and caveats that affect the answer remain visible. For Lys, inspect the rendered output at the supplied sizes, with no JavaScript and in print where supported; use the renderer's keyboard navigation. Record the sizes and modes reviewed, plus any gaps.
+
+Keep the explanation of the selected pattern and consequential assumptions with the deliverable when useful.
+
+Deliver the slide in the requested format. Include the chosen pattern and consequential assumptions in the accompanying explanation when useful; keep authoring instructions out of the audience's slide.
+# Golden cut
+
+## Message
+
+Give one already-supported message or visual field more room, with a smaller
+field for evidence, context, or qualification. This is a compositional choice
+about spatial emphasis. It is not a data relationship and does not replace the
+pattern needed to compare values, show parts of a whole, represent membership,
+dependencies, or change over time.
+
+The conventional 61.8/38.2 split is an optional starting proportion for the
+two fields. Adjust it to the content, screen, and reading order; equal or other
+proportions may work better. No golden rectangle canvas, phi grid, recursive
+subdivision, or particular typography is required.
+
+## Useful when
+
+- The audience has one clear primary takeaway and needs a smaller adjacent
+  field for its evidence, source, caveat, or next step.
+- A single image, quotation, or concise finding can lead while related context
+  remains visible and clearly associated.
+
+For example, a slide may give a service's supported launch date the main field
+and put the conditions that qualify it beside the date. Keep the conditions
+readable and label the primary statement so the spatial hierarchy does not
+overstate certainty.
+
+## Poor fit
+
+- Two claims carry equal importance; making one field larger would imply an
+  unsupported priority.
+- A dense comparison needs shared row and column alignment for readers to
+  compare the same criteria across options. Use a comparison pattern instead.
+- The source has no clear primary message, or the medium leaves too little room
+  for the secondary field to remain legible.
+
+Adapt by changing the split, stacking fields in reading order for a narrow
+screen, simplifying secondary material without dropping consequential
+caveats, or choosing another pattern. Do not preserve a side-by-side desktop
+canvas by shrinking its text until the context is unreadable. Inspect the
+rendered phone output and keep the qualification visible and clearly associated
+with the primary message. If the primary message or the relative priority is
+unknown, ask what the audience needs to decide and which claim has priority. If
+that cannot be established, do not imply it with area.
+
+## Keep quantitative meaning separate
+
+The 61.8/38.2 spatial division does not mean that one quantity is 61.8% of a
+whole. Do not use it to allocate data, compare unequal categories, encode a
+winner, or imply aesthetic or cognitive superiority. Encode actual values with
+their supported scales and attach labels to the evidence they describe. State
+the source, scope, and uncertainty where they affect interpretation.
+
+## Worked Lys example
+
+The fictional brief is a supported launch date of 18 June, subject to a
+security review due 10 June. The date is the main message; the review is a
+qualification that must remain visible. The example uses a flexible main
+column and a smaller context column rather than fixing the canvas to a ratio.
+
+```html
+<article data-notes="Fictional planning example. The date depends on the security review.">
+  <h2>Launch is planned for 18 June</h2>
+  <div class="launch-layout">
+    <p class="launch-date"><time datetime="2027-06-18">18 June</time></p>
+    <aside>
+      <h3>Condition</h3>
+      <p>Security review due 10 June. The launch date remains planned, not confirmed.</p>
+    </aside>
+  </div>
+</article>
+```
+
+The date receives emphasis, while the condition remains explicit beside it.
+This is a design judgment about the brief's stated priority, not a claim that
+the split improves comprehension.
+# Nested groups
+
+**Form:** A rooted structure in which each child has one parent. **Audience question:** What belongs where?
+
+Use nested regions for membership, a tree for reporting lines or deeper parent-child structure, and an indented list when space is tight. Multiple parents or cross-group dependencies call for a relationship diagram. Do not infer reporting authority from mere grouping.
+
+## Structure
+
+Name the root and the relation being shown. Give siblings the same visual treatment and place children within their parent region. Keep spacing between groups greater than spacing within them. Use equal areas when size has no meaning. Limit visible depth to what the audience needs, with a separate detail slide if required.
+
+## Worked example
+
+Fictional service launch. A new team member needs the workstream map, not a reporting chart.
+
+- Launch programme
+  - Experience: Research, Design
+  - Delivery: Engineering, Operations
+
+**Before:** One sentence listing the programme, workstreams, and four disciplines.
+
+**After headline:** “Launch work belongs to two workstreams”
+
+**After layout:** A single enclosing region named Launch programme. Inside, two equal regions named Experience and Delivery, each containing its two disciplines. Add “Workstream membership; area does not indicate team size.”
+
+## Rationale and limits
+
+Design judgment: containment expresses membership without a tangle of connectors. Common region is the Gestalt inspiration. Equal region size is a deliberate choice to avoid implying staffing levels. It is not evidence that the workstreams have equal capacity or influence.
+
+**Check:** Each discipline has exactly one parent in the supplied example. Do not silently duplicate a shared team to make the diagram fit.
+# Lys runtime
+
+`lys.css` and `lys.iife.js` are copied without modification from the local
+`@11thdeg/lys` 1.2.1 build at commit
+`116d76255c42d5bb2a78de3954462b89979688f1`.
+
+Upstream: https://github.com/villetakanen/lys
+
+The upstream package and README declare MIT licensing. That checkout does not
+contain a standalone LICENSE file; this notice records the upstream declaration
+and source provenance. Preserve it with the bundled runtime.
+
+The build embeds these files in `examples/kata-lys.html` for offline use.
+Updating the runtime is a deliberate copy-and-review operation, not part of the
+normal example build.
+
+exec
+/bin/zsh -lc 'cat inputs/skill/references/integration.md; cat inputs/skill/references/comparison.md; cat inputs/skill/references/relationship.md; head -c 1600 inputs/lys/lys.css; head -c 800 inputs/lys/lys.iife.js' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+ succeeded in 0ms:
+# Combining Kata with a renderer and a brand
+
+The first iteration uses three separate responsibilities:
+
+| Layer | Owns | Example |
+| --- | --- | --- |
+| Kata | Message, relationships, encoding, reading order | A comparison matrix with common rows |
+| Lys or another renderer | Output, navigation, sizing, notes, print behavior | Semantic HTML articles in a Lys deck |
+| Optional brand skill | Visual identity | Approved typography and palette |
+
+These are composition guidelines, not an adapter API. There is no separate `kata-lys` package yet.
+
+## Lys
+
+Read the available Lys instructions when producing a deck. The locally inspected Lys 1.2.1 contract uses a `div` with `data-lys` containing direct `article` children. Give each slide a heading and useful `data-notes`. Keep Kata's layout inside the article. Include the renderer CSS and JavaScript according to its packaging instructions, followed by the theme's CSS overrides. Use public `--lys-*` tokens; leave internal state attributes to Lys.
+
+A dependency chart can be inline SVG with a title and text description. A comparison should remain a semantic table. Charts should retain their values in text or an accessible data table. A no-JavaScript view must still expose the slide content. Check both navigation and print output after integration.
+
+The repository's `examples/kata-lys.html` is a working single-file specimen with ten slides: a before and after for each form. It bundles the locally available Lys build; it does not fetch a CDN resource at runtime. `examples/index.html` offers a scrollable comparison gallery. These are repository review artifacts and are not required when installing just this skill folder.
+
+The specimen uses Lys's direct transition mode. A small chapter-navigation listener routes local anchor clicks through the public `Lys.Lys.from(element).goTo(id)` API so the active slide, accessibility state, and subsequent arrow-key navigation agree. Plain anchors remain usable without JavaScript. The vendored runtime itself is unchanged.
+
+## Brand skills
+
+If a Futurice brand skill is supplied, read and apply it. This repository does not contain or verify Futurice assets, tokens, or rules. Do not label a neutral example as on-brand. Keep the data's grouping and scales intact while changing the visual identity. If a brand palette cannot distinguish adjacent segments, retain explicit labels and boundaries instead of relying on hue.
+
+## Example requests
+
+“Use Kata to compare these three suppliers for the procurement team. Cost and delivery time matter, but don't choose a winner.”
+
+“Use Kata with Lys to show how this budget is allocated. Apply the attached brand skill.”
+
+“Improve this slide's structure using Kata. Preserve the supplied figures and explain the choice of pattern.”
+# Aligned comparison
+
+**Form:** Several alternatives share the same attributes. **Audience question:** Which trade-offs matter for this decision?
+
+Use a matrix when exact values or mixed units matter. Use aligned bars or dots when the question is primarily about one numeric measure. Avoid a matrix for long narrative descriptions or options evaluated on unrelated criteria. Split a large comparison around the actual decision instead of shrinking everything.
+
+## Structure
+
+Put alternatives in columns and criteria in rows, with units in row labels. Keep identical attributes in the same position. Use consistent precision. Put the decisive criterion near the top when the audience has supplied one. Highlight a recommendation only when the data and decision criteria support it. Missing data remains “Unknown,” not a dash that could mean zero.
+
+## Worked example
+
+Fictional service launch. An operations lead needs a launch route within six weeks and an initial budget of €80k. Costs are one-time estimates; lead times are estimates too.
+
+| Criterion | Build | Buy | Partner |
+| --- | ---: | ---: | ---: |
+| Lead time, weeks | 12 | 4 | 6 |
+| Initial cost, €k | 120 | 60 | 80 |
+| Control | Full | Limited | Shared |
+
+**Before:** Three paragraphs, each listing its option's time, cost, and control. The audience must remember values across paragraphs.
+
+**After headline:** “Buy and Partner meet both launch limits”
+
+**After layout:** One matrix with the constraints stated above it. Emphasize the time and cost cells for Buy and Partner, retaining their text. State below: “The remaining trade-off is control.” This does not establish a winner or address lifetime cost.
+
+## Rationale and limits
+
+Design judgment: common alignment makes a criterion easy to scan. Similarity is a useful Gestalt analogy for repeated cell treatment; it does not prove this matrix is best for every audience. Avoid unrelated icons, ratings without defined scales, and weighted totals without agreed weights.
+
+**Check:** All nine values survive the transformation, both constraints remain visible, and no option becomes a recommendation by styling alone.
+# Directed dependencies
+
+**Form:** Named entities connected by a defined relation. **Audience question:** What must happen before what?
+
+Use a small directed diagram when prerequisite structure matters. Use a timeline when dates or durations are the question. Use a matrix or several focused views for a dense network. Keep direction and edge meaning explicit; data flow, ownership, influence, and prerequisite are different relations.
+
+## Structure
+
+For prerequisite edges, put prerequisites on the left and dependent work on the right. State that an arrow means “must finish before.” Route connectors so endpoints are unambiguous. Preserve forks and joins. Do not imply that horizontal distance means duration. Label different edge types individually if they must coexist.
+
+## Worked example
+
+Fictional service launch. The launch lead needs to explain readiness prerequisites.
+
+- Research must finish before Design.
+- Design must finish before Build.
+- Build must finish before Launch.
+- Compliance must finish before Launch.
+
+**Before:** A list of these four rules.
+
+**After headline:** “Launch requires both Build and Compliance”
+
+**After layout:** Research, Design, Build, and Launch run left to right. Compliance sits on a separate lower branch with its own arrow into Launch. State the edge meaning and “Spacing does not represent duration.” The final join retains two independent prerequisites.
+
+## Rationale and limits
+
+Design judgment: continuous paths make the prerequisite chain traceable. Good continuation is a Gestalt analogy, not proof of easier comprehension. The lower branch is a separate prerequisite, not a later phase. No durations or slack are supplied, so the diagram cannot identify a critical path or a bottleneck.
+
+**Check:** All four source edges survive; no connector merely passes through a box that could look like another dependency. A cycle should remain explicit and trigger a question about its meaning, not be silently deleted.
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[data-lys]>article{--_lys-aspect-ratio:var(--lys-aspect-ratio,16 / 9);--_lys-slide-padding:var(--lys-slide-padding,4cqi);--_lys-transition-duration:var(--lys-transition-duration,.3s);--_lys-transition-easing:var(--lys-transition-easing,ease-in-out);--_lys-font-size-base:var(--lys-font-size-base,clamp(.75rem, 2.5cqi, 1.5rem));--_lys-slide-gap:var(--lys-slide-gap,0);--_lys-slide-max-width:var(--lys-slide-max-width,100vw);--_lys-slide-max-height:var(--lys-slide-max-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark;background:var(--_lys-backdrop);color:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-lys]>article{scroll-snap-align:center;scroll-snap-stop:always;padding:var(--_lys-slide-padding);font-size:var(--_lys-font-size-base);box-sizing:border-box;width:min(var(--_lys-slide-max-width), var(--_lys-slide-max-height) * var(--_lys-aspect-ratio));aspect-ratio:var(--_lys-aspect-ratio);max-height:var(--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:attr(data-backgrouvar Lys=(function(e){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function t(e,t,n){let r=[],i=new Map,a=new Set;if(e.setAttribute(`role`,`group`),r.push(`role`),e.setAttribute(`aria-roledescription`,`slide deck`),r.push(`aria-roledescription`),!e.hasAttribute(`aria-label`)&&!e.hasAttribute(`aria-labelledby`)){let n=(t[0]?.querySelector(`h1, h2, h3, h4, h5, h6`))?.textContent?.trim()||`Slide deck`;e.setAttribute(`aria-label`,n),r.push(`aria-label`)}let o=t.length;for(let e=0;e<o;e++){let r=t[e];if(!r)continue;let s=[];r.setAttribute(`role`,`group`),s.push(`role`),r.setAttribute(`aria-roledescription`,`slide`),s.push(`aria-roledescription`),r.hasAttribute(`aria-label`)||(r.setAttribute(`aria-label`,`Slide ${e+1} of ${o}`),s.push(`aria-label`)),e!==n&&(r.setAttribute(`aria-hi
+exec
+/bin/zsh -lc "rg -o '.{0,80}(data-lys|@media|h2|display:none|visibility:hidden).{0,100}' inputs/lys/lys.css" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+ succeeded in 0ms:
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[d
+x-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light
+fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-ly
+--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:at
+tr(data-background type(<color>), none)}[data-lys]>article:focus{outline:none}.lys-sr-only{clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;width:1p
+x;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}[data-lys] [data-lys-nav]{z-index:1;position:fixed;top:0;left:0;right:0}[data-lys][data-lys-mode]{scroll-snap
+-type:none;display:block;position:relative;overflow:hidden}[data-lys][data-lys-mode]>article{scroll-snap-align:unset;scroll-snap-stop:unset;opacity:0;pointer-events:none;position
+:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}[data-lys][data-lys-ready][data-lys-mode]>article[data-transition=fade]{transition-property:opacity;transition-duration
+-transition-duration);transition-timing-function:var(--_lys-transition-easing)}[data-lys][data-lys-mode]>article:not([data-transition=fade]){transition-duration:0s}[data-lys][data-lys-mode
+]>article[data-lys-active]{opacity:1;pointer-events:auto}@media (prefers-reduced-motion:reduce){[data-lys],[data-lys]>article{--_lys-transition-duration:0s}}@media
+ print{@page{size:var(--lys-print-page-size,13.333in 7.5in);margin:0}[data-lys]{scroll-snap-type:none;background:0 0;height:auto;display:block;overflow:visible}[data-lys]>article
+ust:exact;-moz-print-color-adjust:exact;print-color-adjust:exact;margin:0 auto}[data-lys]>article+article{margin-top:0}[data-lys]>article:last-of-type{page-break-after:avoid;break-after:av
+oid}[data-lys][data-lys-mode]>article{opacity:1;pointer-events:auto;position:static;transform:none}[data-lys] [data-lys-nav
+]{display:none}}
+
+codex
+The brief supports a bounded next step: authorize another measurement cycle, while withholding wider installation until cost and energy use are measured. I’m using a primary recommendation with adjacent evidence and limitations, including the plot counts and range so the +6% median doesn’t read as a guaranteed or causal effect.
+exec
+/bin/zsh -lc "mkdir -p output; python3 - <<'PY'
+from pathlib import Path
+css=Path('inputs/lys/lys.css').read_text()
+js=Path('inputs/lys/lys.iife.js').read_text()
+html='''<"'!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverbank lighting pilot — next step</title>
+<style>
+'"'''+css+'''
+</style>
+<style>
+:root{color-scheme:light;--lys-backdrop:#102b2b;--lys-aspect-ratio:auto;--lys-slide-padding:clamp(22px,5vw,72px);--lys-font-size-base:16px;--lys-focus-ring:3px solid #f2b95f}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,\"Segoe UI\",sans-serif;background:#102b2b;color:#f5f2e9}
+[data-lys]{height:100svh;min-height:100vh;display:block;overflow:auto;scroll-snap-type:none;background:#102b2b;color:#f5f2e9}
+[data-lys]>article{width:100%;height:100svh;min-height:100vh;max-height:none;aspect-ratio:auto;overflow:auto;container-type:normal;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,4vh,44px);padding:clamp(26px,5vw,76px);background:radial-gradient(ellipse at 88% 12%,#254846 0,transparent 38%),#102b2b}
+.eyebrow{margin:0;color:#a8c5b4;font-weight:700;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}
+h1{font-size:clamp(2rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.045em;max-width:1000px;margin:8px 0 0;color:#fff9eb}
+.deck{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:clamp(24px,5vw,72px);align-items:stretch;max-width:1250px;width:100%}
+.recommend{border-left:5px solid #e9ae53;padding:6px 0 6px clamp(18px,2.4vw,32px);align-self:center}
+.recommend .label,.panel h3{margin:0 0 12px;color:#a8c5b4;font-size:.78rem;text-transform:uppercase;letter-spacing:.13em}
+.recommend h2{font-size:clamp(1.55rem,3.3vw,2.75rem);line-height:1.1;letter-spacing:-.03em;margin:0 0 14px;color:#f3c477}
+.recommend p{font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.45;max-width:650px;margin:0;color:#e5e9df}
+.panel{background:#1a3a38;border:1px solid #46635a;border-radius:18px;padding:clamp(20px,3vw,34px);display:flex;flex-direction:column;gap:20px}
+.metric{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.metric strong{font-size:clamp(2.7rem,6vw,5rem);line-height:.95;color:#f3c477;letter-spacing:-.06em}
+.metric span{font-size:1rem;color:#e7ece2}
+.panel p{margin:0;color:#e5e9df;font-size:1rem;line-height:1.45}
+.range{font-weight:700;color:#fff9eb}.panel hr{border:0;border-top:1px solid #46635a;width:100%;margin:0}
+.caveat{max-width:1250px;width:100%;border-top:1px solid #46635a;padding-top:18px;color:#d3ddd3;font-size:.93rem;line-height:1.5;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.caveat p{margin:0}.caveat strong{color:#fff9eb}
+footer{color:#9fb9aa;font-size:.78rem;letter-spacing:.04em}
+@media(max-width:650px){[data-lys]>article{justify-content:flex-start;padding:28px 22px;gap:20px}.deck{grid-template-columns:1fr;gap:18px}.recommend{padding-left:17px}.panel{gap:13px;padding:18px}.metric strong{font-size:3rem}.caveat{grid-template-columns:1fr;gap:10px;padding-top:14px;font-size:.88rem}h1{font-size:2.15rem}}
+@media(max-height:720px) and (min-width:651px){[data-lys]>article{justify-content:flex-start;gap:18px}.deck{gap:22px}.panel{gap:12px}.caveat{padding-top:12px}}
+@media print{html,body,[data-lys]{height:auto;min-height:0;overflow:visible;background:#102b2b"'!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}[data-lys]>article{height:auto;min-height:7.5in;max-height:none;overflow:visible;break-inside:avoid;page-break-inside:avoid}.panel,.recommend,.caveat{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div data-lys aria-label="Riverbank greenhouse lighting pilot">
+<article data-notes="Decision supported: authorize another measurement cycle. This pilot covered 18 non-randomly assigned plots at three sites over one winter cycle. Median yield difference was +6% versus site reference plots; plot differences ranged from −3% to +14%, and 12 of 18 plots were positive. Site crop mix and baseline conditions differed, so this observed difference is not evidence that lighting caused the result. Installation cost and energy use were not measured; wider installation is not supported by yield evidence alone.">
+<p class="eyebrow">Riverbank greenhouse lighting · steering group</p>
+<h1>What should the pilot evidence support next?</h1>
+<div class="deck">
+<section class="recommend" aria-labelledby="next-step">
+<p class="label">Recommended decision</p>
+<h2 id="next-step">Authorize another measurement cycle.</h2>
+<p>Use the next cycle to measure yield alongside installation cost and energy use before considering wider installation.</p>
+</section>
+<section class="panel" aria-label="Pilot yield evidence">
+<div><h3>Observed yield difference</h3><div class="metric"><strong>+6%</strong><span>median vs each site’s reference plots</span></div></div>
+<hr>
+<p><strong>18 plots</strong> · 3 sites · 1 winter growing cycle</p>
+<p>Plot differences: <span class="range">−3% to +14%</span><br><strong>12 of 18</strong> plots had a positive difference; 6 did not.</p>
+</section>
+</div>
+<div class="caveat">
+<p><strong>Interpret cautiously:</strong> plots were not randomly assigned; crop mix and baseline conditions differed between sites. The pilot does not establish that lighting caused the observed differences.</p>
+<p><strong>Decision limit:</strong> installation cost and energy use were not measured. The steering group can authorize another measurement cycle; wider installation has not been approved.</p>
+</div>
+<footer>Observed pilot result · association only · not a causal estimate</footer>
+</article>
+</div>
+<script>
+'"'''+js+'''
+</script>
+</body>
+</html>
+'''
+Path('output/slide.html').write_text(html)
+PY
+cat > output/decision.json <<'EOF'
+{
+  \"protocol\": \"kata-eval-decision/v1\",
+  \"audience_question\": \"What does the pilot evidence support the steering group doing next?\",
+  \"form\": \"Asymmetric composition: recommendation with adjacent evidence and caveats\",
+  \"fit_rationale\": \"The question asks for a next decision, and the brief supports one bounded action. The primary field makes authorizing another measurement cycle clear while the evidence and explicit limitations remain visible beside it.\",
+  \"tradeoff\": \"Giving the next-step recommendation visual priority compresses methodological and measurement limitations into a secondary block, so they must remain legible and attached to the yield result.\",
+  \"caveats\": [\"18 plots across three sites and one winter cycle; plots were not randomly assigned, and crop mix and baseline conditions differed between sites.\", \"The +6% is the median yield difference versus site reference plots; individual plot differences ranged from −3% to +14%, with 12 of 18 positive and six not positive.\", \"The pilot does not establish that lighting caused the observed differences.\", \"Installation cost and energy use were not measured; wider installation is not supported by yield alone and has not been approved.\"]
+}
+EOF" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu
+ succeeded in 0ms:
+codex
+Created the offline, single-slide deck at [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/slide.html) and the requested decision record at [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/decision.json).
+
+The slide recommends authorizing another measurement cycle and preserves the pilot’s scope, yield figures, non-random assignment, causal uncertainty, and unmeasured cost and energy use. I did not render or inspect it at the requested viewport sizes or in print.
+tokens used
+28,812

@@ -1,0 +1,18 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Separate-source aligned bars (each source on its own denominator) with a text-first turnaround assessment",
+  "fit_rationale": "Within Partner North, one shared denominator (40 respondents) and overlapping selections make aligned bars the honest way to show which barrier is most selected, with each count and percentage printed. Partner South has a different unit (cases, not homeowners) and records only one barrier, so it gets its own panel rather than sharing an axis with North. Turnaround has no comparable measure across sources or periods, so a bar or trend would imply a comparison the evidence does not support; a text-first list of the three figures and their gaps keeps the qualifications attached.",
+  "tradeoff": "The slide answers the within-source question (installer scheduling leads Partner North) but gives no single overall ranking or headline turnaround number, so a reader wanting one answer must accept \"not established\" and read the needed-information list.",
+  "caveats": [
+    "Partner North: 40 respondents, multiple selections allowed; counts overlap and total 54 selections, so shares add to more than 100%.",
+    "Partner North: upfront cost 17 of 40 (42.5%); unclear eligibility 9 of 40 (22.5%).",
+    "Partner South: 15 open support cases reviewed; homeowners served not reported, so no rate of homeowners.",
+    "Partner South: waiting for an installer in 9 of 15 cases (60%); other barriers were not recorded, so South cannot be ranked.",
+    "Partner South turnaround: median 8 days from 11 cases with a recorded time; 4 of 15 cases had no time recorded; recent and partial.",
+    "Partner South free-text note \"around two weeks last spring\" does not identify the cases, sample, or method; not a comparable baseline.",
+    "Partner North included no service-turnaround times.",
+    "The two partners used separate reporting forms with no shared period definition, denominator, or baseline; counts are not pooled and no overall ranking is given.",
+    "The scenario is fictional; all figures are invented for this evaluation."
+  ]
+}

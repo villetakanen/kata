@@ -1,0 +1,108 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "release-0.2.0-20261012",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "336e69935d26d8d525dcb6d9fc3160df2d0a3a51ac64a885bcab7bad54424fa5"
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T07:18:56.854Z",
+  "ended_at": "2026-10-12T07:20:56.167Z",
+  "tool": {
+    "id": "claude",
+    "observed_version": "2.1.296 (Claude Code)",
+    "model": "claude-haiku-5-5",
+    "settings": {
+      "cli_args": [
+        "-p",
+        "--output-format",
+        "json",
+        "--safe-mode",
+        "--no-session-persistence",
+        "--permission-mode",
+        "acceptEdits",
+        "--model",
+        "haiku",
+        "<frozen prompt>"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    },
+    "exit_code": 0
+  },
+  "frozen_inputs": [
+    {
+      "path": "inputs/brief.md",
+      "sha256": "91cb98872680ab5fc217f6d8fdb00081b7d5d6bbfb98cd81dfcbfbb232670bb2"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "sha256": "5fbc11e92036fd07f8a310a08b7d68f41aef0b6ae670ff0c7de869fb68969000"
+    },
+    {
+      "path": "inputs/lys/lys.css",
+      "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+    },
+    {
+      "path": "inputs/lys/lys.iife.js",
+      "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+    },
+    {
+      "path": "inputs/lys/NOTICE.md",
+      "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+    },
+    {
+      "path": "inputs/skill/references/change-over-time.md",
+      "sha256": "eb395237d58a5f4d5e277d433bd744b943642684faed95d8102df4a54fbe4a3b"
+    },
+    {
+      "path": "inputs/skill/references/comparison.md",
+      "sha256": "fc20172f54b9999bf3c38d169091d1032fa61321c7e40e7c9ed2f9b187b5bb18"
+    },
+    {
+      "path": "inputs/skill/references/composition.md",
+      "sha256": "b6d6139d1f0c84126859127e581ce0be1154666a383ecbcbcf163f171f900100"
+    },
+    {
+      "path": "inputs/skill/references/hierarchy.md",
+      "sha256": "0093c30b01c1b7c591c547d07d96827c72a5ab23227054be950416dcf5cd0779"
+    },
+    {
+      "path": "inputs/skill/references/integration.md",
+      "sha256": "3d67fcfe1c0161c85e51b57ea583251c1f9edb9e1114a7fda75607e91a58f779"
+    },
+    {
+      "path": "inputs/skill/references/relationship.md",
+      "sha256": "49857540dd3749e38417504a862c3e5f5775fb5daab874109bf4a63b4eaffd1e"
+    },
+    {
+      "path": "inputs/skill/SKILL.md",
+      "sha256": "a09260e864ea2cef5ef7d85493c9a2390c8418cb5837b29d4228b1922f1d37bf"
+    },
+    {
+      "path": "evaluator/answer-key.json",
+      "sha256": "3590f4bfe71c9308db4ef065c3cd34485c68b7c101832f9f21c86ab3a458d0a4"
+    }
+  ],
+  "artifacts": {
+    "decision": {
+      "path": "output/decision.json",
+      "sha256": "f9f03d27df64a6e218ec62afc89500224f1c04eaccc7874e4408c17988ba90cb"
+    },
+    "lys_html": {
+      "path": "output/slide.html",
+      "sha256": "9f751927e745b7cb3809cc68e2900efa5206d1289bdff40f041412126b39e930"
+    },
+    "final_response": {
+      "path": "output/final-response.md",
+      "sha256": "26cb43fb97a813b60ab0644a199b46423163faeb82c44716b8cdd0bfe4f96136"
+    },
+    "log": {
+      "path": "output/tool.log",
+      "sha256": "ab39c1faf31c0d0d2d2797521c4e983879b719fc919c246e3ca0716332f15c9d"
+    }
+  },
+  "failure": null
+}

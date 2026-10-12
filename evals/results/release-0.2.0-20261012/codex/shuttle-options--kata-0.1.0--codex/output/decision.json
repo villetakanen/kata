@@ -1,0 +1,13 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "aligned comparison matrix",
+  "fit_rationale": "A matrix keeps all four options aligned on the same three criteria, shows the 200 km gate beside each range, and preserves exact values and units so the qualifying options' upfront costs can be compared directly.",
+  "tradeoff": "The matrix favors exact side-by-side values over a proportional visual scale, so readers compare range magnitudes from the printed numbers.",
+  "caveats": [
+    "The procurement minimum is 200 km; Cedar's 190 km range does not qualify.",
+    "Annual energy-cost estimates assume 18,000 km of service per vehicle and exclude maintenance and charging-infrastructure costs.",
+    "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided.",
+    "Alder is the lowest upfront-cost qualifying option, not the lowest annual energy-cost option."
+  ]
+}

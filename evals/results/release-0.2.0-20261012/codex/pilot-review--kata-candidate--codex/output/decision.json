@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Asymmetric evidence-and-action composition",
+  "fit_rationale": "The question asks for a next decision: a prominent action is paired with the yield signal and its limits, making clear why another measurement cycle is supportable while wider installation awaits cost and energy evidence.",
+  "tradeoff": "Giving the action visual priority reduces room for methodological detail, so the slide keeps the key assignment and site-comparability caveats concise.",
+  "caveats": [
+    "The pilot covered 18 plots at three sites over one winter growing cycle; plots were not randomly assigned and crop mix and baseline conditions differed between sites.",
+    "The +6% is a reported median yield difference versus each site's reference plots; individual plot differences ranged from −3% to +14%, with 12 of 18 plots positive and six not positive.",
+    "The pilot does not establish that lighting caused the observed differences; installation cost and energy use were not measured."
+  ]
+}

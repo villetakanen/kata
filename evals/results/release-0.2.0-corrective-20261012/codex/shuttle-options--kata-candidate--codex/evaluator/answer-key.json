@@ -1,0 +1,24 @@
+{
+  "protocol": "kata-eval-answer-key/v1",
+  "case_id": "shuttle-options",
+  "revision": "1.0.0",
+  "required_facts": [
+    {"id": "threshold", "fact": "Minimum required range is 200 km"},
+    {"id": "alder", "fact": "Alder is 210 km, $38k upfront, and $4.2k estimated annual energy cost"},
+    {"id": "birch", "fact": "Birch is 240 km, $44k upfront, and $3.9k estimated annual energy cost"},
+    {"id": "cedar", "fact": "Cedar is 190 km, $35k upfront, and $4.5k estimated annual energy cost"},
+    {"id": "dogwood", "fact": "Dogwood is 220 km, $47k upfront, and $3.8k estimated annual energy cost"},
+    {"id": "assumption", "fact": "Annual energy estimates assume 18,000 km of service per vehicle; maintenance and charging infrastructure are excluded"},
+    {"id": "answer", "fact": "Alder is the lowest-upfront-cost option among the options meeting the 200 km minimum"}
+  ],
+  "disallowed_claims": [
+    "Cedar meets the minimum range.",
+    "Alder is the lowest-cost option on every cost measure.",
+    "Annual energy cost includes maintenance or charging-infrastructure costs."
+  ],
+  "acceptable_choices": [
+    "A shared-alignment comparison is appropriate because the options use the same criteria and the audience must compare alternatives.",
+    "The comparison may emphasize the range threshold or mark the qualifying options, provided all options and values remain available for comparison.",
+    "The brief does not prescribe a chart type; a table is also acceptable if legible and complete."
+  ]
+}

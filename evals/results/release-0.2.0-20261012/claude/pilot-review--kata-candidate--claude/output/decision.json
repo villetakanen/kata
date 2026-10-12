@@ -1,0 +1,15 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "aligned comparison",
+  "fit_rationale": "The pilot gives only summary figures (median +6%, range -3% to +14%, 12 of 18 plots positive) and no per-plot values, so a dot or bar chart of plots would have to invent data. The steering group's real choice is between a small set of next steps measured against the same evidence criteria, which is what a semantic comparison table shows. Denominators (18 plots, 12 of 18), units (%), scope, and the unmeasured cost and energy use stay visible as text.",
+  "tradeoff": "The table is denser and gives the +6% less visual weight than a single headline chart would. It makes the options and missing measures explicit at the cost of making the magnitude and spread of the result harder to see at a glance.",
+  "caveats": [
+    "One winter growing cycle, 18 plots at 3 sites; the pilot size and duration limit how far the result generalises.",
+    "The +6% is the reported median yield difference versus each site's reference plots, not a measured effect of lighting.",
+    "Individual plot differences ranged from -3% to +14%; 12 of 18 plots were positive and 6 were not.",
+    "Plots were not randomly assigned; crop mix and baseline conditions differed between sites.",
+    "Installation cost and energy use were not measured, so yield alone cannot support a wider installation decision.",
+    "The steering group can decide whether to run another measurement cycle; wider installation has not been approved."
+  ]
+}

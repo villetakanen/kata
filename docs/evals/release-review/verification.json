@@ -1,0 +1,638 @@
+[
+  {
+    "file": "index",
+    "size": "desktop",
+    "articles": 14,
+    "errors": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "comparison-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "composition-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "composition-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "relationship-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "relationship-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "minTextPx": 7.47773
+      }
+    ],
+    "tabFocus": "<a class=\"wordmark\" href=\"../README.md\"><img src=\"../assets/kata.svg\" width=\"48\" height=\"48\" alt=\"Kata\">Kata <span>First practice / 0.2</span></a>"
+  },
+  {
+    "file": "index",
+    "size": "desktop",
+    "nojs": true,
+    "articleCount": 14,
+    "textLength": 7347,
+    "hiddenArticles": []
+  },
+  {
+    "file": "index",
+    "size": "phone",
+    "articles": 14,
+    "errors": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "comparison-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.56
+      },
+      {
+        "id": "composition-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "composition-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "relationship-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "relationship-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 366.625,
+        "height": 443.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 441,
+        "clientHeight": 441,
+        "minTextPx": 10.56
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 366.625,
+        "height": 433.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 431,
+        "clientHeight": 431,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 366.625,
+        "height": 484.484375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 482,
+        "clientHeight": 482,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 366.625,
+        "height": 387.3125,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 385,
+        "clientHeight": 385,
+        "minTextPx": 10.56
+      }
+    ],
+    "tabFocus": "<a class=\"wordmark\" href=\"../README.md\"><img src=\"../assets/kata.svg\" width=\"48\" height=\"48\" alt=\"Kata\">Kata <span>First practice / 0.2</span></a>"
+  },
+  {
+    "file": "index",
+    "size": "phone",
+    "nojs": true,
+    "articleCount": 14,
+    "textLength": 7473,
+    "hiddenArticles": []
+  },
+  {
+    "file": "kata-lys",
+    "size": "desktop",
+    "articles": 14,
+    "errors": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "comparison-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "composition-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "composition-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "relationship-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "relationship-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "minTextPx": 16.5602
+      }
+    ],
+    "keyboard": {
+      "before": "comparison-before",
+      "after": "comparison-after"
+    },
+    "tabFocus": "<div data-lys=\"\" aria-label=\"Kata before and after slide examples\" data-lys-current=\"1\" data-lys-mode=\"stacked\" tabindex=\"0\" role=\"group\" aria-roledes"
+  },
+  {
+    "file": "kata-lys",
+    "size": "desktop",
+    "nojs": true,
+    "articleCount": 14,
+    "textLength": 5346,
+    "hiddenArticles": []
+  },
+  {
+    "file": "kata-lys",
+    "size": "phone",
+    "articles": 14,
+    "errors": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "comparison-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.56
+      },
+      {
+        "id": "composition-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "composition-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "relationship-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "relationship-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.56
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.88
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "minTextPx": 10.56
+      }
+    ],
+    "keyboard": {
+      "before": "comparison-before",
+      "after": "comparison-after"
+    },
+    "tabFocus": "<div data-lys=\"\" aria-label=\"Kata before and after slide examples\" data-lys-current=\"1\" data-lys-mode=\"stacked\" tabindex=\"0\" role=\"group\" aria-roledes"
+  },
+  {
+    "file": "kata-lys",
+    "size": "phone",
+    "nojs": true,
+    "articleCount": 14,
+    "textLength": 5493,
+    "hiddenArticles": []
+  }
+]

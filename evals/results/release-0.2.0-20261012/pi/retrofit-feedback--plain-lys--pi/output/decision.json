@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Evidence comparison with explicit answerability gaps",
+  "fit_rationale": "A two-source evidence comparison preserves each partner's denominator and collection method while making clear that neither the overall barrier ranking nor turnaround change can be established.",
+  "tradeoff": "The slide prioritizes comparability limits and required data over a single headline ranking or improvement claim.",
+  "caveats": ["North allowed overlapping barrier selections; its counts cannot be summed as distinct people.", "South's 15 reviewed cases are not a reported denominator of homeowners served, and other barriers were not systematically recorded.", "The 8-day median covers 11 South cases; four reviewed cases lack times, and the spring estimate is not comparable."]
+}

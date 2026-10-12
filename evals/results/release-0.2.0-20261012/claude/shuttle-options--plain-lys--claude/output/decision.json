@@ -1,0 +1,15 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "comparison table",
+  "fit_rationale": "Four options compared on the same five columns, with a pass/fail check against the 200 km minimum. A table keeps every exact range and cost value, its units, and the 200 km threshold visible, and lets readers verify why Cedar is excluded. A bar chart would show range gaps more visually but would drop exact cost values and the energy-cost column that carries the stated assumptions.",
+  "tradeoff": "The table trades at-a-glance visual contrast for exact, auditable values. The answer is marked by a highlighted row and a sentence beneath the table, and the other options' advantages (Birch's range, Dogwood's energy cost) are stated in text rather than emphasised visually.",
+  "caveats": [
+    "Fictional scenario; all figures are invented for the evaluation.",
+    "Costs are fictional planning estimates in thousands of US dollars.",
+    "Annual energy estimates assume 18,000 km of service per vehicle.",
+    "Annual energy estimates exclude maintenance and charging-infrastructure costs.",
+    "No uncertainty ranges were provided for any figure.",
+    "Alder is the lowest upfront-cost option meeting the 200 km minimum, but it is not the best on every criterion."
+  ]
+}

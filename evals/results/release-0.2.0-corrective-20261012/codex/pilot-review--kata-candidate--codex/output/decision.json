@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Asymmetric composition: recommendation with adjacent evidence and caveats",
+  "fit_rationale": "The question asks for a next decision, and the brief supports one bounded action. The primary field makes authorizing another measurement cycle clear while the evidence and explicit limitations remain visible beside it.",
+  "tradeoff": "Giving the next-step recommendation visual priority compresses methodological and measurement limitations into a secondary block, so they must remain legible and attached to the yield result.",
+  "caveats": ["18 plots across three sites and one winter cycle; plots were not randomly assigned, and crop mix and baseline conditions differed between sites.", "The +6% is the median yield difference versus site reference plots; individual plot differences ranged from −3% to +14%, with 12 of 18 positive and six not positive.", "The pilot does not establish that lighting caused the observed differences.", "Installation cost and energy use were not measured; wider installation is not supported by yield alone and has not been approved."]
+}

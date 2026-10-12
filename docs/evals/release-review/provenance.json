@@ -1,0 +1,35 @@
+{
+  "protocol": "kata-release-review-provenance/v1",
+  "tested_main_commit": "ac501fc30da108ad9cb4bec3ca1dc6df26c06776",
+  "review_date": "2026-10-12",
+  "reviewed_sources": [
+    {
+      "path": "examples/index.html",
+      "sha256": "e298a720e233ba6526750ad2c62b7a393807422653e499ec61b4d3d59d0527e6"
+    },
+    {
+      "path": "examples/kata-lys.html",
+      "sha256": "a0e8224f30f5e6571b68cf1d0be6df0d8332cf40cd21a99447e092cdd1903d04"
+    },
+    {
+      "path": "examples/theme.css",
+      "sha256": "b956570d933ca5eeef772d8acdf75e85dd1b3adb290cdde058a10425b1a1fc02"
+    },
+    {
+      "path": "scripts/build-examples.mjs",
+      "sha256": "e6ce8778a48de222f70ce99041ba331e7b304da34a9b3caaa91b42940c3e5ac0"
+    }
+  ],
+  "verification_script": {
+    "file_name": "verify.mjs",
+    "archived": false,
+    "sha256": "3154e3820b22975117234aaa6a41bad27629ff75e33130efa25b205611a89b76"
+  },
+  "scope": [
+    "Gallery and deck at 1440x900 and 390x844",
+    "Fourteen slides in each artifact",
+    "Keyboard interaction and JavaScript-disabled content presence",
+    "Fourteen-page print PDFs"
+  ],
+  "limits": "Coordinator visual QA and browser checks; not a human reader study and not evidence of improved comprehension."
+}

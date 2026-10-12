@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "single-slide decision readout with a yield range and limitations panel",
+  "fit_rationale": "The steering group needs a next action, while the evidence is a small, non-randomized pilot with meaningful spread and two unmeasured decision factors. A decision readout keeps the proposed measurement step prominent and the limits adjacent to the yield result.",
+  "tradeoff": "A single slide makes the recommendation easy to scan but leaves little room to explain site-level variation or specify a detailed next-cycle design.",
+  "caveats": [
+    "The pilot covered 18 plots at three sites over one winter growing cycle; plots were not randomly assigned, and crop mix and baseline conditions differed between sites.",
+    "The +6% median is an observed yield difference versus each site's reference plots, not evidence that lighting caused the difference; individual plot differences ranged from −3% to +14%, and six of 18 plots did not have a positive difference.",
+    "Installation cost and energy use were not measured, so yield alone does not support wider installation."
+  ]
+}

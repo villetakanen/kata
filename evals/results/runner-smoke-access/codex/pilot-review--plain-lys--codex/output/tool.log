@@ -1,0 +1,276 @@
+--- stdout ---
+Created the single-slide steering brief and its decision record:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot/output/decision.json)
+
+The slide recommends another measurement cycle before wider installation, and distinguishes the observed yield difference from what the nonrandom pilot can establish. It includes the supplied Lys CSS and JavaScript for offline use.
+
+--- stderr ---
+OpenAI Codex v0.162.1
+--------
+workdir: /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: high
+reasoning summaries: none
+session id: 01a12eee-5999-7fa1-80cd-386068cdffcb
+--------
+user
+Create a single Lys slide that answers the audience question using the supplied brief. Choose the form that best preserves the evidence and makes the answer clear. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Case brief: inputs/brief.md
+Audience question: What does the pilot evidence support the steering group doing next?
+Constraints:
+- Use one slide.
+- Preserve the scope and limits of the pilot.
+- Do not claim the pilot caused the observed difference.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and your decision record to output/decision.json. The decision record must be valid JSON following kata-eval-decision/v1 with audience_question, form, fit_rationale, tradeoff, and caveats. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll read the brief and any skill snapshot, then inspect the supplied Lys runtime so I can build a single offline slide that answers the steering question and records the form choice and caveats.
+exec
+/bin/zsh -lc 'rg --files' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 0ms:
+inputs/lys/NOTICE.md
+inputs/lys/lys.iife.js
+inputs/lys/lys.css
+inputs/brief.md
+inputs/prompt.md
+
+exec
+/bin/zsh -lc 'cat inputs/brief.md && cat inputs/lys/NOTICE.md && find inputs -maxdepth 3 -type f' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 0ms:
+# Riverbank greenhouse lighting pilot
+
+This is a fictional scenario; all figures are invented for the evaluation.
+
+## Audience question
+
+What does the pilot evidence support the steering group doing next?
+
+## Source facts
+
+- A cooperative tested supplemental lighting on 18 greenhouse plots at three
+  sites over one winter growing cycle.
+- The reported median yield difference versus each site's reference plots was
+  **+6%**. Individual plot differences ranged from **−3% to +14%**.
+- Twelve of the 18 plots had a positive yield difference; six did not.
+- The plots were not randomly assigned. Crop mix and baseline conditions
+  differed between sites.
+- The pilot did not measure installation cost or energy use.
+- The steering group can authorize another measurement cycle, but has not
+  approved wider installation.
+
+## Constraints
+
+- Make one slide for the steering group.
+- Preserve the pilot size, duration, result, and limitations.
+- Do not claim that lighting caused the observed yield differences.
+- Do not recommend wider installation based on yield alone; cost and energy
+  use have not been measured.
+- The group can decide whether to run another measurement cycle.
+# Lys runtime
+
+`lys.css` and `lys.iife.js` are copied without modification from the local
+`@11thdeg/lys` 1.2.1 build at commit
+`116d76255c42d5bb2a78de3954462b89979688f1`.
+
+Upstream: https://github.com/villetakanen/lys
+
+The upstream package and README declare MIT licensing. That checkout does not
+contain a standalone LICENSE file; this notice records the upstream declaration
+and source provenance. Preserve it with the bundled runtime.
+
+The build embeds these files in `examples/kata-lys.html` for offline use.
+Updating the runtime is a deliberate copy-and-review operation, not part of the
+normal example build.
+inputs/prompt.md
+inputs/brief.md
+inputs/lys/lys.css
+inputs/lys/lys.iife.js
+inputs/lys/NOTICE.md
+
+exec
+/bin/zsh -lc 'cat inputs/prompt.md && head -c 5000 inputs/lys/lys.iife.js && wc -c inputs/lys/lys.css inputs/lys/lys.iife.js && head -c 2500 inputs/lys/lys.css' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 0ms:
+Create a single Lys slide that answers the audience question using the supplied brief. Choose the form that best preserves the evidence and makes the answer clear. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Case brief: inputs/brief.md
+Audience question: What does the pilot evidence support the steering group doing next?
+Constraints:
+- Use one slide.
+- Preserve the scope and limits of the pilot.
+- Do not claim the pilot caused the observed difference.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and your decision record to output/decision.json. The decision record must be valid JSON following kata-eval-decision/v1 with audience_question, form, fit_rationale, tradeoff, and caveats. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+var Lys=(function(e){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function t(e,t,n){let r=[],i=new Map,a=new Set;if(e.setAttribute(`role`,`group`),r.push(`role`),e.setAttribute(`aria-roledescription`,`slide deck`),r.push(`aria-roledescription`),!e.hasAttribute(`aria-label`)&&!e.hasAttribute(`aria-labelledby`)){let n=(t[0]?.querySelector(`h1, h2, h3, h4, h5, h6`))?.textContent?.trim()||`Slide deck`;e.setAttribute(`aria-label`,n),r.push(`aria-label`)}let o=t.length;for(let e=0;e<o;e++){let r=t[e];if(!r)continue;let s=[];r.setAttribute(`role`,`group`),s.push(`role`),r.setAttribute(`aria-roledescription`,`slide`),s.push(`aria-roledescription`),r.hasAttribute(`aria-label`)||(r.setAttribute(`aria-label`,`Slide ${e+1} of ${o}`),s.push(`aria-label`)),e!==n&&(r.setAttribute(`aria-hidden`,`true`),s.push(`aria-hidden`)),r.hasAttribute(`tabindex`)||(r.setAttribute(`tabindex`,`-1`),a.add(r)),i.set(r,s)}let s=document.createElement(`div`);s.setAttribute(`role`,`status`),s.setAttribute(`aria-live`,`polite`),s.setAttribute(`aria-atomic`,`true`),s.className=`lys-sr-only`,e.appendChild(s);function c(e){let{from:n,to:r,slide:a}=e.detail,o=t[n];if(o){o.setAttribute(`aria-hidden`,`true`);let e=i.get(o);e&&!e.includes(`aria-hidden`)&&e.push(`aria-hidden`)}let c=t[r];c&&c.removeAttribute(`aria-hidden`);let l=c?.getAttribute(`aria-label`),u=l&&!/^Slide \d+ of \d+$/.test(l)?`: ${l}`:``;s.textContent=`Slide ${r+1} of ${t.length}${u}`,a.focus({preventScroll:!0})}return e.addEventListener(`lys:slidechange`,c),{destroy(){e.removeEventListener(`lys:slidechange`,c);for(let t of r)e.removeAttribute(t);for(let[e,t]of i)for(let n of t)e.removeAttribute(n);i.clear();for(let e of a)e.removeAttribute(`tabindex`);a.clear(),s.remove()}}}function n(e,t,n){let r=e.querySelector(`:scope [data-lys-nav]`);if(!r)return null;let i=Array.from(r.querySelectorAll(`a[href*="#"]`)).map(e=>{let t=e.getAttribute(`href`)??``,n=t.indexOf(`#`);return{el:e,target:n>=0?decodeURIComponent(t.slice(n+1)):``}}).filter(e=>e.target),a=null;function o(e){let t=e?i.find(t=>t.target===e)?.el??null:null;t!==a&&(a?.removeAttribute(`aria-current`),a?.removeAttribute(`data-lys-nav-active`),t&&(t.setAttribute(`aria-current`,`true`),t.setAttribute(`data-lys-nav-active`,``)),a=t)}function s(e){let{slide:t}=e.detail;o(t?.id||null)}e.addEventListener(`lys:slidechange`,s);let c=null;if(!e.hasAttribute(`data-lys-mode`)&&typeof IntersectionObserver<`u`){c=new IntersectionObserver(e=>{for(let t of e){let e=t.target.id;t.isIntersecting&&e&&o(e)}},{root:e,rootMargin:`-45% 0px -50% 0px`});for(let e of t)e.id&&c.observe(e)}return o(t[n]?.id||null),{destroy(){e.removeEventListener(`lys:slidechange`,s),c?.disconnect(),a?.removeAttribute(`aria-current`),a?.removeAttribute(`data-lys-nav-active`),a=null}}}var r=`input,textarea,select,button,[contenteditable],[role='textbox']`;function i(e,t){let n=!t.hasAttribute(`tabindex`);n&&t.setAttribute(`tabindex`,`0`);function i(t){if(!(t.ctrlKey||t.altKey||t.metaKey))switch(t.key){case`ArrowRight`:case`ArrowDown`:e.next(),t.preventDefault();break;case`ArrowLeft`:case`ArrowUp`:e.prev(),t.preventDefault();break;case` `:if(t.target.closest(r))return;t.shiftKey?e.prev():e.next(),t.preventDefault();break;case`Home`:e.goTo(0),t.preventDefault();break;case`End`:e.goTo(e.total-1),t.preventDefault();break}}t.addEventListener(`keydown`,i);let a=0,o=0;function s(e){let t=e.touches[0];t&&(a=t.clientX,o=t.clientY)}function c(t){let n=t.changedTouches[0];if(!n)return;let r=n.clientX-a,i=n.clientY-o;Math.abs(r)>50&&Math.abs(r)>Math.abs(i)&&(r<0?e.next():e.prev())}t.addEventListener(`touchstart`,s,{passive:!0}),t.addEventListener(`touchend`,c,{passive:!0});function l(e){let t=e.match(/^#slide=(.+)$/);if(!t?.[1])return null;let n=t[1],r=Number(n);return Number.isFinite(r)?r-1:n}function u(e){let t=e.detail,n=t.slide.id||String(t.to+1);history.replaceState(null,``,`#slide=${n}`)}function d(){let t=l(location.hash);t!==null&&e.goTo(t)}t.addEventListener(`lys:slidechange`,u),window.addEventListener(`hashchange`,d);let f=l(location.hash);return f!==null&&e.goTo(f),document.querySelectorAll(`[data-lys]`).length===1&&t.focus({preventScroll:!0}),{destroy(){t.removeEventListener(`keydown`,i),t.removeEventListener(`touchstart`,s),t.removeEventListener(`touchend`,c),t.removeEventListener(`lys:slidechange`,u),window.removeEventListener(`hashchange`,d),n&&t.removeAttribute(`tabindex`)}}}var a=new WeakMap,o=class e{#e;#t=[];#n=-1;#r=new Map;#i=null;#a=0;#o=null;#s=null;#c=null;static init(){let t=document.querySelectorAll(`[data-lys]`);return Array.from(t,t=>e.from(t))}static from(t){return a.get(t)||new e(t)}constructor(e){let r=a.get(e);r&&r.destroy(),this.#e=e,this.#t=Array.from(e.querySelectorAll(`:scope > article`)),this.#n=this.#t.length>0?0:-1;for(let e of this.#t){let t=e.dataset.class;if(t){let n=t.split(/\s+/).filter(Boolean);e.classList.add(...n),this.#r.set(e,n)}}for(let e of this.#t){let t=e.dataset.background;t&&(e.style.background=t)}this.#n>=0&&(this.    3235 inputs/lys/lys.css
+    6970 inputs/lys/lys.iife.js
+   10205 total
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[data-lys]>article{--_lys-aspect-ratio:var(--lys-aspect-ratio,16 / 9);--_lys-slide-padding:var(--lys-slide-padding,4cqi);--_lys-transition-duration:var(--lys-transition-duration,.3s);--_lys-transition-easing:var(--lys-transition-easing,ease-in-out);--_lys-font-size-base:var(--lys-font-size-base,clamp(.75rem, 2.5cqi, 1.5rem));--_lys-slide-gap:var(--lys-slide-gap,0);--_lys-slide-max-width:var(--lys-slide-max-width,100vw);--_lys-slide-max-height:var(--lys-slide-max-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark;background:var(--_lys-backdrop);color:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-lys]>article{scroll-snap-align:center;scroll-snap-stop:always;padding:var(--_lys-slide-padding);font-size:var(--_lys-font-size-base);box-sizing:border-box;width:min(var(--_lys-slide-max-width), var(--_lys-slide-max-height) * var(--_lys-aspect-ratio));aspect-ratio:var(--_lys-aspect-ratio);max-height:var(--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:attr(data-background type(<color>), none)}[data-lys]>article:focus{outline:none}.lys-sr-only{clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}[data-lys] [data-lys-nav]{z-index:1;position:fixed;top:0;left:0;right:0}[data-lys][data-lys-mode]{scroll-snap-type:none;display:block;position:relative;overflow:hidden}[data-lys][data-lys-mode]>article{scroll-snap-align:unset;scroll-snap-stop:unset;opacity:0;pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}[data-lys][data-lys-ready][data-lys-mode]>article[data-transition=fade]{transition-property:opacity;transition-duration:var(--_lys-transition-duration);transition-timing-function:var(--_lys-transition-easing)}[data-lys][data-lys-mode]>article:not([data-transition=fade]){transition-duration:0s}[data-lys][data-lys-mode]>article[data-lys-active]{opacity:
+exec
+/bin/zsh -lc 'tail -c 1600 inputs/lys/lys.iife.js' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 0ms:
+ent(`lys:ready`,{detail:{instance:this},bubbles:!0})),this.#a=requestAnimationFrame(()=>{e.setAttribute(`data-lys-ready`,``),this.#a=0})}get current(){return this.#n}get total(){return this.#t.length}get slide(){return this.#t[this.#n]??null}next(){this.goTo(this.#n+1)}prev(){this.goTo(this.#n-1)}goTo(e){if(this.#t.length===0)return;let t;if(typeof e==`string`){if(t=this.#t.findIndex(t=>t.id===e),t===-1)return}else t=Math.max(0,Math.min(e,this.#t.length-1));if(t===this.#n)return;let n=this.#n,r=this.#t[this.#n],i=this.#t[t];if(i){if(r?.removeAttribute(`data-lys-active`),this.#n=t,i.setAttribute(`data-lys-active`,``),this.#e.setAttribute(`data-lys-current`,String(this.#n)),!this.#i){let e=matchMedia(`(prefers-reduced-motion: reduce)`).matches;i.scrollIntoView({behavior:e?`instant`:`smooth`,block:`start`})}this.#e.dispatchEvent(new CustomEvent(`lys:slidechange`,{detail:{from:n,to:this.#n,slide:i},bubbles:!0}))}}destroy(){this.#a&&=(cancelAnimationFrame(this.#a),0),this.#s?.destroy(),this.#s=null,this.#o?.destroy(),this.#o=null,this.#c?.destroy(),this.#c=null;for(let e of this.#t)e.removeAttribute(`data-lys-active`);this.#e.removeAttribute(`data-lys-current`),this.#e.removeAttribute(`data-lys-mode`),this.#e.removeAttribute(`data-lys-ready`),this.#i=null;for(let[e,t]of this.#r)e.classList.remove(...t);this.#r.clear();for(let e of this.#t)e.dataset.background&&(e.style.background=``);this.#t=[],this.#n=-1,a.delete(this.#e)}};return typeof document<`u`&&(document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,()=>o.init(),{once:!0}):o.init()),e.Lys=o,e})({});
+codex
+The evidence supports a bounded next step: authorize one more measurement cycle, while holding off on wider installation until yield is assessed alongside installation cost and energy use. I’m laying out the observed yield result separately from the design limits so the +6% median cannot read as a causal estimate.
+exec
+/bin/zsh -lc "mkdir -p output && python3 - <<'PY'
+from pathlib import Path
+import json
+root = Path('.')
+css = (root/'inputs/lys/lys.css').read_text()
+js = (root/'inputs/lys/lys.iife.js').read_text()
+notice = (root/'inputs/lys/NOTICE.md').read_text()
+html = '''<"'!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverbank greenhouse lighting pilot | steering group</title>
+<style>
+'"''' + css + '''
+</style>
+<style>
+:root { color-scheme: light; --ink:#162d35; --muted:#52676c; --paper:#f3f4ef; --green:#1f5b4c; --lime:#b7d58a; --amber:#e3ad54; --line:#d9dfd8; }
+* { box-sizing:border-box; }
+html, body { margin:0; width:100%; height:100%; background:var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif; }
+[data-lys] { --lys-backdrop:var(--paper); --lys-aspect-ratio:16 / 9; --lys-slide-padding:0; --lys-slide-max-width:100vw; --lys-slide-max-height:100vh; }
+[data-lys] > article { background:var(--paper); color:var(--ink); padding:4.3cqi 5cqi 3.5cqi; display:flex; flex-direction:column; }
+.slide { height:100%; display:flex; flex-direction:column; }
+.kicker { display:flex; align-items:center; gap:.65em; color:var(--green); font-size:.72em; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.kicker::before { content:\"\"; width:1.8em; height:3px; background:var(--amber); display:inline-block; }
+h1 { font-size:2.46em; letter-spacing:-.045em; line-height:1.02; margin:.52em 0 .22em; max-width:18ch; }
+.deck { color:var(--muted); font-size:1.02em; line-height:1.42; margin:0; max-width:72ch; }
+.deck strong { color:var(--ink); }
+.main { display:grid; grid-template-columns: .88fr 1.12fr; gap:2.8cqi; margin-top:2.15cqi; flex:1; min-height:0; }
+.action { background:var(--ink); color:#f5f6ef; border-radius:1.05em; padding:1.45em 1.55em; display:flex; flex-direction:column; justify-content:space-between; }
+.action .label { font-size:.68em; text-transform:uppercase; letter-spacing:.13em; font-weight:800; color:#b7d58a; }
+.action h2 { font-size:1.55em; line-height:1.08; letter-spacing:-.025em; margin:.52em 0 .38em; }
+.action p { font-size:.86em; line-height:1.4; margin:0; color:#d0d9d5; }
+.action .rule { margin-top:1.05em; border-top:1px solid #40575a; padding-top:.8em; font-size:.76em; color:#dce5df; line-height:1.35; }
+.action .rule strong { color:#fff; }
+.evidence { display:flex; flex-direction:column; gap:.9em; min-height:0; }
+.card { border:1px solid var(--line); background:#fffefa; border-radius:.95em; padding:1.02em 1.25em; }
+.card-title { display:flex; justify-content:space-between; align-items:baseline; gap:1em; }
+.card-title h2 { margin:0; font-size:.83em; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+.card-title span { color:var(--muted); font-size:.69em; }
+.median { display:flex; align-items:baseline; gap:.48em; margin-top:.35em; }
+.median strong { font-size:2.34em; line-height:1; letter-spacing:-.06em; color:var(--green); }
+.median span { font-size:.81em; color:var(--ink); font-weight:650; }
+.range { margin:.88em .15em .15em; }
+.track { position:relative; height:7px; background:#e4e9e3; border-radius:99px; margin:0 .45em; }
+.segment { position:absolute; inset:0; background:linear-gradient(90deg,#a9b9ad,#63937f); border-radius:99px; }
+.marker { position:absolute; top:50%; left:52.94%; transform:translate(-50%,-50%); width:17px; height:17px; border:3px solid white; outline:2px solid var(--green); background:var(--green); border-radius:50%; }
+.range-labels { display:flex; justify-content:space-between; margin-top:.53em; color:var(--muted); font-size:.72em; }
+.range-labels strong { color:var(--ink); }
+.plots { display:grid; grid-template-columns:auto 1fr; gap:1.2em; align-items:center; }
+.plots .big { color:var(--green); font-weight:800; font-size:1.86em; letter-spacing:-.05em; line-height:1; white-space:nowrap; }
+.plots p { margin:0; color:var(--ink); font-size:.82em; line-height:1.35; }
+.plots small { display:block; color:var(--muted); font-size:.8em; margin-top:.24em; }
+.scope { display:flex; justify-content:space-between; gap:.8em; margin-top:auto; padding-top:.82em; border-top:1px solid var(--line); color:var(--muted); font-size:.71em; line-height:1.2; }
+.scope strong { color:var(--ink); }
+.footer { background:#e7ebe4; border-left:4px solid var(--amber); border-radius:.25em .55em .55em .25em; margin-top:1.25cqi; padding:.72em 1em; color:#354b50; font-size:.7em; line-height:1.34; }
+.footer strong { color:var(--ink); }
+@media (max-aspect-ratio: 4/3) {
+ [data-lys] > article { font-size:clamp(.66rem,2.15cqi,1.1rem); }
+ .main { grid-template-columns:.82fr 1.18fr; }
+}
+</style>
+</head>
+<body>
+<main data-lys aria-label=\"Riverbank greenhouse lighting pilot steering group decision\">
+  <article id=\"next-step\" aria-label=\"Authorize another measurement cycle\">
+    <div class=\"slide\">
+      <header>
+        <div class=\"kicker\">Riverbank greenhouse lighting pilot <span aria-hidden=\"true\">/</span> steering group</div>
+        <h1>Measure again before scaling.</h1>
+        <p class=\"deck\"><strong>Authorize one further measurement cycle.</strong> The pilot shows a positive median yield difference, but its design cannot establish that lighting caused it.</p>
+      </header>
+      <div class=\"main\">
+        <section class=\"action\" aria-labelledby=\"action-title\">
+          <div>
+            <div class=\"label\">Recommended next step</div>
+            <h2 id=\"action-title\">Repeat the measurement; fill the decision gaps.</h2>
+            <p>Track yield alongside <strong>installation cost</strong> and <strong>energy use</strong>, which this pilot did not measure. Use the next cycle to make the comparison more interpretable across sites.</p>
+          </div>
+          <div class=\"rule\"><strong>Do not approve wider installation on yield evidence alone.</strong> The pilot is an early signal, not a causal estimate or a full operating case.</div>
+        </section>
+        <section class=\"evidence\" aria-label=\"Pilot evidence and scope\">
+          <div class=\"card\">
+            <div class=\"card-title\"><h2>Observed yield difference</h2><span>versus each site's reference plots</span></div>
+            <div class=\"median\"><strong>+6%</strong><span>reported median</span></div>
+            <div class=\"range\" aria-label=\"Individual plot differences ranged from minus 3 percent to plus 14 percent; reported median plus 6 percent\">
+              <div class=\"track\"><div class=\"segment\"></div><div class=\"marker\"></div></div>
+              <div class=\"range-labels\"><span><strong>−3%</strong> low</span><span>individual plot range</span><span><strong>+14%</strong> high</span></div>
+            </div>
+          </div>
+          <div class=\"card plots\">
+            <div class=\"big\">12 / 18</div>
+            <p>plots had a positive yield difference.<small>6 of 18 did not have a positive difference; that does not mean all six were negative.</small></p>
+          </div>
+          <div class=\"scope\" aria-label=\"Pilot scope\">
+            <span><strong>18</strong> greenhouse plots</span>
+            <span><strong>3</strong> sites</span>
+            <span><strong>1</strong> winter growing cycle</span>
+          </div>
+        </section>
+      </div>
+      <footer class=\"footer\"><strong>Limits:</strong> plots were not randomly assigned; crop mix and baseline conditions differed between sites. Yield differences may reflect those differences. Installation cost and energy use remain unmeasured.</footer>
+    </div>
+  </article>
+</main>
+<script>
+''' + js + '''
+</script>
+</body>
+</html>
+'''
+# Preserve the supplied runtime provenance notice alongside the embedded runtime.
+html = '<"'!-- Vendored Lys runtime provenance notice:'"\\n' + notice.replace('--', '—') + '\\n-->' + html
+(root/'output/slide.html').write_text(html)
+record = {
+  \"audience_question\": \"What does the pilot evidence support the steering group doing next?\",
+  \"form\": \"Single-slide decision brief with a direct recommendation, a compact yield evidence panel, and an explicit scope-and-limits footer.\",
+  \"fit_rationale\": \"A decision-led slide makes the supported action clear while keeping the reported median, plot range, positive-plot count, and pilot scope visible together. Separating the recommendation from the evidence limits helps avoid presenting the observed yield difference as causal.\",
+  \"tradeoff\": \"The slide prioritizes the next decision and the quantitative signal, so it does not show plot-level values individually or characterize the distribution beyond the supplied median, range, and positive count.\",
+  \"caveats\": [
+    \"The pilot covered 18 greenhouse plots at three sites over one winter growing cycle.\",
+    \"Plots were not randomly assigned, and crop mix and baseline conditions differed between sites; the pilot does not show that lighting caused the observed yield differences.\",
+    \"The reported median yield difference was +6% versus each site's reference plots; individual plot differences ranged from −3% to +14%.\",
+    \"Twelve of 18 plots had a positive yield difference; six did not, which does not establish that all six were negative.\",
+    \"Installation cost and energy use were not measured, so the pilot alone does not support wider installation on yield evidence alone.\"
+  ]
+}
+(root/'output/decision.json').write_text(json.dumps(record, ensure_ascii=False, indent=2) + '\\n')
+PY
+ls -l output && wc -c output/slide.html output/decision.json" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 107ms:
+total 48
+-rw-r--r--@ 1 ville.takanen  staff   1459 Oct 12 10:06 decision.json
+-rw-r--r--@ 1 ville.takanen  staff  18222 Oct 12 10:06 slide.html
+   18222 output/slide.html
+    1459 output/decision.json
+   19681 total
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+p=Path('output/slide.html')
+s=p.read_text()
+s=s.replace('Use the next cycle to make the comparison more interpretable across sites.', 'Design the comparison to account for site, crop mix, and baseline conditions.')
+p.write_text(s)
+PY" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot
+ succeeded in 0ms:
+codex
+Created the single-slide steering brief and its decision record:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-QGv5Ot/output/decision.json)
+
+The slide recommends another measurement cycle before wider installation, and distinguishes the observed yield difference from what the nonrandom pilot can establish. It includes the supplied Lys CSS and JavaScript for offline use.
+tokens used
+22,021

@@ -1,0 +1,23 @@
+{
+  "protocol": "kata-eval-answer-key/v1",
+  "case_id": "pilot-review",
+  "revision": "1.0.0",
+  "required_facts": [
+    {"id": "scale", "fact": "18 plots at three sites over one winter growing cycle"},
+    {"id": "median", "fact": "Median reported yield difference was +6% versus reference plots"},
+    {"id": "spread", "fact": "Plot differences ranged from -3% to +14%; 12 were positive and six were not"},
+    {"id": "design", "fact": "Plots were not randomly assigned and crop mix and baseline conditions differed between sites"},
+    {"id": "omissions", "fact": "Installation cost and energy use were not measured"},
+    {"id": "decision", "fact": "The steering group can authorize another measurement cycle; wider installation is not approved"}
+  ],
+  "disallowed_claims": [
+    "Lighting caused the yield differences.",
+    "The pilot proves the intervention will work across the cooperative.",
+    "Wider installation is justified by the yield result alone."
+  ],
+  "acceptable_choices": [
+    "An asymmetric composition may emphasize the cautious pilot finding while keeping design limits and unmeasured costs visible.",
+    "A simple summary with a small plot of the range is acceptable if the finding and qualification remain clearly associated.",
+    "The supported next step is another measurement cycle that also records installation cost and energy use; the brief does not require a particular design."
+  ]
+}

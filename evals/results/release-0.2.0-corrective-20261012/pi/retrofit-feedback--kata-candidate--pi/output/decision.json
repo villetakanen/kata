@@ -1,0 +1,13 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Evidence-led asymmetric composition",
+  "fit_rationale": "A single slide can make the bounded answer prominent while keeping the distinct partner evidence and the specific data needed to resolve each question visible; it avoids implying unsupported cross-source comparability or a time trend.",
+  "tradeoff": "Using compact side-by-side evidence panels preserves both questions and their qualifications, but gives less room for detailed method specifications.",
+  "caveats": [
+    "North's 40-person multi-select survey counts overlap and sum to more than 40.",
+    "South reviewed 15 cases, not a reported count of all homeowners served; other barriers were not recorded.",
+    "South's median is 8 days for 11 cases; four reviewed cases lack turnaround times.",
+    "The 'around two weeks last spring' note has no identified cases, sample size, or method and is not a comparable baseline."
+  ]
+}

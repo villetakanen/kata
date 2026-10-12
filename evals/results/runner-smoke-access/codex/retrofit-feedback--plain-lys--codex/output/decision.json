@@ -1,0 +1,14 @@
+{
+  "schema": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "Single-slide evidence comparison with two partner-specific evidence panels, a direct answer for each part of the question, and a compact statement of the information needed.",
+  "fit_rationale": "Keeps the partners' distinct units and denominators visible while showing North's within-survey leader and South's installer-wait mentions without ranking across sources. Separates the recent partial turnaround median from the non-comparable historical note.",
+  "tradeoff": "A compact slide cannot resolve either question; it prioritizes a clear decision and the minimum comparability requirements over detailed methodology.",
+  "caveats": [
+    "North allowed multiple barrier selections; 28 of 40 selecting installer scheduling is a within-survey result, not an overall cross-partner ranking.",
+    "South reviewed 15 open cases, not a reported total of homeowners served; 9 cases mentioned waiting for an installer, and other barriers were not recorded.",
+    "South's 8-day median covers 11 of 15 reviewed cases; four turnaround times were missing.",
+    "The note 'around two weeks last spring' has no identified cases, sample size, or method, so it is not a comparable baseline.",
+    "There is no shared period definition, common denominator, or comparable baseline measure across partners."
+  ]
+}

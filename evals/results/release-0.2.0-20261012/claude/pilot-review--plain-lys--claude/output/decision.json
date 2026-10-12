@@ -1,0 +1,16 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "single-slide decision brief: summary figure tiles beside supports and does-not-support claims",
+  "fit_rationale": "The brief gives only summary figures (median +6%, range -3% to +14%, 12 of 18 plots positive), not plot-level values, so a dot or strip plot would invent a distribution. Figure tiles keep each number with its unit and denominator. The two-column split separates what the evidence supports from what it does not, which matches the steering group's actual choice: another measurement cycle, but not wider installation.",
+  "tradeoff": "Summary tiles keep the figures exact but cannot show the shape of the 18 plot differences or which site drove the median, so the audience sees the range and the 12-of-18 count rather than the pattern.",
+  "caveats": [
+    "Plots were not randomly assigned, so the pilot does not show that lighting caused the yield differences.",
+    "Crop mix and baseline conditions differed between sites.",
+    "One winter growing cycle, 18 plots at three sites; results are not generalized beyond this scope.",
+    "Installation cost and energy use were not measured, so yield alone does not support wider installation.",
+    "Individual plot differences ranged from -3% to +14%; 6 of 18 plots did not show a positive yield difference.",
+    "The median +6% is a yield difference versus each site's reference plots.",
+    "The scenario is fictional; all figures are invented for the evaluation."
+  ]
+}
