@@ -228,6 +228,18 @@ examples and guidance. They do not establish that Kata generally improves
 slides, that one CLI is better, that readers understand the outputs better, or
 that people prefer the golden ratio.
 
+## Revisions made from the review
+
+- The candidate guidance now asks authors to reflow phone layouts while keeping
+  qualifications readable, and to avoid headlines that rank categories absent
+  from the source. See the [delivered skill](../../skills/kata/SKILL.md).
+- The shared task prompt now states the 1440×900 and 390×844 targets, keyboard,
+  no-JavaScript, and print expectations. The validator separates scrollable
+  overflow from clipped content; see the [evaluation protocol](PROTOCOL.md)
+  and [Lys review tool](../../evals/lys/README.md).
+- The examples received phone and print fixes, then passed the final 14-slide
+  review documented in the [release review archive](release-review/verification.json).
+
 ## Artifacts
 
 Original attempts are preserved under
