@@ -34,11 +34,11 @@ an unconstrained measure of a model's general pattern knowledge.
 All 27 CLI attempts returned exit code 0 and supplied the required HTML and
 decision JSON. Each case used the same task-prompt SHA-256 across all three
 conditions and CLIs; the digests are recorded in [semantic-review.json](semantic-review.json).
-The runner's prompt did not require specific viewport sizes,
-keyboard operation, no-JavaScript reading, or print review. The original matrix
-still informs form choice and visible source-fact coverage; its browser findings
-are exploratory for phone and print usability. Results stay separated by CLI
-and model below.
+The prompt asked for output usable without JavaScript, but did not specify
+viewport sizes, keyboard operation, or print review. The original matrix still
+informs form choice and authored source-fact text coverage. Its phone, keyboard,
+and print browser findings are exploratory because those targets were not
+specified in the task prompt. Results stay separated by CLI and model below.
 
 ## Claude Code
 
@@ -87,15 +87,18 @@ the other CLIs.
 
 ## Fidelity, reasoning, and Lys artifacts
 
-A separate visible-text review compared each slide with the case answer key;
-it did not count decision JSON self-assessments as evidence. The per-attempt
-record is in [semantic-review.json](semantic-review.json). All nine shuttle
-slides showed the required threshold, four options' values and units, energy
-estimate basis and exclusions, and correct qualifying answer. Eight of nine
-pilot slides stated all six required facts; pi's candidate showed 12/18 positive
-but did not explicitly state that six were not positive. On retrofit, most
-slides preserved the source-specific counts and the reasons an overall ranking
-and turnaround change cannot be determined. The review records three partial
+A separate agent source-fact text review compared authored slide HTML with the
+case answer keys; it did not count decision JSON self-assessments as evidence.
+The per-attempt record is in [semantic-review.json](semantic-review.json).
+Covered facts here are present in HTML source text. This does not establish that
+they remained visible after clipping or were readable in the rendered slide.
+All nine shuttle HTML artifacts contained the required threshold, four options'
+values and units, energy estimate basis and exclusions, and correct qualifying
+answer. Eight of nine pilot HTML artifacts contained all six required facts;
+pi's candidate showed 12/18 positive but did not explicitly state that six were
+not positive. On retrofit, most HTML artifacts contained the source-specific
+counts and reasons an overall ranking and turnaround change cannot be
+determined. The review records three partial
 caveat issues: Codex 0.1.0 omitted that South did not record other barriers;
 Codex candidate omitted that North supplied no turnaround times; and pi
 candidate only implied that South's other barriers may be present. Claude's
@@ -103,6 +106,16 @@ retrofit candidate headline says installer barriers lead in each source, which
 is unsupported because South recorded only one barrier; its body correctly
 says no South ranking is possible. These are artifact-level observations, not
 comparative scores.
+
+Three preflight runs of three cases each were preserved separately from the 27-attempt
+matrix: [runner-smoke](../../evals/results/runner-smoke/) had CLI exits with
+status 1; [runner-smoke-access](../../evals/results/runner-smoke-access/) made
+CLI calls but produced decision JSON with the wrong protocol; and
+[runner-contract-smoke](../../evals/results/runner-contract-smoke/) returned
+successful CLI exits but the validator rejected an unreferenced frozen
+`evaluator/reader-task.md`. These runs exposed invocation and contract issues;
+they are not included in matrix totals. The runner and check were corrected
+before the full matrix.
 
 The structural checker accepted 26 of 27 outputs. It rejected Claude Code's
 plain-Lys retrofit HTML because its embedded vendored CSS differed by a removed

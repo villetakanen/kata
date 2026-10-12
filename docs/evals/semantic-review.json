@@ -1,13 +1,13 @@
 {
   "protocol": "kata-eval-semantic-review/v1",
   "run_id": "release-0.2.0-20261012",
-  "review_type": "agent semantic review of visible slide text and coordinator visual findings; not human reader research",
+  "review_type": "agent source-fact text review of authored slide HTML, with coordinator visual findings; not human reader research",
   "sources": {
     "briefs_and_keys": "../../evals/cases/index.json",
     "attempts": "../../evals/results/release-0.2.0-20261012/",
     "structural_and_browser_checks": "../../evals/results/release-0.2.0-20261012/<cli>/<attempt>/review/validation.json"
   },
-  "method": "Compared visible HTML text in all 27 original attempts with each case answer key required_facts. Decision JSON self-assessments were not treated as evidence of fact coverage. Labels mean the fact was visibly stated; partial identifies a clear but incomplete statement. Automated browser geometry pass is reported separately and is not a readability judgment.",
+  "method": "Compared authored slide HTML text (excluding script and style content) in all 27 original attempts with each case answer key required_facts. Decision JSON self-assessments were not treated as evidence of fact coverage. Covered means the fact is stated in the authored HTML text; partial identifies a clear but incomplete statement. This does not establish that text remained visible after clipping, readable at a target size, or otherwise successfully rendered. Automated browser geometry pass is reported separately and is not a readability judgment.",
   "summary": {
     "attempts_reviewed": 27,
     "structural_passes": 26,
@@ -23,7 +23,12 @@
       "attempt_id": "pilot-review--kata-0.1.0--claude",
       "case_id": "pilot-review",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -31,20 +36,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "pilot-review--kata-candidate--claude",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": true,
+      "visual_review_note": "Automated geometry review passed, but coordinator visual review found microscopic text and overlapping table content; this is a readability failure the geometry check does not detect.",
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -52,20 +57,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": true,
-      "visual_review_note": "Automated geometry review passed, but coordinator visual review found microscopic text and overlapping table content; this is a readability failure the geometry check does not detect."
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "pilot-review--plain-lys--claude",
       "case_id": "pilot-review",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -73,20 +78,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "retrofit-feedback--kata-0.1.0--claude",
       "case_id": "retrofit-feedback",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -95,44 +100,44 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "retrofit-feedback--kata-candidate--claude",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
-        "north-sample",
-        "north-counts",
-        "south-sample",
-        "south-barrier",
-        "south-time",
-        "baseline",
-        "incomparability"
-      ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
       "unsupported_claims_or_headline_issues": [
         "Headline says installer barriers lead in each source. South recorded only installer waiting, so it cannot establish which barrier leads there. Body later says only that barrier was recorded and no South ranking is possible; the headline remains unsupported."
       ],
       "material_caveat_omissions": [],
       "structural_contract_pass": true,
       "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
+        "north-sample",
+        "north-counts",
+        "south-sample",
+        "south-barrier",
+        "south-time",
+        "baseline",
+        "incomparability"
+      ],
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "retrofit-feedback--plain-lys--claude",
       "case_id": "retrofit-feedback",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": false,
+      "automated_browser_geometry_pass": null,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -141,20 +146,20 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": false,
-      "automated_browser_geometry_pass": null,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "shuttle-options--kata-0.1.0--claude",
       "case_id": "shuttle-options",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -163,20 +168,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "shuttle-options--kata-candidate--claude",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": true,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -185,20 +190,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": true,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "claude",
       "attempt_id": "shuttle-options--plain-lys--claude",
       "case_id": "shuttle-options",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -207,20 +212,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "pilot-review--kata-0.1.0--codex",
       "case_id": "pilot-review",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -228,20 +233,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "pilot-review--kata-candidate--codex",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -249,20 +254,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "pilot-review--plain-lys--codex",
       "case_id": "pilot-review",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -270,20 +275,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "retrofit-feedback--kata-0.1.0--codex",
       "case_id": "retrofit-feedback",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -291,46 +296,46 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {
+      "required_fact_ids_partially_covered": {
         "south-barrier": "Reports 9 of 15 South cases mentioning installer waiting, but omits that other barriers were not recorded."
       },
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "retrofit-feedback--kata-candidate--codex",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
-        "north-sample",
-        "north-counts",
-        "south-sample",
-        "south-barrier",
-        "south-time",
-        "baseline",
-        "incomparability"
-      ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
       "unsupported_claims_or_headline_issues": [],
       "material_caveat_omissions": [
         "North reported no turnaround times."
       ],
       "structural_contract_pass": true,
       "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
+        "north-sample",
+        "north-counts",
+        "south-sample",
+        "south-barrier",
+        "south-time",
+        "baseline",
+        "incomparability"
+      ],
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "retrofit-feedback--plain-lys--codex",
       "case_id": "retrofit-feedback",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -339,20 +344,20 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "shuttle-options--kata-0.1.0--codex",
       "case_id": "shuttle-options",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -361,20 +366,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "shuttle-options--kata-candidate--codex",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": true,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -383,20 +388,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": true,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "codex",
       "attempt_id": "shuttle-options--plain-lys--codex",
       "case_id": "shuttle-options",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -405,20 +410,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "pilot-review--kata-0.1.0--pi",
       "case_id": "pilot-review",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -426,42 +431,42 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "pilot-review--kata-candidate--pi",
       "case_id": "pilot-review",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "design",
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {
+      "required_fact_ids_partially_covered": {
         "spread": "Shows 12/18 positive, but does not explicitly state that six were not positive."
       },
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "pilot-review--plain-lys--pi",
       "case_id": "pilot-review",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "scale",
         "median",
         "spread",
@@ -469,20 +474,20 @@
         "omissions",
         "decision"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "retrofit-feedback--kata-0.1.0--pi",
       "case_id": "retrofit-feedback",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -491,20 +496,20 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "retrofit-feedback--kata-candidate--pi",
       "case_id": "retrofit-feedback",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -512,22 +517,22 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {
+      "required_fact_ids_partially_covered": {
         "south-barrier": "Says other barriers may also be present, but does not state explicitly that the review did not record their presence."
       },
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "retrofit-feedback--plain-lys--pi",
       "case_id": "retrofit-feedback",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "north-sample",
         "north-counts",
         "south-sample",
@@ -536,20 +541,20 @@
         "baseline",
         "incomparability"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "shuttle-options--kata-0.1.0--pi",
       "case_id": "shuttle-options",
       "condition": "kata-0.1.0",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": true,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -558,20 +563,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": true,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "shuttle-options--kata-candidate--pi",
       "case_id": "shuttle-options",
       "condition": "kata-candidate",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -580,20 +585,20 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     },
     {
       "cli": "pi",
       "attempt_id": "shuttle-options--plain-lys--pi",
       "case_id": "shuttle-options",
       "condition": "plain-lys",
-      "required_fact_ids_full": [
+      "unsupported_claims_or_headline_issues": [],
+      "material_caveat_omissions": [],
+      "structural_contract_pass": true,
+      "automated_browser_geometry_pass": false,
+      "visual_review_note": null,
+      "required_fact_ids_text_covered": [
         "threshold",
         "alder",
         "birch",
@@ -602,13 +607,8 @@
         "assumption",
         "answer"
       ],
-      "required_fact_ids_partial": {},
-      "required_fact_ids_missing": [],
-      "unsupported_claims_or_headline_issues": [],
-      "material_caveat_omissions": [],
-      "structural_contract_pass": true,
-      "automated_browser_geometry_pass": false,
-      "visual_review_note": null
+      "required_fact_ids_partially_covered": {},
+      "required_fact_ids_not_covered": []
     }
   ],
   "prompt_sha256_by_case": {
@@ -616,5 +616,6 @@
     "retrofit-feedback": "c521ed5e8e51e6c2f63c0912e40ec5d5bc2a2e4839484284a248a7cdcac75295",
     "shuttle-options": "5fbc11e92036fd07f8a310a08b7d68f41aef0b6ae670ff0c7de869fb68969000"
   },
-  "prompt_hash_note": "For each case, the original task prompt SHA-256 is identical across all three conditions and CLIs. The corrected retest prompt has a distinct digest and remains a separate intervention."
+  "prompt_hash_note": "For each case, the original task prompt SHA-256 is identical across all three conditions and CLIs. The corrected retest prompt has a distinct digest and remains a separate intervention.",
+  "text_coverage_note": "Fact coverage describes authored HTML source text only. Content may still be clipped, too small, overlapping, or otherwise unreadable in the rendered slide."
 }
