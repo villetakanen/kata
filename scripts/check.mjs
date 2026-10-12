@@ -1,10 +1,17 @@
-import { readFile, readdir, stat } from 'node:fs/promises';
+import { readFile, readdir, readlink, stat } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = path => readFile(resolve(root, path), 'utf8');
+const instructions = await read('AGENTS.md');
+const instructionLines = instructions.split(/\r?\n/);
+if (instructionLines.at(-1) === '') instructionLines.pop();
+assert(instructions.trim().length > 0, 'AGENTS.md must contain development guidance');
+assert(instructionLines.length < 100, 'AGENTS.md must be fewer than 100 lines, including blank lines');
+assert.equal(await readlink(resolve(root, 'CLAUDE.md')), 'AGENTS.md', 'CLAUDE.md must link to AGENTS.md');
+
 const data = JSON.parse(await read('examples/data.json'));
 assert.equal(data.composition.parts.reduce((sum, p) => sum + p.value, 0), data.composition.total, 'Parts must exhaust the stated total');
 assert(data.composition.parts.every(p => p.value >= 0), 'A composition cannot contain negative parts');
@@ -37,4 +44,4 @@ for (const name of ['index.html', 'kata-lys.html']) {
   assert(!/<(?:script|link)[^>]+(?:src|href)="https?:/i.test(html), 'Examples must work offline');
   assert(html.includes(data.disclosure), 'Fictional data must be disclosed');
 }
-console.log('Checked example data, skill links, slide structure, navigation targets, and offline packaging.');
+console.log('Checked harness instructions, example data, skill links, slide structure, navigation targets, and offline packaging.');

@@ -2,9 +2,19 @@
 
 ![Kata logo](assets/kata.svg)
 
-A small repertoire for making good slides. Kata helps an agent recognise the form
-of information, choose a useful visual structure, and adapt it to the audience's
-question.
+*A language of forms for thought.*
+
+Kata is a language of forms, shapes, and patterns for thinking with ideas and
+presenting them visually. It helps people and language models choose and adapt
+a form to the situation: what needs to be understood, by whom, and in what
+medium. Forms make some relationships, comparisons, or priorities easier to
+see and others harder to express. Kata explains these affordances and trade-offs
+so each choice can be reasoned about rather than treated as a universal rule.
+
+Kata's vision spans post-its, slides, diagrams, and other visual layers. This
+first iteration puts that direction into practice as a small repertoire of
+slide patterns, with worked examples and guidance for choosing a useful
+structure around the audience's question.
 
 **First iteration: five patterns, five worked before-and-after pairs, and an offline Lys deck.**
 
@@ -41,18 +51,41 @@ slide, a concrete example, and a review check. All example data is fictional. Th
 before slides retain the same source information as the after slides; the change
 is in structure and the supported headline.
 
-Gestalt ideas supply design analogies. This iteration does not claim empirical
-validation for the layouts. General deck storytelling is outside its scope.
+The patterns describe when a form can help and when it gets in the way. Their
+rationales distinguish design judgment and Gestalt analogies from empirical
+evidence; they do not claim that these layouts or Kata have been empirically
+validated. Specific claims about perception or psychology should be supported
+by relevant research and presented with its limits. General deck storytelling
+is outside this iteration's scope.
 
 ## Kata, Lys, and brand skills
 
 Kata supplies information structure. Lys supplies slide behavior. An optional
 brand skill supplies visual identity. See [integration notes](skills/kata/references/integration.md).
 
+Slides are Kata's first test medium, not a restriction to one screen shape:
+Lys can render slide content in different formats, including vertical phone
+screens. The projects are intended to inform each other closely: Lys uses Kata
+to choose layouts, and Kata uses Lys to demonstrate its forms in realistic
+examples. This relationship is a direction for the projects to develop
+together, not a claim that a packaged integration already exists.
+
 The example deck embeds the locally available Lys 1.2.1 runtime. Runtime provenance
 is recorded in [the vendor notice](examples/vendor/NOTICE.md). The cream and rust
 example theme is neutral; Futurice branding has not been supplied or tested.
 There is no separate `kata-lys` package in this iteration.
+
+## Kata and ASDLC.io
+
+[ASDLC.io](https://asdlc.io) is our pattern library for harness engineering:
+it documents concepts, patterns, and practices for engineering with agents.
+We use its guidance to develop Kata's agent instructions and internal workflows.
+Kata's delivered skill supplies a focused vocabulary for choosing visual forms
+and presenting information.
+
+Development guidance lives in [AGENTS.md](AGENTS.md); `CLAUDE.md` links to the
+same file. Internal development skills, when added, live under `.agents/skills/`
+with `kata-dev-` names. The delivered skill lives in `skills/kata/`.
 
 ## Work on the examples
 
@@ -68,16 +101,14 @@ or [the theme](examples/theme.css), then rebuild. Commit the generated HTML alon
 the sources so the examples stay usable immediately after checkout. The build runs
 o network requests and makes no changes to the neighboring Lys project.
 
-`npm run check` checks data invariants, linked skill references, slide structure,
+`npm run check` checks the harness instructions, data invariants, linked skill references, slide structure,
 unique IDs, navigation targets, and offline packaging. It does not replace visual
 review. When changing layouts, inspect the gallery and deck in a browser, including
 narrow viewports, keyboard navigation, no-JavaScript reading, and print layout.
 
-## What comes next
+## Roadmap
 
-Try the skill on real, messy slide material. Use those results to refine pattern
-selection and the integration boundary before adding more patterns. A real brand
-application and empirical evaluation remain future work.
+See the [Kata roadmap](docs/plans/ROADMAP.md) for planned work and open questions.
 
 The [original brief](docs/initial-brief.md) records the starting intent from
 2 October 2026.
