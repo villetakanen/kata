@@ -366,6 +366,8 @@ async function reviewWithBrowser(context, outputDir) {
   const browser = await chromium.launch({ headless: true });
   const notes = [];
   const errors = [];
+  let presentationLayouts = [];
+  let phoneLayouts = [];
   await mkdir(outputDir, { recursive: true });
   try {
     const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
@@ -406,14 +408,13 @@ async function reviewWithBrowser(context, outputDir) {
       }
       return layouts;
     };
-    const presentationLayouts = slideCount ? await captureSlides('presentation') : [];
+    presentationLayouts = slideCount ? await captureSlides('presentation') : [];
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.screenshot({ path: path.join(outputDir, 'phone-390x844.png') });
     const overflowPhone = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
     if (overflowPhone) errors.push('phone viewport has horizontal overflow');
     notes.push({ check: 'phone-390x844', passed: !overflowPhone });
-    let phoneLayouts = [];
     if (slideCount) {
       await page.goto(pathToFileURL(context.htmlPath).href, { waitUntil: 'load' });
       phoneLayouts = await captureSlides('phone');
