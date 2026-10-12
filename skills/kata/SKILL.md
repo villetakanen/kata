@@ -38,6 +38,8 @@ For Lys, read [the integration note](references/integration.md) and use the avai
 
 Check whether a reader can answer the audience question from the visual without reconstructing the source prose. Check data fidelity, meaningful grouping, and the suggested reading order. Make numeric encodings proportional; do not use decorative size or area to imply magnitude. Inspect at presentation size for clipped text, unreadable labels, and connectors that imply the wrong relationship. Preserve a text equivalent for charts and diagrams, and use labels or shape as well as color.
 
-Review label association, emphasis, and legibility in the rendered result. Keep the explanation of the selected pattern and consequential assumptions with the deliverable when useful.
+Review the rendered deliverable in its intended reading contexts, including phone size when relevant. Structural validity does not establish readability: inspect the actual output for legible text, clipping, overflow, and labels and caveats that remain attached to their evidence. When fitting a narrow screen, reflow or stack content in reading order; do not shrink a desktop canvas until its text is unreadable. Simplify only when the values, units, uncertainty, and caveats that affect the answer remain visible. For Lys, inspect the rendered output at the supplied sizes, with no JavaScript and in print where supported; use the renderer's keyboard navigation. Record the sizes and modes reviewed, plus any gaps.
+
+Keep the explanation of the selected pattern and consequential assumptions with the deliverable when useful.
 
 Deliver the slide in the requested format. Include the chosen pattern and consequential assumptions in the accompanying explanation when useful; keep authoring instructions out of the audience's slide.

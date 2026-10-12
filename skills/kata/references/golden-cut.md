@@ -34,11 +34,14 @@ overstate certainty.
 - The source has no clear primary message, or the medium leaves too little room
   for the secondary field to remain legible.
 
-Adapt by changing the split, stacking fields for a narrow screen, simplifying
-secondary material without dropping consequential caveats, or choosing another
-pattern. If the primary message or the relative priority is unknown, ask what
-the audience needs to decide and which claim has priority. If that cannot be
-established, do not imply it with area.
+Adapt by changing the split, stacking fields in reading order for a narrow
+screen, simplifying secondary material without dropping consequential
+caveats, or choosing another pattern. Do not preserve a side-by-side desktop
+canvas by shrinking its text until the context is unreadable. Inspect the
+rendered phone output and keep the qualification visible and clearly associated
+with the primary message. If the primary message or the relative priority is
+unknown, ask what the audience needs to decide and which claim has priority. If
+that cannot be established, do not imply it with area.
 
 ## Keep quantitative meaning separate
 
