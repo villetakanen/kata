@@ -6,7 +6,9 @@ are evidence records: do not edit or overwrite `manifest.json`, `result.json`,
 brief, prompt, skill, Lys, tool, and settings used; result records include
 SHA-256 digests for frozen inputs and output artifacts. Browser validation
 reports for the two release runs record the checker source digest; older
-preflight review files predate that provenance field.
+preflight review files predate that provenance field. The curated example QA
+source and temporary verification script hashes are in
+`docs/evals/release-review/provenance.json`.
 
 ## Run groups
 
@@ -29,8 +31,8 @@ Visual, accessibility, and print review must not change the authored attempt.
 For a render-only review, point `evals/lys/check.mjs --html` at the existing
 `output/slide.html` and write screenshots, PDFs, and validation reports to a
 separate `render-only/` directory. Record the source artifact hash and
-`validator_source.sha256` with any review notes. Keep curated, human-selected
-review copies and notes under `docs/evals/release-review/`, separate from these
+`validator_source.sha256` with any review notes. Keep curated, selected review
+copies and notes under `docs/evals/release-review/`, separate from these
 runner records. Browser measurements and a generated PDF do not establish that
 the slide is readable or that a reader can answer the brief.
 
