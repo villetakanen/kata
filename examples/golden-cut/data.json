@@ -1,0 +1,18 @@
+{
+  "disclosure": "Fictional service-launch data · layout examples only",
+  "launch": {
+    "date": "18 June 2027",
+    "dateIso": "2027-06-18",
+    "review": "Security review",
+    "reviewDue": "10 June 2027",
+    "status": "Planned, not confirmed"
+  },
+  "comparison": {
+    "maxWeeks": 6,
+    "maxCost": 80,
+    "options": [
+      { "name": "Buy", "weeks": 4, "cost": 60, "control": "Limited" },
+      { "name": "Partner", "weeks": 6, "cost": 80, "control": "Shared" }
+    ]
+  }
+}
