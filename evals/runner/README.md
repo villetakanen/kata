@@ -53,6 +53,13 @@ recorded in that attempt's `result.json`; it is not omitted. A successful CLI
 must create both `output/slide.html` and a valid `output/decision.json`.
 Structural and visual Lys validation is handled separately by issue #6.
 
+The shared authoring prompt gives every condition the same review targets:
+readability at 1440×900 and 390×844, Lys keyboard navigation, readable content
+with JavaScript disabled, and print output without clipped essential content.
+These are task requirements; the prompt leaves form choice to the evidence and
+audience question. Browser measurements and generated print output are recorded
+separately from human visual review.
+
 The output directories are unique and never overwritten. Choose a new `--run-id`
 to start a separate run. Each CLI runs from an isolated temporary workspace
 outside the repository so Kata's development instructions do not enter the
