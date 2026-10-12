@@ -65,3 +65,65 @@ svg text { font-family: inherit; font-size: 22px; } svg .value { font-weight: 65
 @media (max-width: 1000px) { .pair { grid-template-columns: 1fr; }.slide { padding: 5%; } }
 @media (max-width: 600px) { .wordmark span { display: none; }.masthead { padding: 16px 5vw; }.intro { padding: 44px 5vw; }.intro > p:not(.overline) { font-size: 16px; }.pattern { padding-left: 3vw; padding-right: 3vw; }.pattern-heading { padding: 0 2vw; }.pattern-heading h2 { font-size: 24px; }.site-footer { flex-direction: column; } }
 @media print { .masthead, .intro, .pattern-heading, .site-footer { display: none; }.pair { display: block; }.pattern { padding: 0; border: 0; }.slide { break-after: page; border: 0 !important; width: 100%; print-color-adjust: exact; }.deck [data-lys] { height: auto; padding: 0; background: none; }.deck [data-lys] > .slide { width: 100vw; max-height: none; }.deck [data-lys-nav] { display: none; } }
+
+/* Keep slide copy legible on phones; charts gain a readable text equivalent. */
+.mobile-equivalent { display: none; }
+.golden-layout { display: grid; grid-template-columns: 1.55fr 1fr; align-items: stretch; gap: 3cqi; height: 100%; }
+.golden-primary { display: flex; flex-direction: column; justify-content: center; padding: 4cqi; background: #eeece5; border-left: 1cqi solid var(--accent); }
+.golden-primary span { color: var(--muted); font-size: 1.8cqi; text-transform: uppercase; letter-spacing: .08em; }
+.golden-primary strong { font-size: 5.2cqi; line-height: 1.1; margin-top: 1cqi; }
+.golden-context { align-self: center; padding: 2cqi 1cqi; }
+.golden-context h3 { color: var(--accent); font-size: 2.2cqi; margin-bottom: 1cqi; }
+.golden-context p { font-size: 1.8cqi; line-height: 1.5; }
+.golden-context p + p { margin-top: 1cqi; font-weight: 650; }
+#golden-cut-mismatch-after td { color: inherit !important; font-weight: 450 !important; }
+
+@media (max-width: 600px) {
+  .slide { aspect-ratio: auto; height: auto; min-height: 24rem; overflow: visible; padding: 1.25rem; }
+  .slide .eyebrow { font-size: .7rem; line-height: 1.35; margin-bottom: .8rem; }
+  .slide h2 { font-size: 1.4rem; line-height: 1.16; max-width: 100%; }
+  .slide .visual { font-size: 1rem; padding-top: .6rem; overflow: visible; }
+  .slide .context { font-size: .8rem; margin-bottom: .65rem; }
+  .slide footer { font-size: .7rem; line-height: 1.4; margin-top: 1rem; }
+  .slide footer p + p { font-size: .68rem; margin-top: .4rem; }
+  .slide .prose { max-width: 100%; line-height: 1.5; }
+  table { table-layout: fixed; font-size: .72rem; }
+  th, td { padding: .4rem .3rem; overflow-wrap: anywhere; }
+  thead th { font-size: .66rem; }
+  .conclusion { font-size: .8rem; margin-top: .6rem; }
+  .total { font-size: 1.8rem; margin-bottom: .8rem; }
+  .total span { font-size: .75rem; }
+  .stack { height: 2rem; }
+  .segment { font-size: 0; }
+  .parts { grid-template-columns: 1fr 1fr; gap: .55rem; margin-top: .8rem; font-size: .72rem; }
+  .parts dt { gap: .35rem; }
+  .key { width: .55rem; height: .55rem; }
+  .parts dd { font-size: .85rem; margin-top: .2rem; }
+  .parts dd span { font-size: .68rem; }
+  .programme { padding: .7rem; }
+  .programme h3, .groups h4 { font-size: .85rem; margin-bottom: .45rem; }
+  .groups { gap: .5rem; }
+  .groups section { padding: .65rem; }
+  .groups ul { font-size: .75rem; line-height: 1.5; }
+  .golden-layout { grid-template-columns: 1fr; gap: .8rem; height: auto; }
+  .golden-primary { min-height: 9rem; padding: 1rem; border-left-width: .3rem; }
+  .golden-primary span { font-size: .7rem; }
+  .golden-primary strong { font-size: 2.1rem; margin-top: .4rem; }
+  .golden-context { padding: .25rem .1rem; }
+  .golden-context h3 { font-size: .9rem; margin-bottom: .3rem; }
+  .golden-context p { font-size: .85rem; line-height: 1.4; }
+  .mobile-equivalent { display: block; font-size: .8rem; line-height: 1.4; }
+  .mobile-equivalent ul { margin-top: .4rem; }
+  .mobile-equivalent table { margin-top: .25rem; }
+  .slide .visual > svg { display: none; }
+  .deck [data-lys] { display: block; height: auto; min-height: 100vh; padding-top: 56px; overflow: visible; grid-auto-rows: auto; }
+  .deck [data-lys] > .slide { position: relative !important; top: auto !important; left: auto !important; transform: none !important; opacity: 1 !important; pointer-events: auto !important; width: 100vw; max-width: 100vw; height: auto; aspect-ratio: auto; min-height: calc(100svh - 56px); max-height: none; overflow: visible; container-type: inline-size; margin: 0 auto 1rem; scroll-margin-top: 56px; }
+  .deck [data-lys-nav] { position: fixed; top: 0; }
+}
+
+@media print {
+  @page { size: 13.333in 7.5in; margin: 0; }
+  .gallery .slide { width: 13.333in; height: 7.5in; aspect-ratio: 16 / 9; break-after: page; page-break-after: always; }
+  .gallery .pattern:last-of-type .slide:last-child { break-after: auto; page-break-after: auto; }
+  .mobile-equivalent { display: none !important; }
+}
