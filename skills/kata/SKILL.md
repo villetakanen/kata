@@ -22,7 +22,7 @@ Read the relevant reference. Check whether the source supports the relationship 
 
 ## Adapt to the information
 
-Identify the audience question, the units and scope of the supplied data, and a supportable headline. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption. Explain the consequential trade-off and retain values, units, scope, uncertainty, and caveats.
+Identify the audience question, the units and scope of the supplied data, and a supportable headline. Keep the headline within the evidence: an observed category is not “most common” or a winner when other categories were unrecorded; say when the records do not establish a ranking. Preserve missing values as unknown; distinguish them from zero. Ask for missing information when it changes the meaning, such as whether categories overlap or what a dependency arrow represents. Otherwise proceed with a stated assumption. Explain the consequential trade-off and retain values, units, scope, uncertainty, and caveats.
 
 Keep labels, units, denominators, dates, uncertainty, and sources that affect interpretation. Do not invent measurements, causal explanations, option weights, or winners. The worked examples use fictional data and are layout specimens, not evidence to reuse in a real presentation.
 
