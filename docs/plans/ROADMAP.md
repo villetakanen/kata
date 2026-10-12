@@ -4,32 +4,30 @@ This document is a place to discuss direction and next steps. It distinguishes
 the current project from agreed plans and questions that still need decisions;
 it is not a promise about delivery dates.
 
-## Current
+## Current: 0.2.0
 
-The first iteration is a small slide-pattern repertoire: five patterns, worked
-before-and-after examples, an offline gallery and Lys deck, and an agent skill
-for choosing and adapting a pattern. Its examples use fictional data. See the
-[README](../../README.md) and the project [vision](../../VISION.md).
+Kata 0.2.0 implements six slide patterns, seven worked before-and-after pairs,
+an offline Lys deck with 14 slides, and a portable framework for choosing,
+adapting, or rejecting a form. It also includes a versioned evaluation corpus,
+three CLI adapters, Lys validation, and runner regression checks. See the
+[README](../../README.md), [evaluation report](../evals/report.md), and
+[project vision](../../VISION.md).
 
-## Planned: 0.2.0
+The original 27-attempt matrix and separate nine-attempt corrective check are
+reported independently in the [evaluation report](../evals/report.md). The
+corrective check changed both the shared task prompt and the candidate skill,
+so it cannot isolate the skill's effect. No independent reader outcomes were
+collected; the results do not establish improved comprehension or preference.
+The report includes source-text and visual review, automated checks, print
+failures, and evidence limits.
 
-The [redesigned 0.2.0 plan](0.2.0.md) is planned. It focuses the release on
-three outcomes:
+## Evidence boundaries
 
-- Give people and agents a clear framework to choose, adapt, or reject a visual
-  pattern and explain the trade-off.
-- Add the golden cut as an optional asymmetric-composition pattern, with
-  explicit fit and mismatch examples and no unsupported claims about beauty or
-  comprehension.
-- Evaluate the guidance through Lys using repeatable briefs and a common runner
-  for Claude Code, Codex CLI, and pi, recording fidelity, failures, and reader
-  outcomes where available.
-
-The scope keeps the five current data patterns and adds the golden cut as a
-sixth pattern. It defers brand-specific and temporal demonstrations unless the
-evaluation exposes a concrete need. These are planned outcomes, not current
-capabilities; see the plan for runner requirements, evaluation criteria, and
-completion checks.
+The golden cut is an optional asymmetric composition. Its 61.8/38.2 proportion
+does not encode quantities or establish preference or comprehension. The six
+patterns are slide guidance with worked Lys examples, not a general deck
+storytelling system or a packaged Kata-Lys integration. Brand-specific work
+remains untested.
 
 ## Questions for the next discussion
 
