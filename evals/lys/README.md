@@ -53,15 +53,24 @@ node evals/lys/check.mjs --html examples/kata-lys.html --lys-dir examples/vendor
   --review --playwright-module /path/to/node_modules/@playwright/test
 ```
 
-The checker saves 1440×900 and 390×844 screenshots for each Lys slide,
-horizontal-overflow and visible-slide height measurements, a keyboard
-navigation check (or keyboard focus check for a static gallery), a
-JavaScript-disabled content check, and a generated print PDF under
+The checker saves 1440×900 and 390×844 screenshots for each Lys slide and
+reports per-slide horizontal and vertical scroll/client dimensions with
+computed overflow modes. It also records a keyboard navigation check (or
+keyboard focus check for a static gallery), a JavaScript-disabled content
+check, and a generated print PDF under
 `lys-review/` (or the attempt's `review/`). It records browser failures under
 `review`, separately from deterministic `structural` failures. The PDF is
 evidence for a person to inspect; generating it does not establish that print
 pagination or clipping is acceptable. The dependency is optional and is not
 added to Kata's package dependencies.
+
+Measured overflow is reported by axis. Only actual overflow with computed
+`hidden` or `clip` is an automated clipping error. `auto` or `scroll` overflow
+is recorded for manual review rather than treated as a failure; scrollability
+does not establish that the content is readable. Visible overflow is also
+reported without being classified as clipping. Each validation report records
+the SHA-256 of `evals/lys/check.mjs` so results identify the validator version
+that produced the measurements.
 
 Automated checks do not judge grouping, emphasis, label association, reading
 order, or whether readers can answer the brief. Record those visual/readability
