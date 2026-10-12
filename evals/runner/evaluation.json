@@ -1,0 +1,38 @@
+{
+  "case_index": "../cases/index.json",
+  "prompt": "task-prompt.md",
+  "lys": {
+    "version": "1.2.1",
+    "directory": "../../examples/vendor"
+  },
+  "skills": {
+    "kata-0.1.0": {
+      "revision": "v0.1.0",
+      "git_repository": "../..",
+      "git_ref": "v0.1.0",
+      "subpath": "skills/kata"
+    },
+    "kata-candidate": {
+      "directory": "../../skills/kata"
+    }
+  },
+  "timeout_seconds": 300,
+  "tools": {
+    "claude": {
+      "path": "claude",
+      "model": "haiku",
+      "settings": {}
+    },
+    "codex": {
+      "path": "codex",
+      "model": "gpt-6-luna",
+      "settings": {}
+    },
+    "pi": {
+      "path": "pi",
+      "model": "gpt-6-luna",
+      "args": ["--provider", "openai-codex"],
+      "settings": {}
+    }
+  }
+}
