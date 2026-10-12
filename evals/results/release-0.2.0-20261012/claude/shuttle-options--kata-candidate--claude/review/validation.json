@@ -1,0 +1,177 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "validator_source": {
+    "path": "evals/lys/check.mjs",
+    "sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47"
+  },
+  "target": {
+    "kind": "attempt",
+    "path": "/Users/ville.takanen/dev/kata/evals/results/release-0.2.0-20261012/claude/shuttle-options--kata-candidate--claude"
+  },
+  "contract_status": "checked",
+  "structural": {
+    "passed": true,
+    "error": null,
+    "lysRoot": true,
+    "slides": 1,
+    "manifestSha256": "6526df76797886c6cb0731a0c6000de2ebec946c7499be7ce17861785a98d33f",
+    "resultSha256": "5238401e4fd78a02f80b4b176e212bef5f77cd4be11c66a16dc6399a5108fc4f",
+    "artifacts": {
+      "decision": {
+        "path": "output/decision.json",
+        "sha256": "f0da89e7ee0fe28609242c0914ab71eaf96eb73f16afac476a034f49d27b5259"
+      },
+      "lys_html": {
+        "path": "output/slide.html",
+        "sha256": "a8fb85fe255ba9a6be95bde5313a878c5fd9ed5d28857871e665e30a7f7600ea"
+      },
+      "final_response": {
+        "path": "output/final-response.md",
+        "sha256": "90ab3e852222c4c890b5ed201982f220127c53ae4038d402d6a0147db7a1540c"
+      },
+      "log": {
+        "path": "output/tool.log",
+        "sha256": "bc0e09b4c4e5e14fd3b3388486d9cbbfef39348ee473e6d9fd6dd33f62b102b6"
+      }
+    }
+  },
+  "review": {
+    "checks": [
+      {
+        "check": "presentation-1440x900",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 900,
+          "scrollHeight": 916,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 16,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "phone-390x844",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 844,
+          "scrollHeight": 860,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 16,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "keyboard-navigation",
+        "passed": true,
+        "slides": 1
+      },
+      {
+        "check": "print-pdf-generated",
+        "passed": null,
+        "artifact": "print.pdf",
+        "note": "Inspect this PDF manually for pagination and clipping."
+      },
+      {
+        "check": "no-javascript-content",
+        "passed": true
+      }
+    ],
+    "slide_layouts": {
+      "presentation": [
+        {
+          "id": null,
+          "active": true,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": "hidden",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 810,
+          "scrollHeight": 810,
+          "overflowY": "hidden",
+          "verticalOverflow": false,
+          "verticalOverflowAmount": 0,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": false,
+          "scrollable": false
+        }
+      ],
+      "phone": [
+        {
+          "id": null,
+          "active": true,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": "hidden",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 219,
+          "scrollHeight": 219,
+          "overflowY": "hidden",
+          "verticalOverflow": false,
+          "verticalOverflowAmount": 0,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": false,
+          "scrollable": false
+        }
+      ]
+    },
+    "errors": [],
+    "passed": true,
+    "status": "complete"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

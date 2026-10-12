@@ -1,0 +1,80 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "release-0.2.0-20261012",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "35b6dbd375f74ea6d1f197a0cd4920e92febe12f8892b1adb1861bb09b38b917"
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T07:12:03.549Z",
+  "ended_at": "2026-10-12T07:13:48.583Z",
+  "tool": {
+    "id": "claude",
+    "observed_version": "2.1.296 (Claude Code)",
+    "model": "claude-haiku-5-5",
+    "settings": {
+      "cli_args": [
+        "-p",
+        "--output-format",
+        "json",
+        "--safe-mode",
+        "--no-session-persistence",
+        "--permission-mode",
+        "acceptEdits",
+        "--model",
+        "haiku",
+        "<frozen prompt>"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    },
+    "exit_code": 0
+  },
+  "frozen_inputs": [
+    {
+      "path": "inputs/brief.md",
+      "sha256": "f28885c95f4d23075eb72a6bd8b5d780133263e1a9dcb730b4e17e500b3b003d"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "sha256": "c363447092b67cae380cdce796ce4181f02e1fcbc912c108168132ab6230ad3a"
+    },
+    {
+      "path": "inputs/lys/lys.css",
+      "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+    },
+    {
+      "path": "inputs/lys/lys.iife.js",
+      "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+    },
+    {
+      "path": "inputs/lys/NOTICE.md",
+      "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+    },
+    {
+      "path": "evaluator/answer-key.json",
+      "sha256": "89f4e89007e1eba734eac3f876e9e2c7f95c7f64cc59352d537c6783b8bb8102"
+    }
+  ],
+  "artifacts": {
+    "decision": {
+      "path": "output/decision.json",
+      "sha256": "d12fb8f0eb15b53ee40e791e4b6a48b4d5543257f673371992e8f2ceed69c9a9"
+    },
+    "lys_html": {
+      "path": "output/slide.html",
+      "sha256": "b66155909c187716fba2090bd7b61eafc2d5efe99310beeeb3f190d8050e5dfa"
+    },
+    "final_response": {
+      "path": "output/final-response.md",
+      "sha256": "af6c9ef2bbbea58d8aeb054670705214f6c408daf277d89ae7db25a3bf8f7422"
+    },
+    "log": {
+      "path": "output/tool.log",
+      "sha256": "c64e911addab7717f74b806e193d062caaa5d3462135e6a3855a0745d257aada"
+    }
+  },
+  "failure": null
+}

@@ -1,0 +1,17 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "aligned comparison",
+  "fit_rationale": "The barrier question is a comparison of shares on one measure, so aligned bars on a zero-based 0-100% track fit. Each partner gets its own panel and denominator (North: 40 homeowners, overlapping selections; South: 15 cases, one barrier recorded), so the slide does not pool or rank across sources. A time series was rejected because there is no comparable baseline; a line or slope would imply a change the data cannot support. The turnaround status is stated in text rather than plotted, since the 'around two weeks last spring' note has no method and would invite a false comparison with the 8-day median.",
+  "tradeoff": "Keeping the partners separate means the slide cannot give one overall barrier ranking; the audience gets a within-North answer and an explicit 'cannot determine' for the overall ranking and for turnaround change, instead of the single headline they asked for.",
+  "caveats": [
+    "Fictional scenario; all figures are invented for the evaluation.",
+    "Partner North: 40 homeowners; respondents could select several barriers, so counts overlap and sum to more than 40.",
+    "Partner South: 15 open support cases reviewed; homeowners served in the period was not reported, so no population share.",
+    "Partner South: 9 of 15 cases mention waiting for an installer; other barriers were not recorded, and whether this equals North's 'installer scheduling' category is not established.",
+    "Partner South turnaround: median 8 days from 11 of 15 cases; 4 cases had no time recorded; recent partial period, not a baseline.",
+    "Partner North reported no turnaround times.",
+    "'Around two weeks last spring' has no case count, sample, or method and is not comparable to the recent median; it is not used as a baseline.",
+    "No shared period definition, common denominator, or comparable baseline exists across partners; turnaround improvement is not claimed."
+  ]
+}

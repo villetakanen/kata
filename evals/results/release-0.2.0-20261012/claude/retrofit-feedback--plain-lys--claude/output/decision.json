@@ -1,0 +1,15 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "annotated horizontal bars with separate per-source evidence panels and explicit not-answerable verdicts",
+  "fit_rationale": "The two partners report different units (North: 40 respondents with overlapping multi-select barriers; South: 15 support cases with only one barrier recorded) and no shared denominator, so the form keeps each source in its own panel with its denominator printed. North's counts are shown as bars with the overlap noted, which keeps the 54-selections-over-40-people relationship visible. The overall barrier question and the turnaround question get text verdicts because no comparable pooled ranking or baseline exists; a single combined chart would imply a ranking the data cannot support.",
+  "tradeoff": "Keeping the sources separate means the audience gets no single 'most common barrier overall' figure and must read two partial pictures, which is less immediate than a headline number but avoids a pooled ranking built on incompatible denominators.",
+  "caveats": [
+    "Fictional scenario; all figures are invented for the evaluation.",
+    "Partner North: 40 homeowners; respondents could select several barriers, so counts overlap and total 54 (shares sum above 100%).",
+    "Partner South: 15 open support cases, not homeowners; homeowners served not reported; 9 cases mention waiting for an installer and other barriers were not recorded, so South cannot be ranked against North.",
+    "Partner South turnaround: median 8 days from 11 of 15 cases; 4 cases have no time; recent period, partial.",
+    "The 'around two weeks last spring' note has no sample, case list, or method and is not a comparable baseline, so improvement cannot be claimed.",
+    "No shared intake period definition, common denominator, or comparable baseline exists across the partners."
+  ]
+}

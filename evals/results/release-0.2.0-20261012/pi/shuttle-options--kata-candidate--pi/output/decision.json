@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "Aligned comparison matrix",
+  "fit_rationale": "Every shuttle option shares the same range, upfront-cost, and annual-energy criteria; a common table keeps exact values and units aligned while making the qualifying lowest-cost choice clear.",
+  "tradeoff": "Including annual energy cost adds useful context but keeps the focus on upfront-cost eligibility rather than implying a lifecycle-cost winner.",
+  "caveats": ["Annual energy estimates assume 18,000 km of service per vehicle and exclude maintenance and charging-infrastructure costs.", "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided.", "Alder is the lowest upfront-cost option among those meeting 200 km, not necessarily best on every criterion."]
+}

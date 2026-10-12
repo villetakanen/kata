@@ -1,0 +1,1 @@
+Created `output/slide.html` and `output/decision.json`. The slide recommends another measurement cycle, not wider installation, and preserves the pilot’s scope, results, and limitations. JSON validation passed.

@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "Aligned comparison matrix",
+  "fit_rationale": "Every shuttle is compared on the same three criteria and units; the range threshold and qualifying options make it clear that Alder is the lowest-cost option among those meeting the minimum.",
+  "tradeoff": "The matrix preserves the annual energy-cost comparison but keeps the answer centered on upfront cost and range; Alder is not presented as best on every criterion.",
+  "caveats": ["Annual energy estimates assume 18,000 kilometres of service per vehicle and exclude maintenance and charging-infrastructure costs.", "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided."]
+}

@@ -1,0 +1,114 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "release-0.2.0-20261012",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "b7e59f4cacce22efa8c4c0cd91181fe7a88c60c04fa60cb860e0033d79152445"
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-12T07:15:08.173Z",
+  "ended_at": "2026-10-12T07:17:10.289Z",
+  "tool": {
+    "id": "codex",
+    "observed_version": "codex-cli 0.162.1",
+    "model": "gpt-6-luna",
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-cf0La2",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-cf0La2/output/final-response.md",
+        "-m",
+        "gpt-6-luna",
+        "-"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    },
+    "exit_code": 0
+  },
+  "frozen_inputs": [
+    {
+      "path": "inputs/brief.md",
+      "sha256": "f28885c95f4d23075eb72a6bd8b5d780133263e1a9dcb730b4e17e500b3b003d"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "sha256": "c363447092b67cae380cdce796ce4181f02e1fcbc912c108168132ab6230ad3a"
+    },
+    {
+      "path": "inputs/lys/lys.css",
+      "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+    },
+    {
+      "path": "inputs/lys/lys.iife.js",
+      "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+    },
+    {
+      "path": "inputs/lys/NOTICE.md",
+      "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+    },
+    {
+      "path": "inputs/skill/references/change-over-time.md",
+      "sha256": "eb395237d58a5f4d5e277d433bd744b943642684faed95d8102df4a54fbe4a3b"
+    },
+    {
+      "path": "inputs/skill/references/comparison.md",
+      "sha256": "fc20172f54b9999bf3c38d169091d1032fa61321c7e40e7c9ed2f9b187b5bb18"
+    },
+    {
+      "path": "inputs/skill/references/composition.md",
+      "sha256": "b6d6139d1f0c84126859127e581ce0be1154666a383ecbcbcf163f171f900100"
+    },
+    {
+      "path": "inputs/skill/references/golden-cut.md",
+      "sha256": "1002fb0d4c73d9c570be047c47200b9df3550b8d7fbb8af4f61d6b83ae9f4fa2"
+    },
+    {
+      "path": "inputs/skill/references/hierarchy.md",
+      "sha256": "0093c30b01c1b7c591c547d07d96827c72a5ab23227054be950416dcf5cd0779"
+    },
+    {
+      "path": "inputs/skill/references/integration.md",
+      "sha256": "3d67fcfe1c0161c85e51b57ea583251c1f9edb9e1114a7fda75607e91a58f779"
+    },
+    {
+      "path": "inputs/skill/references/relationship.md",
+      "sha256": "49857540dd3749e38417504a862c3e5f5775fb5daab874109bf4a63b4eaffd1e"
+    },
+    {
+      "path": "inputs/skill/SKILL.md",
+      "sha256": "5fc7a5bf731a8ac5b0735729df75a3ee9d61a6f37bad1cda22defbc53c14c9b0"
+    },
+    {
+      "path": "evaluator/answer-key.json",
+      "sha256": "89f4e89007e1eba734eac3f876e9e2c7f95c7f64cc59352d537c6783b8bb8102"
+    }
+  ],
+  "artifacts": {
+    "decision": {
+      "path": "output/decision.json",
+      "sha256": "d6e73f35f3b0c33b0335d0f9b5e0ccd3c44828e9b6e4044cf437da90e42c534e"
+    },
+    "lys_html": {
+      "path": "output/slide.html",
+      "sha256": "b773679bd91bb476472c70688822cdc636ad677b2d6548f8f9cbcb0c6ecc9619"
+    },
+    "final_response": {
+      "path": "output/final-response.md",
+      "sha256": "5015db2a0f6324b9ef9583bc45ab3d906e9076c6ca382429a94b462208a59cbf"
+    },
+    "log": {
+      "path": "output/tool.log",
+      "sha256": "f695900151f51f39bc7fedb7ad3fbb7bdf5832f44360baff38b3a910228495dc"
+    }
+  },
+  "failure": null
+}

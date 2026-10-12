@@ -1,0 +1,14 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "evidence readout with source-separated comparison and answerability callout",
+  "fit_rationale": "A source-separated two-panel readout preserves North's overlapping survey counts and South's distinct case-review unit while making the limits on overall ranking and turnaround change explicit. A shared footer states the comparable data needed to answer both parts.",
+  "tradeoff": "The slide prioritizes comparability and caveats over a single cross-partner ranking or trend visual, which the evidence cannot support.",
+  "caveats": [
+    "North allowed multiple selections, so its barrier counts overlap and exceed 40; its within-survey leading listed barrier does not establish the overall leader.",
+    "South reviewed 15 open cases, not a reported count of all homeowners served; 9 mentioned installer wait and other barriers were not systematically recorded.",
+    "South's 8-day median covers 11 cases; four cases lacked times.",
+    "The 'around two weeks last spring' note has no identified cases, sample size, or method and is not comparable to the recent median.",
+    "The partners have no shared period definition or common denominator."
+  ]
+}

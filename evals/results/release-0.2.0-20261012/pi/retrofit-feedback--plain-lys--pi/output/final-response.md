@@ -1,0 +1,4 @@
+Created the requested deliverables:
+
+- `output/slide.html`
+- `output/decision.json`

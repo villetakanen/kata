@@ -5,7 +5,8 @@ are evidence records: do not edit or overwrite `manifest.json`, `result.json`,
 `inputs/`, `evaluator/`, or `output/` after a run. Each manifest records the
 brief, prompt, skill, Lys, tool, and settings used; result records include
 SHA-256 digests for frozen inputs and output artifacts. Browser validation
-reports record the checker source digest.
+reports for the two release runs record the checker source digest; older
+preflight review files predate that provenance field.
 
 ## Run groups
 

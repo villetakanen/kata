@@ -1,0 +1,179 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "validator_source": {
+    "path": "evals/lys/check.mjs",
+    "sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47"
+  },
+  "target": {
+    "kind": "attempt",
+    "path": "/Users/ville.takanen/dev/kata/evals/results/release-0.2.0-20261012/claude/retrofit-feedback--kata-0.1.0--claude"
+  },
+  "contract_status": "checked",
+  "structural": {
+    "passed": true,
+    "error": null,
+    "lysRoot": true,
+    "slides": 1,
+    "manifestSha256": "158796a7c1c33ced7bd6a8af83f9a26fde558cbac170b9be836b58967b2d4d13",
+    "resultSha256": "f9c59b1c416a4c334f4923a9093c875125ae63a0f95b535f42a97a83617b0a6e",
+    "artifacts": {
+      "decision": {
+        "path": "output/decision.json",
+        "sha256": "7e7ef3f395aa97acfc05fb1bade98e5628d941003a31bd2e7992fb5c766c870a"
+      },
+      "lys_html": {
+        "path": "output/slide.html",
+        "sha256": "7dbf06b2a91a689946702022d6ff0485a68b8b1cee3bb77305241278c53e3bda"
+      },
+      "final_response": {
+        "path": "output/final-response.md",
+        "sha256": "695986956d26ac472b71061c6ca35244c3cccce62b44b606070237ccc9d06348"
+      },
+      "log": {
+        "path": "output/tool.log",
+        "sha256": "81eea2eb3ba8e7ec142f7a3d5c038c3b3ac9a67e3494d97826bf059984d70cdc"
+      }
+    }
+  },
+  "review": {
+    "checks": [
+      {
+        "check": "presentation-1440x900",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 900,
+          "scrollHeight": 916,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 16,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "phone-390x844",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 844,
+          "scrollHeight": 860,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 16,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "keyboard-navigation",
+        "passed": true,
+        "slides": 1
+      },
+      {
+        "check": "print-pdf-generated",
+        "passed": null,
+        "artifact": "print.pdf",
+        "note": "Inspect this PDF manually for pagination and clipping."
+      },
+      {
+        "check": "no-javascript-content",
+        "passed": true
+      }
+    ],
+    "slide_layouts": {
+      "presentation": [
+        {
+          "id": "barriers-and-turnaround",
+          "active": true,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": "hidden",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 810,
+          "scrollHeight": 810,
+          "overflowY": "hidden",
+          "verticalOverflow": false,
+          "verticalOverflowAmount": 0,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": false,
+          "scrollable": false
+        }
+      ],
+      "phone": [
+        {
+          "id": "barriers-and-turnaround",
+          "active": true,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": "hidden",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 219,
+          "scrollHeight": 428,
+          "overflowY": "hidden",
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 209,
+          "clippedVertically": true,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": true,
+          "scrollable": false
+        }
+      ]
+    },
+    "errors": [
+      "phone slide barriers-and-turnaround has content clipped by hidden/clip overflow"
+    ],
+    "passed": false,
+    "status": "complete"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

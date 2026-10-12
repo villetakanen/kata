@@ -1,0 +1,1 @@
+Explain whether either question can be answered from the brief and name the minimum missing information needed for a valid comparison.

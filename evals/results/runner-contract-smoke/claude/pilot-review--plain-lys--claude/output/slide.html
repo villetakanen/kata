@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverbank greenhouse lighting pilot: what the evidence supports next</title>
+<style>
+/*LYS_CSS*/
+</style>
+<style>
+/* Custom theme: warm paper ground, deep green ink, amber accent */
+[data-lys] {
+  --lys-backdrop: #f4f1ea;
+  --lightningcss-light: #f4f1ea;
+  --lightningcss-dark: #1b2420;
+  --rb-ink: #1f2a24;
+  --rb-muted: #56635b;
+  --rb-green: #2f6b4f;
+  --rb-amber: #b7791f;
+  --rb-rule: #cfc8b8;
+  --rb-panel: #fbfaf6;
+  --rb-red: #9b3d2e;
+}
+@media (prefers-color-scheme: dark) {
+  [data-lys] {
+    --rb-ink: #eef2ec;
+    --rb-muted: #b7c2b9;
+    --rb-green: #7fc39f;
+    --rb-amber: #e7b15c;
+    --rb-rule: #3d4a42;
+    --rb-panel: #222d27;
+    --rb-red: #e89a8a;
+  }
+}
+[data-lys] > article {
+  --lys-font-size-base: clamp(0.7rem, 2.2cqi, 1.25rem);
+  --lys-slide-padding: 3.5cqi;
+  color: var(--rb-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+.rb-title {
+  margin: 0;
+  font-size: 1.9em;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.rb-kicker {
+  margin: 0;
+  color: var(--rb-muted);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.rb-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em;
+  flex: 1;
+  min-height: 0;
+}
+.rb-cols h2 {
+  margin: 0 0 0.4em;
+  font-size: 1.05em;
+  color: var(--rb-green);
+  border-bottom: 2px solid var(--rb-rule);
+  padding-bottom: 0.25em;
+}
+.rb-cols ul {
+  margin: 0;
+  padding-left: 1.1em;
+}
+.rb-cols li + li { margin-top: 0.45em; }
+.rb-stat {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.rb-figure {
+  margin: 0.2em 0 0;
+  padding: 0.8em 1em 0.9em;
+  background: var(--rb-panel);
+  border: 1px solid var(--rb-rule);
+  border-radius: 6px;
+}
+.rb-figure figcaption {
+  font-size: 0.82em;
+  color: var(--rb-muted);
+  margin-bottom: 0.6em;
+}
+/* Range bar: scale runs -5% to +15%; 0% reference line shown */
+.rb-range {
+  position: relative;
+  height: 2.6em;
+  margin: 1.4em 0.5em 0.2em;
+}
+.rb-range .rb-axis {
+  position: absolute;
+  left: 0; right: 0; top: 1.05em;
+  height: 2px;
+  background: var(--rb-rule);
+}
+.rb-range .rb-span {
+  position: absolute;
+  top: 0.8em;
+  height: 0.5em;
+  background: var(--rb-green);
+  opacity: 0.35;
+  border-radius: 3px;
+}
+.rb-range .rb-zero {
+  position: absolute;
+  top: 0.2em;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed var(--rb-muted);
+}
+.rb-range .rb-median {
+  position: absolute;
+  top: 0.35em;
+  width: 4px;
+  height: 1.35em;
+  margin-left: -2px;
+  background: var(--rb-green);
+  border-radius: 2px;
+}
+.rb-range .rb-label {
+  position: absolute;
+  top: -1.25em;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+  white-space: nowrap;
+  color: var(--rb-ink);
+}
+.rb-range .rb-label-low { top: 1.6em; }
+.rb-range .rb-label-zero { top: 1.6em; color: var(--rb-muted); }
+.rb-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.35em;
+  margin: 0.5em 0 0.4em;
+}
+.rb-grid span {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--rb-green);
+}
+.rb-grid span.rb-no {
+  background: transparent;
+  border: 2px solid var(--rb-amber);
+}
+.rb-legend {
+  display: flex;
+  gap: 1.2em;
+  font-size: 0.8em;
+  color: var(--rb-muted);
+  flex-wrap: wrap;
+}
+.rb-legend b { color: var(--rb-ink); }
+.rb-decide {
+  border-left: 4px solid var(--rb-green);
+  padding: 0.1em 0 0.1em 0.8em;
+}
+.rb-hold {
+  border-left: 4px solid var(--rb-amber);
+  padding: 0.1em 0 0.1em 0.8em;
+}
+.rb-hold h2 { color: var(--rb-amber) !important; }
+.rb-foot {
+  margin: 0;
+  font-size: 0.72em;
+  color: var(--rb-muted);
+  border-top: 1px solid var(--rb-rule);
+  padding-top: 0.5em;
+}
+</style>
+</head>
+<body>
+<div data-lys>
+  <article data-notes="Pilot: 18 greenhouse plots at three sites over one winter growing cycle. Median yield difference versus each site's reference plots was +6%; individual plots ranged from -3% to +14%; 12 of 18 plots were positive. Plots were not randomly assigned and crop mix and baseline conditions differed between sites, so the pilot does not show that lighting caused the differences. Cost and energy use were not measured. The steering group can authorize another measurement cycle; wider installation is not approved and is not supported by yield alone.">
+    <p class="rb-kicker">Riverbank greenhouse lighting pilot · steering group</p>
+    <h1 class="rb-title">The pilot supports one more measurement cycle, not wider installation</h1>
+
+    <div class="rb-cols">
+      <section>
+        <h2>What the pilot measured</h2>
+        <ul>
+          <li>18 greenhouse plots at three sites, one winter growing cycle.</li>
+          <li>Median yield difference vs. each site's reference plots: <span class="rb-stat">+6%</span>.</li>
+          <li>Individual plot differences: <span class="rb-stat">−3% to +14%</span>.</li>
+          <li><span class="rb-stat">12 of 18</span> plots had a positive yield difference; <span class="rb-stat">6 of 18</span> did not.</li>
+        </ul>
+
+        <figure class="rb-figure" aria-label="Range of plot yield differences from -3% to +14%, median +6%, 12 of 18 plots positive">
+          <figcaption>Yield difference vs. site reference plots (%). Bar spans the lowest to highest plot; marker is the median.</figcaption>
+          <div class="rb-range" role="img" aria-label="Scale from -5 to +15 percent; range -3 to +14; median +6; zero line at 0">
+            <div class="rb-axis"></div>
+            <div class="rb-zero" style="left: 25%"></div>
+            <div class="rb-span" style="left: 10%; width: 85%"></div>
+            <div class="rb-median" style="left: 55%"></div>
+            <div class="rb-label" style="left: 55%">median +6%</div>
+            <div class="rb-label rb-label-low" style="left: 10%">−3%</div>
+            <div class="rb-label rb-label-low" style="left: 95%">+14%</div>
+            <div class="rb-label rb-label-zero" style="left: 25%">0%</div>
+          </div>
+          <div class="rb-grid" role="img" aria-label="18 plots: 12 positive, 6 not positive">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="rb-legend">
+            <span><b>●</b> positive difference: 12 plots</span>
+            <span><span style="color: var(--rb-amber)">○</span> not positive: 6 plots</span>
+          </div>
+        </figure>
+      </section>
+
+      <section>
+        <div class="rb-decide">
+          <h2>Supported next step</h2>
+          <ul>
+            <li>Authorize another measurement cycle. The group can make this decision now.</li>
+          </ul>
+        </div>
+
+        <div class="rb-hold" style="margin-top: 1.1em">
+          <h2>Not supported yet</h2>
+          <ul>
+            <li><b>Wider installation on yield alone.</b> Installation cost and energy use were not measured, and no wider installation is approved.</li>
+            <li><b>A causal claim.</b> Plots were not randomly assigned; crop mix and baseline conditions differed between sites. The pilot does not show that lighting caused these differences.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <p class="rb-foot">Scope: one cooperative pilot, 18 plots, 3 sites, 1 winter growing cycle. Fictional scenario; all figures are invented for the evaluation.</p>
+  </article>
+</div>
+<script>
+/*LYS_JS*/
+</script>
+</body>
+</html>

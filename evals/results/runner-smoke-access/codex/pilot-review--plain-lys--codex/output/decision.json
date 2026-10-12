@@ -1,0 +1,13 @@
+{
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Single-slide decision brief with a direct recommendation, a compact yield evidence panel, and an explicit scope-and-limits footer.",
+  "fit_rationale": "A decision-led slide makes the supported action clear while keeping the reported median, plot range, positive-plot count, and pilot scope visible together. Separating the recommendation from the evidence limits helps avoid presenting the observed yield difference as causal.",
+  "tradeoff": "The slide prioritizes the next decision and the quantitative signal, so it does not show plot-level values individually or characterize the distribution beyond the supplied median, range, and positive count.",
+  "caveats": [
+    "The pilot covered 18 greenhouse plots at three sites over one winter growing cycle.",
+    "Plots were not randomly assigned, and crop mix and baseline conditions differed between sites; the pilot does not show that lighting caused the observed yield differences.",
+    "The reported median yield difference was +6% versus each site's reference plots; individual plot differences ranged from −3% to +14%.",
+    "Twelve of 18 plots had a positive yield difference; six did not, which does not establish that all six were negative.",
+    "Installation cost and energy use were not measured, so the pilot alone does not support wider installation on yield evidence alone."
+  ]
+}

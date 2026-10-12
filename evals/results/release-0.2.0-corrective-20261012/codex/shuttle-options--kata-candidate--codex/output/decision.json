@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "Aligned comparison matrix",
+  "fit_rationale": "All four options share the same range and cost criteria, and exact values in mixed units matter. The matrix keeps every option comparable while making the 200 km eligibility threshold and the lowest upfront cost among qualifying options clear.",
+  "tradeoff": "Alder is the lowest upfront-cost qualifying option, while Birch has a lower estimated annual energy cost; the slide does not combine upfront and annual costs into a total.",
+  "caveats": ["Annual energy estimates assume 18,000 kilometres of service per vehicle.", "Maintenance and charging-infrastructure costs are excluded.", "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided."]
+}

@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Decision slide with evidence-and-limits panels",
+  "fit_rationale": "A single-slide recommendation connects the actionable next step to the pilot's observed yield results and the limitations that prevent a rollout claim.",
+  "tradeoff": "Prioritizes a clear authorization decision over detailed plot-by-plot or site-level analysis.",
+  "caveats": ["18 plots at three sites over one winter growing cycle; plots were not randomly assigned and sites differed in crop mix and baseline conditions, so the observed difference does not establish causation.", "Median yield difference was +6% versus each site's reference plots; individual plot differences ranged from −3% to +14%, and 12 of 18 plots were positive.", "Installation cost and energy use were not measured; yield alone does not support wider installation."]
+}

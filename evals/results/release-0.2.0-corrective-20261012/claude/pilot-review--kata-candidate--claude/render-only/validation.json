@@ -1,0 +1,160 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "validator_source": {
+    "path": "evals/lys/check.mjs",
+    "sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47"
+  },
+  "target": {
+    "kind": "html",
+    "path": "/Users/ville.takanen/dev/kata/evals/results/release-0.2.0-corrective-20261012/claude/pilot-review--kata-candidate--claude/output/slide.html"
+  },
+  "contract_status": "HTML-only; full manifest/result/decision contract not checked",
+  "structural": {
+    "passed": true,
+    "error": null,
+    "lysRoot": true,
+    "slides": 1,
+    "manifestSha256": null,
+    "resultSha256": null,
+    "artifacts": {}
+  },
+  "review": {
+    "checks": [
+      {
+        "check": "presentation-1440x900",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 900,
+          "scrollHeight": 916,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 16,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "phone-390x844",
+        "passed": true,
+        "overflow": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": [
+            "visible",
+            "visible"
+          ],
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 844,
+          "scrollHeight": 1169,
+          "overflowY": [
+            "visible",
+            "visible"
+          ],
+          "verticalOverflow": true,
+          "verticalOverflowAmount": 325,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": true,
+          "clipped": false,
+          "scrollable": false
+        },
+        "status": "measured"
+      },
+      {
+        "check": "keyboard-navigation",
+        "passed": true,
+        "slides": 1
+      },
+      {
+        "check": "print-pdf-generated",
+        "passed": null,
+        "artifact": "print.pdf",
+        "note": "Inspect this PDF manually for pagination and clipping."
+      },
+      {
+        "check": "no-javascript-content",
+        "passed": true
+      }
+    ],
+    "slide_layouts": {
+      "presentation": [
+        {
+          "id": "pilot-decision",
+          "active": true,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflowX": "hidden",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 810,
+          "scrollHeight": 810,
+          "overflowY": "hidden",
+          "verticalOverflow": false,
+          "verticalOverflowAmount": 0,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": false,
+          "scrollable": false
+        }
+      ],
+      "phone": [
+        {
+          "id": "pilot-decision",
+          "active": true,
+          "clientWidth": 374,
+          "scrollWidth": 374,
+          "overflowX": "visible",
+          "horizontalOverflow": false,
+          "horizontalOverflowAmount": 0,
+          "clippedHorizontally": false,
+          "scrollableHorizontally": false,
+          "visibleOverflowHorizontally": false,
+          "clientHeight": 1153,
+          "scrollHeight": 1153,
+          "overflowY": "visible",
+          "verticalOverflow": false,
+          "verticalOverflowAmount": 0,
+          "clippedVertically": false,
+          "scrollableVertically": false,
+          "visibleOverflowVertically": false,
+          "clipped": false,
+          "scrollable": false
+        }
+      ]
+    },
+    "errors": [],
+    "passed": true,
+    "status": "complete"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

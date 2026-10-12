@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "Asymmetric composition (primary recommendation with adjacent evidence and qualifications)",
+  "fit_rationale": "The audience needs an actionable next step and one central evidence finding. Giving the recommendation priority while keeping the pilot result, scope, and limitations alongside it answers the decision without implying that yield evidence alone justifies wider installation.",
+  "tradeoff": "The recommendation gets more visual emphasis than the numeric result, so the quantitative detail is compacted into a single evidence panel.",
+  "caveats": [
+    "18 plots at three sites over one winter growing cycle; plots were not randomly assigned and sites differed in crop mix and baseline conditions.",
+    "The +6% is the reported median yield difference versus each site's reference plots, not a causal effect; individual plot differences ranged from −3% to +14%, and six of 18 plots did not show a positive difference.",
+    "Installation cost and energy use were not measured."
+  ]
+}

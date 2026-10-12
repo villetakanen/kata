@@ -1,0 +1,9 @@
+Create a single Lys slide that answers the audience question using the supplied brief. Choose the form that best preserves the evidence and makes the answer clear. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Case brief: inputs/brief.md
+Audience question: Which shuttle option meets the minimum range at the lowest upfront cost?
+Constraints:
+- Use one slide.
+- Compare all options on the same criteria.
+- Show range in kilometres and costs in thousands of dollars.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and your decision record to output/decision.json. The decision record must be valid JSON following kata-eval-decision/v1 with audience_question, form, fit_rationale, tradeoff, and caveats. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.

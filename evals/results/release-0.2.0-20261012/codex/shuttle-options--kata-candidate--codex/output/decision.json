@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "Aligned comparison matrix",
+  "fit_rationale": "A shared table keeps all four shuttle options on the same criteria and units, puts the 200 km threshold beside each range, and makes Alder's lowest upfront cost among qualifying options easy to identify while retaining annual energy estimates.",
+  "tradeoff": "Selecting on the stated upfront-cost and range criteria does not establish the lowest total cost of ownership; annual energy is shown for context, while maintenance and infrastructure costs are excluded.",
+  "caveats": [
+    "Annual energy estimates assume 18,000 kilometres of service per vehicle and exclude maintenance and charging-infrastructure costs.",
+    "All figures are estimates from the same procurement worksheet; no uncertainty ranges were provided.",
+    "Cedar has the lowest upfront estimate overall ($35k) but does not meet the 200 km minimum (190 km)."
+  ]
+}

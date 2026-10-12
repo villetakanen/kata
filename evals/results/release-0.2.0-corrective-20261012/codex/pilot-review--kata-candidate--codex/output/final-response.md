@@ -1,0 +1,3 @@
+Created the offline, single-slide deck at [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/slide.html) and the requested decision record at [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-uN2BHu/output/decision.json).
+
+The slide recommends authorizing another measurement cycle and preserves the pilot’s scope, yield figures, non-random assignment, causal uncertainty, and unmeasured cost and energy use. I did not render or inspect it at the requested viewport sizes or in print.

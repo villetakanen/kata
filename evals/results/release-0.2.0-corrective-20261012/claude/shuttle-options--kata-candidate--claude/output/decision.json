@@ -1,0 +1,14 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which shuttle option meets the minimum range at the lowest upfront cost?",
+  "form": "aligned comparison matrix (semantic table)",
+  "fit_rationale": "All four options share the same criteria (range in km, pass or fail against the 200 km minimum, range margin, upfront cost in USD thousands, annual energy cost in USD thousands per year). A matrix with options as columns keeps every value, unit, and the minimum test visible together, so the reader can check the answer directly. A bar or dot chart would drop exact values and the pass/fail test, and a one-line headline would hide Cedar's exclusion and the energy-cost counterpoint.",
+  "tradeoff": "Alder is the lowest upfront cost among options meeting the 200 km minimum, but it has the smallest range margin of those options (+10 km, against +20 for Dogwood and +40 for Birch) and a higher estimated annual energy cost (4.2) than Birch (3.9) or Dogwood (3.8). The slide keeps these alongside the answer and does not present Alder as best on every criterion.",
+  "caveats": [
+    "This is a fictional scenario; all figures are invented for the evaluation.",
+    "Range and upfront cost are fictional planning estimates; costs are in thousands of US dollars and no uncertainty ranges were provided.",
+    "Annual energy estimates assume 18,000 km of service per vehicle and exclude maintenance and charging-infrastructure costs.",
+    "The answer uses upfront cost only; annual energy cost is shown for context and is not part of the upfront-cost ranking.",
+    "Cedar has the lowest upfront cost (35) but a range of 190 km, 10 km below the 200 km minimum, so it does not qualify."
+  ]
+}

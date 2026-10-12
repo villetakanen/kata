@@ -1,0 +1,16 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Which retrofit barrier is most common overall, and did service turnaround improve?",
+  "form": "aligned bars, one panel per source",
+  "fit_rationale": "Each source's barrier counts are one numeric measure against its own denominator, which aligned bars show directly. Separate panels keep Partner North's 40 homeowners (overlapping multi-select survey) apart from Partner South's 15 support cases, so the sources are not pooled or ranked together. Turnaround is stated as text rather than charted: it is one recent, partial median with no comparable baseline, and a chart would imply a trend the data cannot support.",
+  "tradeoff": "Keeping the sources in separate panels means the slide cannot give one overall ranking of barriers; it gives a within-source answer and states that the overall question cannot be answered until the denominators are shared.",
+  "caveats": [
+    "Partner North: 40 homeowners surveyed; several barriers could be selected, so counts overlap and sum to 54 rather than 40.",
+    "Partner South: 15 open support cases reviewed; homeowners served not reported; only 'waiting for an installer' (9 of 15 cases) was recorded, and the review did not record whether other barriers were present.",
+    "The two sources use different units and denominators with no shared period definition, so they cannot be pooled or ranked together.",
+    "South median turnaround is 8 days from 11 of 15 cases; 4 cases had no time recorded; the figure is recent and partial.",
+    "The note 'around two weeks last spring' gives no case count, sample or method, so it is not a comparable baseline; no improvement in turnaround is claimed.",
+    "Partner North reported no turnaround times.",
+    "Fictional scenario; all figures are invented for the evaluation."
+  ]
+}

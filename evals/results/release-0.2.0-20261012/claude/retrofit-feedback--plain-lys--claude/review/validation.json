@@ -1,0 +1,32 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "validator_source": {
+    "path": "evals/lys/check.mjs",
+    "sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47"
+  },
+  "target": {
+    "kind": "attempt",
+    "path": "/Users/ville.takanen/dev/kata/evals/results/release-0.2.0-20261012/claude/retrofit-feedback--plain-lys--claude"
+  },
+  "contract_status": "checked",
+  "structural": {
+    "passed": false,
+    "error": "Lys style inputs/lys/lys.css is neither embedded exactly nor linked from the snapshot",
+    "lysRoot": false,
+    "slides": 0,
+    "manifestSha256": null,
+    "resultSha256": null,
+    "artifacts": {}
+  },
+  "review": {
+    "checks": [],
+    "errors": [],
+    "passed": null,
+    "status": "not-run"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

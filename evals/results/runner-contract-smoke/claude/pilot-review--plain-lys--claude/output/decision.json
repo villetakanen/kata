@@ -1,0 +1,17 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "single annotated slide: summary range bar, 18-plot count grid, and a supported vs. not-supported split",
+  "fit_rationale": "The brief gives only summary figures (median +6%, range -3% to +14%, 12 of 18 positive), not per-plot values, so a plot-level dot plot would invent data. A range bar with a zero reference line and an 18-cell count grid show the spread and the count without fabricating points. A two-column split separates what the group can decide now (another measurement cycle) from what the evidence does not support (wider installation on yield alone, a causal claim), which answers the question directly on one slide.",
+  "tradeoff": "Per-plot magnitudes are not shown: the count grid shows how many plots were positive, not how large each difference was, so the reader sees the spread only as a summary range and median.",
+  "caveats": [
+    "Pilot size: 18 greenhouse plots at three sites over one winter growing cycle.",
+    "Median yield difference vs. each site's reference plots was +6%; individual plot differences ranged from -3% to +14%.",
+    "12 of 18 plots had a positive yield difference; 6 did not.",
+    "Plots were not randomly assigned; crop mix and baseline conditions differed between sites.",
+    "The pilot does not show that lighting caused the observed yield differences.",
+    "Installation cost and energy use were not measured; yield alone does not support wider installation.",
+    "The steering group has not approved wider installation; it can authorize another measurement cycle.",
+    "Fictional scenario; all figures are invented for the evaluation."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "decision slide with evidence-and-limitations comparison",
+  "fit_rationale": "A single decision-led slide pairs the observed yield signal with its design limits and translates the evidence into a bounded next step: another measurement cycle, not deployment.",
+  "tradeoff": "Prioritizes the next decision over a detailed plot-by-plot display, while retaining the median, full range, and positive-plot count.",
+  "caveats": [
+    "18 plots across three sites over one winter growing cycle; not randomly assigned, and crop mix and baseline conditions differed between sites.",
+    "The +6% is a reported median difference versus site reference plots, not evidence that lighting caused the difference; plot differences ranged from −3% to +14%, with 12 of 18 positive.",
+    "Installation cost and energy use were not measured, so yield alone does not support wider installation."
+  ]
+}

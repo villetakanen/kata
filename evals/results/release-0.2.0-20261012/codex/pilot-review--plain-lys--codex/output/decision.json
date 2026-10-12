@@ -1,0 +1,12 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What does the pilot evidence support the steering group doing next?",
+  "form": "decision slide with a range-and-median evidence graphic",
+  "fit_rationale": "A single decision slide pairs the pilot's measured yield spread and positive-plot count with its scope and design limits, then makes the supported next action explicit: another measurement cycle that captures the missing cost and energy data.",
+  "tradeoff": "The compact range graphic highlights the overall spread and median but does not show each plot's individual value.",
+  "caveats": [
+    "The pilot covered 18 plots at three sites over one winter growing cycle.",
+    "Plots were not randomly assigned, and crop mix and baseline conditions differed between sites; the observed yield differences do not establish that lighting caused them.",
+    "Installation cost and energy use were not measured, so yield alone does not support wider installation."
+  ]
+}
