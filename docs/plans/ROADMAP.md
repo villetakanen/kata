@@ -13,18 +13,23 @@ for choosing and adapting a pattern. Its examples use fictional data. See the
 
 ## Planned: 0.2.0
 
-The [0.2.0 plan](0.2.0.md) is marked planned. It aims to strengthen the existing
-repertoire before expanding it:
+The [redesigned 0.2.0 plan](0.2.0.md) is planned. It focuses the release on
+three outcomes:
 
-- Add difficult cases that show when to adapt a pattern or choose another form.
-- Add a concise perceptual review for grouping, label association, emphasis,
-  and reading order.
-- Compare Kata-assisted work with plain Lys and the first iteration on the same
-  unfamiliar briefs, recording reader outcomes as well as failures and ties.
-- Demonstrate a real brand application and one short temporal sequence.
+- Give people and agents a clear framework to choose, adapt, or reject a visual
+  pattern and explain the trade-off.
+- Add the golden cut as an optional asymmetric-composition pattern, with
+  explicit fit and mismatch examples and no unsupported claims about beauty or
+  comprehension.
+- Evaluate the guidance through Lys using repeatable briefs and a common runner
+  for Claude Code, Codex CLI, and pi, recording fidelity, failures, and reader
+  outcomes where available.
 
-These are planned outcomes, not completed capabilities. The plan defines its
-own completion checks and research boundaries.
+The scope keeps the five current data patterns and adds the golden cut as a
+sixth pattern. It defers brand-specific and temporal demonstrations unless the
+evaluation exposes a concrete need. These are planned outcomes, not current
+capabilities; see the plan for runner requirements, evaluation criteria, and
+completion checks.
 
 ## Questions for the next discussion
 
