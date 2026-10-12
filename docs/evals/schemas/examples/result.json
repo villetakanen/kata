@@ -1,0 +1,22 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "2026-10-12T093000Z-codex-case-gc01-candidate",
+  "manifest": {"path": "manifest.json", "sha256": "5555555555555555555555555555555555555555555555555555555555555555"},
+  "status": "succeeded",
+  "started_at": "2026-10-12T09:30:00Z",
+  "ended_at": "2026-10-12T09:31:12Z",
+  "tool": {"id": "codex", "observed_version": "1.2.3", "model": "example-model", "settings": {"reasoning_effort": "medium"}, "exit_code": 0},
+  "frozen_inputs": [
+    {"path": "inputs/brief.md", "sha256": "0000000000000000000000000000000000000000000000000000000000000000"},
+    {"path": "inputs/prompt.md", "sha256": "2222222222222222222222222222222222222222222222222222222222222222"},
+    {"path": "inputs/skill/SKILL.md", "sha256": "3333333333333333333333333333333333333333333333333333333333333333"},
+    {"path": "inputs/lys/lys.js", "sha256": "4444444444444444444444444444444444444444444444444444444444444444"}
+  ],
+  "artifacts": {
+    "decision": {"path": "output/decision.json", "sha256": "6666666666666666666666666666666666666666666666666666666666666666"},
+    "lys_html": {"path": "output/slide.html", "sha256": "7777777777777777777777777777777777777777777777777777777777777777"},
+    "final_response": {"path": "output/final-response.md", "sha256": "8888888888888888888888888888888888888888888888888888888888888888"},
+    "log": {"path": "output/tool.log", "sha256": "9999999999999999999999999999999999999999999999999999999999999999"}
+  },
+  "failure": null
+}

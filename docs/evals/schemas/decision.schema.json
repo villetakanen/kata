@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kata.example/schemas/decision.schema.json",
+  "title": "Kata evaluation decision record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "audience_question", "form", "fit_rationale", "tradeoff", "caveats"],
+  "properties": {
+    "protocol": {"const": "kata-eval-decision/v1"},
+    "audience_question": {"type": "string", "minLength": 1},
+    "form": {"type": "string", "minLength": 1, "description": "Pattern name or none."},
+    "fit_rationale": {"type": "string", "minLength": 1},
+    "tradeoff": {"type": "string", "minLength": 1},
+    "caveats": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kata.example/schemas/result.schema.json",
+  "title": "Kata evaluation attempt result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol", "run_id", "manifest", "status", "started_at", "ended_at", "tool", "frozen_inputs", "artifacts", "failure"],
+  "properties": {
+    "protocol": {"const": "kata-eval/v1"},
+    "run_id": {"type": "string", "minLength": 1},
+    "manifest": {"$ref": "#/$defs/digestFile"},
+    "status": {"enum": ["succeeded", "failed", "unavailable"]},
+    "started_at": {"type": ["string", "null"], "format": "date-time"},
+    "ended_at": {"type": ["string", "null"], "format": "date-time"},
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "observed_version", "model", "settings", "exit_code"],
+      "properties": {
+        "id": {"enum": ["claude", "codex", "pi"]},
+        "observed_version": {"type": ["string", "null"]},
+        "model": {"type": ["string", "null"]},
+        "settings": {"type": "object"},
+        "exit_code": {"type": ["integer", "null"]}
+      }
+    },
+    "frozen_inputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/digestFile"}},
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decision", "lys_html", "final_response", "log"],
+      "properties": {
+        "decision": {"$ref": "#/$defs/optionalDigestFile"},
+        "lys_html": {"$ref": "#/$defs/optionalDigestFile"},
+        "final_response": {"$ref": "#/$defs/optionalDigestFile"},
+        "log": {"$ref": "#/$defs/optionalDigestFile"}
+      }
+    },
+    "failure": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["reason"],
+      "properties": {"reason": {"type": "string", "minLength": 1}}
+    }
+  },
+  "$defs": {
+    "digestFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+    },
+    "optionalDigestFile": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/digestFile"}]}
+  }
+}
