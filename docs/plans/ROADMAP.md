@@ -48,6 +48,10 @@ are deferred until a specific agent-behavior question calls for them.
 The plan also includes aligning the README, vision, development instructions,
 delivered skill, and other living materials with that current scope. A later
 scope change should update those materials as part of the same decision.
+Before demo authoring, the local harness will gain a checked-in, version-pinned
+Lys skill and its required resources, compatible with the vendored runtime,
+with `AGENTS.md` directing agents to use it for demo decks. This development
+dependency stays outside the portable Kata skill.
 
 Prose, videos, infographics, and tables are treated as supplied content.
 Creating or internally redesigning them is intentionally outside this release.
