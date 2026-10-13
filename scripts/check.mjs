@@ -58,4 +58,6 @@ assert(gallery.includes('references/golden-cut.md'), 'Gallery must link to the d
 assert(gallery.includes('golden-cut-mismatch'), 'Gallery must include the explicit mismatch case');
 assert(deck.includes('golden-cut-mismatch'), 'Lys deck must include the explicit mismatch case');
 console.log('Checked harness instructions, example data, skill links, slide structure, navigation targets, and offline packaging.');
+await import('./check-lys-skill.mjs');
 await import('./check-evals.mjs');
+await import('./check-field-guide.mjs');

@@ -4,59 +4,48 @@ This document is a place to discuss direction and next steps. It distinguishes
 the current project from agreed plans and questions that still need decisions;
 it is not a promise about delivery dates.
 
-## Current: 0.2.0
+## Current: 0.3.0
 
-Kata 0.2.0 implements six slide patterns, seven worked before-and-after pairs,
-an offline Lys deck with 14 slides, and a portable framework for choosing,
-adapting, or rejecting a form. It also includes a versioned evaluation corpus,
-three CLI adapters, Lys validation, and runner regression checks. See the
-[README](../../README.md), [evaluation report](../evals/report.md), and
-[project vision](../../VISION.md).
+Kata arranges supplied content: placement, available space, grouping, reading
+order, and emphasis supported by the brief. It can retain a suitable existing
+layout. Content authorship, rewriting, internal chart/table redesign, and
+inference of information relationships are outside the current responsibility.
+See the [README](../../README.md) and [project vision](../../VISION.md).
 
-The original 27-attempt matrix and separate nine-attempt corrective check are
-reported independently in the [evaluation report](../evals/report.md). The
-corrective check changed both the shared task prompt and the candidate skill,
-so it cannot isolate the skill's effect. No independent reader outcomes were
-collected; the results do not establish improved comprehension or preference.
-The report includes source-text and visual review, automated checks, print
-failures, and evidence limits.
+The [0.3.0 release](../releases/0.3.0.md) adds a six-slide offline Lys
+[field guide](../../examples/field-guide.html), with a visible specimen, fit,
+limitation, and reference for every current form. Shared
+[layout assessment](../../skills/kata/references/layout-assessment.md)
+consolidates checks across forms. The development harness includes pinned Lys
+authoring guidance compatible with the vendored 1.2.1 runtime, separate from
+the portable Kata skill.
+
+The six forms and seven before-and-after pairs (14 slides) from 0.2.0 remain.
+These historical specimens include information-authoring examples beyond the
+current scope; their presence does not authorize those tasks. The existing
+versioned evaluation corpus, three CLI adapters, and runner checks remain.
+The [0.3.0 plan](0.3.0.md) records the release rationale and acceptance criteria;
+the [review record](../evals/0.3.0-review/README.md) records verification and
+limitations.
 
 ## Evidence boundaries
 
+The field guide is an authored demonstration and dogfooding fixture. It is not
+an independent measure of agent behavior or reader comprehension.
+Baseline-versus-candidate model runs are deferred until a specific behavior
+question calls for them. The original 27-attempt matrix and separate
+nine-attempt corrective check remain independently reported in the
+[0.2.0 evaluation](../evals/report.md). The corrective check changed both prompt
+and skill, so it cannot isolate the skill's effect. No independent reader
+outcomes were collected.
+
 The golden cut is an optional asymmetric composition. Its 61.8/38.2 proportion
-does not encode quantities or establish preference or comprehension. The six
-patterns are slide guidance with worked Lys examples, not a general deck
-storytelling system or a packaged Kata-Lys integration. Brand-specific work
-remains untested.
-
-## Proposed: 0.3.0
-
-The [initial 0.3.0 plan](0.3.0.md) responds to the Lys-side migration
-evaluation supplied on 12 October 2026. Its scope is layout around supplied
-content: retaining suitable arrangements, placing content and qualifications,
-and applying emphasis when priority is supplied. General assessment guidance
-would live in a shared reference used across forms, with the number-and-context
-case as a small illustration rather than a golden-cut-specific feature.
-The main focus area is a Lys field-guide PoC: each current form is visibly
-demonstrated on a slide that also explains where it works and its limits.
-The deck serves as dogfooding, a demo, and a reproducible review fixture,
-alongside the guidance tasks. Verification covers every form, agreement with
-the skill references, automated artifact checks, and presentation, phone,
-keyboard, no-JavaScript, and print review. Baseline-versus-candidate model runs
-are deferred until a specific agent-behavior question calls for them.
-
-The plan also includes aligning the README, vision, development instructions,
-delivered skill, and other living materials with that current scope. A later
-scope change should update those materials as part of the same decision.
-Before demo authoring, the local harness will gain a checked-in, version-pinned
-Lys skill and its required resources, compatible with the vendored runtime,
-with `AGENTS.md` directing agents to use it for demo decks. This development
-dependency stays outside the portable Kata skill.
-
-Prose, videos, infographics, and tables are treated as supplied content.
-Creating or internally redesigning them is intentionally outside this release.
-The six existing patterns remain; their long-term fit with this boundary is
-unresolved. The draft does not expand the catalogue or implement these changes.
+does not encode quantities or establish preference or comprehension. Kata is
+not a general deck storytelling system or a packaged Kata-Lys integration.
+Brand-specific work remains untested. The six forms' long-term fit with the
+supplied-content boundary remains unresolved; this release does not expand or
+remove the catalogue. Future scope decisions must update the affected living
+materials together.
 
 [Out-of-scope work](out-of-scope.md) records information-structure research,
 content-authoring questions, separate harness improvements, and Lys-owned

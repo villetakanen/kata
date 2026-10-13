@@ -2,65 +2,60 @@
 
 ## A language of forms for thought
 
-Kata is a language of forms, shapes, and patterns for thinking with ideas and
-presenting them visually. It helps people and language models choose and adapt
-a form to a particular situation: what needs to be understood, by whom, and in
-what medium.
+Kata's long-term vision is a language of visual forms that helps people think
+with and communicate ideas across media. Forms have affordances and trade-offs:
+they make some relationships, comparisons, or priorities easier to see and
+others harder to express. The guidance should make those qualities legible so
+people can reason about a choice instead of treating a layout as a universal
+rule.
 
-Kata applies across visual layers, from a quick arrangement of post-its to a
-slide, diagram, or another visual representation. Slides are a useful first
-test medium, especially when a renderer such as Lys can present the same ideas
-in different formats and screen shapes. Its forms can help explore, organize,
-compare, and communicate ideas; they are not limited to polishing a finished
-slide.
+## Current responsibility
 
-Kata and Lys are intended to develop together. Lys uses Kata to choose layouts;
-Kata uses Lys to demonstrate its forms in realistic examples. Each project
-should help make the other's ideas and capabilities more concrete.
+Kata currently helps arrange supplied content for visual communication. Its
+scope is placement, available space, grouping, and reading order. It can help
+decide whether the existing layout already works and preserve a priority
+supported by the supplied material or brief.
 
-Kata is also connected to [ASDLC.io](https://asdlc.io), our pattern library for
-harness engineering. ASDLC.io describes the broader engineering practices for
-agentic work; Kata contributes patterns for choosing visual forms to present
-information within that work.
+Kata does not currently author or rewrite content, derive information
+relationships, or redesign the internal structure of supplied prose, charts,
+tables, infographics, code, lists, or other material. If available space cannot
+accommodate supplied content legibly, the layout guidance should identify the
+constraint for the author. It should not silently shorten, omit, or change that
+content. This scope can change through an explicit later decision; broader
+aspirations do not promise that expansion.
 
 ## Forms are choices, not prescriptions
 
-No one form is right for every situation. A form has affordances and trade-offs:
-it makes some relationships, comparisons, or priorities easier to see, while
-making others less visible or harder to express. Kata explains these qualities
-so a person or model can make a reasoned choice, adapt a form, combine forms, or
-choose a different representation when needed. It does not prescribe fixed
-layouts.
+No form is right for every situation. A form makes some visual arrangements
+possible and may obscure others. A supplied comparison, for instance, may
+benefit from aligned placement when its criteria are already shared. A layout
+with unequal areas can imply unequal priority, so use it only when the brief
+supports that emphasis. If the priority is unclear and the choice matters, ask;
+otherwise preserve the supplied treatment or use equal emphasis.
 
-For example, two panes can give two ideas equal space when they deserve equal
-weight. A golden-cut composition can give one element more emphasis beside
-another. The choice should follow the communication purpose, not a universal
-layout rule.
+The six documented forms and their worked examples remain part of the
+catalogue. Some specimens show a wider historical practice of structuring
+information. Their presence does not expand the current responsibility stated
+above.
 
 ## Reasoning and evidence
 
-Kata uses consistent, explicit criteria grounded where possible in research on
-human perception and psychology. Criteria should help describe what a form
-makes salient, how it groups or relates elements, what reading it invites, and
-what it may obscure. They should support explanation and comparison across
-forms rather than produce an automatic answer detached from context.
-
-Research is evidence to examine, not authority for unsupported prescriptions.
-Distinguish empirical findings from design judgment and analogy. Cite evidence
-for specific psychological claims, describe its limits, and do not claim that
-a form or Kata has been validated unless appropriate evidence supports that
-claim.
+Describe layout effects as design judgments unless specific empirical evidence
+supports a stronger claim. Distinguish research findings from analogy, cite
+research for specific psychology claims, and describe its limits. Do not claim
+that a form or Kata has been validated unless appropriate evidence supports
+that claim. Examples should preserve their stated source meaning and
+qualifications; fictional examples are demonstrations, not empirical evidence.
 
 ## A useful repertoire
 
-Each form should include a clear description of the idea or relationship it
-expresses, the situations where it can help, the affordances and trade-offs,
-and examples that show both useful applications and cases where it gets in the
-way. Examples should make the choice legible and preserve the meaning of the
-source material. When the fit is poor, say why and suggest a better way to
-represent the idea.
+The current repertoire gives readers and agents a shared vocabulary for
+discussing visual arrangements and their constraints. Guidance should preserve
+human judgment, keep supplied context attached to the content it qualifies,
+and allow a concise conclusion that no layout change is needed. Future scope
+changes require updating the affected living project materials together.
 
-Kata is useful to both people making visual work and language models helping
-them. Its guidance should make the reasoning behind a choice visible, preserve
-room for human judgment, and help ideas move coherently between media and
-stages of thought.
+Kata is connected to [ASDLC.io](https://asdlc.io), our pattern library for
+harness engineering. ASDLC.io describes broader engineering practices for
+agentic work; Kata contributes a focused vocabulary for arranging supplied
+content.

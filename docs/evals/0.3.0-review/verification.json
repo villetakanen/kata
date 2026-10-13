@@ -1,0 +1,2456 @@
+[
+  {
+    "file": "field-guide",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "aligned-comparison",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 717,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead aligned comparison guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read aligned comparison guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "whole-and-parts",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead whole and parts guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read whole and parts guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "nested-groups",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 553,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead nested groups guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read nested groups guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "directed-dependencies",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 548,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead directed dependencies guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read directed dependencies guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "time-series",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 655,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead time series guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read time series guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "asymmetric-composition",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead asymmetric composition guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read asymmetric composition guidance \u2197"
+          }
+        ]
+      }
+    ],
+    "keyboard": {
+      "before": "aligned-comparison",
+      "next": "whole-and-parts",
+      "previous": "aligned-comparison"
+    },
+    "navigation": {
+      "target": "asymmetric-composition",
+      "actual": "asymmetric-composition"
+    },
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "field-guide",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "aligned-comparison",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 717,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead aligned comparison guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read aligned comparison guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "whole-and-parts",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead whole and parts guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read whole and parts guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "nested-groups",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 553,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead nested groups guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read nested groups guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "directed-dependencies",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 548,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead directed dependencies guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read directed dependencies guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "time-series",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 655,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead time series guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read time series guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "asymmetric-composition",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead asymmetric composition guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 736.40625,
+            "bottom": 752.40625,
+            "text": "Read asymmetric composition guidance \u2197"
+          }
+        ]
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "field-guide",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "aligned-comparison",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 717,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 502.125,
+            "bottom": 574.0625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead aligned comparison guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 502.125,
+            "bottom": 550.6875,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 557.875,
+            "bottom": 574.0625,
+            "text": "Read aligned comparison guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "whole-and-parts",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 475.984375,
+            "bottom": 547.921875,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead whole and parts guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 475.984375,
+            "bottom": 524.546875,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 531.734375,
+            "bottom": 547.921875,
+            "text": "Read whole and parts guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "nested-groups",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 553,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 423.125,
+            "bottom": 495.0625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead nested groups guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 423.125,
+            "bottom": 471.6875,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 478.875,
+            "bottom": 495.0625,
+            "text": "Read nested groups guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "directed-dependencies",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 719,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 610.78125,
+            "bottom": 682.71875,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead directed dependencies guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 610.78125,
+            "bottom": 659.34375,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 666.53125,
+            "bottom": 682.71875,
+            "text": "Read directed dependencies guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "time-series",
+        "width": 390,
+        "height": 835.6875,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 836,
+        "clientHeight": 836,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 735,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 727.5625,
+            "bottom": 815.6875,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead time series guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 727.5625,
+            "bottom": 792.3125,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 799.5,
+            "bottom": 815.6875,
+            "text": "Read time series guidance \u2197"
+          }
+        ],
+        "footerReachable": true
+      },
+      {
+        "id": "asymmetric-composition",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 479.828125,
+            "bottom": 551.765625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead asymmetric composition guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 479.828125,
+            "bottom": 528.390625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 535.578125,
+            "bottom": 551.765625,
+            "text": "Read asymmetric composition guidance \u2197"
+          }
+        ]
+      }
+    ],
+    "keyboard": {
+      "before": "aligned-comparison",
+      "next": "whole-and-parts",
+      "previous": "aligned-comparison"
+    },
+    "navigation": {
+      "target": "asymmetric-composition",
+      "actual": "asymmetric-composition"
+    },
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "field-guide",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "aligned-comparison",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 717,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 502.125,
+            "bottom": 574.0625,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead aligned comparison guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 502.125,
+            "bottom": 550.6875,
+            "text": "One-time cost and lead-time estimates. Lifetime cost is outside this comparison. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 557.875,
+            "bottom": 574.0625,
+            "text": "Read aligned comparison guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "whole-and-parts",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 475.984375,
+            "bottom": 547.921875,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead whole and parts guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 475.984375,
+            "bottom": 524.546875,
+            "text": "Exclusive categories cover the planned budget. This is an allocation, not actual spending. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 531.734375,
+            "bottom": 547.921875,
+            "text": "Read whole and parts guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "nested-groups",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 553,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 423.125,
+            "bottom": 495.0625,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead nested groups guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 423.125,
+            "bottom": 471.6875,
+            "text": "Membership is the relationship shown. Equal areas do not indicate team size or capacity. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 478.875,
+            "bottom": 495.0625,
+            "text": "Read nested groups guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "directed-dependencies",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 719,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 610.78125,
+            "bottom": 682.71875,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead directed dependencies guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 610.78125,
+            "bottom": 659.34375,
+            "text": "Build and Compliance are independent prerequisites for Launch. Spacing does not represent duration. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 666.53125,
+            "bottom": 682.71875,
+            "text": "Read directed dependencies guidance \u2197"
+          }
+        ]
+      },
+      {
+        "id": "time-series",
+        "width": 390,
+        "height": 835.6875,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 836,
+        "clientHeight": 836,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 735,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 727.5625,
+            "bottom": 815.6875,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead time series guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 727.5625,
+            "bottom": 792.3125,
+            "text": "Monthly means; consistent measure. April rises before the decline continues. Causes and within-cohort variation are unknown. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 799.5,
+            "bottom": 815.6875,
+            "text": "Read time series guidance \u2197"
+          }
+        ],
+        "footerReachable": true
+      },
+      {
+        "id": "asymmetric-composition",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 627,
+        "footer": [
+          {
+            "tag": "FOOTER",
+            "top": 479.828125,
+            "bottom": 551.765625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples onlyRead asymmetric composition guidance \u2197"
+          },
+          {
+            "tag": "SPAN",
+            "top": 479.828125,
+            "bottom": 528.390625,
+            "text": "Planned, not confirmed. Security review due 10 June 2027. Fictional planning data; the condition qualifies the date. \u00b7 Fictional service-launch data \u00b7 layout examples only"
+          },
+          {
+            "tag": "A",
+            "top": 535.578125,
+            "bottom": 551.765625,
+            "text": "Read asymmetric composition guidance \u2197"
+          }
+        ]
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "index",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 326,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 343,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata First practice / 0.3",
+      "href": "../README.md"
+    }
+  },
+  {
+    "file": "index",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 326,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 343,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 652.40625,
+        "height": 366.96875,
+        "scrollWidth": 650,
+        "clientWidth": 650,
+        "scrollHeight": 365,
+        "clientHeight": 365,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata First practice / 0.3",
+      "href": "../README.md"
+    }
+  },
+  {
+    "file": "index",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 446,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 366.625,
+        "height": 443.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 441,
+        "clientHeight": 441,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 370,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 366.625,
+        "height": 433.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 431,
+        "clientHeight": 431,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 366.625,
+        "height": 484.484375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 482,
+        "clientHeight": 482,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 366.625,
+        "height": 387.3125,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 385,
+        "clientHeight": 385,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata First practice / 0.3",
+      "href": "../README.md"
+    }
+  },
+  {
+    "file": "index",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 446,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 366.625,
+        "height": 443.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 441,
+        "clientHeight": 441,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 370,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 366.625,
+        "height": 384,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 382,
+        "clientHeight": 382,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 366.625,
+        "height": 433.109375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 431,
+        "clientHeight": 431,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 366.625,
+        "height": 484.484375,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 482,
+        "clientHeight": 482,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 366.625,
+        "height": 387.3125,
+        "scrollWidth": 365,
+        "clientWidth": 365,
+        "scrollHeight": 385,
+        "clientHeight": 385,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata First practice / 0.3",
+      "href": "../README.md"
+    }
+  },
+  {
+    "file": "kata-lys",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 326,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 343,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "keyboard": {
+      "before": "comparison-before",
+      "next": "comparison-after",
+      "previous": "comparison-before"
+    },
+    "navigation": {
+      "target": "golden-cut-mismatch-after",
+      "actual": "golden-cut-mismatch-after"
+    },
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "kata-lys",
+    "size": "presentation",
+    "width": 1440,
+    "height": 900,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 326,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 343,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 1440,
+        "height": 810,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "scrollHeight": 810,
+        "clientHeight": 810,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "kata-lys",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": true,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 446,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 370,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "keyboard": {
+      "before": "comparison-before",
+      "next": "comparison-after",
+      "previous": "comparison-before"
+    },
+    "navigation": {
+      "target": "golden-cut-mismatch-after",
+      "actual": "golden-cut-mismatch-after"
+    },
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  },
+  {
+    "file": "kata-lys",
+    "size": "phone",
+    "width": 390,
+    "height": 844,
+    "javaScriptEnabled": false,
+    "errors": [],
+    "network": [],
+    "slides": [
+      {
+        "id": "comparison-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 385,
+        "footer": []
+      },
+      {
+        "id": "comparison-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 429,
+        "footer": []
+      },
+      {
+        "id": "composition-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 292,
+        "footer": []
+      },
+      {
+        "id": "composition-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 362,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 318,
+        "footer": []
+      },
+      {
+        "id": "hierarchy-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 294,
+        "footer": []
+      },
+      {
+        "id": "relationship-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 358,
+        "footer": []
+      },
+      {
+        "id": "relationship-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 446,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 331,
+        "footer": []
+      },
+      {
+        "id": "change-over-time-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 370,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 402,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 377,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-before",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 436,
+        "footer": []
+      },
+      {
+        "id": "golden-cut-mismatch-after",
+        "width": 390,
+        "height": 788,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 788,
+        "clientHeight": 788,
+        "display": "flex",
+        "visibility": "visible",
+        "textLength": 527,
+        "footer": []
+      }
+    ],
+    "tabFocus": {
+      "tag": "A",
+      "text": "Kata / Gallery",
+      "href": "index.html"
+    }
+  }
+]
