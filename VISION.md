@@ -1,61 +1,94 @@
 # Kata
 
-## A language of forms for thought
+## Deliberate composition for communication
 
-Kata's long-term vision is a language of visual forms that helps people think
-with and communicate ideas across media. Forms have affordances and trade-offs:
-they make some relationships, comparisons, or priorities easier to see and
-others harder to express. The guidance should make those qualities legible so
-people can reason about a choice instead of treating a layout as a universal
-rule.
+Kata helps people and agents make deliberate compositional choices, beyond
+merely producing a readable arrangement. Its starting question is **what should
+this presentation item communicate?** This includes both intended understanding
+and expressive character: alternatives may deserve equal consideration; a
+composition may invite quiet reflection or demand attention.
 
-## Current responsibility
+The goal is to move beyond generic, mediocre defaults towards thought-out,
+sensible forms. Readability is necessary, but it does not by itself make a
+composition considered or appropriate. Kata should offer meaningful alternatives
+even when an existing arrangement is readable. Keeping that arrangement can
+still be a deliberate choice, supported by communicative intent.
 
-Kata currently helps arrange supplied content for visual communication. Its
-scope is placement, available space, grouping, and reading order. It can help
-decide whether the existing layout already works and preserve a priority
-supported by the supplied material or brief.
+## Forms to think with
 
-Kata does not currently author or rewrite content, derive information
-relationships, or redesign the internal structure of supplied prose, charts,
-tables, infographics, code, lists, or other material. If available space cannot
-accommodate supplied content legibly, the layout guidance should identify the
-constraint for the author. It should not silently shorten, omit, or change that
-content. This scope can change through an explicit later decision; broader
-aspirations do not promise that expansion.
+Kata offers a repertoire of compositions and the judgment to choose and adapt
+them. Whitespace, tension, balance, restraint, proximity, contrast, and dominance
+are communicative choices. They help explain what an arrangement emphasizes,
+connects, places in dialogue, or leaves quiet. They are not universal recipes.
 
-## Forms are choices, not prescriptions
+The same supplied photograph and quotation can give the photograph a leading
+role with the quotation as accompaniment, or give both comparable presence so
+they are considered together. Either can be useful. The question is what comes
+across, rather than which content blocks happen to be available or which layout
+looks more elaborate. A fixed proportion, including the golden cut, is only a
+possible means to an intended effect.
 
-No form is right for every situation. A form makes some visual arrangements
-possible and may obscure others. A supplied comparison, for instance, may
-benefit from aligned placement when its criteria are already shared. A layout
-with unequal areas can imply unequal priority, so use it only when the brief
-supports that emphasis. If the priority is unclear and the choice matters, ask;
-otherwise preserve the supplied treatment or use equal emphasis.
+Forms should make alternatives and trade-offs legible to humans and agents.
+They should develop judgment rather than replace one automatic default with
+another. The repertoire's names and organization should follow communicative
+purpose; the existing catalogue is not a constraint on that work.
 
-The six documented forms and their worked examples remain part of the
-catalogue. Some specimens show a wider historical practice of structuring
-information. Their presence does not expand the current responsibility stated
-above.
+## Unit and responsibility
+
+Through 1.0.0, the unit is a single presentation item: a slide, poster, book
+cover, or similar surface. Slides remain the first implementation and test
+medium. Sequences, timing, staged reveals, and narrative orchestration across
+items are outside this scope.
+
+Kata works with supplied content. It understands communicative roles and intent
+enough to arrange that content purposefully; it does not treat content as opaque
+rectangles. It can pair photographs with their descriptions, give a supported
+recommendation prominence, or propose equal treatment of alternatives. Ask when
+missing intent would materially change what the composition communicates.
+
+Kata does not author or rewrite the supplied material, determine a process's
+steps, turn prose into boxes and arrows, or design the internal representation
+of a chart, table, or infographic. It may recommend that a supplied process
+occupy its own slide or that space be reserved for a needed legend, without
+writing that legend or redesigning the process. It may recommend separating
+competing material into distinct items without orchestrating their sequence.
+
+Preserve supplied meaning, quantities, uncertainty, and meaningful associations.
+Do not silently shorten or omit content to make a form fit. Preserve supplied
+qualifications; sophisticated diagnosis of whether a caveat receives sufficient
+communicative prominence belongs conceptually, but is deferred beyond the near-term
+roadmap.
+
+## Responsibilities alongside Kata
+
+Kata owns compositional choices in service of communication. Lys or another
+renderer owns output behavior. A brand supplies visual identity and its
+constraints. Kata can reason about expressive character within those constraints;
+expression is not delegated wholesale to a brand. Kata should remain usable
+without a particular renderer or brand.
+
+## Direction and existing artifacts
+
+This vision records the design alignment agreed on 14 October 2026. The 0.3.0
+skill and demos do not yet embody it consistently. Five of the six existing
+forms primarily concern information representations; golden cut comes closest
+to the intended compositional practice. The field guide exposed that mismatch.
+Retaining those artifacts does not make them the model for future work.
+
+The [0.4.0 plan](docs/plans/0.4.0.md) brings the repertoire, delivered guidance,
+and demonstrations into alignment. Until implemented, those changes are planned
+capabilities. Historical briefs, release records, and evaluations retain their
+original context.
 
 ## Reasoning and evidence
 
-Describe layout effects as design judgments unless specific empirical evidence
-supports a stronger claim. Distinguish research findings from analogy, cite
-research for specific psychology claims, and describe its limits. Do not claim
-that a form or Kata has been validated unless appropriate evidence supports
-that claim. Examples should preserve their stated source meaning and
-qualifications; fictional examples are demonstrations, not empirical evidence.
+Explain compositional effects as design judgments unless specific empirical
+evidence supports a stronger claim. Distinguish research findings from perceptual
+analogies, cite research for specific psychology claims, and describe its limits.
+Do not claim that a form or Kata improves comprehension without appropriate
+evidence. Authored demonstrations make choices inspectable; they are not reader
+studies or independent validation.
 
-## A useful repertoire
-
-The current repertoire gives readers and agents a shared vocabulary for
-discussing visual arrangements and their constraints. Guidance should preserve
-human judgment, keep supplied context attached to the content it qualifies,
-and allow a concise conclusion that no layout change is needed. Future scope
-changes require updating the affected living project materials together.
-
-Kata is connected to [ASDLC.io](https://asdlc.io), our pattern library for
-harness engineering. ASDLC.io describes broader engineering practices for
-agentic work; Kata contributes a focused vocabulary for arranging supplied
-content.
+Kata is developed using [ASDLC.io](https://asdlc.io) as a pattern library for
+harness engineering. Its contribution is a repertoire and practice for deliberate
+composition in communication.

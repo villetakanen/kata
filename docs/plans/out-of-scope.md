@@ -5,6 +5,15 @@ Status: excluded from 0.3.0; unscheduled. This is a record of questions and
 possible follow-ups, not a commitment to deliver them in a future release.
 Some may remain outside Kata permanently.
 
+## Later alignment
+
+The [vision](../../VISION.md) and [0.4.0 plan](0.4.0.md), agreed on 14 October
+2026, supersede this record where composition and item separation are concerned.
+Communicative composition includes expressive character, and Kata may recommend
+separate items for competing content without designing their narrative sequence.
+The exclusions on content authorship and internal representation remain. The
+sections below preserve the rationale and deferrals recorded for 0.3.0.
+
 ## Boundary to study before expanding Kata
 
 The initial scope is layout around supplied content. Prose, videos,

@@ -1,7 +1,7 @@
 # Kata development harness
 
-A layout language for helping people and agents arrange supplied content in
-visual forms that support its message. Built with [ASDLC.io](https://asdlc.io)
+A language of forms helping people and agents make deliberate compositional
+choices in service of communication, beyond merely readable arrangements. Built with [ASDLC.io](https://asdlc.io)
 as the pattern library for harness engineering, with demos and test examples
 rendered via [Lys](https://villetakanen.github.io/lys/).
 
@@ -34,11 +34,15 @@ upstream instructions.
 
 ## Project judgment
 
-- Arrange supplied content around the audience's question; explain useful layout alternatives and trade-offs.
+- Start with what a single presentation item should communicate: intended understanding and expressive character. Read VISION.md before changing the repertoire or its guidance.
+- Offer considered compositional alternatives even when the current layout is readable. Explain the communicative role of whitespace, tension, balance, restraint, proximity, contrast, and dominance where relevant; avoid automatic defaults.
+- Treat the 0.3.0 catalogue as an artifact to reassess, not the definition of Kata. Follow the 0.4.0 plan when realigning the delivered skill and demos.
+- Keep the unit to one presentation item through 1.0.0. Recommending separate items is allowed; sequencing, timing, and narrative orchestration are outside scope.
+- Leave content authorship and internal representation to the author: do not turn prose into process steps or redesign a supplied chart. Understand communicative roles sufficiently to compose the supplied material.
 - Preserve supplied meaning, quantities, uncertainty, and meaningful relationships while arranging and reflowing it.
 - Distinguish empirical evidence, design judgment, and perceptual analogies.
 - Support specific psychology claims with relevant research and its limits.
-- Keep Kata responsible for placement, grouping, emphasis, and reading order; Lys for rendering; and brands for identity.
+- Keep Kata responsible for composition in service of communication; Lys for rendering; and brands for identity. Expressive compositional choices remain part of Kata within brand constraints.
 - Treat plans as proposed work; describe capabilities as available only when implemented.
 - Resolve routine choices from context; ask when missing information changes the meaning.
 

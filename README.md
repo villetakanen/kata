@@ -4,17 +4,22 @@
 
 *A language of forms for thought.*
 
-Kata helps people and agents arrange supplied content for clear visual
-communication. Its current responsibility is layout: placement, available
-space, grouping, and reading order. It does not author or rewrite content,
-derive its internal relationships, or redesign the inside of a supplied chart,
-table, infographic, or other item. A suitable result can be keeping the
-existing layout when it already works.
+Kata helps people and agents make deliberate compositional choices, beyond
+merely producing a readable arrangement. Start with **what should this item
+communicate?** That includes intended understanding and expressive character.
+Whitespace, tension, balance, restraint, proximity, contrast, and dominance
+help give supplied content a considered form.
 
-Kata's longer-term vision spans post-its, slides, diagrams, and other visual
-layers. The current release applies layout guidance to supplied content in a
-small repertoire of slide forms. See [VISION.md](VISION.md) for the broader
-direction and its distinction from today's scope.
+The unit through 1.0.0 is one presentation item, such as a slide, poster, or
+book cover. Slides are the first test medium. Kata arranges supplied content;
+its authorship and internal representation remain with the author. See
+[VISION.md](VISION.md) for the agreed direction and boundaries.
+
+**Alignment status:** the design direction was clarified on 14 October 2026.
+The 0.3.0 skill and demos below remain available, but do not consistently embody
+it. Their information-representation catalogue and readability-focused guidance
+are being reassessed in the [0.4.0 plan](docs/plans/0.4.0.md). That work is planned,
+not implemented by this documentation update.
 
 **Kata 0.3.0: six forms, a six-slide field guide, seven retained before-and-after pairs, and an offline 14-slide Lys deck.**
 
@@ -44,7 +49,11 @@ agent's skills directory, such as `~/.codex/skills/kata`. The skill is self-cont
 its installation does not require the gallery, Node, Lys, or a brand skill. This
 repository does not install anything automatically.
 
-## Patterns
+## Existing 0.3.0 catalogue
+
+This inventory describes the released artifacts, not the intended organization
+of the future repertoire. Golden cut is closest to the compositional direction;
+the other five chiefly describe information representations.
 
 | Form | Pattern | Audience question |
 | --- | --- | --- |
@@ -73,9 +82,9 @@ preference or comprehension.
 
 ## Kata, Lys, and brand skills
 
-Kata arranges supplied content through placement, available space, grouping,
-and reading order. Lys supplies output behavior. An optional brand skill
-supplies visual identity. See [integration notes](skills/kata/references/integration.md).
+Kata makes compositional choices in service of communication. Lys supplies
+output behavior. An optional brand skill supplies visual identity; Kata considers
+expressive arrangements within those constraints. See [integration notes](skills/kata/references/integration.md).
 
 Slides are Kata's current medium; Lys can render them in different formats,
 including vertical phone screens. The projects may inform each other as they
