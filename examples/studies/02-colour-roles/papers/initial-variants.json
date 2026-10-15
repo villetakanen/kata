@@ -1,0 +1,30 @@
+[
+  {
+    "id": "original",
+    "name": "Original paper",
+    "paper": "#f4f1e9",
+    "rationale": "The previous warm neutral, retained as the control. Against ceramic it is separated more by warmth than by depth.",
+    "tradeoff": "Its pale value keeps the slide light but may make its boundary too quiet beside the new site surface."
+  },
+  {
+    "id": "ivory",
+    "name": "Warmer ivory",
+    "paper": "#f2e8d5",
+    "rationale": "More yellow warmth and a little more depth make the paper visibly separate from cool ceramic without making the reading field dark.",
+    "tradeoff": "The warmer cast can influence the apparent colour of imagery and may feel more traditional than intended."
+  },
+  {
+    "id": "parchment",
+    "name": "Deeper parchment",
+    "paper": "#e7d7b9",
+    "rationale": "A deeper warm field gives the strongest tonal separation of these papers. The surrounding ceramic stays visibly outside the slide.",
+    "tradeoff": "The stronger material suggestion may become too sepia or aged; contrast alone does not make it the right character."
+  },
+  {
+    "id": "mineral",
+    "name": "Mineral paper",
+    "paper": "#dfe7dc",
+    "rationale": "A muted green-grey, deliberately deep enough to distinguish it from ceramic. It tests a cooler, more contemporary paper impression.",
+    "tradeoff": "Its green cast may feel like a coloured interface surface rather than paper. It must earn its place beside the warmer alternatives."
+  }
+]

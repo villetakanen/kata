@@ -1,9 +1,24 @@
 # 0.4.0 implementation review — phase 1
 
-Status: **working demonstrations ready for project-owner review; not a release**.
+Original phase-1 status: **working demonstrations ready for project-owner review; not a release**.
 The [plan](../../plans/0.4.0.md) requires that review before the examples become
 the repertoire. Agent reviews below do not supply owner acceptance. The portable
 skill and released 0.3.0 examples remain unchanged; package version stays 0.3.0.
+
+## Delivery disposition · 15 October 2026
+
+The owner approved closing this increment with the existing skill/catalogue
+explicitly provisional. This supersedes the original review gates below for
+release purposes; it does not adopt every specimen as a reference form. The
+skill remains unchanged from 0.3.0. The preparation task left version metadata
+at 0.4.0 without publishing. The subsequent delivery published
+[v0.4.0](https://github.com/villetakanen/kata/releases/tag/v0.4.0) on GitHub;
+no website deployment or catalogue alignment is implied.
+
+See [0.4.0 release notes](../../releases/0.4.0.md) for the complete increment,
+including design foundations and the bounded trial. Original phase-1 findings
+and outstanding alignment work below remain historical evidence, not hidden
+completion claims.
 
 ## Delivered increment
 
@@ -108,3 +123,13 @@ assessment alignment, active/historical navigation separation, unfamiliar-brief
 trial, broader release-facing alignment, final review and 0.4.0 release/version.
 The old six-form mandatory checks still describe the unchanged 0.3.0 artifacts;
 they have not been imposed on the new repertoire.
+
+## Follow-up: bounded selection-guidance pilot · 15 October 2026
+
+A [controlled four-output trial](../../../evals/experiments/communication-choice/review.md)
+compared the existing skill with a small selection-guidance edit on two venue
+briefs. The candidate made a supplied recommendation more prominent, but also
+introduced a new headline; both versions already distinguished the two intents.
+The candidate remains an experiment, not a promoted skill change. The delivered
+skill was restored to its baseline. This does not complete repertoire/skill
+alignment or constitute owner acceptance of the generated compositions.

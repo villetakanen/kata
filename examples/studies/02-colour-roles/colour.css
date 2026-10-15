@@ -1,0 +1,117 @@
+/* Provisional study roles; scoped to avoid touching the frozen specimen. */
+.colour-sample { --role-accent: lch(37.1041 22.9388 237.301); --review-surface: lch(95.6974 2.78537 220.73); }
+.colour-sample .review-status { margin: 2rem auto; border-left: 3px solid lch(14.1974 0.00489595 356.65); padding: .75rem 1rem; }
+.colour-sample .review-status p { font-size: 16px; line-height: 1.5; }
+.colour-sample .review-status .status-label { font-weight: 600; margin: 0 0 .35rem; }
+.colour-sample .review-status p + p { margin: 0; }
+.colour-sample.mode-action a { color: var(--role-accent); }
+.colour-sample.mode-action a:focus-visible { outline-color: var(--role-accent); }
+.colour-sample.mode-review .review-status { background: var(--review-surface); border-color: var(--role-accent); }
+.colour-sample.mode-review .status-label { color: var(--role-accent); }
+.colour-values dt { margin-top: 1rem; font-weight: 600; }
+.colour-values dd { margin: .25rem 0; }
+.colour-values code { font: 13px/1.6 'Study Chivo Mono',monospace; }
+@media print {
+ .colour-sample .review-status { margin: .35cm 0; padding: .2cm .3cm; print-color-adjust: exact; }
+ .colour-sample .review-status p { font-size: 9pt; }
+ .colour-sample { print-color-adjust: exact; }
+ .colour-values code { font-size: 8pt; }
+}
+@media print {
+ .colour-sample { font-size: 10pt; line-height: 1.4; }
+ .colour-sample figure img { max-height: 30mm; }
+ .colour-sample .notes h4 { font-size: 9pt; }
+ .colour-sample figcaption { font-size: 8pt; }
+ .colour-sample .review-status { margin: .2cm 0; }
+ .colour-sample .sample-meta { margin-bottom: .25cm; }
+}
+
+/* Owner's monochrome tokens; original frame interpretation and accent proposals. */
+.industrial-frame { --surface-white: lch(97.8686 0.634429 252.323); --ink-black: lch(5.51252 3.33294 278.053); --ink-meta: lch(49.2366 7.25312 259.864); --frame-line: lch(89.8826 0.0171656 356.656); --paper: lch(95.2132 4.24718 89.5919); --paper-ink: lch(13.2276 0.00474684 356.617); background: var(--surface-white); border: 1px solid var(--ink-black); }
+.sakura-pink { --signature: lch(79.372 20.5987 356.305); --signature-ink: lch(36.8352 34.1207 359.077); }
+.sakura-lilac { --signature: lch(79.0147 22.7738 301.681); --signature-ink: lch(36.9258 34.7924 305.514); }
+.industrial-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; padding: 1.25rem 2rem; background: var(--ink-black); color: var(--surface-white); font: 500 14px/1.5 'Study Archivo',sans-serif; }
+.industrial-nav .kata-mark { background: var(--signature); color: var(--ink-black); padding: .4rem 1.2rem; font-weight: 600; letter-spacing: .1em; text-decoration: none; border: 1px solid var(--signature); }
+.industrial-nav .kata-mark:hover { text-decoration: underline; }
+.frame-code { margin-left: auto; font: 12px/1.6 'Study Chivo Mono',monospace; }
+.frame-body { padding: 1.5rem 3rem 3rem; }
+.frame-register, .frame-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem 2rem; color: var(--ink-black); font: 12px/1.6 'Study Chivo Mono',monospace; }
+.frame-register { border-bottom: 1px solid var(--ink-meta); padding: 0 0 1rem; margin-bottom: 2rem; }
+.frame-register a, .frame-footer a { font: 500 14px/1.5 'Study Archivo',sans-serif; }
+.frame-footer { padding: 1rem 2rem; border-top: 1px solid var(--frame-line); }
+.industrial-frame .paper-sample { background: var(--paper); color: var(--paper-ink); border: 0; border-top: 3px solid var(--signature); }
+.paper-sample figcaption { color: var(--paper-ink); }
+.paper-sample a { color: var(--signature-ink); }
+.paper-sample .review-status { border-left-color: var(--ink-black); }
+.industrial-nav a:focus-visible { outline: 3px solid var(--signature); outline-offset: 5px; }
+.paper-sample a:focus-visible { outline: 3px solid var(--signature-ink); outline-offset: 4px; }
+.frame-register a:focus-visible, .frame-footer a:focus-visible { outline: 3px solid var(--ink-black); outline-offset: 4px; }
+@media (max-width: 800px) {
+ .industrial-nav { padding: 1rem; gap: .8rem 1rem; }
+ .frame-code { margin-left: 0; flex-basis: 100%; }
+ .frame-body { padding: 1rem .75rem 1.25rem; }
+ .frame-register { margin-bottom: 1.25rem; }
+ .frame-register, .frame-footer { font-size: 11px; }
+ .frame-footer { padding: 1rem; }
+}
+@media print {
+ .industrial-frame { print-color-adjust: exact; }
+ .industrial-nav { padding: .15cm .3cm; gap: .3cm; font-size: 8pt; }
+ .industrial-nav .kata-mark { padding: .1cm .3cm; }
+ .frame-code, .frame-register, .frame-footer { font-size: 7pt; }
+ .frame-body { padding: .2cm; }
+ .frame-register { margin-bottom: .2cm; padding-bottom: .15cm; }
+ .frame-register a, .frame-footer a { font-size: 8pt; }
+ .frame-footer { padding: .2cm; }
+ .industrial-frame a:focus-visible { outline: none; }
+ .industrial-frame .paper-sample { padding: .25cm; }
+ .paper-sample .sample-meta { margin-bottom: .15cm; }
+ .paper-sample figure { margin: .2cm 0; }
+ .paper-sample figure img { max-height: 23mm; }
+}
+
+@media print {
+ .sakura-contrast .colour-values { display: grid; grid-template-columns: 1fr 1.2fr; gap: .15cm .4cm; font-size: 8pt; }
+ .sakura-contrast .colour-values dt, .sakura-contrast .colour-values dd { margin: 0; }
+}
+
+/* Round 3: correction. Paper belongs to the unchanged slide preview only. */
+/* Raspberry tokens: Reasonable Colors v0.4.0, MIT; https://www.reasonable.work/colors/ */
+.mode-strong-pink { --color-raspberry-3: lch(59.0328 75.8225 17.1698); --color-raspberry-4: lch(47.9442 77.6589 17.0893); --color-raspberry-5: lch(27.0717 52.3026 17.0613); background: lch(97.8686 0.634429 252.323); color: lch(5.51252 3.33294 278.053); border: 0; }
+.mode-strong-pink a { color: var(--color-raspberry-4); }
+.mode-strong-pink a:hover { color: var(--color-raspberry-5); }
+.mode-strong-pink .sample-nav { border-bottom-color: lch(49.2366 7.25312 259.864); align-items: baseline; }
+.mode-strong-pink .sample-nav .kata-wordmark { color: lch(5.51252 3.33294 278.053); font-weight: 600; letter-spacing: .1em; text-decoration-color: var(--color-raspberry-3); text-decoration-thickness: 4px; text-underline-offset: .4em; }
+.mode-strong-pink .nav-context { color: lch(5.51252 3.33294 278.053); }
+.mode-strong-pink figcaption { color: lch(5.51252 3.33294 278.053); }
+.mode-strong-pink a:focus-visible { outline: 3px solid var(--color-raspberry-4); outline-offset: 5px; }
+@media print { .mode-strong-pink a:focus-visible { outline: none; } }
+#kata-pink .commentary code { overflow-wrap: anywhere; }
+
+/* Round 4: ceramic surrounds every paper equally. No artificial specimen border. */
+.paper-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: lch(97.8686 0.634429 252.323); padding: 2rem; margin-bottom: 3rem; }
+.paper-overview img, .ceramic-context img { display: block; width: 100%; height: auto; }
+.paper-overview a { color: lch(5.51252 3.33294 278.053); font: 500 14px/1.5 'Study Archivo',sans-serif; }
+.paper-overview span { display: block; margin-top: .7rem; }
+.paper-overview code, .paper-meta { font: 12px/1.6 'Study Chivo Mono',monospace; }
+.ceramic-context { background: lch(97.8686 0.634429 252.323); color: lch(5.51252 3.33294 278.053); padding: 2rem; }
+.paper-nav { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 1.5rem; font: 500 14px/1.5 'Study Archivo',sans-serif; }
+.paper-nav a { color: lch(47.9442 77.6589 17.0893); }
+.paper-nav a:hover { color: lch(27.0717 52.3026 17.0613); }
+.paper-nav .paper-wordmark { color: lch(5.51252 3.33294 278.053); font-weight: 600; letter-spacing: .1em; text-decoration-color: lch(59.0328 75.8225 17.1698); text-decoration-thickness: 4px; }
+.paper-meta { margin-bottom: 1rem; }
+.ceramic-context figcaption { margin-top: 1rem; font: 16px/1.5 'Study Newsreader',serif; }
+.paper-rationale { max-width: 680px; margin: 1.5rem 0 0; font: 20px/1.65 'Study Newsreader',serif; }
+.paper-nav a:focus-visible, .paper-overview a:focus-visible { outline: 3px solid lch(47.9442 77.6589 17.0893); outline-offset: 4px; }
+@media (max-width: 700px) { .paper-overview { grid-template-columns: 1fr; padding: 1rem; gap: 1.5rem; } .ceramic-context { padding: 1rem; } }
+@media print {
+ .paper-overview { grid-template-columns: 1fr 1fr; padding: .3cm; gap: .4cm; break-inside: avoid; print-color-adjust: exact; }
+ .paper-overview a { font-size: 9pt; }
+ .paper-overview code, .paper-meta { font-size: 8pt; }
+ .ceramic-context { padding: .4cm; print-color-adjust: exact; }
+ .paper-nav { font-size: 8pt; margin-bottom: .3cm; }
+ .paper-meta { margin-bottom: .3cm; }
+ .ceramic-context figcaption { font-size: 9pt; }
+ .paper-rationale { font-size: 11pt; line-height: 1.5; }
+ .paper-nav a:focus-visible, .paper-overview a:focus-visible { outline: none; }
+}

@@ -15,15 +15,15 @@ book cover. Slides are the first test medium. Kata arranges supplied content;
 its authorship and internal representation remain with the author. See
 [VISION.md](VISION.md) for the agreed direction and boundaries.
 
-**Alignment status:** the design direction was clarified on 14 October 2026.
-The 0.3.0 skill and demos below remain available, but do not consistently embody
-it. Their information-representation catalogue and readability-focused guidance
-are being reassessed in the [0.4.0 plan](docs/plans/0.4.0.md). Phase 1 now has
-[working composition studies](examples/communication/index.html) and an
-[offline Lys deck](examples/communication/deck.html): six alternatives across
-two frozen content briefs. **Your design review is required before repertoire
-and skill migration.** This is not a 0.4.0 release; the installed skill remains
-0.3.0. See the [implementation review](docs/evals/0.4.0-review/README.md).
+**0.4.0 released:** [GitHub release](https://github.com/villetakanen/kata/releases/tag/v0.4.0). This increment clarifies
+Kata's direction and delivers visual foundations, design studies, a living design
+system and shared tokens. See the [release notes](docs/releases/0.4.0.md).
+
+The portable skill and six-form catalogue remain unchanged from 0.3.0 and
+provisional relative to [VISION.md](VISION.md). The owner considers golden cut
+the closest existing example to the intended compositional practice. This
+release does not claim catalogue or skill alignment. The communication examples
+are exploratory material, not an adopted replacement catalogue.
 
 **Kata 0.3.0: six forms, a six-slide field guide, seven retained before-and-after pairs, and an offline 14-slide Lys deck.**
 
@@ -32,7 +32,28 @@ supports that emphasis. The [Kata skill](skills/kata/SKILL.md) explains when an
 existing arrangement should stay and how to use the catalogue within the
 current scope.
 
-## Review the 0.4.0 studies
+## Visual foundations delivered in 0.4.0
+
+The first [design study](examples/studies/01-reading-rhythm/index.html) compares
+three typography and reading-rhythm treatments using the same composition and
+commentary. A second round compares bundled F/OSS Archivo, Newsreader and Literata
+in the reflective editorial direction. The owner selected Newsreader for copy,
+with Archivo and Chivo Mono as supplementary defaults. The combined typography settings are accepted;
+the typography and colour foundation is adopted. A third round shows those roles together
+in a working documentation excerpt. [Study 02](examples/studies/02-colour-roles/index.html)
+records the adopted light surface, silicate black and Reasonable Colors raspberry
+accents, with paper reserved for the example slides. Round 4 compares four
+paper surfaces against ceramic in a dedicated Lys deck. Papers 1–3 are adopted;
+Round 5 adopts toned-black reading ink, petrol headings/emphasis and paper-coloured
+lettering on petrol text backgrounds. The colour study is complete.
+The [living design system](examples/design-system/index.html) implements the adopted
+foundations. Its [token source](examples/design-system/tokens.json) generates shared
+CSS custom properties for current documentation and the live Lys specimen.
+Historical studies retain their scoped styles. Design exploration for this phase
+is closed by owner decision; integration does not require further visual studies.
+The [study index](examples/studies/index.html) collects these historical records.
+
+## Explore the 0.4.0 communication studies
 
 Open the [study gallery](examples/communication/index.html) for intentions,
 visible choices, priority disclosures, and trade-offs. Use the
@@ -46,9 +67,9 @@ recommended variants. The changed recommendation brief is disclosed, not inferre
 from the estimates. These are design explorations, not accepted patterns or
 claims of improved comprehension.
 
-**Review question:** do these compositions express Kata's intended practice?
-Which intentions and trade-offs should be retained or revised before the portable
-skill is changed?
+The owner chose to retain these as exploratory evidence and defer catalogue/skill
+alignment. Further selection or revision is future product work, not a 0.4.0
+release gate.
 
 ## Try the released 0.3.0 artifacts
 
@@ -166,7 +187,8 @@ no-JavaScript reading, and print where supported; record any gaps.
 
 The [0.3.0 artifact review](docs/evals/0.3.0-review/README.md) records field-guide
 coverage, source checks, visual review, dogfooding corrections, and remaining
-verification limits. See also the [release notes](docs/releases/0.3.0.md).
+verification limits. See the [0.3.0 release notes](docs/releases/0.3.0.md) and
+[current delivery notes](docs/releases/0.4.0.md).
 
 The versioned cases, shared run contract, CLI adapters, and Lys artifact checks
 are under [evals](evals/runner/README.md). The [0.2.0 evaluation report](docs/evals/report.md)

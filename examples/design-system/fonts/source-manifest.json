@@ -1,0 +1,107 @@
+{
+  "retrieved": "2026-10-15",
+  "repository": "https://github.com/google/fonts",
+  "commit": "b7c8331cf620346575487ef8db0e2c729f014675",
+  "files": [
+    {
+      "path": "archivo/Archivo-Italic[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/archivo/Archivo-Italic%5Bwdth%2Cwght%5D.ttf",
+      "sha256": "305d13b4eb80e62f7d517f78d7c045250d977552a420f2dbed906f314e761305"
+    },
+    {
+      "path": "archivo/Archivo[wdth,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf",
+      "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+    },
+    {
+      "path": "archivo/DESCRIPTION.en_us.html",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/archivo/DESCRIPTION.en_us.html",
+      "sha256": "54df22711b8dba2226e893f9e5c0a929db5d1063510ed597dc8f05962122cdcd"
+    },
+    {
+      "path": "archivo/METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/archivo/METADATA.pb",
+      "sha256": "a2e8f63ffa4f9dfe43a65c349b4742e9cd85298802aed890a6315152f2ae231d"
+    },
+    {
+      "path": "archivo/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/archivo/OFL.txt",
+      "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b"
+    },
+    {
+      "path": "newsreader/DESCRIPTION.en_us.html",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/newsreader/DESCRIPTION.en_us.html",
+      "sha256": "449e463cd1226ac86945b4f1a39de53120c0ccaf7dd357869d22332011fc2087"
+    },
+    {
+      "path": "newsreader/METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/newsreader/METADATA.pb",
+      "sha256": "dc0bcb264c09d663c9a4f559e4f5392fd7d9f62139ad9cbba39253ec43aa315b"
+    },
+    {
+      "path": "newsreader/Newsreader-Italic[opsz,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/newsreader/Newsreader-Italic%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792"
+    },
+    {
+      "path": "newsreader/Newsreader[opsz,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/newsreader/Newsreader%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1"
+    },
+    {
+      "path": "newsreader/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/newsreader/OFL.txt",
+      "sha256": "fdfad38143ec470553cae82a1e45320bdd1b9ec70415d37bd0171051d8a4ded8"
+    },
+    {
+      "path": "literata/DESCRIPTION.en_us.html",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/literata/DESCRIPTION.en_us.html",
+      "sha256": "3cb6dc9c817c15ee4c3fe546664d5f567accd88120b20254efff7d3cbd7f68ee"
+    },
+    {
+      "path": "literata/Literata-Italic[opsz,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/literata/Literata-Italic%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "d483dfaeba9cbf4ce71d32a52ee65df82f7e35b15fff8d1011cdb242d1fcd465"
+    },
+    {
+      "path": "literata/Literata[opsz,wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/literata/Literata%5Bopsz%2Cwght%5D.ttf",
+      "sha256": "b41138c9373112f32abb589cc22e8674b06ed4048b0c513be922bdd26f274440"
+    },
+    {
+      "path": "literata/METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/literata/METADATA.pb",
+      "sha256": "8dbc5c48f254be32c879f006391cb5f6781941beb1a643c13acf66fa989b6a83"
+    },
+    {
+      "path": "literata/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/literata/OFL.txt",
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "chivomono/ChivoMono-Italic[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/chivomono/ChivoMono-Italic%5Bwght%5D.ttf",
+      "sha256": "e6c3e5469d99fee864414845d95ef6aa2fb166121bddd7486d6958c4a54e3aea"
+    },
+    {
+      "path": "chivomono/ChivoMono[wght].ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/chivomono/ChivoMono%5Bwght%5D.ttf",
+      "sha256": "725256f30b7b1b25dd001a96ff8d4a23773197bb886cd847a97ff8eabc9c1d9d"
+    },
+    {
+      "path": "chivomono/DESCRIPTION.en_us.html",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/chivomono/DESCRIPTION.en_us.html",
+      "sha256": "a2b5c678200172a6ad52f2738e40e043fc63d9c3e8c31b6501e5fa724d2fa76d"
+    },
+    {
+      "path": "chivomono/METADATA.pb",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/chivomono/METADATA.pb",
+      "sha256": "3f12fce4522b05ac6a773d24121ad69fd76dafed9e8ddd6916bbf13dc2a530a6"
+    },
+    {
+      "path": "chivomono/OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/b7c8331cf620346575487ef8db0e2c729f014675/ofl/chivomono/OFL.txt",
+      "sha256": "c9b69fa18c372df2b187b49efc57b1ea643b86a938e5af32f6b5a7af1017c891"
+    }
+  ]
+}

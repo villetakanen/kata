@@ -1,0 +1,49 @@
+{
+  "protocol": "kata-eval-lys-validation/v1",
+  "validator_source": {
+    "path": "evals/lys/check.mjs",
+    "sha256": "691d3b1e538751f10b92ef570f497d660cfd6b795b3042b95571110af905cf47"
+  },
+  "target": {
+    "kind": "attempt",
+    "path": "/Users/ville.takanen/dev/kata/evals/results/communication-choice/choice-candidate/codex/recommended--kata-candidate--codex"
+  },
+  "contract_status": "checked",
+  "structural": {
+    "passed": true,
+    "error": null,
+    "lysRoot": true,
+    "slides": 1,
+    "manifestSha256": "6c6c2b911fd16e6f5798959ae1beb4962ddb7a08e69a017508bf6ef16f9ae10b",
+    "resultSha256": "ec9475beb308c3f9a317bda1e8d4a25de4af7f5f466d889923bb91df2376f998",
+    "artifacts": {
+      "decision": {
+        "path": "output/decision.json",
+        "sha256": "bb23f3a1b48a2b2d0d7119972e908e3ada907aa673f790b5e459ad22f17884f6"
+      },
+      "lys_html": {
+        "path": "output/slide.html",
+        "sha256": "144a6fdee45fdfa8c9bfcf009335a5a8a6f4aae3e42447425eb45da7dcf6b9ea"
+      },
+      "final_response": {
+        "path": "output/final-response.md",
+        "sha256": "61866f9667f025621fbe9aec6176d7371fd4d8a1d026be27b18988c81fa6017b"
+      },
+      "log": {
+        "path": "output/tool.log",
+        "sha256": "4362f5a50e5836ed10aa83421bbd815fb9a886d57fbd3ff0f0babf3051221f56"
+      }
+    }
+  },
+  "review": {
+    "checks": [],
+    "errors": [],
+    "passed": null,
+    "status": "not-run"
+  },
+  "human_visual_review": {
+    "status": "not-recorded",
+    "notes": null
+  },
+  "limits": "Structural checks and browser measurements do not establish visual quality or reader comprehension."
+}

@@ -1,0 +1,10 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What trade-offs do the two venues offer?",
+  "form": "aligned comparison table",
+  "fit_rationale": "Both venues are supplied against the same four criteria, so an aligned table makes the parallel evidence easy to compare while giving the options equal emphasis.",
+  "tradeoff": "Station hall has capacity for 48 people and is next to the bus station, while the Garden room has capacity for 32 people, is 700 m from the bus station, and allows tools to stay in a locked cupboard; their quoted hires are €240 and €160 per evening, respectively.",
+  "caveats": [
+    "All costs are provisional quotes for one evening; staffing and insurance are excluded."
+  ]
+}

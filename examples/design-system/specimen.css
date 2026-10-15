@@ -1,0 +1,19 @@
+/* Same component in the living page and standalone Lys deck. */
+.kata-specimen { --paper:var(--kata-paper); background:var(--paper); color:var(--kata-ink); padding:3%; font-family:var(--kata-font-copy); container-type:inline-size; }
+.kata-specimen .context { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font:var(--kata-mono-size)/1.6 var(--kata-font-mono); border-bottom:1px solid var(--kata-ink); padding-bottom:1rem; }
+.kata-specimen .composition { display:grid; grid-template-columns:1.8fr 1fr; gap:4%; align-items:center; padding-top:2rem; }
+.kata-specimen figure { margin:0; width:85%; justify-self:center; }
+.kata-specimen img { display:block; width:100%; height:auto; }
+.kata-specimen figcaption { font:var(--kata-mono-size)/1.6 var(--kata-font-mono); margin-top:.75rem; }
+.kata-specimen blockquote { margin:0; min-width:0; }
+.kata-specimen blockquote p { font:400 clamp(1.25rem,2.4cqi,2rem)/1.3 var(--kata-font-copy); letter-spacing:-.02em; }
+.kata-specimen blockquote footer { font:var(--kata-mono-size)/1.6 var(--kata-font-mono); padding:1.5rem 0 0; }
+.kata-specimen h1,.kata-specimen h2,.kata-specimen h3 { color:var(--kata-petrol); }
+.kata-specimen .text_background { background:var(--kata-petrol); color:var(--paper); padding:.04em .12em; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+.kata-specimen .text_underline { text-decoration:underline; text-decoration-color:var(--kata-petrol); text-decoration-thickness:.09em; text-underline-offset:.15em; }
+@media(max-width:700px) { .kata-specimen { padding:1rem; } .kata-specimen .composition { grid-template-columns:1fr; gap:2rem; } .kata-specimen figure { width:100%; } }
+@media print { .kata-specimen { break-inside:avoid; } .kata-specimen .context,.kata-specimen figcaption,.kata-specimen blockquote footer { font-size:7pt; } .kata-specimen blockquote p { font-size:14pt; } }
+.kata-specimen { --ink:var(--kata-ink); --muted:var(--kata-ink); --accent:var(--kata-petrol); }
+.kata-specimen .sr-only { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@media(min-width:1101px) and (min-height:561px) { [data-lys] > .kata-specimen figure { width:min(85%,55vh); } }
+@media print { .kata-specimen figure { width:70%; } }

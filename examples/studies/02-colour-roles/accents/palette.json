@@ -1,0 +1,13 @@
+{
+  "petrol": "lch(34 25 220)",
+  "ink": "lch(5.51252 3.33294 278.053)",
+  "inkSource": "#111217",
+  "status": "adopted",
+  "roles": {
+    "reading": "ink",
+    "headings": "petrol",
+    "emphasis": "petrol",
+    "textBackground": "petrol with paper lettering"
+  },
+  "rationale": "Original LCH ink candidate inspired by the owner’s lily/green/petrol reference; not named Reasonable Colors tokens."
+}

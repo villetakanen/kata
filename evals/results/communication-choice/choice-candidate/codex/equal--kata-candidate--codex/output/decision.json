@@ -1,0 +1,10 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What trade-offs do the two venues offer?",
+  "form": "Balanced two-column venue comparison",
+  "fit_rationale": "The supplied content gives both venues the same four attributes, and the brief asks the committee to consider both equally. Side-by-side venue cards align those attributes for direct comparison without implying a recommendation.",
+  "tradeoff": "Side-by-side cards support direct comparison on a presentation screen; on a phone they stack, so comparing the same fields requires vertical scanning.",
+  "caveats": [
+    "All costs are provisional quotes for one evening; staffing and insurance are excluded."
+  ]
+}

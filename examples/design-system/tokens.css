@@ -1,0 +1,22 @@
+/* Generated from tokens.json. Edit the source, then npm run build. */
+:root {
+  --kata-page: lch(99.9988 0.0188379 356.626);
+  --kata-ceramic: lch(97.8686 0.634429 252.323);
+  --kata-ink: lch(5.51252 3.33294 278.053);
+  --kata-raspberry-signature: lch(59.0328 75.8225 17.1698);
+  --kata-raspberry-link: lch(47.9442 77.6589 17.0893);
+  --kata-raspberry-hover: lch(27.0717 52.3026 17.0613);
+  --kata-petrol: lch(34 25 220);
+  --kata-paper: lch(95.2132 4.24718 89.5919);
+  --kata-paper-warm: lch(93.8137 7.43229 86.5692);
+  --kata-paper-mineral: lch(93.0059 5.17116 111.736);
+  --kata-font-copy: "Kata Newsreader", serif;
+  --kata-font-ui: "Kata Archivo", sans-serif;
+  --kata-font-mono: "Kata Chivo Mono", monospace;
+  --kata-copy-size: 1.25rem;
+  --kata-copy-leading: 1.65;
+  --kata-copy-measure: 68ch;
+  --kata-caption-size: 1rem;
+  --kata-ui-size: .875rem;
+  --kata-mono-size: .75rem;
+}

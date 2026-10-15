@@ -1,0 +1,24 @@
+{
+  "case_index": "index.json",
+  "prompt": "task-prompt.md",
+  "lys": {
+    "version": "1.2.1",
+    "directory": "../../../examples/vendor"
+  },
+  "skills": {
+    "kata-candidate": {
+      "directory": "baseline-skill"
+    },
+    "kata-0.1.0": {
+      "directory": "baseline-skill"
+    }
+  },
+  "timeout_seconds": 300,
+  "tools": {
+    "codex": {
+      "path": "codex",
+      "model": "gpt-6-luna",
+      "settings": {}
+    }
+  }
+}

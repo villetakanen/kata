@@ -1,0 +1,21 @@
+{
+  "source": "https://villetakanen.com/sundry/design-system/",
+  "stylesheet": "https://villetakanen.com/_astro/about.Ca25xNxC.css",
+  "retrieved": "2026-10-15",
+  "stylesheetSha256": "54a2a90ed297c1ef41fceb50e42b48303a6f2da8694691af4e326fa1bf66dd2d",
+  "tokens": {
+    "surface-white": "#f8f9fa",
+    "ink-black": "#111111",
+    "ink-meta": "#6e7681",
+    "color-gray-2": "#e2e2e2",
+    "color-gray-6": "#222222"
+  },
+  "scope": "Selected monochrome values only. Frame arrangement and sakura palettes are original Kata proposals, not copied site components.",
+  "ownerOverrides": {
+    "ink-black": {
+      "value": "#111217",
+      "date": "2026-10-15",
+      "reason": "Owner requested a more toned black; replaces the site\u2019s #111111 in the Kata frame."
+    }
+  }
+}

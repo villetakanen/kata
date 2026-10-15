@@ -1,0 +1,11 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Why does the committee provisionally recommend Station hall, and what is the alternative?",
+  "form": "supported lead with accompanying comparison",
+  "fit_rationale": "A lead recommendation with Garden room alongside keeps the stated reasons prominent while making every supplied venue value, access detail, and constraint easy to compare.",
+  "tradeoff": "Giving Station hall the lead makes the committee's priority clear but gives the alternatives unequal visual emphasis.",
+  "caveats": [
+    "All costs are provisional quotes for one evening; staffing and insurance are excluded.",
+    "The committee provisionally recommends Station hall for its capacity and bus access; booking is not approved."
+  ]
+}

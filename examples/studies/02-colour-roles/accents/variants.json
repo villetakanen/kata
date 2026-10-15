@@ -1,0 +1,38 @@
+[
+  {
+    "id": "original-petrol",
+    "name": "Paper 1 · Petrol underline",
+    "paper": "lch(95.2132 4.24718 89.5919)",
+    "mode": "petrol"
+  },
+  {
+    "id": "original-highlight",
+    "name": "Paper 1 · Text background",
+    "paper": "lch(95.2132 4.24718 89.5919)",
+    "mode": "highlight"
+  },
+  {
+    "id": "original-warm-petrol",
+    "name": "Paper 2 · Petrol underline",
+    "paper": "lch(93.8137 7.43229 86.5692)",
+    "mode": "petrol"
+  },
+  {
+    "id": "original-warm-highlight",
+    "name": "Paper 2 · Text background",
+    "paper": "lch(93.8137 7.43229 86.5692)",
+    "mode": "highlight"
+  },
+  {
+    "id": "original-mineral-petrol",
+    "name": "Paper 3 · Petrol underline",
+    "paper": "lch(93.0059 5.17116 111.736)",
+    "mode": "petrol"
+  },
+  {
+    "id": "original-mineral-highlight",
+    "name": "Paper 3 · Text background",
+    "paper": "lch(93.0059 5.17116 111.736)",
+    "mode": "highlight"
+  }
+]

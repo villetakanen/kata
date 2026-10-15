@@ -1,0 +1,18 @@
+{
+  "protocol": "kata-eval-answer-key/v1",
+  "case_id": "equal",
+  "revision": "1.0.0",
+  "required_facts": [
+    {
+      "id": "content",
+      "fact": "# Supplied content (fictional)\n\nTitle: Two places for the repair workshop\n\nStation hall\nCapacity: 48 people\nHire: \u20ac240 per evening\nAccess: Step-free entrance, next to the bus station\nConstraint: Tools and tables must be removed each evening\n\nGarden room\nCapacity: 32 people\nHire: \u20ac160 per evening\nAccess: Step-free entrance, 700 m from the bus station\nConstraint: Tools can stay in a locked cupboard\n\nAll costs are provisional quotes for one evening; staffing and insurance are excluded.\n"
+    }
+  ],
+  "disallowed_claims": [
+    "Booking is approved.",
+    "Costs include staffing or insurance."
+  ],
+  "acceptable_choices": [
+    "Any composition whose visible hierarchy matches the supplied intent and retains both options and caveats."
+  ]
+}

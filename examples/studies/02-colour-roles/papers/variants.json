@@ -1,0 +1,80 @@
+[
+  {
+    "id": "original",
+    "name": "1 \u00b7 Original",
+    "paper": "lch(95.2132 4.24718 89.5919)",
+    "rationale": "The original paper, unchanged as the control.",
+    "tradeoff": "The palest reference: judge how clearly its edge separates from ceramic.",
+    "mix": {
+      "space": "lch",
+      "hue": "shorter",
+      "inputs": [
+        "lch(95.2132 4.24718 89.5919)"
+      ],
+      "weights": [
+        1
+      ]
+    },
+    "status": "adopted-default"
+  },
+  {
+    "id": "original-warm",
+    "name": "2 \u00b7 Original + warmer",
+    "paper": "lch(93.8137 7.43229 86.5692)",
+    "rationale": "50% original + 50% warmer ivory. A restrained increase in warmth.",
+    "tradeoff": "Tests whether a small warm shift gives enough separation without the full ivory cast.",
+    "mix": {
+      "space": "lch",
+      "hue": "shorter",
+      "inputs": [
+        "lch(95.2132 4.24718 89.5919)",
+        "lch(92.4141 10.6174 83.5464)"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    "status": "adopted-alternative"
+  },
+  {
+    "id": "original-mineral",
+    "name": "3 \u00b7 Original + mineral",
+    "paper": "lch(93.0059 5.17116 111.736)",
+    "rationale": "50% original + 50% mineral. A softer green-grey paper.",
+    "tradeoff": "Tests a quieter mineral tint while keeping the original paper\u2019s lightness.",
+    "mix": {
+      "space": "lch",
+      "hue": "shorter",
+      "inputs": [
+        "lch(95.2132 4.24718 89.5919)",
+        "lch(90.7985 6.09514 133.881)"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    "status": "adopted-alternative"
+  },
+  {
+    "id": "warm-mineral",
+    "name": "4 \u00b7 Warmer + mineral",
+    "paper": "lch(91.6063 8.35627 108.714)",
+    "rationale": "50% warmer ivory + 50% mineral. Warm and green undertones meet.",
+    "tradeoff": "Tests a balanced, deeper neutral between ivory and mineral.",
+    "mix": {
+      "space": "lch",
+      "hue": "shorter",
+      "inputs": [
+        "lch(92.4141 10.6174 83.5464)",
+        "lch(90.7985 6.09514 133.881)"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ]
+    },
+    "status": "exploration-only"
+  }
+]

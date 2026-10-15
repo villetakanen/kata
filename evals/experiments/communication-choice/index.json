@@ -1,0 +1,29 @@
+{
+  "protocol": "kata-eval-case-index/v1",
+  "cases": [
+    {
+      "id": "equal",
+      "revision": "1.0.0",
+      "brief": "equal.md",
+      "answer_key": "equal-key.json",
+      "audience_question": "What trade-offs do the two venues offer?",
+      "constraints": [
+        "Use one slide.",
+        "Preserve supplied wording and values; add no claim or criterion."
+      ],
+      "reader_task": "What trade-offs do the two venues offer?"
+    },
+    {
+      "id": "recommended",
+      "revision": "1.0.0",
+      "brief": "recommended.md",
+      "answer_key": "recommended-key.json",
+      "audience_question": "Why does the committee provisionally recommend Station hall, and what is the alternative?",
+      "constraints": [
+        "Use one slide.",
+        "Preserve supplied wording and values; add no claim or criterion."
+      ],
+      "reader_task": "Why does the committee provisionally recommend Station hall, and what is the alternative?"
+    }
+  ]
+}

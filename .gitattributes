@@ -1,0 +1,5 @@
+# Preserve upstream font licence/description snapshots byte-for-byte.
+examples/design-system/fonts/**/OFL.txt whitespace=-blank-at-eol
+examples/design-system/fonts/**/DESCRIPTION.en_us.html whitespace=-blank-at-eol
+examples/studies/01-reading-rhythm/fonts/**/OFL.txt whitespace=-blank-at-eol
+examples/studies/01-reading-rhythm/fonts/**/DESCRIPTION.en_us.html whitespace=-blank-at-eol

@@ -1,0 +1,541 @@
+--- stdout ---
+Created the single-slide Lys deck and decision file:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I/output/decision.json)
+
+The slide preserves both venues’ supplied details, the exact recommendation sentence, and the cost caveat. The HTML and JSON passed structural checks. I couldn’t inspect the rendered slide at the requested viewport sizes because the available browser tools were unavailable, so visual fit, print output, and JavaScript-disabled rendering remain unverified.
+
+--- stderr ---
+2026-10-15T11:09:51.698688Z  WARN codex_skills::interface: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/
+2026-10-15T11:09:51.698706Z  WARN codex_skills::interface: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/
+2026-10-15T11:09:51.707843Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.710302Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.712982Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.715036Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.717124Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.719179Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-15T11:09:51.721259Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+OpenAI Codex v0.162.1
+--------
+workdir: /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: workspace-write [workdir, /tmp, $TMPDIR]
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a13f41-0ba6-7a03-8c51-4ba9daa3bbd3
+--------
+user
+Create one single-file Lys slide that answers the audience question using the supplied brief. Use the standard Lys structure: a `<div data-lys>` containing one or more `<article>` slides. Include a document language, character set, viewport, title, a heading on each slide, and useful `data-notes`. Inline the supplied `lys.css` in a `<style>` element and `lys.iife.js` in a `<script>` element so the HTML works offline. Keep the content readable without JavaScript and use a custom theme. Choose the form that best preserves the evidence and makes the answer clear; do not choose a form just to satisfy these review targets.
+
+Make the complete message and its necessary evidence, uncertainty, and caveats readable at both a 1440×900 presentation viewport and a 390×844 phone viewport. Keep the deck keyboard-operable using Lys navigation; if it has multiple slides, verify ArrowLeft and ArrowRight move between them. Keep the information available when JavaScript is disabled, and make the HTML print without clipping or losing essential labels and qualifications. Preserve uncertainty, caveats, units, denominators, and meaningful relationships. Do not invent facts. Save only the requested deliverables in the output directory.
+
+Write `output/decision.json` as valid JSON with exactly this shape and protocol value (replace the example values):
+
+```json
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "copy the audience question",
+  "form": "chosen form, or none",
+  "fit_rationale": "why the form fits or does not fit",
+  "tradeoff": "one consequential trade-off",
+  "caveats": ["preserved caveat"]
+}
+```
+
+Do not include Markdown fences in `decision.json`.
+
+Case brief: inputs/brief.md
+Audience question: Why does the committee provisionally recommend Station hall, and what is the alternative?
+Constraints:
+- Use one slide.
+- Preserve supplied wording and values; add no claim or criterion.
+If a skill snapshot exists, read it from inputs/skill/. The vendored Lys runtime and assets are in inputs/lys/. Embed the supplied Lys CSS and JavaScript into the HTML artifact so it works offline. Write the actual local HTML artifact to output/slide.html and make output/decision.json match the JSON example above exactly. Do not look for or request an answer key. The task directory is isolated; do not access files outside it.
+
+hook: SessionStart
+hook: SessionStart Completed
+codex
+I’ll read the supplied brief and Lys assets, then build the single-slide HTML and decision JSON in `output/`. I’ll keep to the supplied wording and values and check the slide at both requested viewport sizes, in print, and with JavaScript disabled.
+exec
+/bin/zsh -lc "rg --files -g '"'!*node_modules*'"'" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+inputs/lys/NOTICE.md
+inputs/lys/lys.iife.js
+inputs/lys/lys.css
+inputs/brief.md
+inputs/prompt.md
+inputs/skill/SKILL.md
+inputs/skill/references/golden-cut.md
+inputs/skill/references/hierarchy.md
+inputs/skill/references/layout-assessment.md
+inputs/skill/references/relationship.md
+inputs/skill/references/composition.md
+inputs/skill/references/change-over-time.md
+inputs/skill/references/integration.md
+inputs/skill/references/comparison.md
+
+exec
+/bin/zsh -lc 'cat inputs/brief.md inputs/skill/SKILL.md inputs/skill/references/comparison.md inputs/skill/references/layout-assessment.md inputs/skill/references/hierarchy.md inputs/skill/references/golden-cut.md' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+# Supplied content (fictional)
+
+Title: Two places for the repair workshop
+
+Station hall
+Capacity: 48 people
+Hire: €240 per evening
+Access: Step-free entrance, next to the bus station
+Constraint: Tools and tables must be removed each evening
+
+Garden room
+Capacity: 32 people
+Hire: €160 per evening
+Access: Step-free entrance, 700 m from the bus station
+Constraint: Tools can stay in a locked cupboard
+
+All costs are provisional quotes for one evening; staffing and insurance are excluded.
+
+## Audience and intention
+The neighbourhood committee is explaining its provisional recommendation of Station hall because capacity and bus access matter most. Keep Garden room available for comparison. Include this supplied sentence verbatim: “The committee provisionally recommends Station hall for its capacity and bus access; booking is not approved.”
+---
+name: kata
+description: Arrange supplied content into a clear visual layout, choose a suitable existing form, or retain the current layout. Use when placement, space, grouping, or reading order needs attention. Does not author or rewrite content or infer its internal relationships.
+---
+
+# Kata
+
+Kata helps people arrange supplied content so its intended message remains clear. Work with the content as provided: consider its placement, available space, grouping, and reading order. Do not write or rewrite prose, derive relationships, redesign the inside of a supplied chart, table, infographic, code sample, or other content, or invent material to make a layout fit.
+
+The brief and supplied content may state an audience, question, or priority. Use these to assess layout. Do not invent a primary claim or stronger priority. If a consequential layout choice depends on missing intent, ask; otherwise preserve the supplied treatment or give equally important material equal emphasis.
+
+## Choose or retain a form
+
+Supplied content does not need to acquire a Kata pattern to be a valid input. A concise result such as “keep the current layout; it preserves the stated emphasis and remains readable” is complete when no change is needed.
+
+The references describe six existing forms and retain their worked specimens. Those specimens illustrate the catalogue's history and affordances; some demonstrate organizing or authoring information beyond Kata's current supplied-content scope. Do not treat them as authorization to create headlines, classify content, derive relationships, or rewrite source material. Use a form only to arrange supplied material whose relevant relationship and priority are already stated. If the source does not support the relationship, do not infer it.
+
+| Existing form | Supplied relationship or priority | Read |
+| --- | --- | --- |
+| Aligned comparison | Alternatives are already presented on common criteria | [comparison](references/comparison.md) |
+| Whole and parts | Parts and the whole are already identified | [composition](references/composition.md) |
+| Nested groups | Membership is already specified | [hierarchy](references/hierarchy.md) |
+| Directed dependencies | The entities and edge meaning are already specified | [relationship](references/relationship.md) |
+| Time series | A consistently defined measure is supplied at ordered times | [change over time](references/change-over-time.md) |
+| Asymmetric composition | The brief supports one item receiving more space beside its context | [golden cut](references/golden-cut.md) |
+
+Read [shared layout assessment](references/layout-assessment.md) for checks that apply across forms, including when to keep the current arrangement. Then read the relevant form reference for its particular constraints. If none fits, explain the layout constraint and what supplied information or intent would change the recommendation. Do not silently shorten text, remove facts, or redesign the content. Preserve any association between content and its caption, source, unit, or qualification.
+
+## Responsibility and output
+
+Kata's current responsibility is the arrangement of supplied content: placement, available space, grouping, and reading order. It does not own content authorship or internal information modeling. The renderer owns output behavior and format; an optional brand skill owns visual identity. See [integration](references/integration.md). For Lys, use the available Lys authoring guidance. Kata works without Lys or a brand skill and does not install either.
+
+Only claim an integration was tested when the actual output has been inspected. Review the rendered result in its intended contexts; structural validity alone does not establish readability. Keep authoring instructions out of the audience-facing content.
+
+The worked examples use fictional data and are specimens, not evidence to reuse in a real presentation. The rationales are design judgments; Gestalt vocabulary supplies analogies, not proof of universal effectiveness. Support specific empirical psychology claims with relevant research and describe its limits.
+# Aligned comparison
+
+**Scope:** This reference preserves the existing form and worked specimen.
+Use it to arrange supplied comparisons only when common criteria are already
+provided. Structure notes describe the specimen's constraints; they do not
+authorize deriving criteria, rewriting material, or splitting or hiding content
+without the content author's direction. For shared checks, see
+[layout assessment](layout-assessment.md).
+
+**Form:** Several alternatives share the same attributes. **Audience question:** Which trade-offs matter for this decision?
+
+An existing matrix accommodates exact values or mixed units; aligned bars or dots can accommodate content centered on one numeric measure. A matrix may be hard to read with long descriptions or unrelated criteria. If supplied material does not fit legibly, state the constraint; split or filter it only when the content author directs that change.
+
+## Structure
+
+In the supplied specimen, alternatives occupy columns and criteria rows, with units in row labels. Identical attributes share positions and precision is consistent. A supplied priority may appear earlier in reading order. Recommendation styling belongs only when it is already supported by the supplied content and brief. Preserve source representations of missing data; do not reinterpret them.
+
+## Retained worked example (historical)
+
+Fictional service launch. An operations lead needs a launch route within six weeks and an initial budget of €80k. Costs are one-time estimates; lead times are estimates too.
+
+| Criterion | Build | Buy | Partner |
+| --- | ---: | ---: | ---: |
+| Lead time, weeks | 12 | 4 | 6 |
+| Initial cost, €k | 120 | 60 | 80 |
+| Control | Full | Limited | Shared |
+
+**Before:** The historical example contrasts three paragraphs, each listing its option's time, cost, and control.
+
+**After headline (historical):** “Buy and Partner meet both launch limits”
+
+**After layout:** The historical specimen shows one matrix with constraints above it. It emphasizes two options and adds a trade-off sentence. These are retained example choices, not instructions to rewrite supplied material or assert a priority absent from a user's brief.
+
+## Rationale and limits
+
+Design judgment: common alignment makes a criterion easy to scan. Similarity is a useful Gestalt analogy for repeated cell treatment; it does not prove this matrix is best for every audience. Avoid unrelated icons, ratings without defined scales, and weighted totals without agreed weights.
+
+**Check:** All nine values survive the transformation, both constraints remain visible, and no option becomes a recommendation by styling alone.
+# Assessing a layout
+
+Use these checks with any form, including forms not listed in the catalogue. They concern the arrangement of supplied content; they do not ask you to rewrite it or model relationships within it.
+
+## Understand the supplied emphasis
+
+Read enough of the supplied material to avoid misleading emphasis. Identify what it says, which audience or purpose the brief names, and which context, unit, source, or qualification must remain attached for the message to stay accurate. Use only priorities supported by the brief or material. If the intended priority is unclear and would change the layout, ask. If it would not change the layout, retain the supplied treatment or use equal emphasis.
+
+For example, a supplied figure of **8%**, qualified by “among surveyed respondents,” should retain that qualification beside the figure. Giving 8% a dominant field may make it look more general or certain than the supplied evidence supports.
+
+If two supplied claims have equal priority, enlarging one suggests a ranking that the source does not give. Keep them balanced, or ask which one should lead if the brief requires a clear primary message.
+
+## Check the arrangement
+
+- Does size, placement, grouping, or reading order express only the priority supported by the brief?
+- Are captions, labels, units, sources, and qualifications readable and clearly associated with the content they explain?
+- Are meaningful scales, grouping, and labels preserved? Does the arrangement work at its intended presentation size and phone size when relevant?
+- Does the rendered output show clipping or overflow, or text that has become too small to read?
+- Does content remain readable without JavaScript and in print where supported? Does the renderer’s keyboard navigation work?
+- Would a change resolve a consequential ambiguity, or does the current layout already work?
+
+Keep the current arrangement when it preserves the supplied meaning and remains readable. If space is insufficient, state the constraint for the author. Do not shorten prose, remove facts, invent content, or redesign a supplied item to force it into the layout. Record the sizes and modes reviewed, and note any verification gaps.
+# Nested groups
+
+**Scope:** This reference preserves the existing form and worked specimen.
+Use it to arrange supplied groups only when membership is already provided.
+Structure notes describe the specimen's constraints; they do not authorize
+deriving membership, splitting content, or hiding detail without the supplied
+author's direction. For shared checks, see [layout assessment](layout-assessment.md).
+
+**Form:** A rooted structure in which each child has one parent. **Audience question:** What belongs where?
+
+The retained examples show nested regions for membership, trees for reporting lines, and indented lists when space is tight. Multiple parents or cross-group dependencies may constrain this form. Do not infer reporting authority from grouping or restructure supplied content to resolve a mismatch.
+
+## Structure
+
+In the specimen, the root and relation are named, siblings have consistent treatment, and children sit within their parent. Spacing distinguishes groups; equal areas avoid implying size. Deeper supplied content may need more space: report the constraint instead of truncating it or moving it to another slide without the content author's direction.
+
+## Retained worked example (historical)
+
+Fictional service launch. A new team member needs the workstream map, not a reporting chart.
+
+- Launch programme
+  - Experience: Research, Design
+  - Delivery: Engineering, Operations
+
+**Before:** One sentence listing the programme, workstreams, and four disciplines.
+
+**After headline (historical):** “Launch work belongs to two workstreams”
+
+**After layout:** The historical specimen shows an enclosing programme region, with two equal workstream regions and their supplied disciplines. Its annotation clarifies that area does not indicate team size. These are retained example choices, not instructions to derive a hierarchy.
+
+## Rationale and limits
+
+Design judgment: containment expresses membership without a tangle of connectors. Common region is the Gestalt inspiration. Equal region size is a deliberate choice to avoid implying staffing levels. It is not evidence that the workstreams have equal capacity or influence.
+
+**Check:** Each discipline has exactly one parent in the supplied example. Do not silently duplicate a shared team to make the diagram fit.
+# Golden cut
+
+**Scope:** This reference preserves the existing form and worked specimen.
+Use unequal space only when the supplied brief supports that priority; do not
+author a primary claim. For checks shared across forms, see
+[layout assessment](layout-assessment.md).
+
+## Message
+
+Give one already-supported message or visual field more room, with a smaller
+field for evidence, context, or qualification. This is a compositional choice
+about spatial emphasis. It is not a data relationship and does not replace the
+pattern needed to compare values, show parts of a whole, represent membership,
+dependencies, or change over time.
+
+The conventional 61.8/38.2 split is an optional starting proportion for the
+two fields. Adjust it to the content, screen, and reading order; equal or other
+proportions may work better. No golden rectangle canvas, phi grid, recursive
+subdivision, or particular typography is required.
+
+## Useful when
+
+- The audience has one clear primary takeaway and needs a smaller adjacent
+  field for its evidence, source, caveat, or next step.
+- A single image, quotation, or concise finding can lead while related context
+  remains visible and clearly associated.
+
+For example, a slide may give a service's supported launch date the main field
+and put the conditions that qualify it beside the date. Keep the conditions
+readable and label the primary statement so the spatial hierarchy does not
+overstate certainty.
+
+## Poor fit
+
+- Two claims carry equal importance; making one field larger would imply an
+  unsupported priority.
+- A dense comparison needs shared row and column alignment for readers to
+  compare the same criteria across options. Use a comparison pattern instead.
+- The source has no clear primary message, or the medium leaves too little room
+  for the secondary field to remain legible.
+
+Adapt by changing the split, stacking fields in reading order for a narrow
+screen, or choosing another arrangement for the supplied material. Do not
+preserve a side-by-side desktop canvas by shrinking its text until the context
+is unreadable. Inspect the rendered phone output and keep the qualification
+visible and clearly associated with the primary message. Use a primary message
+and relative priority only when the supplied brief supports them. If their
+absence makes the layout decision consequential, ask; otherwise retain the
+supplied treatment or give the material equal emphasis.
+
+## Keep quantitative meaning separate
+
+The 61.8/38.2 spatial division does not mean that one quantity is 61.8% of a
+whole. Do not use it to allocate data, compare unequal categories, encode a
+winner, or imply aesthetic or cognitive superiority. Encode actual values with
+their supported scales and attach labels to the evidence they describe. State
+the source, scope, and uncertainty where they affect interpretation.
+
+For shared checks on supported emphasis, readable context, and whether the
+current arrangement should stay, see [layout assessment](layout-assessment.md).
+
+## Worked Lys example
+
+The fictional brief is a supported launch date of 18 June, subject to a
+security review due 10 June. The date is the main message; the review is a
+qualification that must remain visible. The example uses a flexible main
+column and a smaller context column rather than fixing the canvas to a ratio.
+
+```html
+<article data-notes="Fictional planning example. The date depends on the security review.">
+  <h2>Launch is planned for 18 June</h2>
+  <div class="launch-layout">
+    <p class="launch-date"><time datetime="2027-06-18">18 June</time></p>
+    <aside>
+      <h3>Condition</h3>
+      <p>Security review due 10 June. The launch date remains planned, not confirmed.</p>
+    </aside>
+  </div>
+</article>
+```
+
+The date receives emphasis, while the condition remains explicit beside it.
+This is a design judgment about the brief's stated priority, not a claim that
+the split improves comprehension.
+
+codex
+The brief already gives a clear priority and shared criteria: Station hall is provisionally recommended for capacity and bus access, with Garden room retained for comparison. I’m using a two-column comparison with the recommendation emphasized, while keeping the cost qualification and booking status attached to the relevant content.
+exec
+/bin/zsh -lc "cat inputs/skill/references/integration.md; sed -n '1,220p' inputs/lys/NOTICE.md; sed -n '1,240p' inputs/lys/lys.css; head -c 4000 inputs/lys/lys.iife.js" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+# Combining Kata with a renderer and a brand
+
+The first iteration uses three separate responsibilities:
+
+| Layer | Owns | Example |
+| --- | --- | --- |
+| Kata | Arrangement of supplied content: placement, available space, grouping, reading order | Positioning a supplied comparison matrix while retaining its rows |
+| Lys or another renderer | Output, navigation, sizing, notes, print behavior | Semantic HTML articles in a Lys deck |
+| Optional brand skill | Visual identity | Approved typography and palette |
+
+These are composition guidelines, not an adapter API. There is no separate `kata-lys` package yet.
+
+## Lys
+
+Read the available Lys instructions when producing a deck. The locally inspected Lys 1.2.1 contract uses a `div` with `data-lys` containing direct `article` children. Give each slide a heading and useful `data-notes`. Keep Kata's layout inside the article. Include the renderer CSS and JavaScript according to its packaging instructions, followed by the theme's CSS overrides. Use public `--lys-*` tokens; leave internal state attributes to Lys.
+
+A dependency chart can be inline SVG with a title and text description. A comparison should remain a semantic table. Charts should retain their values in text or an accessible data table. A no-JavaScript view must still expose the slide content. Check both navigation and print output after integration.
+
+The repository's `examples/kata-lys.html` is a working single-file specimen with 14 slides: a before and after for each of the seven worked pairs. It bundles the locally available Lys build; it does not fetch a CDN resource at runtime. `examples/index.html` offers a scrollable comparison gallery. These are repository review artifacts and are not required when installing just this skill folder. The specimens retain examples of broader information-structuring work; they do not expand Kata's current responsibility for arranging supplied content.
+
+The specimen uses Lys's direct transition mode. A small chapter-navigation listener routes local anchor clicks through the public `Lys.Lys.from(element).goTo(id)` API so the active slide, accessibility state, and subsequent arrow-key navigation agree. Plain anchors remain usable without JavaScript. The vendored runtime itself is unchanged.
+
+## Brand skills
+
+If a Futurice brand skill is supplied, read and apply it. This repository does not contain or verify Futurice assets, tokens, or rules. Do not label a neutral example as on-brand. Keep the data's grouping and scales intact while changing the visual identity. If a brand palette cannot distinguish adjacent segments, retain explicit labels and boundaries instead of relying on hue.
+
+## Example requests
+
+“Arrange this supplied supplier comparison for the procurement team. Keep cost and delivery time easy to compare, and don't imply a winner.”
+
+“Arrange this supplied budget breakdown in a Lys slide. Keep the labels and amounts together, and apply the attached brand skill.”
+
+“Review this slide's layout using Kata. Preserve the supplied content and tell me whether a layout change is needed.”
+# Lys runtime
+
+`lys.css` and `lys.iife.js` are copied without modification from the local
+`@11thdeg/lys` 1.2.1 build at commit
+`116d76255c42d5bb2a78de3954462b89979688f1`.
+
+Upstream: https://github.com/villetakanen/lys
+
+The upstream package and README declare MIT licensing. That checkout does not
+contain a standalone LICENSE file; this notice records the upstream declaration
+and source provenance. Preserve it with the bundled runtime.
+
+The build embeds these files in `examples/kata-lys.html` for offline use.
+Updating the runtime is a deliberate copy-and-review operation, not part of the
+normal example build.
+[data-lys]{--_lys-backdrop:var(--lys-backdrop,var(--lightningcss-light,#fff)var(--lightningcss-dark,#000))}[data-lys]>article{--_lys-aspect-ratio:var(--lys-aspect-ratio,16 / 9);--_lys-slide-padding:var(--lys-slide-padding,4cqi);--_lys-transition-duration:var(--lys-transition-duration,.3s);--_lys-transition-easing:var(--lys-transition-easing,ease-in-out);--_lys-font-size-base:var(--lys-font-size-base,clamp(.75rem, 2.5cqi, 1.5rem));--_lys-slide-gap:var(--lys-slide-gap,0);--_lys-slide-max-width:var(--lys-slide-max-width,100vw);--_lys-slide-max-height:var(--lys-slide-max-height,100vh);--_lys-focus-ring:var(--lys-focus-ring,2px solid currentColor)}[data-lys]{grid-auto-rows:var(--lys-slide-max-height,100vh);scroll-snap-type:y mandatory;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light dark;background:var(--_lys-backdrop);color:var(--lightningcss-light,#000)var(--lightningcss-dark,#fff);place-items:center;height:100vh;margin:0;display:grid;overflow:hidden auto}@media (prefers-color-scheme:dark){[data-lys]{--lightningcss-light: ;--lightningcss-dark:initial}}[data-lys]>article{scroll-snap-align:center;scroll-snap-stop:always;padding:var(--_lys-slide-padding);font-size:var(--_lys-font-size-base);box-sizing:border-box;width:min(var(--_lys-slide-max-width), var(--_lys-slide-max-height) * var(--_lys-aspect-ratio));aspect-ratio:var(--_lys-aspect-ratio);max-height:var(--_lys-slide-max-height);position:relative;overflow:hidden;container-type:size}[data-lys]>article+article{margin-top:var(--_lys-slide-gap)}[data-lys]>article[data-background]{background:attr(data-background type(<color>), none)}[data-lys]>article:focus{outline:none}.lys-sr-only{clip:rect(0, 0, 0, 0);white-space:nowrap;border:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}[data-lys] [data-lys-nav]{z-index:1;position:fixed;top:0;left:0;right:0}[data-lys][data-lys-mode]{scroll-snap-type:none;display:block;position:relative;overflow:hidden}[data-lys][data-lys-mode]>article{scroll-snap-align:unset;scroll-snap-stop:unset;opacity:0;pointer-events:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}[data-lys][data-lys-ready][data-lys-mode]>article[data-transition=fade]{transition-property:opacity;transition-duration:var(--_lys-transition-duration);transition-timing-function:var(--_lys-transition-easing)}[data-lys][data-lys-mode]>article:not([data-transition=fade]){transition-duration:0s}[data-lys][data-lys-mode]>article[data-lys-active]{opacity:1;pointer-events:auto}@media (prefers-reduced-motion:reduce){[data-lys],[data-lys]>article{--_lys-transition-duration:0s}}@media print{@page{size:var(--lys-print-page-size,13.333in 7.5in);margin:0}[data-lys]{scroll-snap-type:none;background:0 0;height:auto;display:block;overflow:visible}[data-lys]>article{scroll-snap-align:unset;page-break-after:always;break-after:page;-webkit-print-color-adjust:exact;-moz-print-color-adjust:exact;print-color-adjust:exact;margin:0 auto}[data-lys]>article+article{margin-top:0}[data-lys]>article:last-of-type{page-break-after:avoid;break-after:avoid}[data-lys][data-lys-mode]>article{opacity:1;pointer-events:auto;position:static;transform:none}[data-lys] [data-lys-nav]{display:none}}
+/*$vite$:1*/var Lys=(function(e){Object.defineProperty(e,Symbol.toStringTag,{value:`Module`});function t(e,t,n){let r=[],i=new Map,a=new Set;if(e.setAttribute(`role`,`group`),r.push(`role`),e.setAttribute(`aria-roledescription`,`slide deck`),r.push(`aria-roledescription`),!e.hasAttribute(`aria-label`)&&!e.hasAttribute(`aria-labelledby`)){let n=(t[0]?.querySelector(`h1, h2, h3, h4, h5, h6`))?.textContent?.trim()||`Slide deck`;e.setAttribute(`aria-label`,n),r.push(`aria-label`)}let o=t.length;for(let e=0;e<o;e++){let r=t[e];if(!r)continue;let s=[];r.setAttribute(`role`,`group`),s.push(`role`),r.setAttribute(`aria-roledescription`,`slide`),s.push(`aria-roledescription`),r.hasAttribute(`aria-label`)||(r.setAttribute(`aria-label`,`Slide ${e+1} of ${o}`),s.push(`aria-label`)),e!==n&&(r.setAttribute(`aria-hidden`,`true`),s.push(`aria-hidden`)),r.hasAttribute(`tabindex`)||(r.setAttribute(`tabindex`,`-1`),a.add(r)),i.set(r,s)}let s=document.createElement(`div`);s.setAttribute(`role`,`status`),s.setAttribute(`aria-live`,`polite`),s.setAttribute(`aria-atomic`,`true`),s.className=`lys-sr-only`,e.appendChild(s);function c(e){let{from:n,to:r,slide:a}=e.detail,o=t[n];if(o){o.setAttribute(`aria-hidden`,`true`);let e=i.get(o);e&&!e.includes(`aria-hidden`)&&e.push(`aria-hidden`)}let c=t[r];c&&c.removeAttribute(`aria-hidden`);let l=c?.getAttribute(`aria-label`),u=l&&!/^Slide \d+ of \d+$/.test(l)?`: ${l}`:``;s.textContent=`Slide ${r+1} of ${t.length}${u}`,a.focus({preventScroll:!0})}return e.addEventListener(`lys:slidechange`,c),{destroy(){e.removeEventListener(`lys:slidechange`,c);for(let t of r)e.removeAttribute(t);for(let[e,t]of i)for(let n of t)e.removeAttribute(n);i.clear();for(let e of a)e.removeAttribute(`tabindex`);a.clear(),s.remove()}}}function n(e,t,n){let r=e.querySelector(`:scope [data-lys-nav]`);if(!r)return null;let i=Array.from(r.querySelectorAll(`a[href*="#"]`)).map(e=>{let t=e.getAttribute(`href`)??``,n=t.indexOf(`#`);return{el:e,target:n>=0?decodeURIComponent(t.slice(n+1)):``}}).filter(e=>e.target),a=null;function o(e){let t=e?i.find(t=>t.target===e)?.el??null:null;t!==a&&(a?.removeAttribute(`aria-current`),a?.removeAttribute(`data-lys-nav-active`),t&&(t.setAttribute(`aria-current`,`true`),t.setAttribute(`data-lys-nav-active`,``)),a=t)}function s(e){let{slide:t}=e.detail;o(t?.id||null)}e.addEventListener(`lys:slidechange`,s);let c=null;if(!e.hasAttribute(`data-lys-mode`)&&typeof IntersectionObserver<`u`){c=new IntersectionObserver(e=>{for(let t of e){let e=t.target.id;t.isIntersecting&&e&&o(e)}},{root:e,rootMargin:`-45% 0px -50% 0px`});for(let e of t)e.id&&c.observe(e)}return o(t[n]?.id||null),{destroy(){e.removeEventListener(`lys:slidechange`,s),c?.disconnect(),a?.removeAttribute(`aria-current`),a?.removeAttribute(`data-lys-nav-active`),a=null}}}var r=`input,textarea,select,button,[contenteditable],[role='textbox']`;function i(e,t){let n=!t.hasAttribute(`tabindex`);n&&t.setAttribute(`tabindex`,`0`);function i(t){if(!(t.ctrlKey||t.altKey||t.metaKey))switch(t.key){case`ArrowRight`:case`ArrowDown`:e.next(),t.preventDefault();break;case`ArrowLeft`:case`ArrowUp`:e.prev(),t.preventDefault();break;case` `:if(t.target.closest(r))return;t.shiftKey?e.prev():e.next(),t.preventDefault();break;case`Home`:e.goTo(0),t.preventDefault();break;case`End`:e.goTo(e.total-1),t.preventDefault();break}}t.addEventListener(`keydown`,i);let a=0,o=0;function s(e){let t=e.touches[0];t&&(a=t.clientX,o=t.clientY)}function c(t){let n=t.changedTouches[0];if(!n)return;let r=n.clientX-a,i=n.clientY-o;Math.abs(r)>50&&Math.abs(r)>Math.abs(i)&&(r<0?e.next():e.prev())}t.addEventListener(`touchstart`,s,{passive:!0}),t.addEventListener(`touchend`,c,{passive:!0});function l(e){let t=e.match(/^#slide=(.+)$/);if(!t?.[1])return null;let n=t[1],r=Number(n);return Number.isFinite(r)?r-1:n}function u(e){let t=e.detail,n=t.slide.id||String(t.to+1);history.replaceState(null,``,`#slide=${n}`)}function d(){let t=l(location.hash);t!==null&&e.goTo(t)}t.addEventListener(`lys:slidechange`,u),w
+exec
+/bin/zsh -lc 'tail -c 2500 inputs/lys/lys.iife.js' in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+l;#a=0;#o=null;#s=null;#c=null;static init(){let t=document.querySelectorAll(`[data-lys]`);return Array.from(t,t=>e.from(t))}static from(t){return a.get(t)||new e(t)}constructor(e){let r=a.get(e);r&&r.destroy(),this.#e=e,this.#t=Array.from(e.querySelectorAll(`:scope > article`)),this.#n=this.#t.length>0?0:-1;for(let e of this.#t){let t=e.dataset.class;if(t){let n=t.split(/\s+/).filter(Boolean);e.classList.add(...n),this.#r.set(e,n)}}for(let e of this.#t){let t=e.dataset.background;t&&(e.style.background=t)}this.#n>=0&&(this.#t[this.#n]?.setAttribute(`data-lys-active`,``),e.setAttribute(`data-lys-current`,String(this.#n))),this.#i=this.#t.some(e=>e.dataset.transition===`fade`||e.dataset.transition===`direct`)?`stacked`:null,this.#i&&e.setAttribute(`data-lys-mode`,this.#i),a.set(e,this),this.#o=i(this,e),this.#s=t(e,this.#t,this.#n),this.#c=n(e,this.#t,this.#n),e.dispatchEvent(new CustomEvent(`lys:ready`,{detail:{instance:this},bubbles:!0})),this.#a=requestAnimationFrame(()=>{e.setAttribute(`data-lys-ready`,``),this.#a=0})}get current(){return this.#n}get total(){return this.#t.length}get slide(){return this.#t[this.#n]??null}next(){this.goTo(this.#n+1)}prev(){this.goTo(this.#n-1)}goTo(e){if(this.#t.length===0)return;let t;if(typeof e==`string`){if(t=this.#t.findIndex(t=>t.id===e),t===-1)return}else t=Math.max(0,Math.min(e,this.#t.length-1));if(t===this.#n)return;let n=this.#n,r=this.#t[this.#n],i=this.#t[t];if(i){if(r?.removeAttribute(`data-lys-active`),this.#n=t,i.setAttribute(`data-lys-active`,``),this.#e.setAttribute(`data-lys-current`,String(this.#n)),!this.#i){let e=matchMedia(`(prefers-reduced-motion: reduce)`).matches;i.scrollIntoView({behavior:e?`instant`:`smooth`,block:`start`})}this.#e.dispatchEvent(new CustomEvent(`lys:slidechange`,{detail:{from:n,to:this.#n,slide:i},bubbles:!0}))}}destroy(){this.#a&&=(cancelAnimationFrame(this.#a),0),this.#s?.destroy(),this.#s=null,this.#o?.destroy(),this.#o=null,this.#c?.destroy(),this.#c=null;for(let e of this.#t)e.removeAttribute(`data-lys-active`);this.#e.removeAttribute(`data-lys-current`),this.#e.removeAttribute(`data-lys-mode`),this.#e.removeAttribute(`data-lys-ready`),this.#i=null;for(let[e,t]of this.#r)e.classList.remove(...t);this.#r.clear();for(let e of this.#t)e.dataset.background&&(e.style.background=``);this.#t=[],this.#n=-1,a.delete(this.#e)}};return typeof document<`u`&&(document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,()=>o.init(),{once:!0}):o.init()),e.Lys=o,e})({});
+exec
+/bin/zsh -lc "mkdir -p output
+python3 - <<'PY'
+from pathlib import Path
+css=Path('inputs/lys/lys.css').read_text()
+js=Path('inputs/lys/lys.iife.js').read_text()
+html='''<"'!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two places for the repair workshop</title>
+<style>
+'"'''+css+'''
+</style>
+<style>
+:root{--lys-backdrop:#f3f1eb;--lys-aspect-ratio:16 / 9;--lys-slide-padding:clamp(22px,4.2cqi,62px);--lys-font-size-base:16px;--lys-focus-ring:3px solid #c74d2c}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;color:#182a33;background:#f3f1eb}
+[data-lys]{background:#f3f1eb;color:#182a33}
+[data-lys]>article{background:#f3f1eb;color:#182a33}
+.slide{display:flex;flex-direction:column;gap:clamp(12px,2cqi,24px)}
+.eyebrow{margin:0;color:#4d6870;font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1{font-size:clamp(30px,4.4cqi,58px);line-height:1.03;letter-spacing:-.045em;margin:0;max-width:18ch}
+.deck{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2cqi,24px);min-height:0;flex:1}
+.option{border:1px solid #bac5c1;border-radius:16px;padding:clamp(16px,2cqi,28px);background:#fff;display:flex;flex-direction:column;gap:clamp(10px,1.5cqi,18px)}
+.option.recommended{border:2px solid #c74d2c;background:#fffaf6}
+.option h2{font-size:clamp(22px,2.5cqi,32px);line-height:1.05;letter-spacing:-.025em;margin:0}
+.badge{display:inline-block;color:#8f361f;background:#f7e1d6;border-radius:99px;padding:5px 10px;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;font-weight:800;align-self:flex-start}
+dl{margin:0;display:grid;grid-template-columns:minmax(82px,.62fr) 1.4fr;gap:10px 14px;font-size:clamp(14px,1.3cqi,18px);line-height:1.28}
+dt{color:#4d6870;font-weight:750}dd{margin:0;font-weight:560}
+.rationale{margin:0;padding:14px 16px;border-left:5px solid #c74d2c;background:#f7e1d6;border-radius:0 10px 10px 0;font-weight:750;font-size:clamp(15px,1.45cqi,20px);line-height:1.3}
+.caveat{margin:0;color:#40555d;font-size:clamp(12px,1.05cqi,15px);line-height:1.3}
+@media(max-width:600px){
+ :root{--lys-slide-padding:24px;--lys-aspect-ratio:auto}
+ [data-lys]{height:100dvh;display:block;overflow:auto;scroll-snap-type:y proximity}
+ [data-lys]>article{width:100%;height:auto;min-height:100dvh;max-height:none;aspect-ratio:auto;overflow:visible;padding:24px}
+ .slide{gap:16px}
+ h1{font-size:36px;max-width:15ch}
+ .deck{grid-template-columns:1fr;gap:12px;flex:initial}
+ .option{padding:17px;gap:12px}
+ .option h2{font-size:25px}
+ dl{grid-template-columns:102px 1fr;font-size:15px;gap:9px 12px}
+ .rationale{font-size:15px;padding:12px 14px}
+ .caveat{font-size:13px;padding-bottom:4px}
+}
+@media print{
+ :root{--lys-print-page-size:13.333in 7.5in}
+ [data-lys]>article{width:100%;height:100vh;max-height:none;overflow:visible;aspect-ratio:16 / 9}
+}
+</style>
+</head>
+<body>
+<div data-lys aria-label=\"Two places for the repair workshop\">
+<article class=\"slide\" aria-labelledby=\"slide-title\" data-notes=\"The committee provisionally recommends Station hall for capacity and bus access. Garden room remains the alternative. Costs are provisional quotes for one evening; staffing and insurance are excluded. Booking is not approved.\">
+<p class=\"eyebrow\">Repair workshop · venue comparison</p>
+<h1 id=\"slide-title\">Two places for the repair workshop</h1>
+<div class=\"deck\">
+<section class=\"option recommended\" aria-labelledby=\"station-title\">
+<span class=\"badge\">Provisional recommendation</span>
+<h2 id=\"station-title\">Station hall</h2>
+<dl>
+<dt>Capacity</dt><dd>48 people</dd>
+<dt>Hire</dt><dd>€240 per evening</dd>
+<dt>Access</dt><dd>Step-free entrance, next to the bus station</dd>
+<dt>Constraint</dt><dd>Tools and tables must be removed each evening</dd>
+</dl>
+</section>
+<section class=\"option\" aria-labelledby=\"garden-title\">
+<h2 id=\"garden-title\">Garden room</h2>
+<dl>
+<dt>Capacity</dt><dd>32 people</dd>
+<dt>Hire</dt><dd>€160 per evening</dd>
+<dt>Access</dt><dd>Step-free entrance, 700 m from the bus station</dd>
+<dt>Constraint</dt><dd>Tools can stay in a locked cupboard</dd>
+</dl>
+</section>
+</div>
+<p class=\"rationale\">The committee provisionally recommends Station hall for its capacity and bus access; booking is not approved.</p>
+<p class=\"caveat\">All costs are provisional quotes for one evening; staffing and insurance are excluded.</p>
+</article>
+</div>
+<script>
+'''+js+'''
+</script>
+</body>
+</html>
+'''
+Path('output/slide.html').write_text(html)
+PY
+cat > output/decision.json <<'JSON'
+{
+  \"protocol\": \"kata-eval-decision/v1\",
+  \"audience_question\": \"Why does the committee provisionally recommend Station hall, and what is the alternative?\",
+  \"form\": \"Aligned comparison\",
+  \"fit_rationale\": \"Both venues are supplied on the same criteria, so a two-option comparison keeps capacity, hire, access, and constraints directly comparable while highlighting the stated capacity and bus access priority.\",
+  \"tradeoff\": \"Station hall offers the stated capacity and bus access advantages; Garden room has a lower provisional evening hire and tools can stay in a locked cupboard.\",
+  \"caveats\": [\"All costs are provisional quotes for one evening; staffing and insurance are excluded.\", \"Booking is not approved.\"]
+}
+JSON
+python3 -m json.tool output/decision.json >/dev/null
+" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+codex
+The slide and decision file are written. The comparison keeps all four supplied criteria for both venues, gives Station hall the emphasis supported by the brief, and preserves the exact recommendation sentence and cost caveat. I’m checking the actual rendered layout and offline behavior now.
+mcp: cua_repl/js started
+mcp: cua_repl/js (completed)
+mcp: cua_repl/js started
+mcp: cua_repl/js (failed)
+mcp: cua_repl/js started
+mcp: cua_repl/js (failed)
+exec
+/bin/zsh -lc "which chromium || which chromium-browser || which google-chrome || which playwright || python3 - <<'PY'
+try:
+ import playwright; print('python-playwright')
+except Exception: pass
+PY
+" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+chromium not found
+chromium-browser not found
+google-chrome not found
+playwright not found
+
+exec
+/bin/zsh -lc "python3 - <<'PY'
+from pathlib import Path
+from html.parser import HTMLParser
+import json
+p=Path('output/slide.html')
+s=p.read_text()
+d=json.loads(Path('output/decision.json').read_text())
+class Check(HTMLParser):
+ def __init__(self): super().__init__(); self.scripts=0; self.styles=0; self.articles=0; self.headings=0; self.data_notes=0
+ def handle_starttag(self,t,a):
+  a=dict(a)
+  if t=='script': self.scripts+=1
+  if t=='style': self.styles+=1
+  if t=='article': self.articles+=1; self.data_notes+=('data-notes' in a)
+  if t in ('h1','h2','h3','h4','h5','h6'): self.headings+=1
+c=Check(); c.feed(s)
+assert c.articles==1 and c.data_notes==1 and c.scripts==1 and c.styles>=2
+assert 'data-lys' in s and 'aria-labelledby' in s
+assert d['protocol']=='kata-eval-decision/v1' and len(d)==6
+assert '<html lang=\"en\">' in s and 'name=\"viewport\"' in s and 'charset=\"utf-8\"' in s
+print(f'HTML parsed: {c.articles} slide, {c.styles} style blocks, {c.scripts} inline script; JSON valid; slide bytes={p.stat().st_size}')
+PY
+ls -la output" in /var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I
+ succeeded in 0ms:
+HTML parsed: 1 slide, 2 style blocks, 1 inline script; JSON valid; slide bytes=14543
+total 40
+drwxr-xr-x@ 4 ville.takanen  staff    128 Oct 15 14:10 .
+drwx------@ 4 ville.takanen  staff    128 Oct 15 14:09 ..
+-rw-r--r--@ 1 ville.takanen  staff    723 Oct 15 14:10 decision.json
+-rw-r--r--@ 1 ville.takanen  staff  14543 Oct 15 14:10 slide.html
+
+codex
+Created the single-slide Lys deck and decision file:
+
+- [slide.html](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I/output/slide.html)
+- [decision.json](/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-zfeT3I/output/decision.json)
+
+The slide preserves both venues’ supplied details, the exact recommendation sentence, and the cost caveat. The HTML and JSON passed structural checks. I couldn’t inspect the rendered slide at the requested viewport sizes because the available browser tools were unavailable, so visual fit, print output, and JavaScript-disabled rendering remain unverified.
+2026-10-15T11:11:28.879785Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("/Users/ville.takanen/.codex/shell_snapshots/01a13f41-0ba6-7a03-8c51-4ba9daa3bbd3.1792062591702821000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }
+tokens used
+37,526

@@ -65,4 +65,5 @@ When using subagents, give each a bounded task, relevant context, and a clear
 expected result. The coordinating agent reviews and integrates their work.
 
 - `kata-dev-increment`: bounded implementation or independent review with explicit file ownership and verification evidence.
+- `kata-dev-study`: create or revise a design study with alternatives, provenance and owner decisions.
 - `.pi/agents/kata-worker.md`: pi delegation adapter for that shared development skill.

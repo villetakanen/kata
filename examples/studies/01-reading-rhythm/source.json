@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "status": "Pending project-owner design review — working explorations, not accepted repertoire.",
+  "evidenceBoundary": "Rationales are design judgments, not reader-study findings. Variants are alternatives for different intentions, not a universal ranking. Each specimen is one independent presentation item; gallery order is not narrative guidance.",
+  "briefs": {
+    "earthrise": {
+      "title": "A world held in common",
+      "fictional": "The quotation and attribution are fictional supplied demonstration copy; the photograph is genuine.",
+      "baselineIntent": "Consider the photograph and quotation together, without assigning either a leading role.",
+      "asset": {
+        "file": "earthrise.jpg",
+        "mime": "image/jpeg",
+        "alt": "Earth above a grey lunar horizon, surrounded by black space, photographed from Apollo 8.",
+        "caption": "Earthrise · Apollo 8 · 24 December 1968",
+        "credit": "Photograph: NASA / Bill Anders · AS08-14-2383",
+        "source": "https://images.nasa.gov/details/as08-14-2383",
+        "download": "https://images-assets.nasa.gov/image/as08-14-2383/as08-14-2383~medium.jpg",
+        "license": "NASA image; public domain in the United States. See provenance.md for source and usage policy."
+      },
+      "quote": "From here, distance does not make the world smaller. It makes what we share harder to ignore.",
+      "attribution": "Orbital field notes · fictional text"
+    },
+    "proposals": {
+      "title": "A place to read together",
+      "fictional": "Fictional library planning brief. Estimates are supplied, not measured outcomes.",
+      "baselineIntent": "Give three supplied proposals equal consideration; no option has been selected.",
+      "context": "Neighbourhood library · next-season pilot",
+      "qualification": "Planning estimates for a six-month pilot; staffing is not included. No option has been approved.",
+      "options": [
+        { "id": "reading-room", "title": "Open the reading room", "description": "Keep the existing reading room open on Saturday mornings.", "estimate": "€12,000 · ready in 4 weeks", "tradeoff": "Uses the current space; does not reach residents who cannot travel." },
+        { "id": "mobile-shelves", "title": "Take shelves to the neighbourhood", "description": "Bring a staffed mobile collection to two neighbourhood centres.", "estimate": "€18,000 · ready in 8 weeks", "tradeoff": "Reaches residents locally; offers a smaller collection at each visit." },
+        { "id": "evening-circle", "title": "Host an evening reading circle", "description": "Run a weekly facilitated reading group in the library.", "estimate": "€9,000 · ready in 6 weeks", "tradeoff": "Supports shared discussion; attendance is limited to 16 people." }
+      ],
+      "recommendation": {
+        "optionId": "mobile-shelves",
+        "label": "Working group recommendation",
+        "reason": "Prioritise reaching residents who cannot travel to the library.",
+        "status": "Recommendation only; not an approval."
+      }
+    }
+  },
+  "variants": [
+    {
+      "id": "earthrise-image-lead", "brief": "earthrise", "layout": "image-lead", "name": "Let the image lead",
+      "intent": "Encounter the distant Earth first; read the quotation as accompaniment to the scene.",
+      "changedPriority": "Changed from the baseline: the photograph leads rather than sharing equal presence.",
+      "choices": ["The uncropped square photograph is the largest field, using most of the available specimen height.", "A narrow, smaller quotation sits beside the image, close enough to read as its accompaniment.", "Black space within the photograph carries the visual pause; no text is overlaid on it."],
+      "tradeoff": "The words are less immediate at presentation distance; choose another variant if their argument must lead.",
+      "adaptation": "On a phone, the large photograph remains first and the smaller quotation follows. The side-by-side relationship becomes a lead-and-caption reading."
+    },
+    {
+      "id": "earthrise-equal-presence", "brief": "earthrise", "layout": "equal-presence", "name": "Put image and words in dialogue",
+      "intent": "Consider the scene and the quotation together, with neither treated as a caption for the other.",
+      "changedPriority": "No change from the baseline: comparable presence, not identical visual mass.",
+      "choices": ["Two similarly sized fields hold the full photograph and a generously scaled quotation.", "A shared vertical centre and a restrained gutter connect the fields without merging them.", "The light quotation field counterbalances the dark photograph rather than competing with an overlay."],
+      "tradeoff": "Comparable presence sacrifices both the image's immersive scale and the immediacy of a word-led statement.",
+      "adaptation": "On a phone the fields stack, with similar widths and substantial quotation type. Simultaneous comparison is reduced."
+    },
+    {
+      "id": "earthrise-quiet-reflection", "brief": "earthrise", "layout": "quiet-reflection", "name": "Leave room for reflection",
+      "intent": "Invite an unhurried encounter with the scene and words, without insisting on an immediate takeaway.",
+      "changedPriority": "Changed from the baseline: restraint and open space matter more than comparable impact at a glance.",
+      "choices": ["A small full photograph and a modest quotation form a compact central grouping.", "Wide unoccupied margins deliberately withhold dominance.", "Soft paper and ink contrast avoids a separate emphatic panel or oversized headline."],
+      "tradeoff": "The composition is deliberately less assertive in a busy room; smaller content needs a calm viewing context.",
+      "adaptation": "On a phone, generous outer space is reduced rather than shrinking the quotation below reading size. The restrained scale distinction remains, but the expansive pause is weaker."
+    },
+    {
+      "id": "earthrise-direct-emphasis", "brief": "earthrise", "layout": "direct-emphasis", "name": "Let the words make the claim",
+      "intent": "Make the supplied quotation the direct statement, with the photograph providing a concrete counterpoint.",
+      "changedPriority": "Changed from the baseline: the words lead. The photograph remains visible and uncropped, not a decorative background.",
+      "choices": ["Large serif quotation type occupies the left and most of the available width.", "A short orange rule introduces controlled tension without adding emphasis inside the supplied wording.", "The smaller photograph is aligned alongside the quotation; its black field contrasts with the paper."],
+      "tradeoff": "The scene becomes supporting context, and the invitation to dwell on its detail is reduced.",
+      "adaptation": "On a phone the quotation stays first and large; the full photograph follows. The horizontal tension becomes a clear reading priority."
+    },
+    {
+      "id": "proposals-equal-consideration", "brief": "proposals", "layout": "equal-consideration", "name": "Keep the decision open",
+      "intent": "Offer three supplied proposals for open consideration without suggesting a winner.",
+      "changedPriority": "No change from the baseline. The separately supplied working-group recommendation is intentionally not activated in this brief.",
+      "choices": ["Three open columns share width, title scale and baseline rules; no enclosing card is made dominant.", "Descriptions, estimates and trade-offs remain in the same order within every proposal.", "The common planning qualification spans the whole item rather than attaching to a single option."],
+      "tradeoff": "There is no immediate recommended next choice; this is appropriate for deliberation, not for presenting an endorsed priority.",
+      "adaptation": "On a phone all three proposals stack in their original order with the same styling; document order remains, but none gains a recommendation badge."
+    },
+    {
+      "id": "proposals-recommended-option", "brief": "proposals", "layout": "recommended-option", "name": "Make a recommendation visible",
+      "intent": "Present the working group's supplied recommendation while keeping both alternatives and all qualifications available.",
+      "changedPriority": "Changed from the baseline: activate the separately supplied recommendation for mobile shelves and its stated access priority. This is not an inference from the estimates and not an approved decision. All three proposal texts remain identical.",
+      "choices": ["The recommended option receives the largest field and a dark background; an explicit label names the source of that priority.", "The supplied reason sits next to the recommended proposal, rather than being invented from cost or timing.", "The other two proposals retain full wording in a quieter adjacent column; the shared qualification stays below all three."],
+      "tradeoff": "Unequal area steers attention and no longer supports neutral deliberation; it is justified only by this explicitly changed brief.",
+      "adaptation": "On a phone the recommendation is read first, followed by the two alternatives. The changed reading order and unequal emphasis remain explicit."
+    }
+  ]
+}

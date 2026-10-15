@@ -1,0 +1,114 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "choice-baseline",
+  "case": {
+    "id": "equal",
+    "revision": "1.0.0",
+    "brief": {
+      "path": "inputs/brief.md",
+      "sha256": "e05b3c27fa6b5df942c5d7891d0b2dff485dcb271cce011c1c62c6ea087294ec"
+    },
+    "answer_key": {
+      "path": "evaluator/answer-key.json",
+      "sha256": "6a3c4ddb31fd51696b36fe65cd21b888cbf6839ce40214fa132c8b223d3711bd"
+    }
+  },
+  "task": {
+    "audience_question": "What trade-offs do the two venues offer?",
+    "constraints": [
+      "Use one slide.",
+      "Preserve supplied wording and values; add no claim or criterion."
+    ]
+  },
+  "condition": "kata-candidate",
+  "tool": {
+    "id": "codex",
+    "requested_version": null,
+    "model": "gpt-6-luna",
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-R21ahR",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-R21ahR/output/final-response.md",
+        "-m",
+        "gpt-6-luna",
+        "-"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    }
+  },
+  "prompt": {
+    "path": "inputs/prompt.md",
+    "sha256": "e7bd6241e5c34fec6abc2a8121b179a22ee5784785d0f0f45cf5f5f3fd5fba0a"
+  },
+  "skill_snapshot": {
+    "revision": "24ccfaa34d03d11960242799f4d96975caad52e8",
+    "directory": "inputs/skill",
+    "files": [
+      {
+        "path": "inputs/skill/references/change-over-time.md",
+        "sha256": "2aa7a89ba7d9d27a5e524cf2f9190039f047bcce0a27e55ff5bb0d12f93db4a4"
+      },
+      {
+        "path": "inputs/skill/references/comparison.md",
+        "sha256": "31e048255b9752e2d50fa4313433c15030960cb2dc4cfca07c83b37150d495ae"
+      },
+      {
+        "path": "inputs/skill/references/composition.md",
+        "sha256": "621583f2051dca0b6c2a3e1e227b31a3a565469677e20dfbafddc2a5ba9dc23d"
+      },
+      {
+        "path": "inputs/skill/references/golden-cut.md",
+        "sha256": "18a56674290c0c5bb681db5f456dfa0a9a1a6f5053b4a92ce13e8c29a4f84900"
+      },
+      {
+        "path": "inputs/skill/references/hierarchy.md",
+        "sha256": "397e49e736367459aab9f584ca6de7f41248895afcda9faeb367e94f2e6042af"
+      },
+      {
+        "path": "inputs/skill/references/integration.md",
+        "sha256": "80fe528f6a47387b644c4a6a24aa061fe2e027c25da113429fb7192948821ddb"
+      },
+      {
+        "path": "inputs/skill/references/layout-assessment.md",
+        "sha256": "cf69f6098b4b9021186fc772ea3b7f9859251a5d8b9ff10f1f50e65cd78b26c2"
+      },
+      {
+        "path": "inputs/skill/references/relationship.md",
+        "sha256": "e2d6dd0bde2c531ffc2c40fbba589f2348988d5650e25ec992fc2e19ac339b63"
+      },
+      {
+        "path": "inputs/skill/SKILL.md",
+        "sha256": "94dd4cc5062035d5d2d396c75e27b43241af21b1ba61f14368368b1098811207"
+      }
+    ]
+  },
+  "lys_snapshot": {
+    "version": "1.2.1",
+    "directory": "inputs/lys",
+    "files": [
+      {
+        "path": "inputs/lys/lys.css",
+        "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+      },
+      {
+        "path": "inputs/lys/lys.iife.js",
+        "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+      },
+      {
+        "path": "inputs/lys/NOTICE.md",
+        "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+      }
+    ]
+  },
+  "output_dir": "output"
+}

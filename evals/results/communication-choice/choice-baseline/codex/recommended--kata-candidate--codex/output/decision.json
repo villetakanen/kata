@@ -1,0 +1,8 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "Why does the committee provisionally recommend Station hall, and what is the alternative?",
+  "form": "Aligned comparison",
+  "fit_rationale": "Both venues are supplied on the same criteria, so a two-option comparison keeps capacity, hire, access, and constraints directly comparable while highlighting the stated capacity and bus access priority.",
+  "tradeoff": "Station hall offers the stated capacity and bus access advantages; Garden room has a lower provisional evening hire and tools can stay in a locked cupboard.",
+  "caveats": ["All costs are provisional quotes for one evening; staffing and insurance are excluded.", "Booking is not approved."]
+}

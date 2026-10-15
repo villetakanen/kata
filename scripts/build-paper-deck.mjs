@@ -1,0 +1,15 @@
+import { readFile, writeFile } from 'node:fs/promises';
+const root = new URL('../examples/studies/',import.meta.url);
+const dir = new URL('02-colour-roles/papers/',root);
+const variants = JSON.parse(await readFile(new URL('variants.json',dir),'utf8'));
+let deck = await readFile(new URL('01-reading-rhythm/source-deck.html',root),'utf8');
+const first = deck.match(/<article\b[\s\S]*?<\/article>/)[0];
+const slides = variants.map(v=>first.replace('id="earthrise-image-lead"',`id="paper-${v.id}" style="--paper: ${v.paper}"`).replace('data-variant-id="earthrise-image-lead"',`data-variant-id="paper-${v.id}"`).replace('data-notes="',`data-notes="Paper study: ${v.name}, ${v.paper}. Only the paper background differs; original content, ink, typography and composition are fixed. `));
+let i=0;
+deck=deck.replace(/<article\b[\s\S]*?<\/article>/g,()=>i++===0?slides.join('\n'):'');
+deck=deck.replace(/<nav data-lys-nav[\s\S]*?<\/nav>/,`<nav data-lys-nav class="deck-nav" aria-label="Paper navigation"><a href="../index.html#paper-study">Study & rationale</a><div class="deck-links">${variants.map(v=>`<a href="#paper-${v.id}">${v.name}</a>`).join('')}</div></nav>`);
+deck=deck.replace('<title>Composition studies · Lys deck</title>','<title>Paper surface variants · Lys deck</title>').replace('</head>','<style>[data-lys] { background: #f8f9fa; } .deck-nav { background: #111217; } .deck-nav [data-lys-nav-active] { color: #ff426c; } .deck-nav .deck-links { flex-wrap: wrap; }</style></head>');
+const colours = JSON.parse(await readFile(new URL('../lch-colours.json',dir),'utf8'));
+deck = deck.replace(/<style[^>]*>[\s\S]*?<\/style>/g, css => css.replace(/#[0-9a-f]{6}\b|#[0-9a-f]{3}\b/gi, hex => colours[hex] || hex));
+await writeFile(new URL('deck.html',dir),deck);
+console.log('Built four paper variants from the frozen Lys specimen.');
