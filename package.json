@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-examples.mjs",
+    "build": "node scripts/build-examples.mjs && node scripts/build-communication.mjs",
     "check": "node scripts/check.mjs"
   },
   "engines": { "node": ">=20" }

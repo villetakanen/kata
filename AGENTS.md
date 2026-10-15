@@ -19,7 +19,7 @@ Node 20 or newer; commands and runtime requirements live in [package.json](packa
 
 | Intent | Command | Implementation |
 | --- | --- | --- |
-| Rebuild examples | `npm run build` | `scripts/build-examples.mjs` |
+| Rebuild examples | `npm run build` | `scripts/build-examples.mjs`, `scripts/build-communication.mjs` |
 | Check the project | `npm run check` | `scripts/check.mjs` |
 
 Rebuild after changing example data, generator, or theme; include generated HTML.
@@ -64,5 +64,5 @@ exclude them from the delivered Kata skill and its installation instructions.
 When using subagents, give each a bounded task, relevant context, and a clear
 expected result. The coordinating agent reviews and integrates their work.
 
-No project-local development skills or persistent subagent configurations are
-defined yet. Add them when a concrete workflow benefits from reuse.
+- `kata-dev-increment`: bounded implementation or independent review with explicit file ownership and verification evidence.
+- `.pi/agents/kata-worker.md`: pi delegation adapter for that shared development skill.

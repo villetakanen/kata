@@ -18,8 +18,12 @@ its authorship and internal representation remain with the author. See
 **Alignment status:** the design direction was clarified on 14 October 2026.
 The 0.3.0 skill and demos below remain available, but do not consistently embody
 it. Their information-representation catalogue and readability-focused guidance
-are being reassessed in the [0.4.0 plan](docs/plans/0.4.0.md). That work is planned,
-not implemented by this documentation update.
+are being reassessed in the [0.4.0 plan](docs/plans/0.4.0.md). Phase 1 now has
+[working composition studies](examples/communication/index.html) and an
+[offline Lys deck](examples/communication/deck.html): six alternatives across
+two frozen content briefs. **Your design review is required before repertoire
+and skill migration.** This is not a 0.4.0 release; the installed skill remains
+0.3.0. See the [implementation review](docs/evals/0.4.0-review/README.md).
 
 **Kata 0.3.0: six forms, a six-slide field guide, seven retained before-and-after pairs, and an offline 14-slide Lys deck.**
 
@@ -28,7 +32,25 @@ supports that emphasis. The [Kata skill](skills/kata/SKILL.md) explains when an
 existing arrangement should stay and how to use the catalogue within the
 current scope.
 
-## Try it
+## Review the 0.4.0 studies
+
+Open the [study gallery](examples/communication/index.html) for intentions,
+visible choices, priority disclosures, and trade-offs. Use the
+[Lys deck](examples/communication/deck.html) to compare the compositions at
+presentation size. Both are offline; narrow screens use a scrolling document.
+
+The photograph and fictional quotation remain identical across four variants:
+image-led, comparable presence, quiet reflection, and word-led. Three fictional
+library proposals retain their wording across equal-consideration and explicitly
+recommended variants. The changed recommendation brief is disclosed, not inferred
+from the estimates. These are design explorations, not accepted patterns or
+claims of improved comprehension.
+
+**Review question:** do these compositions express Kata's intended practice?
+Which intentions and trade-offs should be retained or revised before the portable
+skill is changed?
+
+## Try the released 0.3.0 artifacts
 
 Open [the visual gallery](examples/index.html) in a browser to compare the examples.
 Open [the Lys deck](examples/kata-lys.html) to present them. Use the arrow keys to
@@ -119,14 +141,22 @@ npm run check
 ```
 
 Edit [example data](examples/data.json), [the generator](scripts/build-examples.mjs),
-or [the theme](examples/theme.css), then rebuild. Commit the generated HTML alongside
+or [the theme](examples/theme.css), then rebuild. The new studies have separate
+[frozen briefs](examples/communication/data.json), a
+[theme](examples/communication/theme.css), a
+[builder](scripts/build-communication.mjs), and
+[asset provenance](examples/communication/provenance.md). `npm run build` rebuilds
+both sets without fetching anything. Commit the generated HTML alongside
 the sources so the examples stay usable immediately after checkout. The build runs
 no network requests and makes no changes to the neighboring Lys project.
 
 `npm run check` checks harness instructions, source data, portable and
 development skill references, the field guide's form coverage and content
 integrity, slide structure, unique IDs, navigation targets, and offline
-packaging. It also checks versioned evaluation cases and runner protocol paths
+packaging. The pending-review studies additionally check exact per-specimen
+frozen wording, asset identity, recommendation placement, disclosures, and isolated
+deterministic rebuild freshness, with negative controls. It also checks versioned
+evaluation cases and runner protocol paths
 without invoking model CLIs. These structural checks do not replace visual
 review. When changing a rendered layout, inspect the affected gallery, field
 guide, or deck at presentation and phone sizes, with keyboard navigation,

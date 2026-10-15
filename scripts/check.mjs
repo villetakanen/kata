@@ -61,3 +61,4 @@ console.log('Checked harness instructions, example data, skill links, slide stru
 await import('./check-lys-skill.mjs');
 await import('./check-evals.mjs');
 await import('./check-field-guide.mjs');
+await import('./check-communication.mjs');

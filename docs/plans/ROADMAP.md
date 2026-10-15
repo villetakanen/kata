@@ -23,6 +23,13 @@ including intended understanding and expressive character. It proposes a small
 repertoire, demonstrations of different intentional arrangements of the same
 supplied content, and portable guidance that helps humans and agents choose.
 
+**Implementation status:** phase 1 [composition studies](../../examples/communication/index.html)
+and [Lys deck](../../examples/communication/deck.html) are available for project-owner
+review. Six variants use two frozen briefs. Structural and bounded browser review
+are recorded in the [increment review](../evals/0.4.0-review/README.md).
+Owner acceptance is outstanding; the repertoire, portable skill, historical
+separation, unfamiliar-brief trial and release remain unimplemented.
+
 Work proceeds from concrete demonstrations to repertoire and skill alignment,
 then verification. The catalogue is reassessed rather than expanded by default.
 Readable output alone is not the acceptance standard; a choice must have a
