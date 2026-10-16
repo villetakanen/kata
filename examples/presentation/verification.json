@@ -1,116 +1,523 @@
 {
   "date": "2026-10-16",
-  "reviewer": "Codex agent; not owner acceptance",
-  "browser": "Chromium via Playwright",
+  "scope": "Static composition; renderer scaling and navigation at all viewports",
   "artifacts": {
-    "examples/presentation/deck.html": "8596e6d12e420af0db89109de96818bbef9adfafe1b4807344344ccc11192e22",
-    "examples/index.html": "2e17486f2c8e8f14c1320cd3243b8a5348ee9c00accf0717b1111bb8c7bbeead"
+    "examples/presentation/deck.html": "a6a48f6f5b45b7cb834e497170e2d12757e4c0a593604f2c31d5c9d7bdea81d0",
+    "examples/index.html": "d92d62b1efc523bf273c14f169d82fbc13f000c2017efff1fd4a79f3f712c75b"
   },
   "checks": [
     {
-      "name": "deck",
+      "name": "kata-deck",
       "mode": "desktop",
       "js": true,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
-    },
-    {
-      "name": "deck",
-      "navigation": {
-        "first": 0,
-        "second": 1,
-        "last": 6,
-        "restored": 6,
-        "focus": {
-          "tag": "A",
-          "outline": "solid"
+      "metrics": [
+        {
+          "id": "title",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
         },
-        "immediateHiddenOnPhone": 6,
-        "settledResizeCheck": {
-          "previous": 5,
-          "hiddenOnPhone": 0,
-          "restored": 5
+        {
+          "id": "introduction",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
         }
-      }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
-      "name": "deck",
+      "name": "kata-deck",
       "mode": "phone",
       "js": true,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "deck",
-      "mode": "desktop",
+      "name": "kata-deck",
+      "mode": "nojs-desktop",
       "js": false,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions",
+          "width": 1440,
+          "height": 810,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "deck",
-      "mode": "phone",
+      "name": "kata-deck",
+      "mode": "nojs-phone",
       "js": false,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions",
+          "width": 390,
+          "height": 219.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "gallery",
+      "name": "kata-gallery",
       "mode": "desktop",
       "js": true,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "gallery",
-      "keyboardFocus": "A"
-    },
-    {
-      "name": "gallery",
+      "name": "kata-gallery",
       "mode": "phone",
       "js": true,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "gallery",
-      "mode": "desktop",
+      "name": "kata-gallery",
+      "mode": "nojs-desktop",
       "js": false,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions-preview",
+          "width": 1116,
+          "height": 627.75,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     },
     {
-      "name": "gallery",
-      "mode": "phone",
+      "name": "kata-gallery",
+      "mode": "nojs-phone",
       "js": false,
-      "count": 7,
-      "issues": [],
-      "horizontalOverflow": false,
-      "externalRequests": []
+      "metrics": [
+        {
+          "id": "title-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "introduction-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "why-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "background-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "comparison-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "services-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        },
+        {
+          "id": "questions-preview",
+          "width": 358,
+          "height": 201.375,
+          "ratio": 1.7777777777777777,
+          "clipped": []
+        }
+      ],
+      "contentPreserved": true,
+      "errors": [],
+      "externalRequests": [],
+      "axe": []
     }
   ],
+  "reviewer": "Codex agent; not owner acceptance",
+  "artifact_scope": "Reviewed working tree including pre-existing, uncommitted palette refinements. Hashes identify the inspected files; palette changes remain separate from the corrective commit.",
   "print": {
-    "deckPages": 7,
-    "galleryPages": 7,
-    "visualReview": "All pages rasterized and inspected."
+    "deck": {
+      "pages": 7,
+      "size_pt": [
+        960,
+        540
+      ],
+      "all_pages_visually_inspected": true
+    },
+    "gallery": {
+      "pages": 7,
+      "size_pt": [
+        960,
+        540
+      ],
+      "all_pages_visually_inspected": true
+    }
   },
   "limits": [
-    "No physical phone, projector, printer or screen-reader session.",
-    "Selected source excerpts, not full source-deck reconstruction."
-  ],
-  "notes": "Final rebuild only trims trailing whitespace in embedded licence comments; rendered content and styles match the reviewed output."
+    "Chromium visual review only; no physical device or screen reader session.",
+    "Scaled phone text is smaller; no viewport-specific reflow was introduced.",
+    "Frozen independent-generation trial not rerun."
+  ]
 }

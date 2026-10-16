@@ -1,6 +1,6 @@
 Use the supplied Kata skill and pinned Lys authoring instructions below to compose the supplied slides into a finished single-file presentation. Preserve the supplied wording and meaning. Choose the layouts yourself. Read inputs/brief.md and all required files in inputs/skill/.
 
-Deliver output/slide.html. Keep the whole message readable at 1440×900 and 390×844. Keep keyboard navigation, no-JavaScript reading and print usable. Inspect what you can with available tools and state any verification gaps honestly. No layout coaching or further author input is available for routine decisions. Do not access the source repository or the internet. Use the bundled runtime in inputs/lys/.
+Deliver output/slide.html. Compose static 16:9 slides for 1440×900. At 390×844 verify Lys scales the same composition and retains navigation; do not add viewport-driven reflow or a reading mode. Follow Lys guidance for keyboard/touch navigation, JavaScript-free viewing and print. Inspect what you can with available tools and state any verification gaps honestly. No layout coaching or further author input is available for routine decisions. Do not access the source repository or the internet. Use the bundled runtime in inputs/lys/.
 
 Write output/decision.json with exactly this shape, replacing example values:
 {"protocol":"kata-eval-decision/v1","audience_question":"copy the audience question","form":"chosen compositions","fit_rationale":"visible choices and fit","tradeoff":"consequential trade-off","caveats":["preserved qualification"]}

@@ -36,6 +36,14 @@ boundaries and order were frozen before composition. Sources, selection boundari
 and reuse information are recorded with the [worked example](../../examples/presentation/README.md)
 and [trial](../../evals/usable-deck/source.json).
 
+## 0.5.1 scope correction
+
+Kata composes a specified static surface. The 0.5.0 guidance and examples
+mistakenly promoted phone inspection into responsive reflow and renderer lifecycle
+instructions. Version 0.5.1 removes those instructions from the portable kit and
+restores Lys scaling in the current example. Gallery document chrome can adapt;
+the slide composition remains fixed. See [the correction record](../releases/0.5.1.md).
+
 ## Completion evidence and limits
 
 Both decks preserve the supplied wording, quantities, qualifications and
@@ -43,11 +51,13 @@ associations. Equal alternatives receive comparable treatment, a supplied lead
 has visible priority, and supporting material remains readable. The trial also
 preserves the excluded status of struck-out technologies.
 
-The current gallery and both decks were reviewed at 1440×900 and 390×844, with
+The original gallery and both decks were reviewed at 1440×900 and 390×844, with
 keyboard navigation, JavaScript disabled and PDF print output. Offline checks
 found no external asset requests. Project checks cover content fidelity,
 portable resources, packaging, build freshness and retained historical artifacts.
-Detailed records live with the examples, rather than in a separate release process.
+Those original phone checks included out-of-scope reflow and do not validate the
+corrected static contract. Current example verification lives beside the example;
+the independent trial remains frozen historical evidence.
 
 This establishes a usable starting point for the tested text-based excerpts.
 It is not evidence of improved reader comprehension or general superiority to

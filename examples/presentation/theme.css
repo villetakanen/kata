@@ -3,8 +3,9 @@ html { color-scheme: light; }
 body { color: var(--kata-ink); background: var(--kata-paper-mineral); font-family: var(--kata-font-copy); }
 a { color: inherit; text-underline-offset: .2em; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--kata-raspberry-link); outline-offset: 4px; }
-[data-lys] { --lys-slide-max-height: calc(100vh - 48px); --lys-slide-padding: 4.4cqi 5.6cqi; --lys-focus-ring: 3px solid var(--kata-petrol); color: var(--kata-ink); background: var(--kata-paper-mineral); }
-[data-lys] > article, .preview > article { background: var(--kata-paper); container-type: inline-size; color: var(--kata-ink); display: flex; flex-direction: column; padding: 4.4cqi 5.6cqi; }
+[data-lys] { height: calc(100vh - 48px); margin-top: 48px; --lys-slide-max-height: calc(100vh - 48px); --lys-slide-padding: 0; --lys-focus-ring: 3px solid var(--kata-petrol); color: var(--kata-ink); background: var(--kata-paper-mineral); }
+[data-lys] > article, .preview > article { background: var(--kata-paper); container-type: size; color: var(--kata-ink); padding: 0; }
+.slide-frame { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 4.4cqi 5.6cqi; }
 .slide-header { font-family: var(--kata-font-ui); font-size: .95cqi; display: flex; justify-content: space-between; gap: 1em; color: var(--kata-petrol); margin-bottom: 2.3cqi; }
 .content { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .content h2 { font-size: 4cqi; font-weight: 500; line-height: 1.06; color: var(--kata-petrol); max-width: 26ch; margin-bottom: 2.3cqi; }
@@ -40,8 +41,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--kata-raspberry-
 .deck-nav { position: fixed; z-index: 10; inset: 0 0 auto; min-height: 44px; padding: 10px 18px; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font: 13px var(--kata-font-ui); background: var(--kata-paper-mineral); }
 .deck-nav .links { display: flex; gap: 1rem; }
 .deck-nav [aria-current] { text-decoration-thickness: 3px; }
-body:not(.presenting) [data-lys] { display: block; height: auto; overflow: visible; padding-top: 48px; }
-body:not(.presenting) [data-lys] > article { position: relative; inset: auto; transform: none; opacity: 1; pointer-events: auto; width: 100%; max-height: none; height: auto; min-height: 45vw; aspect-ratio: auto; overflow: visible; margin: 0 0 12px; scroll-margin-top: 48px; }
 .gallery { background: var(--kata-page); }
 .gallery main { max-width: 1180px; margin: auto; padding: 64px 32px 32px; }
 .gallery .intro { max-width: 820px; padding: 0 0 56px; }
@@ -52,38 +51,12 @@ body:not(.presenting) [data-lys] > article { position: relative; inset: auto; tr
 .gallery .example { margin-bottom: 70px; }
 .gallery .example > h2 { font: 16px var(--kata-font-ui); color: var(--kata-raspberry-link); margin-bottom: 18px; }
 .preview { container-type: inline-size; }
-.preview > article { width: 100%; aspect-ratio: 16 / 9; }
+.preview > article { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
 .gallery .explanation { max-width: 850px; padding-top: 22px; }
 .gallery .explanation p { font-size: 19px; }
 .gallery main > footer { border-top: 1px solid var(--kata-ink); padding-top: 24px; font: 15px/1.7 var(--kata-font-ui); }
-@media screen and (max-width: 900px), screen and (max-height: 560px) {
-  [data-lys] > article, .preview > article { padding: 32px 24px; min-height: 300px; aspect-ratio: auto; }
-  .slide-header { font-size: 11px; margin-bottom: 28px; }
-  .source-line { font-size: 11px; margin-top: 28px; }
-  .content h2 { font-size: 34px; line-height: 1.1; margin-bottom: 24px; }
-  .content p, .content li { font-size: 19px; line-height: 1.4; }
-  .content li + li { margin-top: 12px; }
-  .focus .content { min-height: 260px; padding-bottom: 24px; }
-  .focus .content h2 { font-size: clamp(44px, 9vw, 76px); }
-  .focus .content p { font-size: 18px; }
-  .lead-layout, .peers-layout { grid-template-columns: 1fr; gap: 28px; }
-  .lead-layout .lead-copy { font-size: 28px; }
-  .lead-layout ul { padding-top: 18px; }
-  .content .note { font-size: 18px; padding-top: 28px; }
-  .list .content li { padding-left: 14px; }
-  .list .content li + li { margin-top: 20px; }
-  .facts .content ul { grid-template-columns: 1fr; gap: 20px; }
-  .facts .content li { font-size: 26px; padding-top: 12px; margin: 0; }
-  .peer h3 { font-size: 25px; padding-bottom: 12px; margin-bottom: 16px; }
-  .peer li, .peer li:nth-child(2) { min-height: 0; }
-  .service-rows { gap: 24px; }
-  .service-row { grid-template-columns: 20px 1fr; gap: 12px; padding-top: 18px; }
-  .service-row .number { font-size: 14px; }
-  .service-row h3 { font-size: 22px; }
-  .service-row p { grid-column: 2; font-size: 19px; }
-  .deck-nav { position: sticky; flex-wrap: wrap; font-size: 12px; }
-  .deck-nav .hint { display: none; }
-  body:not(.presenting) [data-lys] { padding-top: 0; }
+/* The surrounding gallery is a web document; slide previews remain static. */
+@media screen and (max-width: 900px) {
   .gallery main { padding: 36px 16px; }
   .gallery .intro { padding-bottom: 32px; }
   .gallery .intro p, .gallery .explanation p { font-size: 19px; }
@@ -92,8 +65,8 @@ body:not(.presenting) [data-lys] > article { position: relative; inset: auto; tr
   @page { size: 13.333in 7.5in; margin: 0; }
   body, .gallery { background: var(--kata-paper); }
   .deck-nav, .gallery .intro, .gallery .example > h2, .gallery .explanation, .gallery main > footer { display: none !important; }
-  body [data-lys], body:not(.presenting) [data-lys], .gallery main { display: block; height: auto; padding: 0; overflow: visible; max-width: none; }
-  body [data-lys] > article, body:not(.presenting) [data-lys] > article, .preview > article { position: relative !important; inset: auto !important; transform: none !important; opacity: 1 !important; width: 13.333in; height: 7.5in; min-height: 0; max-height: none; aspect-ratio: 16 / 9; margin: 0; padding: .5in .65in; break-after: page; overflow: hidden; print-color-adjust: exact; }
+  body [data-lys], .gallery main { display: block; height: auto; margin: 0; padding: 0; overflow: visible; max-width: none; }
+  body [data-lys] > article, .preview > article { position: relative !important; inset: auto !important; transform: none !important; opacity: 1 !important; width: 13.333in; height: 7.5in; min-height: 0; max-height: none; aspect-ratio: 16 / 9; margin: 0; padding: 0; break-after: page; overflow: hidden; print-color-adjust: exact; }
   .gallery .example { margin: 0; break-after: page; }
-  .gallery .example:last-of-type, body [data-lys] > article:last-child { break-after: auto; }
+  .gallery .example:last-of-type, body [data-lys] > article:last-of-type { break-after: auto; }
 }

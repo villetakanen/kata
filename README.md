@@ -12,7 +12,7 @@ alternatives and trade-offs.
 
 Read the [forms](skills/kata/references/composition.md): each has a brief, two
 schematic arrangements using the same content, reasons to choose between them,
-limits and narrow-view adaptation. The [shared practices](skills/kata/references/practices.md)
+limits for a specified static surface. The [shared practices](skills/kata/references/practices.md)
 cover choosing a form, preserving authored material, and placing captions, labels,
 qualifications, headings and footers. Use them in your own authoring tool or when
 reviewing work with an agent. Both readers use the same material.
@@ -49,7 +49,7 @@ leaving content authorship and deck sequence to you. See [VISION.md](VISION.md).
 - [Example gallery](examples/index.html): seven real source slides recomposed,
   with an explanation and alternative for each composition.
 - [Standalone Lys presentation](examples/presentation/deck.html): open locally,
-  use arrow keys, Home and End on desktop, or scroll on a phone. The HTML embeds
+  use arrow keys, Home and End, or swipe on touch devices. Slides retain their composition as Lys scales them. The HTML embeds
   its runtime and fonts and can be copied on its own.
 - [Source material and verification](examples/presentation/README.md): the public
   presentation sample, frozen inputs, provenance, inspected modes and limits.

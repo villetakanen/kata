@@ -46,18 +46,19 @@ these fonts nor this identity.
 
 ## Verification
 
-The current gallery and deck were inspected at 1440×900 and 390×844 with JavaScript
+For the 0.5.1 static-surface correction, the gallery and deck were inspected at 1440×900 and 390×844 with JavaScript
 on and off. All seven slides retain their supplied wording and reading order.
 Equal options have matching treatment; the purpose leads its supporting material;
-longer service descriptions retain their labels and readable text. Phone layouts
-stack fields instead of shrinking the presentation canvas. Side-by-side comparison
-is consequently reduced on phones.
+longer service descriptions retain their labels and readable text. Lys scales
+the same fixed 16:9 composition on phones; fields do not stack or change alignment. Small text is correspondingly small in a portrait viewport.
 
 Keyboard checks cover ArrowRight, Home, End and visible Tab focus. The deck is
-also checked when resizing between presentation and reading modes. Both gallery
+also checked when resizing the same presentation between viewport sizes. Both gallery
 and deck produce seven print pages, inspected after PDF rasterization. Offline
 browser requests are blocked during testing; no external assets are requested.
-The compact [verification record](verification.json) records the checked artifact
+The [0.5.1 visual evidence](../../docs/evals/0.5.1-review/) includes desktop and
+phone contact sheets and both print PDFs. The compact
+[verification record](verification.json) records the checked working-tree artifact
 hashes and browser measurements. Automated fidelity checks include negative
 controls that remove a qualifier or change an ownership relationship.
 

@@ -1,5 +1,12 @@
 # Independent use of the compact Kata skill
 
+**0.5.1 scope correction:** this is a frozen historical trial. Its natural-height
+phone views implement the responsive behavior mistakenly prescribed by 0.5.0.
+That behavior is outside Kata's static-composition scope and is not current
+acceptance evidence. Preserve the frozen attempt for provenance; the live prompt
+now requires Lys scaling without changing the composition. No fresh generation
+has been run for 0.5.1.
+
 The first generated deck passed the bounded trial without hand-editing its
 layouts. Open the [four-slide NASA excerpt](../results/usable-deck/usable-20261016-b/codex/mars-power--kata-candidate--codex/output/slide.html)
 or its [print PDF](../results/usable-deck/usable-20261016-b/codex/mars-power--kata-candidate--codex/review/print.pdf).

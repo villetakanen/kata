@@ -39,7 +39,7 @@ upstream instructions.
 - Treat the old catalogue as history, not the definition of Kata. Follow the active roadmap and improve the delivered practice from concrete use experience.
 - Keep the unit to one presentation item. Recommending separate items is allowed; sequencing, timing, and narrative orchestration are outside scope.
 - Leave content authorship and internal representation to the author: do not turn prose into process steps or redesign a supplied chart. Understand communicative roles sufficiently to compose the supplied material.
-- Preserve supplied meaning, quantities, uncertainty, and meaningful relationships while arranging and reflowing it.
+- Preserve supplied meaning, quantities, uncertainty, and meaningful relationships while composing it on the specified static surface.
 - Distinguish empirical evidence, design judgment, and perceptual analogies.
 - Support specific psychology claims with relevant research and its limits.
 - Keep Kata responsible for composition in service of communication; Lys for rendering; and brands for identity. Expressive compositional choices remain part of Kata within brand constraints.

@@ -42,6 +42,14 @@ for(const html of [deck,gallery]) {
 assert.throws(()=>verifyContent(deck.replace('Nearly 90%','90%')),'Removing a qualifier must fail');
 assert.throws(()=>verifyContent(deck.replace('Supplier IPR/Source code','Customer IPR/Source code')),'Changing a relationship must fail');
 for(const p of ['lys.css','lys.iife.js']) assert(deck.includes(await read(`examples/vendor/${p}`)),`Pinned ${p} missing`);
+// The authored adapter may wire controls, but must not select a new composition
+// or take over renderer lifecycle in response to the viewport.
+const adapter = [...deck.matchAll(/<script>([\s\S]*?)<\/script>/g)].at(-1)[1];
+assert(!/matchMedia\s*\(|\.destroy\s*\(/.test(adapter), 'Current demo must retain the renderer and static composition at every viewport');
+for (const name of ['composition.md', 'practices.md', 'integration.md']) {
+  const guidance = await read(`skills/kata/references/${name}`);
+  assert(!/\*\*Narrow view\.|matchMedia\s*\(|\.destroy\s*\(/.test(guidance), `${name}: responsive variants and lifecycle adapters are outside Kata scope`);
+}
 // Copy only the portable product; every Markdown resource must be reachable locally.
 const pending=['SKILL.md'],seen=new Set();
 while(pending.length) {

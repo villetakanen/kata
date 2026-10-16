@@ -45,7 +45,9 @@ not require a new website before the kit can be used.
 
 The current unit is a single presentation item: a slide, poster, book
 cover, or similar surface. Slides remain the first implementation and test
-medium. Sequences, timing, staged reveals, and narrative orchestration across
+medium. Compose for the specified surface and aspect ratio. The composition is
+static; viewport-driven reflow, responsive variants and viewing modes belong to
+the authoring or rendering system. Sequences, timing, staged reveals, and narrative orchestration across
 items are outside this scope.
 
 Kata works with supplied content. It understands communicative roles and intent
