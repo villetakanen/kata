@@ -1,0 +1,92 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "usable-20261016-b",
+  "manifest": {
+    "path": "manifest.json",
+    "sha256": "f949b8d1e3d92ba469e46324240f187632680554e7cd02ef071a1ceed81acbf4"
+  },
+  "status": "succeeded",
+  "started_at": "2026-10-16T06:12:15.589Z",
+  "ended_at": "2026-10-16T06:20:20.018Z",
+  "tool": {
+    "id": "codex",
+    "observed_version": "codex-cli 0.162.1",
+    "model": null,
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8KMO8V",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8KMO8V/output/final-response.md",
+        "-"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    },
+    "exit_code": 0
+  },
+  "frozen_inputs": [
+    {
+      "path": "inputs/brief.md",
+      "sha256": "482259a816ed1e232aa06f390c539482730b38d3466d0606c1d83ed5f1c729c8"
+    },
+    {
+      "path": "inputs/prompt.md",
+      "sha256": "0ad278abd4e097c7fdfebe5c3b4b07a676b6b3fa8acd44350efda246917e4bd3"
+    },
+    {
+      "path": "inputs/lys/lys.css",
+      "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+    },
+    {
+      "path": "inputs/lys/lys.iife.js",
+      "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+    },
+    {
+      "path": "inputs/lys/NOTICE.md",
+      "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+    },
+    {
+      "path": "inputs/skill/references/composition.md",
+      "sha256": "2638144254b75c064781f4a696e966ac22683d9062422a83a5be6e6c1ed0e06f"
+    },
+    {
+      "path": "inputs/skill/references/integration.md",
+      "sha256": "a668aaec9a378206b136335cfaa0c655669a24dc924ccd21324c7e88a16f7221"
+    },
+    {
+      "path": "inputs/skill/SKILL.md",
+      "sha256": "60a547f878020f2213b63dd460cfb95fb53292e4f7f90ca3a90496a19cbbe9f2"
+    },
+    {
+      "path": "evaluator/answer-key.json",
+      "sha256": "369e6e2fa650ada489df24fca171c47b242244c01dadc0eb761687940dc1b4b6"
+    }
+  ],
+  "artifacts": {
+    "decision": {
+      "path": "output/decision.json",
+      "sha256": "4e6adacaef197014e9e667315a984169168df67a9628855712e12c12433ca2e9"
+    },
+    "lys_html": {
+      "path": "output/slide.html",
+      "sha256": "8f872cc63a9f162ca81cb4dda35c7e775439517fbf63c0c002ac5df06c28ef4b"
+    },
+    "final_response": {
+      "path": "output/final-response.md",
+      "sha256": "25184fc0aed2a4781ab2a141c488d37495080b8f2e06da50f168a5d074cbae9c"
+    },
+    "log": {
+      "path": "output/tool.log",
+      "sha256": "fb102eb402cfd3cd498cb94745778a940bf62ff57ea3fd2ed99c697dc10a1818"
+    }
+  },
+  "failure": null
+}

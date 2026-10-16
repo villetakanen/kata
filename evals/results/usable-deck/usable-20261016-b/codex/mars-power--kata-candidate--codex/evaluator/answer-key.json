@@ -1,0 +1,19 @@
+{
+  "protocol": "kata-eval-answer-key/v1",
+  "case_id": "mars-power",
+  "revision": "1.0.0",
+  "required_facts": [
+    {
+      "id": "source",
+      "fact": "# Supplied presentation content\n\nCreate these four slides in this order for an audience interested in NASA's\nsurface-power decision. They are a text-only historical excerpt from Michael\nChappell's February 2025 NASA Moon to Mars Architecture workshop presentation:\nhttps://www.nasa.gov/wp-content/uploads/2025/02/2025-ia-workshop-wp-mars-surface-power.pdf\n\nThe supplied material is deliberately limited to source page 1 text, page 2 text,\npage 5's upper two technology lists, and page 13 text. Other source slides,\nillustrations, logos and page 5's lower rationale table are outside this excerpt.\nDo not retrieve or reconstruct them. This input selection is already made by the\nauthor; preserve all the content below. The two category lists on slide 3 are\npeers; struck-out entries are excluded technologies, not ordinary active choices.\nThe decision is already supplied. Keep the original qualifiers about initial\ncrewed missions. Do not add facts, headlines, labels or claims.\n\nSource attribution (may be in a small visible footer): NASA \u00b7 Michael Chappell \u00b7\nFebruary 2025 \u00b7 historical text excerpt. No NASA endorsement is implied.\n\n## Slide 1 \u2014 source page 1\n\nTitle: Mars Surface Power\n\nMichael Chappell\nDeputy Mars Architecture Lead\nStrategy and Architecture Office\nNASA \u2013 ESDMD \u2013 SAO\n\nFebruary 2025\nMoon to Mars Architecture Workshops\n\n## Slide 2 \u2014 source page 2\n\nTitle: Introduction\n\nNuclear fission power selected as primary surface power generation technology for initial crewed missions to Mars\n\n- 2024 Architecture Concept Review outcome\n- Exercise in process as much as decision outcome\n- Documented in Appendix B of the Architecture Definition Document\n\n## Slide 3 \u2014 source page 5 upper lists\n\nTitle: Technology Trade Space and Down Select\n\nNuclear Technologies\n\n- Fission surface power systems (FSP)\n- ~~Radioisotope thermoelectric generators (RTGs)~~\n\nNon-Nuclear Technologies\n\n- Photovoltaic array with energy storage\n- ~~Primary batteries~~\n- ~~Primary fuel cells~~\n- ~~Wind power generation~~\n- ~~Geothermal power generation~~\n- ~~Biogeneration concepts~~\n\n## Slide 4 \u2014 source page 13\n\nTitle: Summary of Decision\n\nNuclear fission power selected as primary surface power generation technology for initial crewed missions to Mars\n\nRead the White Paper\nhttps://bit.ly/3VN2Z1r\n"
+    }
+  ],
+  "disallowed_claims": [
+    "NASA endorses Kata.",
+    "Solar technology was selected as primary power.",
+    "The decision covers all future missions."
+  ],
+  "acceptable_choices": [
+    "Any composition preserving all supplied wording and status; equal treatment for the two technology categories; visible supplied decision and readable support."
+  ]
+}

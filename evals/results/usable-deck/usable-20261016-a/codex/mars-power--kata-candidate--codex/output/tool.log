@@ -1,0 +1,5 @@
+--- stderr ---
+WARNING: proceeding, even though we could not create PATH aliases: Operation not permitted (os error 1)
+2026-10-16T06:11:46.850552Z  WARN codex_state::runtime: failed to open memories db at /Users/ville.takanen/.codex/memories_1.sqlite: failed to open memories DB at /Users/ville.takanen/.codex/memories_1.sqlite: error returned from database: (code: 14) unable to open database file
+2026-10-16T06:11:46.850905Z  WARN codex_rollout::state_db: failed to initialize state runtime: failed to initialize state runtime at /Users/ville.takanen/.codex: failed to open memories DB at /Users/ville.takanen/.codex/memories_1.sqlite: error returned from database: (code: 14) unable to open database file: error returned from database: (code: 14) unable to open database file: (code: 14) unable to open database file
+Error: failed to initialize in-process app-server client: Operation not permitted (os error 1)

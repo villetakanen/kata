@@ -8,7 +8,7 @@ const read = path => readFile(resolve(root, path), 'utf8');
 const guide = await read('examples/field-guide.html');
 const data = JSON.parse(await read('examples/data.json'));
 const golden = JSON.parse(await read('examples/golden-cut/data.json'));
-const skill = await read('skills/kata/SKILL.md');
+const skill = await read('docs/history/catalogue/SKILL.md');
 const lysCss = await read('examples/vendor/lys.css');
 const lysJs = await read('examples/vendor/lys.iife.js');
 const notice = await read('examples/vendor/NOTICE.md');
@@ -23,7 +23,7 @@ const forms = [
   ['asymmetric-composition', 'golden-cut']
 ];
 const catalogue = [...skill.matchAll(/^\|\s*([^|]+?)\s*\|[^\n]*?\]\(references\/([^)]+)\)\s*\|$/gm)].map(([, name, ref]) => ({ name: name.trim(), ref }));
-assert.deepEqual(catalogue.map(item => item.ref), forms.map(([, ref]) => `${ref}.md`), 'Guide coverage must match the six forms in the portable skill catalogue');
+assert.deepEqual(catalogue.map(item => item.ref), forms.map(([, ref]) => `${ref}.md`), 'Guide coverage must match the six forms in the historical catalogue');
 const ids = [...guide.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
 assert.equal(ids.length, new Set(ids).size, 'Field-guide IDs must be unique');
 const articles = [...guide.matchAll(/<article\b[\s\S]*?<\/article>/g)].map(match => match[0]);
@@ -38,7 +38,7 @@ const contains = (slide, expected, message) => assert(slide.includes(expected), 
 for (let index = 0; index < forms.length; index++) {
   const [id, reference] = forms[index];
   const slide = slideFor(id);
-  contains(slide, `references/${reference}.md`, `${id}: missing portable reference link`);
+  contains(slide, `references/${reference}.md`, `${id}: missing historical reference link`);
   contains(slide, 'class="guide-specimen"', `${id}: missing visible specimen`);
   assert(/<h3>Works well when<\/h3><p>[^<]+<\/p>/.test(slide), `${id}: missing fit explanation`);
   assert(/<h3>Limitation<\/h3><p>[^<]+<\/p>/.test(slide), `${id}: missing limitation`);

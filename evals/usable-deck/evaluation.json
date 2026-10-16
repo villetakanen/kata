@@ -1,0 +1,26 @@
+{
+  "case_index": "index.json",
+  "prompt": "prompt.md",
+  "lys": {
+    "version": "1.2.1",
+    "directory": "../../examples/vendor"
+  },
+  "skills": {
+    "kata-candidate": {
+      "directory": "../../skills/kata"
+    },
+    "kata-0.1.0": {
+      "revision": "v0.1.0",
+      "git_repository": "../..",
+      "git_ref": "v0.1.0",
+      "subpath": "skills/kata"
+    }
+  },
+  "timeout_seconds": 600,
+  "tools": {
+    "codex": {
+      "path": "codex",
+      "settings": {}
+    }
+  }
+}

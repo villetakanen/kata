@@ -1,0 +1,18 @@
+{
+  "protocol": "kata-eval-case-index/v1",
+  "cases": [
+    {
+      "id": "mars-power",
+      "revision": "1.0.0",
+      "brief": "brief.md",
+      "answer_key": "answer-key.json",
+      "audience_question": "What surface power technology did NASA select for initial crewed missions to Mars, and which technology categories were considered?",
+      "constraints": [
+        "Four slides in the supplied order.",
+        "Preserve exact supplied wording, struck-out status and qualifiers.",
+        "Offline HTML, presentation and phone views, no-JavaScript access and print."
+      ],
+      "reader_task": "What surface power technology did NASA select for initial crewed missions to Mars, and which technology categories were considered?"
+    }
+  ]
+}

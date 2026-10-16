@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-examples.mjs && node scripts/build-communication.mjs && node scripts/build-reading-study.mjs && node scripts/build-paper-deck.mjs && node scripts/build-example-colours.mjs && node scripts/build-colour-study.mjs && node scripts/build-design-system.mjs",
+    "build": "node scripts/build-examples.mjs && node scripts/build-communication.mjs && node scripts/build-reading-study.mjs && node scripts/build-paper-deck.mjs && node scripts/build-example-colours.mjs && node scripts/build-colour-study.mjs && node scripts/build-design-system.mjs && node scripts/build-presentation.mjs",
     "check": "node scripts/check.mjs"
   },
   "engines": { "node": ">=20" }

@@ -1,0 +1,13 @@
+{
+  "protocol": "kata-eval-decision/v1",
+  "audience_question": "What surface power technology did NASA select for initial crewed missions to Mars, and which technology categories were considered?",
+  "form": "Single-focus title; decision lead above supporting context; equal peer technology columns; decision lead with White Paper support.",
+  "fit_rationale": "Large decision text retains the full initial-crewed-missions qualification. Matching category headings, widths, rules and type keep the two technology categories equal, while all six exclusions retain their strike-through. The title groups the presenter and workshop details. A warm paper field, dark ink and restrained rust emphasis provide a cohesive text-only presentation.",
+  "tradeoff": "The longer decision statement sits above its context rather than beside it to preserve readable line lengths. The technology lists use equal columns on slides and stack in their supplied order on phones, trading simultaneous comparison for natural-size text and scrolling access.",
+  "caveats": [
+    "The selection is primary surface power generation technology for initial crewed missions to Mars.",
+    "The two technology categories are peers; struck-out entries are excluded technologies.",
+    "Historical text excerpt: NASA · Michael Chappell · February 2025. No NASA endorsement is implied.",
+    "Only the supplied source page 1, page 2, page 5 upper lists and page 13 text are included."
+  ]
+}

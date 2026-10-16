@@ -1,94 +1,87 @@
-# Kata roadmap
+# First usable Kata iteration
 
-Direction agreed 14 October 2026; visual-foundations roadmap added 15 October 2026. Plans describe proposed work, not delivered
-capabilities or promised dates. [VISION.md](../../VISION.md) defines the core.
+Delivered locally on 16 October 2026. The next step is to use it on actual
+presentations and improve the specific things that fail. This replaces the
+version sequence as the active direction. [VISION.md](../../VISION.md) remains
+the purpose and scope; earlier numbered plans are historical records.
 
-## Available: 0.3.0
+## What is ready
 
-The released artifacts include six form references, a six-slide field guide,
-seven before-and-after pairs, and an offline 14-slide Lys deck. See the
-[release record](../releases/0.3.0.md) and
-[artifact review](../evals/0.3.0-review/README.md).
+People can read the shared forms and practices and use them in their own work.
+Agents reach the same material through the skill: supply slide content and order,
+give the agent Kata and Lys, and receive a finished presentation. Routine choices
+belong to the agent; the author need not approve every placement.
 
-The field guide exposed a conceptual mismatch: most forms concern internal
-information representations, while Kata's purpose is deliberate composition
-for communication. Existing guidance also overemphasizes retaining readable
-arrangements. These artifacts remain available as the 0.3.0 implementation;
-they do not define the next repertoire.
+| Deliverable | What it provides |
+| --- | --- |
+| [Portable kit](../../skills/kata/SKILL.md) | Four Markdown files: the agent gateway, shared forms, shared practices, and rendering integration. No repository or particular brand required. |
+| [Working presentation](../../examples/presentation/deck.html) | Seven selected slides from a real CCS supplier briefing, composed with the adopted visual foundation and packaged as standalone Lys HTML. |
+| [Example gallery](../../examples/index.html) | Visible compositions with their reasons, alternatives and trade-offs outside the audience-facing slides. |
+| [Independent trial](../../evals/usable-deck/README.md) | A fresh-context agent generated four different NASA slides using only supplied content, the copied skill and pinned Lys guidance/runtime. The output passed review without layout repairs. |
+| [Getting started](../../README.md) | Copy instructions, a normal request, examples and verification links. |
 
-## Released: 0.4.0 foundations
+The practice covers **one focus**, **equal peers**, and **a lead with support**.
+These are adaptable spatial relationships. They guide scale, position, grouping,
+proportion and space without prescribing a layout for each information type.
+Content authorship, chart construction and deck sequencing remain with the author.
 
-The owner closed the [0.4.0 scope](0.4.0.md) around the implemented increment:
-clarified vision, exploratory communication examples, typography/colour studies,
-living design system, shared tokens and local study-workflow skill. See the
-[release notes](../releases/0.4.0.md) and [delivery handoff](../releases/0.4.0-delivery.md).
-Published on GitHub as [`v0.4.0`](https://github.com/villetakanen/kata/releases/tag/v0.4.0),
-with source and bundled artifacts. No website deployment is included.
+The refinement for the owner's live test strengthens these existing forms with
+paired arrangements and explicit choice reasoning. Shared practices now distinguish
+meaning to preserve from adaptable defaults for captions, labels, qualifications,
+headings and footers. The agent entry point routes into this human-publishable
+material. The next evidence should come from using this kit in actual work.
 
-The portable skill and six-form catalogue remain unchanged from 0.3.0 and
-provisional relative to the vision. Golden cut is the closest existing example
-in the owner's assessment. The original catalogue/skill rewrite is explicitly
-deferred, not claimed complete. A bounded unfamiliar-brief trial produced mixed
-results; its candidate was retained as an experiment, not promoted.
+The public-source scan supplied both examples. Their selected wording, slide
+boundaries and order were frozen before composition. Sources, selection boundaries
+and reuse information are recorded with the [worked example](../../examples/presentation/README.md)
+and [trial](../../evals/usable-deck/source.json).
 
-## Planned: 0.5.0 human-facing documentation site
+## Completion evidence and limits
 
-The [0.5.0 plan](0.5.0.md) now targets a local Astro SSG site at
-`kata.villetakanen.com`. Its main purpose is publishing Kata for people:
-browsable forms, intended uses, examples and trade-offs, derived from the same
-source guidance as the portable skill. Studies and the living DS support that
-site. Astro, hosting and deployment are future work, not 0.4.0 prerequisites.
+Both decks preserve the supplied wording, quantities, qualifications and
+associations. Equal alternatives receive comparable treatment, a supplied lead
+has visible priority, and supporting material remains readable. The trial also
+preserves the excluded status of struck-out technologies.
 
-Typography and colour exploration is complete by owner decision. Two studies,
-the living DS, shared tokens and a local study-workflow skill are implemented
-locally. No additional spacing or supporting-treatment study is required.
-Historical studies keep their appearance; current documentation uses the adopted
-foundation. Paper and petrol are confined to examples.
+The current gallery and both decks were reviewed at 1440×900 and 390×844, with
+keyboard navigation, JavaScript disabled and PDF print output. Offline checks
+found no external asset requests. Project checks cover content fidelity,
+portable resources, packaging, build freshness and retained historical artifacts.
+Detailed records live with the examples, rather than in a separate release process.
 
-The 0.5.0 site should expose shared source material with its actual status,
-including the provisional catalogue, rather than duplicate a separate catalogue
-or assume that 0.4.0 completed skill alignment. The earlier main-site subrepo/publication option is superseded by this
-standalone site direction. No public deployment is claimed.
+This establishes a usable starting point for the tested text-based excerpts.
+It is not evidence of improved reader comprehension or general superiority to
+an unaided agent. The independent trial is one generation with one model; its
+authoring environment could not run a browser, so the coordinating agent completed
+visual verification on the unchanged output. Physical devices and screen readers
+have not been tested.
 
-## Candidate next increment: basic composition decisions (possibly 0.6.0)
+That trial used the first delivery's frozen three-file guidance. It has not been
+rerun for the shared-kit refinement. The refinement has passed skill validation,
+portable-link checks and project checks; its behavioral test is the next live use.
 
-Begin with small unanswered questions: when should an item contain only a title,
-when is an empty slide appropriate, and when is leaving space empty the better
-choice? Explain the intended communication and audience context, with only the
-examples needed to make each decision usable. Do not expand this into a complete
-taxonomy or decision framework as a prerequisite.
+## Keep the active project small
 
-The original catalogue illustrated possible outcomes of a yes/no decision path;
-the path was meant to prompt thought about content relationships and relative
-importance. A photograph and quotation are example material for a relationship
-such as lead/support, not necessarily a form in their own right. Future work
-should test the usefulness of that reasoning rather than promote every specimen
-into another catalogue entry. Version assignment is tentative; this work is not
-a new 0.4.0 requirement. Empty-slide use does not itself expand Kata into temporal
-storytelling or sequence orchestration.
+The old information-type catalogue, studies and evaluations remain accessible
+as history. Their frozen guidance is outside the installed skill. The current
+README and gallery lead to the usable practice. The vision, adopted visual
+foundation, pinned Lys integration and useful verification remain in service.
 
-## Boundary through 1.0.0
+No website, larger catalogue, renderer upgrade, new study programme or version
+sequence is needed before use. Add one only when an encountered task makes its
+value concrete. Prefer replacing unclear guidance over appending another layer.
 
-The unit remains a single presentation item: a slide, poster, book cover, or
-similar surface. Slides are the first implementation medium; support for other
-media is not yet verified. Recommending that competing material use separate
-items is in scope. Narrative sequences, staged reveals, and timing are not.
+## Improve through use
 
-Content authorship and internal chart, table, infographic, or process design
-remain outside Kata. Preserving supplied caveats is required; sophisticated
-assessment of caveat prominence is conceptually relevant but deferred beyond
-the near-term roadmap. No broader feature list or release dates for 1.0.0 are
-committed.
+1. Use the shared kit, directly or through its skill, on an actual presentation.
+2. Keep the input, the slide produced and the desired correction when something
+   matters. A short note beside that work is enough.
+3. Choose one useful correction. Change the smallest relevant shared practice, form or example,
+   then check the triggering case alongside the existing examples.
+4. Use it again. Expand the repertoire or try another visual medium when a real
+   task supplies a reason and a result to inspect.
 
-## Evidence and supporting work
-
-Authored demonstrations support inspection and discussion, not claims of better
-reader comprehension. Existing evaluation reports retain their historical
-limits. New model comparisons require a specific behavior question; no broad
-benchmark expansion or human comprehension study is a 0.4.0 dependency.
-
-Lys renders the demos; brands supply identity. Runtime upgrades, integration
-packaging, and broader harness work are not prerequisites for conceptual
-alignment. The [earlier out-of-scope record](out-of-scope.md) retains its 0.3.0
-context; the vision and 0.4.0 plan supersede its composition and item-separation
-boundaries where they differ.
+The implementing agent owns ordinary composition, spacing, proportions, file
+consolidation and corrections within these boundaries. Ask the owner when missing
+information changes meaning or a requested change alters the scope. Taste
+refinements become small follow-ups; they do not reopen the entire vision.

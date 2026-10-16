@@ -19,7 +19,7 @@ Node 20 or newer; commands and runtime requirements live in [package.json](packa
 
 | Intent | Command | Implementation |
 | --- | --- | --- |
-| Rebuild examples | `npm run build` | `scripts/build-examples.mjs`, `scripts/build-communication.mjs` |
+| Rebuild examples | `npm run build` | `scripts/build-presentation.mjs`, historical example builders |
 | Check the project | `npm run check` | `scripts/check.mjs` |
 
 Rebuild after changing example data, generator, or theme; include generated HTML.
@@ -36,8 +36,8 @@ upstream instructions.
 
 - Start with what a single presentation item should communicate: intended understanding and expressive character. Read VISION.md before changing the repertoire or its guidance.
 - Offer considered compositional alternatives even when the current layout is readable. Explain the communicative role of whitespace, tension, balance, restraint, proximity, contrast, and dominance where relevant; avoid automatic defaults.
-- Treat the 0.3.0 catalogue as an artifact to reassess, not the definition of Kata. Follow the 0.4.0 plan when realigning the delivered skill and demos.
-- Keep the unit to one presentation item through 1.0.0. Recommending separate items is allowed; sequencing, timing, and narrative orchestration are outside scope.
+- Treat the old catalogue as history, not the definition of Kata. Follow the active roadmap and improve the delivered practice from concrete use experience.
+- Keep the unit to one presentation item. Recommending separate items is allowed; sequencing, timing, and narrative orchestration are outside scope.
 - Leave content authorship and internal representation to the author: do not turn prose into process steps or redesign a supplied chart. Understand communicative roles sufficiently to compose the supplied material.
 - Preserve supplied meaning, quantities, uncertainty, and meaningful relationships while arranging and reflowing it.
 - Distinguish empirical evidence, design judgment, and perceptual analogies.
@@ -50,6 +50,9 @@ upstream instructions.
 
 `skills/kata/` is the delivered, self-contained product. Keep its instructions
 and required resources portable when that directory is copied on its own.
+Forms and practices are shared material: write them for direct human publication
+and agent use. Keep compositional knowledge there; `SKILL.md` is the agent gateway
+to the same repertoire, with rendering mechanics in integration guidance.
 
 Place development skills in `.agents/skills/kata-dev-<task>/SKILL.md` when needed.
 Name them for the task and describe their trigger, inputs, and expected result.

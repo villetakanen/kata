@@ -1,0 +1,89 @@
+{
+  "protocol": "kata-eval/v1",
+  "run_id": "usable-20261016-b",
+  "case": {
+    "id": "mars-power",
+    "revision": "1.0.0",
+    "brief": {
+      "path": "inputs/brief.md",
+      "sha256": "482259a816ed1e232aa06f390c539482730b38d3466d0606c1d83ed5f1c729c8"
+    },
+    "answer_key": {
+      "path": "evaluator/answer-key.json",
+      "sha256": "369e6e2fa650ada489df24fca171c47b242244c01dadc0eb761687940dc1b4b6"
+    }
+  },
+  "task": {
+    "audience_question": "What surface power technology did NASA select for initial crewed missions to Mars, and which technology categories were considered?",
+    "constraints": [
+      "Four slides in the supplied order.",
+      "Preserve exact supplied wording, struck-out status and qualifiers.",
+      "Offline HTML, presentation and phone views, no-JavaScript access and print."
+    ]
+  },
+  "condition": "kata-candidate",
+  "tool": {
+    "id": "codex",
+    "requested_version": null,
+    "model": null,
+    "settings": {
+      "cli_args": [
+        "exec",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "-C",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8KMO8V",
+        "-s",
+        "workspace-write",
+        "-o",
+        "/var/folders/5x/92_br_c51191x_mqv5grk7p00000gq/T/kata-eval-workspace-8KMO8V/output/final-response.md",
+        "-"
+      ],
+      "runner_adapter": {
+        "id": "kata-eval-runner/v1",
+        "sha256": "278468a2540656425e795763d7886f64d660047a4a2050a3cbf7ae44fd4cf208"
+      }
+    }
+  },
+  "prompt": {
+    "path": "inputs/prompt.md",
+    "sha256": "0ad278abd4e097c7fdfebe5c3b4b07a676b6b3fa8acd44350efda246917e4bd3"
+  },
+  "skill_snapshot": {
+    "revision": "24b8191db0bad767e9c9f0940435bdc0036e8aaa",
+    "directory": "inputs/skill",
+    "files": [
+      {
+        "path": "inputs/skill/references/composition.md",
+        "sha256": "2638144254b75c064781f4a696e966ac22683d9062422a83a5be6e6c1ed0e06f"
+      },
+      {
+        "path": "inputs/skill/references/integration.md",
+        "sha256": "a668aaec9a378206b136335cfaa0c655669a24dc924ccd21324c7e88a16f7221"
+      },
+      {
+        "path": "inputs/skill/SKILL.md",
+        "sha256": "60a547f878020f2213b63dd460cfb95fb53292e4f7f90ca3a90496a19cbbe9f2"
+      }
+    ]
+  },
+  "lys_snapshot": {
+    "version": "1.2.1",
+    "directory": "inputs/lys",
+    "files": [
+      {
+        "path": "inputs/lys/lys.css",
+        "sha256": "c76f4d3ea763d94527ca6b656d724772bfc5a5946e2096945ea69a047d7077fb"
+      },
+      {
+        "path": "inputs/lys/lys.iife.js",
+        "sha256": "f896aeae2c680c727d4bb933b9491b8dfa8abf70585359e8966e86987ac4d904"
+      },
+      {
+        "path": "inputs/lys/NOTICE.md",
+        "sha256": "e2677fbc9d4c0113ae9e254dada5a4f53e5b02c8b552617c961311db89b6114c"
+      }
+    ]
+  },
+  "output_dir": "output"
+}

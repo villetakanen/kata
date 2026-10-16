@@ -37,7 +37,7 @@ async function markdownLinks(directory) {
   }
 }
 await markdownLinks(resolve(root, 'skills'));
-for (const name of ['index.html', 'kata-lys.html']) {
+for (const name of ['catalogue.html', 'kata-lys.html']) {
   const html = await read(`examples/${name}`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(ids.length, new Set(ids).size, `${name}: IDs must be unique`);
@@ -47,7 +47,7 @@ for (const name of ['index.html', 'kata-lys.html']) {
   assert(!/<(?:script|link)[^>]+(?:src|href)="https?:/i.test(html), 'Examples must work offline');
   assert(html.includes(data.disclosure), 'Fictional data must be disclosed');
 }
-const gallery = await read('examples/index.html');
+const gallery = await read('examples/catalogue.html');
 const deck = await read('examples/kata-lys.html');
 for (const html of [gallery, deck]) {
   assert(html.includes('18 June 2027') && html.includes('10 June 2027') && html.includes('Planned, not confirmed'), 'Golden-cut fit must preserve its date and caveat');
@@ -64,3 +64,5 @@ await import('./check-field-guide.mjs');
 await import('./check-communication.mjs');
 
 await import('./check-design-system.mjs');
+
+await import('./check-presentation.mjs');

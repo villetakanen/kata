@@ -33,9 +33,17 @@ They should develop judgment rather than replace one automatic default with
 another. The repertoire's names and organization should follow communicative
 purpose; the existing catalogue is not a constraint on that work.
 
+The forms and practices are the shared product. Every form and practice must be
+publishable directly to people and usable by agents: explain its purpose, show
+concrete arrangements, and make alternatives, trade-offs and limits inspectable.
+People and agents use the same maintained material. The agent skill is a gateway
+for selecting and applying it; compositional knowledge belongs in that shared
+material rather than in a separate set of agent instructions. Publication does
+not require a new website before the kit can be used.
+
 ## Unit and responsibility
 
-Through 1.0.0, the unit is a single presentation item: a slide, poster, book
+The current unit is a single presentation item: a slide, poster, book
 cover, or similar surface. Slides remain the first implementation and test
 medium. Sequences, timing, staged reveals, and narrative orchestration across
 items are outside this scope.
@@ -55,9 +63,10 @@ competing material into distinct items without orchestrating their sequence.
 
 Preserve supplied meaning, quantities, uncertainty, and meaningful associations.
 Do not silently shorten or omit content to make a form fit. Preserve supplied
-qualifications; sophisticated diagnosis of whether a caveat receives sufficient
-communicative prominence belongs conceptually, but is deferred beyond the near-term
-roadmap.
+qualifications and keep them associated with what they qualify. Kata can offer
+reasoned defaults for captions, labels, headings and footers while distinguishing
+those preferences from meaning that must remain intact. Identify missing context
+when it matters; do not invent the author's words or facts.
 
 ## Responsibilities alongside Kata
 
@@ -69,16 +78,18 @@ without a particular renderer or brand.
 
 ## Direction and existing artifacts
 
-This vision records the design alignment agreed on 14 October 2026. The 0.3.0
-skill and demos do not yet embody it consistently. Five of the six existing
-forms primarily concern information representations; golden cut comes closest
-to the intended compositional practice. The field guide exposed that mismatch.
-Retaining those artifacts does not make them the model for future work.
+The shared kit starts with three adaptable forms: one focus, equal peers, and a
+lead with support. Its [forms](skills/kata/references/composition.md) and
+[practices](skills/kata/references/practices.md) are readable on their own; the
+[skill](skills/kata/SKILL.md) routes agents to them. This is a small starting
+repertoire, not a complete taxonomy. The [working example](examples/index.html)
+uses supplied content from a real presentation; the portable instructions remain
+independent of that example and its visual identity.
 
-The [0.4.0 plan](docs/plans/0.4.0.md) brings the repertoire, delivered guidance,
-and demonstrations into alignment. Until implemented, those changes are planned
-capabilities. Historical briefs, release records, and evaluations retain their
-original context.
+The earlier information-type catalogue and design studies remain historical
+artifacts. They do not define active selection. The [roadmap](docs/plans/ROADMAP.md)
+records the first usable delivery and the commitment to make subsequent changes
+from experience using it on actual work.
 
 ## Reasoning and evidence
 

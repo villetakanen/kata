@@ -1,0 +1,139 @@
+{
+  "title": "Digital Marketplace briefing",
+  "description": "Seven-slide excerpt recomposed from Crown Commercial Service’s techUK event presentation, 25 February 2020. Historical source material, not current procurement guidance. Selected pages 1, 3, 5, 6, 8, 13 and 21 retain their wording and original order; omitted pages are not part of this supplied-content fixture. Logos and decorative background shapes are not supplied.",
+  "source": {
+    "author": "Crown Commercial Service",
+    "date": "2020-02-25",
+    "url": "https://assets.crowncommercial.gov.uk/wp-content/uploads/techUK-25-Feb-2020.pdf",
+    "sha256": "dae94aa6272029dd73dc643fc4d8131929c7048832fdaa0a9fd91fe3bdaeacc2",
+    "licence": "Crown copyright; Open Government Licence",
+    "licenceUrl": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/1/open-government-licence.htm",
+    "terms": "https://www.crowncommercial.gov.uk/terms-and-conditions",
+    "accessed": "2026-10-16"
+  },
+  "slides": [
+    {
+      "id": "title",
+      "page": 1,
+      "title": "techUk Event",
+      "kind": "focus",
+      "paragraphs": [
+        "25 February 2020"
+      ],
+      "choice": "The event title stands alone with its date. Open space gives the short title presence without inventing an additional message.",
+      "alternative": "A centered title would be quieter; the left alignment gives the briefing a direct opening."
+    },
+    {
+      "id": "introduction",
+      "page": 3,
+      "title": "Introducing Crown Commercial Service",
+      "kind": "lead",
+      "lead": "We help organisations across the entire public sector save time and money on buying their everyday goods and services…",
+      "items": [
+        "Commercial expertise",
+        "Supporting frontline services",
+        "Significant savings",
+        "Customer focused",
+        "Bulk buying power"
+      ],
+      "note": "We aim to help our customers save £2 billion between 2016 and 2020",
+      "choice": "The supplied purpose receives the larger field. The five supporting capabilities share a quieter adjacent field; the dated ambition remains explicit beneath both.",
+      "alternative": "A vertical stack allows longer lines, but separates the purpose from its supporting capabilities."
+    },
+    {
+      "id": "why",
+      "page": 5,
+      "title": "Why G-Cloud?",
+      "kind": "list",
+      "items": [
+        "A competitive marketplace for huge range of cloud solutions",
+        "Framework’s re-procured every 12 months to keep services fresh",
+        "Cloud First, Government determined to be as efficient as possible",
+        "A catalogue of commoditised, cloud based services",
+        "Fast procurement process"
+      ],
+      "choice": "A shared left edge and generous line spacing keep five supplied reasons readable as a single group. None is promoted as the decisive reason.",
+      "alternative": "A multi-column layout would shorten the lines but fragment this modest list."
+    },
+    {
+      "id": "background",
+      "page": 6,
+      "title": "G-Cloud Background",
+      "kind": "facts",
+      "items": [
+        "Over 4,000 suppliers",
+        "Nearly 30,000 services",
+        "Nearly 90% of the suppliers are SME’s",
+        "£5.7 billion spend on G-Cloud since 2012",
+        "Over 40% of spend goes to SME’s",
+        "In 2019 1467 suppliers reported spend"
+      ],
+      "choice": "Six complete statements share equal treatment in two open columns. Qualifiers stay in the statements rather than becoming tiny footnotes below oversized numbers.",
+      "alternative": "A single vertical list preserves an even simpler reading order but gives each statement less presence."
+    },
+    {
+      "id": "comparison",
+      "page": 8,
+      "title": "G-Cloud Vs DOS",
+      "kind": "peers",
+      "groups": [
+        {
+          "title": "G-Cloud",
+          "items": [
+            "Utility cloud services",
+            "Contract award (after 6 step buying process)",
+            "Supplier T&Cs",
+            "Supplier IPR/Source code",
+            "No Agile development (configuration only)"
+          ]
+        },
+        {
+          "title": "DOS",
+          "items": [
+            "Bespoke services",
+            "Further competition",
+            "Government T&Cs",
+            "Customer IPR/Source code",
+            "Agile development - iterative"
+          ]
+        }
+      ],
+      "choice": "Equal fields, matching titles and aligned rows make the supplied comparison visible without a preferred option. Open gutters replace the two differently coloured source panels.",
+      "alternative": "Equal stacked rows give longer lines on narrow screens but lose simultaneous comparison."
+    },
+    {
+      "id": "services",
+      "page": 13,
+      "title": "What services can you sell through G-Cloud 12?",
+      "kind": "rows",
+      "groups": [
+        {
+          "number": "1",
+          "title": "Cloud Hosting",
+          "text": "Covers Infrastructure and Platform as a Service for example a computer server or storage in the cloud"
+        },
+        {
+          "number": "2",
+          "title": "Cloud Software",
+          "text": "Is an application or service that can be run over the internet or cloud for example accounting tools or customer service management software"
+        },
+        {
+          "number": "3",
+          "title": "Cloud Support",
+          "text": "Support your transition to IaaS, PaaS and SaaS for example migration to the cloud, configuration/implementation of services from Lots 1 & 2"
+        }
+      ],
+      "choice": "Three rows preserve the supplied numbered service groups. The labels align at left and the descriptions get a consistent, longer measure at right.",
+      "alternative": "Three columns would make each service feel self-contained but wrap these descriptions into narrow blocks."
+    },
+    {
+      "id": "questions",
+      "page": 21,
+      "title": "Questions & Answers",
+      "kind": "focus",
+      "paragraphs": [],
+      "choice": "The closing subject has the same restrained treatment as the opening. Empty space leaves attention on the discussion.",
+      "alternative": "A smaller centered treatment would feel more reflective; matching the opening keeps the brief visually consistent."
+    }
+  ]
+}

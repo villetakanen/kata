@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "Coordinating Codex agent",
+  "artifactSha256": "8f872cc63a9f162ca81cb4dda35c7e775439517fbf63c0c002ac5df06c28ef4b",
+  "checks": [
+    {
+      "mode": "presentation",
+      "javaScript": true,
+      "exactContentAndOrder": true,
+      "excludedTechnologies": 6,
+      "hiddenSlides": 3,
+      "externalRequests": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "phone",
+      "javaScript": true,
+      "exactContentAndOrder": true,
+      "excludedTechnologies": 6,
+      "hiddenSlides": 0,
+      "externalRequests": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "presentation",
+      "javaScript": false,
+      "exactContentAndOrder": true,
+      "excludedTechnologies": 6,
+      "hiddenSlides": 0,
+      "externalRequests": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "phone",
+      "javaScript": false,
+      "exactContentAndOrder": true,
+      "excludedTechnologies": 6,
+      "hiddenSlides": 0,
+      "externalRequests": [],
+      "horizontalOverflow": false
+    }
+  ],
+  "visualReview": "All four presentation and phone slides with JavaScript on and off, and all four print pages inspected. Decision qualifications remain part of the main statement. Categories receive equal widths and headings; excluded technologies retain strikeouts. No layout edits were made after generation.",
+  "limits": [
+    "One generation, one default CLI model and one text-only excerpt; no comparative performance claim.",
+    "Chromium on this computer; no physical device, projector, printer or screen-reader session."
+  ],
+  "navigation": {
+    "keys": [
+      {
+        "key": "End",
+        "slide": 4
+      },
+      {
+        "key": "ArrowLeft",
+        "slide": 3
+      },
+      {
+        "key": "Home",
+        "slide": 1
+      },
+      {
+        "key": "ArrowRight",
+        "slide": 2
+      }
+    ],
+    "focus": {
+      "tag": "A",
+      "outline": "solid"
+    },
+    "hiddenOrInertOnPhone": 0,
+    "restoredSlide": 2
+  }
+}
